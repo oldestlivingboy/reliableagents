@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import LeaderboardChart from "@/components/LeaderboardChart";
 import LeaderboardTable from "@/components/LeaderboardTable";
 import UpcomingLeaderboards from "@/components/UpcomingLeaderboards";
+import SubscribeSection from "@/components/SubscribeSection";
 
 const Index = () => {
   return (
@@ -24,6 +25,8 @@ const Index = () => {
         </section>
 
         <UpcomingLeaderboards />
+        
+        <SubscribeSection />
       </main>
 
       <footer className="border-t border-border py-6 md:py-12 mt-12 md:mt-24">
