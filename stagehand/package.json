@@ -1,0 +1,31 @@
+{
+  "name": "stagehand-runner",
+  "version": "1.0.0",
+  "description": "Stagehand runner for web reliability benchmarking.",
+  "keywords": [
+    "web",
+    "reliability",
+    "benchmarking",
+    "stagehand",
+    "runner"
+  ],
+  "author": "Brian Kennish <oldestlivingboy@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx index.ts"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "latest",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oldestlivingboy/webreliability"
+  }
+}
