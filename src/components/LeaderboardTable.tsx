@@ -8,8 +8,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Tool {
   rank: number;
@@ -45,62 +45,62 @@ const LeaderboardTable = () => {
     setData(sorted);
   };
 
-  const getScoreBadge = (score: number) => {
-    if (score >= 85) return <Badge className="bg-primary">Outstanding</Badge>;
-    if (score >= 80) return <Badge className="bg-accent text-accent-foreground">Excellent</Badge>;
-    if (score >= 75) return <Badge variant="secondary">Good</Badge>;
-    return <Badge variant="outline">Fair</Badge>;
-  };
-
   return (
-    <Card className="p-6 border-border bg-card/50 backdrop-blur">
-      <h3 className="text-2xl font-bold mb-6 text-foreground">
-        Detailed Rankings - Agentic Control Layer
+    <Card className="p-8 border border-border bg-card">
+      <h3 className="text-xl font-semibold mb-6 text-foreground">
+        Detailed Rankings
       </h3>
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
-            <TableRow className="border-border hover:bg-muted/50">
-              <TableHead 
-                className="cursor-pointer select-none"
-                onClick={() => handleSort("rank")}
-              >
-                <div className="flex items-center gap-2">
-                  Rank <ArrowUpDown className="w-4 h-4" />
-                </div>
+            <TableRow className="border-border hover:bg-transparent">
+              <TableHead className="h-10">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 px-2 text-xs font-medium -ml-2"
+                  onClick={() => handleSort("rank")}
+                >
+                  Rank
+                  <ArrowUpDown className="ml-2 w-3 h-3" />
+                </Button>
               </TableHead>
-              <TableHead 
-                className="cursor-pointer select-none"
-                onClick={() => handleSort("name")}
-              >
-                <div className="flex items-center gap-2">
-                  Tool <ArrowUpDown className="w-4 h-4" />
-                </div>
+              <TableHead className="h-10">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 px-2 text-xs font-medium -ml-2"
+                  onClick={() => handleSort("name")}
+                >
+                  Tool
+                  <ArrowUpDown className="ml-2 w-3 h-3" />
+                </Button>
               </TableHead>
-              <TableHead 
-                className="cursor-pointer select-none"
-                onClick={() => handleSort("score")}
-              >
-                <div className="flex items-center gap-2">
-                  Score <ArrowUpDown className="w-4 h-4" />
-                </div>
+              <TableHead className="h-10">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 px-2 text-xs font-medium -ml-2"
+                  onClick={() => handleSort("score")}
+                >
+                  Score
+                  <ArrowUpDown className="ml-2 w-3 h-3" />
+                </Button>
               </TableHead>
-              <TableHead>Rating</TableHead>
-              <TableHead>Reliability</TableHead>
-              <TableHead>Speed</TableHead>
-              <TableHead>Documentation</TableHead>
+              <TableHead className="h-10 text-xs font-medium">Reliability</TableHead>
+              <TableHead className="h-10 text-xs font-medium">Speed</TableHead>
+              <TableHead className="h-10 text-xs font-medium">Documentation</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {data.map((tool) => (
               <TableRow key={tool.name} className="border-border hover:bg-muted/50">
-                <TableCell className="font-medium">#{tool.rank}</TableCell>
-                <TableCell className="font-semibold text-foreground">{tool.name}</TableCell>
-                <TableCell className="font-bold text-primary">{tool.score}</TableCell>
-                <TableCell>{getScoreBadge(tool.score)}</TableCell>
-                <TableCell>{tool.reliability}</TableCell>
-                <TableCell>{tool.speed}</TableCell>
-                <TableCell>{tool.documentation}</TableCell>
+                <TableCell className="text-sm text-muted-foreground">#{tool.rank}</TableCell>
+                <TableCell className="font-medium text-sm">{tool.name}</TableCell>
+                <TableCell className="font-semibold text-sm">{tool.score}</TableCell>
+                <TableCell className="text-sm text-muted-foreground">{tool.reliability}</TableCell>
+                <TableCell className="text-sm text-muted-foreground">{tool.speed}</TableCell>
+                <TableCell className="text-sm text-muted-foreground">{tool.documentation}</TableCell>
               </TableRow>
             ))}
           </TableBody>

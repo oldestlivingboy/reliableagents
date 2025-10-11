@@ -8,13 +8,13 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero />
       
-      <main className="container mx-auto max-w-6xl px-4 space-y-16 pb-20">
-        <section className="space-y-8 animate-fade-in">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+      <main className="container mx-auto max-w-4xl px-4 space-y-12 pb-24">
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-2xl font-semibold text-foreground">
               Featured: Agentic Control Layer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground">
               Compare leading frameworks that enable agents to decide and execute web actions
             </p>
           </div>
@@ -26,9 +26,11 @@ const Index = () => {
         <UpcomingLeaderboards />
       </main>
 
-      <footer className="border-t border-border py-8 mt-20">
-        <div className="container mx-auto max-w-6xl px-4 text-center text-muted-foreground">
-          <p>© 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.</p>
+      <footer className="border-t border-border py-12 mt-24">
+        <div className="container mx-auto max-w-4xl px-4">
+          <p className="text-sm text-muted-foreground">
+            © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
+          </p>
         </div>
       </footer>
     </div>

@@ -7,46 +7,51 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 
 const data = [
-  { name: "Browser Use", score: 87, color: "hsl(var(--chart-1))" },
-  { name: "Stagehand", score: 82, color: "hsl(var(--chart-2))" },
-  { name: "Skyvern", score: 78, color: "hsl(var(--chart-3))" },
-  { name: "LaVague", score: 75, color: "hsl(var(--chart-4))" },
+  { name: "Browser Use", score: 87 },
+  { name: "Stagehand", score: 82 },
+  { name: "Skyvern", score: 78 },
+  { name: "LaVague", score: 75 },
 ];
 
 const LeaderboardChart = () => {
   return (
-    <Card className="p-6 border-border bg-card/50 backdrop-blur">
-      <h3 className="text-2xl font-bold mb-6 text-foreground">
+    <Card className="p-8 border border-border bg-card">
+      <h3 className="text-xl font-semibold mb-8 text-foreground">
         Agentic Control Layer Performance
       </h3>
-      <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+      <ResponsiveContainer width="100%" height={350}>
+        <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
           <XAxis 
             dataKey="name" 
             stroke="hsl(var(--muted-foreground))"
-            tick={{ fill: "hsl(var(--foreground))" }}
+            tick={{ fill: "hsl(var(--foreground))", fontSize: 13 }}
+            axisLine={false}
+            tickLine={false}
           />
           <YAxis 
             stroke="hsl(var(--muted-foreground))"
-            tick={{ fill: "hsl(var(--foreground))" }}
+            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 13 }}
+            axisLine={false}
+            tickLine={false}
           />
           <Tooltip 
             contentStyle={{
               backgroundColor: "hsl(var(--card))",
               border: "1px solid hsl(var(--border))",
               borderRadius: "var(--radius)",
-              color: "hsl(var(--foreground))"
+              color: "hsl(var(--foreground))",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.05)"
             }}
+            cursor={{ fill: "hsl(var(--muted))" }}
           />
           <Bar 
             dataKey="score" 
-            fill="hsl(var(--primary))"
-            radius={[8, 8, 0, 0]}
+            fill="hsl(var(--foreground))"
+            radius={[4, 4, 0, 0]}
           />
         </BarChart>
       </ResponsiveContainer>

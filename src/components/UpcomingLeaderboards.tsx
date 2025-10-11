@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Brain, Code, Globe, Monitor, Search, Linkedin, Database, Shield } from "lucide-react";
 
 const generalLeaderboards = [
@@ -19,61 +18,61 @@ const verticalLeaderboards = [
 const UpcomingLeaderboards = () => {
   return (
     <section className="py-16 px-4">
-      <div className="container mx-auto max-w-6xl space-y-12">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl font-bold text-foreground">Upcoming Leaderboards</h2>
-          <p className="text-xl text-muted-foreground">
+      <div className="container mx-auto max-w-4xl space-y-12">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
+          <p className="text-base text-muted-foreground">
             More comprehensive benchmarks coming soon
           </p>
         </div>
 
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <h3 className="text-2xl font-bold text-foreground">General Categories</h3>
-            <Badge variant="secondary">Coming Soon</Badge>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {generalLeaderboards.map((item, index) => (
-              <Card 
-                key={index} 
-                className="p-6 border-border bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10">
-                    <item.icon className="w-6 h-6 text-primary" />
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
+              General Categories
+            </h3>
+            <div className="space-y-3">
+              {generalLeaderboards.map((item, index) => (
+                <Card 
+                  key={index} 
+                  className="p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 rounded-md bg-muted">
+                      <item.icon className="w-4 h-4 text-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium mb-1 text-foreground">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <h3 className="text-2xl font-bold text-foreground">Vertical Specializations</h3>
-            <Badge variant="secondary">Coming Soon</Badge>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {verticalLeaderboards.map((item, index) => (
-              <Card 
-                key={index} 
-                className="p-6 border-border bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <item.icon className="w-6 h-6 text-accent" />
+          <div>
+            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
+              Vertical Specializations
+            </h3>
+            <div className="space-y-3">
+              {verticalLeaderboards.map((item, index) => (
+                <Card 
+                  key={index} 
+                  className="p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 rounded-md bg-muted">
+                      <item.icon className="w-4 h-4 text-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium mb-1 text-foreground">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -3,36 +3,32 @@ import { ExternalLink } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none" />
-      
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center space-y-6 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Reliable Agents
-            </span>
-            <br />
-            <span className="text-foreground">Leaderboard</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            The definitive source for benchmarking and knowledge about agentic automation, 
-            web browsing agents, and computer use tools
-          </p>
+    <section className="py-24 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-foreground">
+              Reliable Agents Leaderboard
+            </h1>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              The definitive source for benchmarking and knowledge about agentic automation, 
+              web browsing agents, and computer use tools.
+            </p>
+          </div>
 
-          <div className="pt-6">
+          <div>
             <Button 
-              size="lg" 
-              className="gap-2 bg-primary hover:bg-primary/90 text-lg px-8 py-6 rounded-xl"
+              variant="outline"
+              className="gap-2 h-11"
               asChild
             >
               <a 
                 href="#report" 
                 className="inline-flex items-center"
               >
-                The Current State of Agentic Web/Browser Automation - Q1 2025
-                <ExternalLink className="w-5 h-5" />
+                <span>The Current State of Agentic Web/Browser Automation - Q1 2025</span>
+                <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
           </div>
