@@ -46,11 +46,13 @@ const LeaderboardTable = () => {
   };
 
   return (
-    <Card className="p-8 border border-border bg-card">
-      <h3 className="text-xl font-semibold mb-6 text-foreground">
+    <Card className="p-4 md:p-8 border border-border bg-card">
+      <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-foreground">
         Detailed Rankings
       </h3>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto -mx-4 md:mx-0">
+        <div className="inline-block min-w-full align-middle">
+          <div className="overflow-hidden">
         <Table>
           <TableHeader>
             <TableRow className="border-border hover:bg-transparent">
@@ -105,6 +107,8 @@ const LeaderboardTable = () => {
             ))}
           </TableBody>
         </Table>
+          </div>
+        </div>
       </div>
     </Card>
   );

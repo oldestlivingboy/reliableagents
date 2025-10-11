@@ -7,15 +7,15 @@ const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 md:py-16 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="space-y-12">
-          <div className="space-y-3">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
+        <div className="space-y-6 md:space-y-12">
+          <div className="space-y-2 md:space-y-3">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
               Reliable Agents Leaderboard
             </h1>
             
-            <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               The definitive source for benchmarking and knowledge about agentic automation, 
               web browsing agents, and computer use tools.
             </p>
@@ -25,22 +25,22 @@ const Hero = () => {
             <CollapsibleTrigger asChild>
               <Button 
                 variant="ghost"
-                className="w-full justify-between p-6 h-auto text-left hover:bg-accent/50"
+                className="w-full justify-between p-4 md:p-6 h-auto text-left hover:bg-accent/50"
               >
-                <div className="space-y-1">
-                  <h2 className="text-xl font-semibold text-foreground">
+                <div className="space-y-1 flex-1 pr-2">
+                  <h2 className="text-base md:text-xl font-semibold text-foreground">
                     The Current State of Agentic Web/Browser Automation - Q1 2025
                   </h2>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs md:text-sm text-muted-foreground">
                     A comprehensive report for the hundreds of thousands of agentic developers
                   </p>
                 </div>
-                <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
               </Button>
             </CollapsibleTrigger>
             
-            <CollapsibleContent className="px-6 pb-6">
-              <div className="pt-4 border-t border-border space-y-6 text-sm text-foreground/90 leading-relaxed">
+            <CollapsibleContent className="px-4 md:px-6 pb-4 md:pb-6">
+              <div className="pt-4 border-t border-border space-y-4 md:space-y-6 text-xs md:text-sm text-foreground/90 leading-relaxed">
                 <p>
                   The landscape of agentic web automation has evolved dramatically. This report synthesizes the 
                   current state-of-the-art stack for enabling agents to interact with the web like humans do.

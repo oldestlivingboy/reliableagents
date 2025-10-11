@@ -17,33 +17,33 @@ const verticalLeaderboards = [
 
 const UpcomingLeaderboards = () => {
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto max-w-4xl space-y-12">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
-          <p className="text-base text-muted-foreground">
+    <section className="py-8 md:py-16 px-4">
+      <div className="container mx-auto max-w-4xl space-y-6 md:space-y-12">
+        <div className="space-y-1 md:space-y-2">
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
+          <p className="text-sm md:text-base text-muted-foreground">
             More comprehensive benchmarks coming soon
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
+            <h3 className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wide mb-3 md:mb-4">
               General Categories
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2 md:space-y-3">
               {generalLeaderboards.map((item, index) => (
                 <Card 
                   key={index} 
-                  className="p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                  className="p-4 md:p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-md bg-muted">
-                      <item.icon className="w-4 h-4 text-foreground" />
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <div className="p-1.5 md:p-2 rounded-md bg-muted">
+                      <item.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium mb-1 text-foreground">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h4 className="text-xs md:text-sm font-medium mb-0.5 md:mb-1 text-foreground">{item.title}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{item.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -52,22 +52,22 @@ const UpcomingLeaderboards = () => {
           </div>
 
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
+            <h3 className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wide mb-3 md:mb-4">
               Vertical Specializations
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2 md:space-y-3">
               {verticalLeaderboards.map((item, index) => (
                 <Card 
                   key={index} 
-                  className="p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                  className="p-4 md:p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-md bg-muted">
-                      <item.icon className="w-4 h-4 text-foreground" />
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <div className="p-1.5 md:p-2 rounded-md bg-muted">
+                      <item.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium mb-1 text-foreground">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h4 className="text-xs md:text-sm font-medium mb-0.5 md:mb-1 text-foreground">{item.title}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{item.description}</p>
                     </div>
                   </div>
                 </Card>
