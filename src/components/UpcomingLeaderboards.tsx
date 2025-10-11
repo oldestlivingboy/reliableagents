@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Brain, Code, Globe, Monitor, Search, Linkedin, Database, Shield } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Brain, Code, Globe, Monitor, Search, Linkedin, Database, Shield, Bell } from "lucide-react";
 import SubscribeDialog from "./SubscribeDialog";
 
 const generalLeaderboards = [
@@ -21,20 +24,93 @@ const verticalLeaderboards = [
 const UpcomingLeaderboards = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedLeaderboard, setSelectedLeaderboard] = useState<{ type: string; title: string } | null>(null);
+  const [generalEmail, setGeneralEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubscribeClick = (type: string, title: string) => {
     setSelectedLeaderboard({ type, title });
     setDialogOpen(true);
   };
 
+  const handleGeneralSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!generalEmail || !generalEmail.includes("@")) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from("subscribers")
+        .insert({ email: generalEmail, subscription_type: "general_updates" });
+
+      if (error) {
+        if (error.code === "23505") {
+          toast({
+            title: "Already subscribed",
+            description: "This email is already subscribed to updates",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Subscribed!",
+          description: "You'll receive updates about all new leaderboards",
+        });
+        setGeneralEmail("");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to subscribe. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="py-8 md:py-16 px-4">
       <div className="container mx-auto max-w-4xl space-y-6 md:space-y-12">
-        <div className="space-y-1 md:space-y-2">
-          <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
-          <p className="text-sm md:text-base text-muted-foreground">
-            More comprehensive benchmarks coming soon
-          </p>
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div className="space-y-1 md:space-y-2">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
+            <p className="text-sm md:text-base text-muted-foreground">
+              More comprehensive benchmarks coming soon
+            </p>
+          </div>
+          
+          <Card className="p-4 bg-primary/5 border-primary/20 md:min-w-[320px]">
+            <form onSubmit={handleGeneralSubscribe} className="space-y-3">
+              <div className="flex items-center gap-2">
+                <Bell className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">Subscribe for all updates</span>
+              </div>
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="your@email.com"
+                  value={generalEmail}
+                  onChange={(e) => setGeneralEmail(e.target.value)}
+                  className="flex-1 h-9 text-sm bg-background"
+                  required
+                />
+                <Button type="submit" size="sm" disabled={isLoading} className="whitespace-nowrap">
+                  {isLoading ? "..." : "Subscribe"}
+                </Button>
+              </div>
+            </form>
+          </Card>
         </div>
 
         <div className="space-y-6 md:space-y-8">
@@ -46,24 +122,23 @@ const UpcomingLeaderboards = () => {
               {generalLeaderboards.map((item, index) => (
                 <Card 
                   key={index} 
-                  className="p-4 md:p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                  className="p-4 border border-border bg-card hover:bg-muted/30 transition-colors"
                 >
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-start gap-3">
-                      <div className="p-1.5 md:p-2 rounded-md bg-muted flex-shrink-0">
-                        <item.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-xs md:text-sm font-medium mb-0.5 md:mb-1 text-foreground">{item.title}</h4>
-                        <p className="text-xs md:text-sm text-muted-foreground">{item.description}</p>
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-md bg-muted flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-foreground">{item.title}</h4>
+                      <p className="text-xs text-muted-foreground">{item.description}</p>
                     </div>
                     <Button 
                       size="sm" 
-                      variant="outline" 
-                      className="w-full"
+                      variant="ghost" 
+                      className="flex-shrink-0 text-xs h-8 px-3"
                       onClick={() => handleSubscribeClick(`general_${index}`, item.title)}
                     >
+                      <Bell className="w-3 h-3 mr-1.5" />
                       Subscribe
                     </Button>
                   </div>
@@ -80,24 +155,23 @@ const UpcomingLeaderboards = () => {
               {verticalLeaderboards.map((item, index) => (
                 <Card 
                   key={index} 
-                  className="p-4 md:p-5 border border-border bg-card hover:bg-muted/30 transition-colors"
+                  className="p-4 border border-border bg-card hover:bg-muted/30 transition-colors"
                 >
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-start gap-3">
-                      <div className="p-1.5 md:p-2 rounded-md bg-muted flex-shrink-0">
-                        <item.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-xs md:text-sm font-medium mb-0.5 md:mb-1 text-foreground">{item.title}</h4>
-                        <p className="text-xs md:text-sm text-muted-foreground">{item.description}</p>
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-md bg-muted flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-foreground">{item.title}</h4>
+                      <p className="text-xs text-muted-foreground">{item.description}</p>
                     </div>
                     <Button 
                       size="sm" 
-                      variant="outline" 
-                      className="w-full"
+                      variant="ghost" 
+                      className="flex-shrink-0 text-xs h-8 px-3"
                       onClick={() => handleSubscribeClick(`vertical_${index}`, item.title)}
                     >
+                      <Bell className="w-3 h-3 mr-1.5" />
                       Subscribe
                     </Button>
                   </div>
