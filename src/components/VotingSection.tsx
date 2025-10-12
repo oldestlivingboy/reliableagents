@@ -135,7 +135,7 @@ const VotingSection = () => {
         </p>
       </div>
 
-      <div className="space-y-2.5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
         {sortedCategories.map((category, index) => {
           const Icon = category.icon;
           const voteCount = votes[category.id] || 0;
@@ -144,17 +144,17 @@ const VotingSection = () => {
           return (
             <div
               key={category.id}
-              className="group relative flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-orange-500/40 hover:bg-orange-500/[0.02] transition-all duration-200"
+              className="group relative flex items-center gap-3 p-3 rounded-lg border border-border bg-card hover:border-primary/40 hover:bg-primary/[0.02] transition-all duration-200"
             >
               {/* Upvote Button */}
               <button
                 onClick={() => handleVote(category.id, category.title)}
                 disabled={hasVoted}
                 className={`
-                  flex flex-col items-center justify-center gap-0.5 w-12 h-12 rounded-lg flex-shrink-0 font-semibold transition-all duration-200
+                  flex flex-col items-center justify-center gap-0.5 w-11 h-11 rounded-lg flex-shrink-0 font-semibold transition-all duration-200
                   ${hasVoted 
-                    ? 'bg-orange-500 text-white shadow-md' 
-                    : 'border border-border hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/30 active:scale-95'
+                    ? 'bg-primary text-primary-foreground shadow-md' 
+                    : 'border border-border hover:border-primary hover:bg-primary/5 active:scale-95'
                   }
                 `}
                 aria-label={hasVoted ? 'Voted' : 'Vote'}
@@ -169,9 +169,9 @@ const VotingSection = () => {
               </button>
 
               {/* Content */}
-              <div className="flex items-center gap-3 flex-1 min-w-0">
+              <div className="flex items-center gap-2.5 flex-1 min-w-0">
                 <div className={`
-                  w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0
+                  w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0
                   ${index % 4 === 0 ? 'bg-blue-500/10' : ''}
                   ${index % 4 === 1 ? 'bg-purple-500/10' : ''}
                   ${index % 4 === 2 ? 'bg-green-500/10' : ''}
@@ -186,7 +186,7 @@ const VotingSection = () => {
                   `} />
                 </div>
                 
-                <h3 className="font-medium text-sm text-foreground leading-snug flex-1 group-hover:text-orange-600 transition-colors">
+                <h3 className="font-medium text-sm text-foreground leading-tight flex-1 group-hover:text-primary transition-colors">
                   {category.title}
                 </h3>
 
