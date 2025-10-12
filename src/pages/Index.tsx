@@ -8,26 +8,25 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero />
       
-      <main className="container mx-auto max-w-3xl px-4 space-y-20 pb-20">
-        <section>
-          <div className="border border-border rounded-xl p-8 bg-gradient-to-br from-muted/20 to-background">
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+      <main className="container mx-auto max-w-3xl px-4 space-y-16 pb-20">
+        <section className="space-y-4">
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+              <div className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
+              <span className="text-xs font-medium text-orange-700 dark:text-orange-400">In Development</span>
+            </div>
+            <h2 className="text-2xl font-bold text-foreground">
               Agentic Control Layer Leaderboard
             </h2>
-            <div className="space-y-2.5">
-              <p className="text-base text-muted-foreground leading-relaxed">
-                We're benchmarking the leading agentic control layers including Browser Use, Stagehand, Skyvern, and LaVague to evaluate their performance across reliability, speed, and documentation quality.
-              </p>
-              <p className="text-sm text-muted-foreground/80 italic">
-                Currently in development - comprehensive results coming soon.
-              </p>
-            </div>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              We're benchmarking the leading agentic control layers including Browser Use, Stagehand, Skyvern, and LaVague to evaluate their performance across reliability, speed, and documentation quality.
+            </p>
           </div>
+          
+          <SubscribeSection />
         </section>
 
         <VotingSection />
-        
-        <SubscribeSection />
 
         <CreatedBy />
       </main>
