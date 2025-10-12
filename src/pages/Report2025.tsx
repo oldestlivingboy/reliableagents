@@ -24,6 +24,48 @@ const Report2025 = () => {
     fetchMarketMapData();
   }, []);
 
+  const getCompanyUrl = (companyName: string): string => {
+    // Clean up company name and create URL
+    const cleanName = companyName
+      .toLowerCase()
+      .replace(/\s*\(.*?\)\s*/g, '') // Remove parentheses content
+      .replace(/\s+/g, '')
+      .replace(/[^a-z0-9]/g, '');
+    
+    // Special cases
+    const specialCases: { [key: string]: string } = {
+      'browseruse': 'https://github.com/browser-use/browser-use',
+      'lavague': 'https://lavague.ai',
+      'skyvern': 'https://skyvern.com',
+      'browserbase': 'https://browserbase.com',
+      'stagehand': 'https://stagehand.dev',
+      'hyperbrowser': 'https://hyperbrowser.ai',
+      'playwright': 'https://playwright.dev',
+      'puppeteer': 'https://pptr.dev',
+      'firecrawl': 'https://firecrawl.dev',
+      'apify': 'https://apify.com',
+      'brightdata': 'https://brightdata.com',
+      'tavily': 'https://tavily.com',
+      'exaai': 'https://exa.ai',
+      'temporal': 'https://temporal.io',
+      'langgraph': 'https://langchain.com/langgraph',
+      'inngest': 'https://inngest.com',
+      'perplexity': 'https://perplexity.ai',
+      'anthropic': 'https://anthropic.com',
+      'openai': 'https://openai.com',
+      'google': 'https://deepmind.google',
+    };
+    
+    return specialCases[cleanName] || `https://${cleanName}.com`;
+  };
+
+  const getCompanyLogoUrl = (companyName: string): string => {
+    const url = getCompanyUrl(companyName);
+    const domain = url.replace('https://', '').replace('http://', '').split('/')[0];
+    // Use Clearbit logo API for better quality logos
+    return `https://logo.clearbit.com/${domain}`;
+  };
+
   const fetchMarketMapData = async () => {
     try {
       const response = await fetch('/market-map.csv');
@@ -138,15 +180,15 @@ const Report2025 = () => {
             across {marketMap.length} key categories
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             {marketMap.map((category, idx) => (
-              <div key={idx} className="space-y-3">
-                <div className="flex items-center gap-3">
+              <div key={idx} className="space-y-4">
+                <div className="flex items-center gap-3 pb-2 border-b-2" style={{ borderColor: category.color }}>
                   <div 
-                    className="w-3 h-3 rounded-full"
+                    className="w-4 h-4 rounded-full"
                     style={{ backgroundColor: category.color }}
                   />
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-lg font-bold text-foreground">
                     {category.name}
                   </h3>
                   <Badge variant="outline" className="text-xs">
@@ -154,18 +196,21 @@ const Report2025 = () => {
                   </Badge>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
                   {category.companies.map((company, companyIdx) => (
-                    <div
+                    <a
                       key={companyIdx}
-                      className="group flex items-center gap-2 p-2 rounded-lg border border-border bg-card hover:bg-accent transition-colors"
-                      title={company.oneLiner}
+                      href={getCompanyUrl(company.name)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center gap-2 p-3 rounded-lg border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all hover:shadow-md"
+                      title={company.oneLiner || company.name}
                     >
-                      <div className="w-6 h-6 rounded bg-muted flex items-center justify-center overflow-hidden shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center overflow-hidden shrink-0 border border-border/50">
                         <img
-                          src={`https://www.google.com/s2/favicons?domain=${company.name.toLowerCase().replace(/\s+/g, '')}.com&sz=64`}
-                          alt={company.name}
-                          className="w-full h-full object-contain"
+                          src={getCompanyLogoUrl(company.name)}
+                          alt={`${company.name} logo`}
+                          className="w-8 h-8 object-contain"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
@@ -174,16 +219,19 @@ const Report2025 = () => {
                           }}
                         />
                         <div 
-                          className="w-full h-full items-center justify-center text-xs font-bold text-muted-foreground hidden"
-                          style={{ display: 'none' }}
+                          className="w-full h-full items-center justify-center text-lg font-bold hidden"
+                          style={{ 
+                            display: 'none',
+                            color: category.color
+                          }}
                         >
                           {company.name.charAt(0)}
                         </div>
                       </div>
-                      <span className="text-xs font-medium text-foreground truncate">
+                      <span className="text-xs font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                         {company.name}
                       </span>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
