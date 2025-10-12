@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -58,40 +57,42 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section className="py-8 md:py-16 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <Mail className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-              </div>
-            </div>
-            <div className="flex-1 space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-xl md:text-2xl font-semibold text-foreground">
-                  Subscribe for future updates
-                </h2>
-                <p className="text-sm md:text-base text-muted-foreground">
-                  We're testing every new big agentic automation update so that you get fresh hot takes in your inbox
-                </p>
-              </div>
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                <Input
-                  type="email"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-background"
-                  required
-                />
-                <Button type="submit" disabled={isLoading} className="whitespace-nowrap">
-                  {isLoading ? "Subscribing..." : "Subscribe"}
-                </Button>
-              </form>
+    <section className="space-y-6">
+      <div className="border-2 border-orange-500/20 rounded-2xl p-8 md:p-10 bg-gradient-to-br from-orange-500/5 to-orange-600/10">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/25">
+              <Mail className="w-8 h-8 text-white" />
             </div>
           </div>
-        </Card>
+          <div className="flex-1 space-y-5">
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Subscribe for future updates
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                We're testing every new big agentic automation update so that you get fresh hot takes in your inbox
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 h-12 text-base bg-background border-2 focus:border-orange-500 transition-colors"
+                required
+              />
+              <Button 
+                type="submit" 
+                disabled={isLoading} 
+                className="h-12 px-8 text-base font-semibold bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/25 transition-all"
+              >
+                {isLoading ? "Subscribing..." : "Subscribe"}
+              </Button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   );
