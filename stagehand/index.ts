@@ -59,7 +59,7 @@ const resultsWriter = createObjectCsvWriter({
   await stagehand.init();
 
   console.log(
-    `Live Stagehand session: https://browserbase.com/sessions/${stagehand.browserbaseSessionID}\n`
+    `Live Stagehand session: https://browserbase.com/sessions/${stagehand.browserbaseSessionID}`
   );
 
   const agent = stagehand.agent({
@@ -76,16 +76,16 @@ const resultsWriter = createObjectCsvWriter({
 
     if (!id || !url || !task || !category) throw new Error(`Task row #${taskOrdinal} malformed`);
 
-    console.log(`${taskOrdinal}. URL: ${url}\nTask: ${task}\n`);
+    console.log(`\n${taskOrdinal}. URL: ${url}\nTask: ${task}`);
 
     try {
       await stagehand.page.goto(url);
 
-      result = await agent.execute(task, { timeoutMs: 60000 });
+      result = await agent.execute(task);
 
-      console.log('Result:', result);
+      console.log('\nResult:', result);
     } catch (error: any) {
-      console.error('Task execution failure:', error.message);
+      console.error('\nTask execution failure:', error.message);
     } finally {
       await resultsWriter.writeRecords([{
         id,
