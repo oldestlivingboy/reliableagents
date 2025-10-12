@@ -47,7 +47,14 @@ const resultsWriter = createObjectCsvWriter({
 });
 
 (async () => {
-  const stagehand = new Stagehand({ env: 'BROWSERBASE' });
+  const stagehand = new Stagehand({
+    env: 'BROWSERBASE',
+    browserbaseSessionCreateParams: {
+      timeout: 21600,
+      keepAlive: true,
+      // browserSettings: { advancedStealth: true }
+    }
+  });
 
   await stagehand.init();
 
@@ -74,7 +81,7 @@ const resultsWriter = createObjectCsvWriter({
     try {
       await stagehand.page.goto(url);
 
-      result = await agent.execute(task);
+      result = await agent.execute(task, { timeoutMs: 60000 });
 
       console.log('Result:', result);
     } catch (error: any) {
@@ -88,7 +95,7 @@ const resultsWriter = createObjectCsvWriter({
         task,
         result: JSON.stringify(result),
         eval: result.success,
-        reasoning: String(result.message)
+        reasoning: result.message
       }]);
     }
   }
