@@ -180,95 +180,101 @@ const Report2025 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto max-w-4xl px-4 py-6 md:py-12">
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <div className="container mx-auto max-w-6xl px-6 py-8 md:py-16">
         <Link to="/">
-          <Button variant="ghost" size="sm" className="mb-6">
-            <ChevronLeft className="w-4 h-4 mr-2" />
-            Back to Home
+          <Button variant="ghost" size="sm" className="mb-8 -ml-3 text-muted-foreground hover:text-foreground">
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            Back
           </Button>
         </Link>
 
-        <header className="space-y-4 mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground">
+        <header className="space-y-6 mb-20 max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">
+            Q4 2025
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
             The Current State of Agentic Browser/Web/Computer Automation
           </h1>
-          <p className="text-lg text-muted-foreground">Q4 2025</p>
         </header>
 
         {/* INTRO Section */}
-        <section className="space-y-6 mb-16">
-          <h2 className="text-2xl font-bold text-foreground">INTRO</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Gen AI / agents craze is at its peak. Deservedly, unlike some "luddites" may claim. 
-              BUT one piece of the puzzle is still not fully there. Agents being able to reliably 
-              (emphasis wink-wink) use browsers to browse the web and use computers.
-            </p>
-            <p>
-              If you're an agentic developer, how do you navigate the stack and what does the stack 
-              actually consist of? Market maps are great - but not really actionable.
-            </p>
-            <p>
-              We've tasked ourselves with digging through the mess and establishing a good answer to 
-              this question: what's the state of the art in browser automation and who are the best 
-              companies you can use as a developer!
-            </p>
-            <p className="font-medium text-foreground">
-              So, starting today and with this report, we're launching RAL (Reliable Agents Leaderboard) - 
-              your one-stop shop for understanding and benchmarking agentic automation.
-            </p>
+        <section className="space-y-8 mb-24 max-w-3xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-6">Introduction</h2>
+            <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
+              <p>
+                Gen AI / agents craze is at its peak. Deservedly, unlike some "luddites" may claim. 
+                BUT one piece of the puzzle is still not fully there. Agents being able to reliably 
+                (emphasis wink-wink) use browsers to browse the web and use computers.
+              </p>
+              <p>
+                If you're an agentic developer, how do you navigate the stack and what does the stack 
+                actually consist of? Market maps are great - but not really actionable.
+              </p>
+              <p>
+                We've tasked ourselves with digging through the mess and establishing a good answer to 
+                this question: what's the state of the art in browser automation and who are the best 
+                companies you can use as a developer!
+              </p>
+              <p className="font-semibold text-foreground text-xl">
+                So, starting today and with this report, we're launching RAL (Reliable Agents Leaderboard) - 
+                your one-stop shop for understanding and benchmarking agentic automation.
+              </p>
+            </div>
           </div>
 
           {/* Created by Section */}
-          <Card className="p-6 bg-muted/20 mt-8">
-            <h3 className="text-lg font-semibold text-foreground mb-4">Created by:</h3>
-            <div className="space-y-4 text-sm text-muted-foreground">
-              <div>
-                <p className="font-medium text-foreground">Alex</p>
-                <p>
+          <div className="pt-12 border-t border-border/50">
+            <h3 className="text-xs font-semibold tracking-widest uppercase text-primary mb-8">Created by</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <p className="font-semibold text-foreground text-lg">Alex</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
                   He also created No Cap, the world's first AI agent that invested in a company. 
                   No Cap coached 10k+ founders and runs nc acc - an accelerator for solopreneurs.
                 </p>
               </div>
-              <div>
-                <p className="font-medium text-foreground">Brian</p>
-                <p>
+              <div className="space-y-2">
+                <p className="font-semibold text-foreground text-lg">Brian</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Ex-Googler who worked on the company's first mobile ad server and started their DevRel team. 
                   Co-founded Disconnect (privacy software shipped with most modern browsers - protecting 750,000,000 users) 
                   and Massive (alternative to ads paywalls) - named Proxyway's 2025 "Newcomer of the Year" for bandwidth monetization.
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
         </section>
 
         {/* MARKET MAP Section */}
-        <section className="space-y-6 mb-16">
-          <h2 className="text-2xl font-bold text-foreground">MARKET MAP</h2>
-          <p className="text-sm text-muted-foreground mb-6">
-            Categorizing {marketMap.reduce((sum, cat) => sum + cat.companies.length, 0)} companies 
-            across {marketMap.length} key categories
-          </p>
+        <section className="space-y-8 mb-24">
+          <div className="max-w-3xl">
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map</h2>
+            <p className="text-sm text-muted-foreground">
+              Categorizing {marketMap.reduce((sum, cat) => sum + cat.companies.length, 0)} companies 
+              across {marketMap.length} key categories
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
             {marketMap.map((category, idx) => (
-              <div key={idx} className="space-y-2">
-                <div className="flex items-center gap-2 pb-1 border-b" style={{ borderColor: category.color }}>
+              <div key={idx} className="space-y-4">
+                <div className="flex items-center gap-2.5">
                   <div 
-                    className="w-2 h-2 rounded-full"
+                    className="w-1.5 h-1.5 rounded-full"
                     style={{ backgroundColor: category.color }}
                   />
-                  <h3 className="text-sm font-bold text-foreground">
+                  <h3 className="text-sm font-semibold text-foreground tracking-tight">
                     {category.name}
                   </h3>
-                  <Badge variant="outline" className="text-[10px] px-1 py-0">
+                  <span className="text-[10px] text-muted-foreground font-medium">
                     {category.companies.length}
-                  </Badge>
+                  </span>
                 </div>
                 
-                <div className="grid grid-cols-4 sm:grid-cols-5 gap-1.5">
+                <div className="grid grid-cols-5 sm:grid-cols-6 gap-3">
                   {category.companies.map((company, companyIdx) => {
                     const domain = getCompanyDomain(company.name);
                     return (
@@ -277,10 +283,10 @@ const Report2025 = () => {
                         href={getCompanyUrl(company.name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-1 p-1.5 rounded border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all"
+                        className="group flex flex-col items-center gap-1.5 transition-transform hover:scale-105"
                         title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}`}
                       >
-                        <div className="w-8 h-8 rounded bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden border border-border/30 p-0.5">
+                        <div className="w-10 h-10 rounded-xl bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden border border-border/40 p-1.5 shadow-sm group-hover:shadow-md transition-shadow">
                           <img
                             src={`https://logo.clearbit.com/${domain}`}
                             alt={company.name}
@@ -302,7 +308,7 @@ const Report2025 = () => {
                             }}
                           />
                         </div>
-                        <span className="text-[10px] font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-1 leading-tight w-full px-0.5">
+                        <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                           {company.name}
                         </span>
                       </a>
@@ -315,58 +321,76 @@ const Report2025 = () => {
         </section>
 
         {/* WHERE TO START Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-primary/10 to-transparent p-6 rounded-lg border-l-4 border-primary">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">WHERE TO START</h2>
-            <p className="text-muted-foreground leading-relaxed">
+        <section className="space-y-8 mb-24 max-w-4xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
               Scary, right? These maps look impressive - but how do you actually navigate them?
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground">The stack you really control</h3>
-            <Card className="p-6 space-y-4 bg-muted/20">
-              <div className="space-y-3">
-                <div>
-                  <p className="font-medium text-foreground">1. Agent brain</p>
-                  <p className="text-sm text-muted-foreground">Your vertical logic + models</p>
+          <div className="space-y-6">
+            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">The stack you really control</h3>
+            <div className="space-y-1 bg-muted/30 rounded-2xl p-8 border border-border/40">
+              <div className="grid gap-6">
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">01</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Agent brain</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Your vertical logic + models</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">2. Agentic control layer</p>
-                  <p className="text-sm text-muted-foreground">Browser Use, Stagehand, Skyvern, LaVague (decide actions)</p>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">02</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Agentic control layer</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Browser Use, Stagehand, Skyvern, LaVague (decide actions)</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">3. Browser control</p>
-                  <p className="text-sm text-muted-foreground">CDP, Playwright, Puppeteer (send actions to a browser)</p>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">03</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Browser control</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">CDP, Playwright, Puppeteer (send actions to a browser)</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">4. Execution environment</p>
-                  <p className="text-sm text-muted-foreground">Local headless or cloud browsers: Anchor, Browserbase, Hyperbrowser</p>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">04</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Execution environment</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Local headless or cloud browsers: Anchor, Browserbase, Hyperbrowser</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">5. Desktop OS control (optional)</p>
-                  <p className="text-sm text-muted-foreground">Cua, SCRAPYBARA when there's no DOM, Citrix native apps</p>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">05</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Desktop OS control <span className="text-xs text-muted-foreground">(optional)</span></p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Cua, SCRAPYBARA when there's no DOM, Citrix native apps</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">6. Orchestration</p>
-                  <p className="text-sm text-muted-foreground">Temporal, Inngest, LangGraph for retries, timeouts, state, audit</p>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">06</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Orchestration</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for retries, timeouts, state, audit</p>
+                  </div>
                 </div>
               </div>
               
-              <div className="pt-4 border-t border-border">
-                <p className="text-sm font-medium text-foreground">
-                  💡 What you really care about: Pick the agentic control layer first, then pick where it runs. 
+              <div className="pt-6 mt-6 border-t border-border/50">
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  <span className="font-semibold">Key insight:</span> Pick the agentic control layer first, then pick where it runs. 
                   Treat frameworks like Stagehand or Browser Use as your "React" - and Browserbase/Anchor/Hyperbrowser as your "Vercel".
                 </p>
               </div>
-            </Card>
+            </div>
           </div>
         </section>
 
         {/* MAP CATEGORIES → STACK LAYERS Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-secondary/10 to-transparent p-6 rounded-lg border-l-4 border-secondary">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Map categories → stack layers</h2>
+        <section className="space-y-8 mb-24 max-w-5xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Map categories → stack layers</h2>
             <p className="text-muted-foreground leading-relaxed">
               Here is how the categories in the market map plug straight into this stack. Use this to decide what to evaluate vs what to merely get inspired by.
             </p>
@@ -375,67 +399,67 @@ const Report2025 = () => {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
-                <tr className="border-b-2 border-border">
-                  <th className="text-left p-3 font-semibold text-foreground">Category</th>
-                  <th className="text-left p-3 font-semibold text-foreground">Stack Layer</th>
-                  <th className="text-left p-3 font-semibold text-foreground">What it does</th>
-                  <th className="text-left p-3 font-semibold text-foreground">Examples</th>
+                <tr className="border-b border-border/50">
+                  <th className="text-left py-3 px-4 font-semibold text-foreground/60 text-xs uppercase tracking-wide">Category</th>
+                  <th className="text-left py-3 px-4 font-semibold text-foreground/60 text-xs uppercase tracking-wide">Layer</th>
+                  <th className="text-left py-3 px-4 font-semibold text-foreground/60 text-xs uppercase tracking-wide">What it does</th>
+                  <th className="text-left py-3 px-4 font-semibold text-foreground/60 text-xs uppercase tracking-wide">Examples</th>
                 </tr>
               </thead>
-              <tbody className="text-muted-foreground">
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Consumer agents</td>
-                  <td className="p-3">1-2</td>
-                  <td className="p-3">Agent brain + agentic control</td>
-                  <td className="p-3">Manus, Yutori, DEX, KAIROS</td>
+              <tbody className="text-muted-foreground text-sm">
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Consumer agents</td>
+                  <td className="py-3 px-4">1-2</td>
+                  <td className="py-3 px-4">Agent brain + agentic control</td>
+                  <td className="py-3 px-4">Manus, Yutori, DEX, KAIROS</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">AI browsers</td>
-                  <td className="p-3">2, 4</td>
-                  <td className="p-3">Built-in agent layer + execution env</td>
-                  <td className="p-3">Dia, Opera, Comet</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">AI browsers</td>
+                  <td className="py-3 px-4">2, 4</td>
+                  <td className="py-3 px-4">Built-in agent layer + execution env</td>
+                  <td className="py-3 px-4">Dia, Opera, Comet</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Enterprise agents</td>
-                  <td className="p-3">1-2, 6</td>
-                  <td className="p-3">Compliance, audit, SSO</td>
-                  <td className="p-3">Orby, CopyCat, Athena, Narada</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Enterprise agents</td>
+                  <td className="py-3 px-4">1-2, 6</td>
+                  <td className="py-3 px-4">Compliance, audit, SSO</td>
+                  <td className="py-3 px-4">Orby, CopyCat, Athena, Narada</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Frameworks & libraries</td>
-                  <td className="p-3">2</td>
-                  <td className="p-3">Decide actions - plan, click, type, recover</td>
-                  <td className="p-3">Browser Use, Stagehand, Skyvern, LaVague</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Frameworks & libraries</td>
+                  <td className="py-3 px-4">2</td>
+                  <td className="py-3 px-4">Decide actions - plan, click, type, recover</td>
+                  <td className="py-3 px-4">Browser Use, Stagehand, Skyvern, LaVague</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Browser control & protocols</td>
-                  <td className="p-3">3</td>
-                  <td className="p-3">Send actions to the browser</td>
-                  <td className="p-3">Playwright, Puppeteer, CDP</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Browser control & protocols</td>
+                  <td className="py-3 px-4">3</td>
+                  <td className="py-3 px-4">Send actions to the browser</td>
+                  <td className="py-3 px-4">Playwright, Puppeteer, CDP</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Browser-as-a-Service infra</td>
-                  <td className="p-3">4</td>
-                  <td className="p-3">Hosted cloud browser sessions, proxies, replay</td>
-                  <td className="p-3">Browserbase, Anchor, Hyperbrowser</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Browser-as-a-Service infra</td>
+                  <td className="py-3 px-4">4</td>
+                  <td className="py-3 px-4">Hosted cloud browser sessions, proxies, replay</td>
+                  <td className="py-3 px-4">Browserbase, Anchor, Hyperbrowser</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Desktop OS control</td>
-                  <td className="p-3">5</td>
-                  <td className="p-3">Automate non-web UIs, VDI, Citrix</td>
-                  <td className="p-3">Cua, SCRAPYBARA</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Desktop OS control</td>
+                  <td className="py-3 px-4">5</td>
+                  <td className="py-3 px-4">Automate non-web UIs, VDI, Citrix</td>
+                  <td className="py-3 px-4">Cua, SCRAPYBARA</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Orchestration</td>
-                  <td className="p-3">6</td>
-                  <td className="p-3">Retries, state, timeouts, audit, SLAs</td>
-                  <td className="p-3">Temporal, Inngest, LangGraph</td>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Orchestration</td>
+                  <td className="py-3 px-4">6</td>
+                  <td className="py-3 px-4">Retries, state, timeouts, audit, SLAs</td>
+                  <td className="py-3 px-4">Temporal, Inngest, LangGraph</td>
                 </tr>
-                <tr className="border-b border-border/50 hover:bg-muted/50">
-                  <td className="p-3 font-medium">Computer Use models</td>
-                  <td className="p-3">1</td>
-                  <td className="p-3">Policy reasoning</td>
-                  <td className="p-3">Claude Computer Use, OpenAI CUA, Gemini 2.5</td>
+                <tr className="hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Computer Use models</td>
+                  <td className="py-3 px-4">1</td>
+                  <td className="py-3 px-4">Policy reasoning</td>
+                  <td className="py-3 px-4">Claude Computer Use, OpenAI CUA, Gemini 2.5</td>
                 </tr>
               </tbody>
             </table>
@@ -443,23 +467,21 @@ const Report2025 = () => {
         </section>
 
         {/* DECISION FLOW Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-accent/10 to-transparent p-6 rounded-lg border-l-4 border-accent">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Decision Flow</h2>
-          </div>
+        <section className="space-y-8 mb-24 max-w-4xl">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-6">Decision Flow</h2>
 
-          <Card className="p-6 space-y-6 bg-muted/20">
+          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
             <div>
-              <h3 className="font-semibold text-foreground mb-2">Is interaction required? (login, forms, upload, pagination)</h3>
-              <ul className="space-y-2 ml-4">
-                <li className="text-muted-foreground">• <strong>No</strong> - use Firecrawl or similar crawler to fetch content cheaply</li>
-                <li className="text-muted-foreground">• <strong>Yes</strong> - go agentic ↓</li>
-              </ul>
+              <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, forms, upload, pagination)</span></h3>
+              <div className="space-y-2 ml-4 text-sm">
+                <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → use Firecrawl or similar crawler to fetch content cheaply</p>
+                <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
+              </div>
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-2">Pick control layer:</h3>
-              <ul className="space-y-1 ml-4 text-muted-foreground">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Pick control layer</h3>
+              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
                 <li>• Browser Use for speed</li>
                 <li>• Stagehand for reliability</li>
                 <li>• Skyvern for vision-heavy pages</li>
@@ -467,8 +489,8 @@ const Report2025 = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-2">Pick infrastructure:</h3>
-              <ul className="space-y-1 ml-4 text-muted-foreground">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Pick infrastructure</h3>
+              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
                 <li>• Browserbase if you need replay and observability</li>
                 <li>• Anchor for simple scalable sessions</li>
                 <li>• Hyperbrowser for anti-bot heavy environments</li>
@@ -476,157 +498,164 @@ const Report2025 = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-2">Pick model:</h3>
-              <ul className="space-y-1 ml-4 text-muted-foreground">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Pick model</h3>
+              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
                 <li>• Claude Computer Use or OpenAI CUA for pixel control</li>
                 <li>• Gemini 2.5 for balanced performance</li>
                 <li>• Or a strong general LLM for DOM/code stacks</li>
               </ul>
             </div>
-          </Card>
+          </div>
         </section>
 
         {/* COMMON PROBLEMS Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-destructive/10 to-transparent p-6 rounded-lg border-l-4 border-destructive">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">COMMON PROBLEMS</h2>
-            <p className="text-muted-foreground leading-relaxed">
+        <section className="space-y-8 mb-24 max-w-4xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Common Problems</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Why do agents still face-plant in production?
             </p>
           </div>
 
-          <Card className="p-6 bg-muted/20">
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="text-destructive font-bold">•</span>
-                <div>
-                  <strong className="text-foreground">Timeouts</strong> - long trajectories, slow DOMs, flaky waits
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-destructive font-bold">•</span>
-                <div>
-                  <strong className="text-foreground">Pop-ups & modals</strong> - can't close or mis-detect overlays
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-destructive font-bold">•</span>
-                <div>
-                  <strong className="text-foreground">Captcha & fingerprinting</strong> - infra issues often block agents more than reasoning does
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-destructive font-bold">•</span>
-                <div>
-                  <strong className="text-foreground">Auth flows</strong> - login, MFA, device checks, bot walls
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-destructive font-bold">•</span>
-                <div>
-                  <strong className="text-foreground">Slow execution</strong> - vision loops for trivial steps explode cost & latency
-                </div>
-              </li>
-            </ul>
-            <p className="mt-6 font-semibold text-foreground">
-              Translation: fix infra first - then policy.
-            </p>
-          </Card>
+          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-4">
+            <div className="flex gap-4 items-start">
+              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground mb-1">Timeouts</p>
+                <p className="text-sm text-muted-foreground">Long trajectories, slow DOMs, flaky waits</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground mb-1">Pop-ups & modals</p>
+                <p className="text-sm text-muted-foreground">Can't close or mis-detect overlays</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground mb-1">Captcha & fingerprinting</p>
+                <p className="text-sm text-muted-foreground">Infra issues often block agents more than reasoning does</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground mb-1">Auth flows</p>
+                <p className="text-sm text-muted-foreground">Login, MFA, device checks, bot walls</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground mb-1">Slow execution</p>
+                <p className="text-sm text-muted-foreground">Vision loops for trivial steps explode cost & latency</p>
+              </div>
+            </div>
+            <div className="pt-6 mt-6 border-t border-border/50">
+              <p className="text-sm font-semibold text-foreground">
+                Translation: fix infra first - then policy.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* RAL LAUNCH Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-primary/10 to-transparent p-6 rounded-lg border-l-4 border-primary">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">RAL LAUNCH</h2>
-            <p className="text-muted-foreground leading-relaxed">
+        <section className="space-y-8 mb-24 max-w-4xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">RAL Launch</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Today, we're launching RAL (Reliable Agents Leaderboard) with a focus on agentic control layers + browser infra combinations.
             </p>
           </div>
 
-          <Card className="p-6 space-y-4 bg-muted/20">
-            <h3 className="font-semibold text-foreground text-lg">Method - simple and reproducible</h3>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• Separate READ vs WRITE task classes</li>
-              <li>• 3 canonical flows: login + 2FA, paginate & extract, form submit + upload</li>
-              <li>• Require replay video + console + HAR + DOM snapshots per attempt</li>
-              <li>• Report: success rate, median steps, p50 time, cost per successful task, human handoff rate</li>
-              <li>• Keep proxy, fingerprint, captcha policies identical across runs</li>
-              <li>• Log infra vs agent failure root causes</li>
-            </ul>
-            <p className="pt-4 font-medium text-foreground border-t border-border">
-              Why this matters: you can finally compare apples to apples. Frameworks are tested like frameworks. 
-              Infra is tested like infra. Models are held constant where appropriate.
-            </p>
-          </Card>
+          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-6">
+            <div>
+              <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide mb-4">Method - simple and reproducible</h3>
+              <ul className="space-y-2.5 text-sm text-muted-foreground">
+                <li className="flex gap-3"><span className="text-primary">•</span> Separate READ vs WRITE task classes</li>
+                <li className="flex gap-3"><span className="text-primary">•</span> 3 canonical flows: login + 2FA, paginate & extract, form submit + upload</li>
+                <li className="flex gap-3"><span className="text-primary">•</span> Require replay video + console + HAR + DOM snapshots per attempt</li>
+                <li className="flex gap-3"><span className="text-primary">•</span> Report: success rate, median steps, p50 time, cost per successful task, human handoff rate</li>
+                <li className="flex gap-3"><span className="text-primary">•</span> Keep proxy, fingerprint, captcha policies identical across runs</li>
+                <li className="flex gap-3"><span className="text-primary">•</span> Log infra vs agent failure root causes</li>
+              </ul>
+            </div>
+            <div className="pt-4 border-t border-border/50">
+              <p className="text-sm text-foreground/80 leading-relaxed">
+                <span className="font-semibold">Why this matters:</span> you can finally compare apples to apples. Frameworks are tested like frameworks. 
+                Infra is tested like infra. Models are held constant where appropriate.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* FUTURE LEADERBOARDS Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-secondary/10 to-transparent p-6 rounded-lg border-l-4 border-secondary">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">FUTURE LEADERBOARDS TO COME</h2>
-            <p className="text-muted-foreground">Subscribe to stay updated!</p>
+        <section className="space-y-8 mb-24 max-w-5xl">
+          <div>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-2">Future Leaderboards</h2>
+            <p className="text-sm text-muted-foreground">Subscribe to stay updated!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Enterprise agents</h3>
-              <p className="text-sm text-muted-foreground">Verticalized flows with compliance, audit, replay, residency</p>
-            </Card>
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Consumer agents & AI browsers</h3>
-              <p className="text-sm text-muted-foreground">Prosumer UX, speed, utility</p>
-            </Card>
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Desktop OS control</h3>
-              <p className="text-sm text-muted-foreground">Citrix, legacy thick clients</p>
-            </Card>
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Memory services</h3>
-              <p className="text-sm text-muted-foreground">Persistence, retrieval, tutoring across repeated tasks</p>
-            </Card>
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Anti-bot setups</h3>
-              <p className="text-sm text-muted-foreground">Proxies, fingerprints, captchas compared fairly</p>
-            </Card>
-            <Card className="p-4 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Training environments</h3>
-              <p className="text-sm text-muted-foreground">Sandbox replicas for safe RL/SFT on real flows</p>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Enterprise agents</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Verticalized flows with compliance, audit, replay, residency</p>
+            </div>
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Consumer agents & AI browsers</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Prosumer UX, speed, utility</p>
+            </div>
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Desktop OS control</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Citrix, legacy thick clients</p>
+            </div>
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Memory services</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Persistence, retrieval, tutoring across repeated tasks</p>
+            </div>
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Anti-bot setups</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Proxies, fingerprints, captchas compared fairly</p>
+            </div>
+            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
+              <h3 className="font-semibold text-foreground mb-2 text-sm">Training environments</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">Sandbox replicas for safe RL/SFT on real flows</p>
+            </div>
           </div>
         </section>
 
         {/* APPENDIX - QUICK FAQ Section */}
-        <section className="space-y-6 mb-16">
-          <div className="bg-gradient-to-r from-accent/10 to-transparent p-6 rounded-lg border-l-4 border-accent">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">APPENDIX - QUICK FAQ</h2>
-          </div>
+        <section className="space-y-8 mb-24 max-w-4xl">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-primary">Quick FAQ</h2>
 
           <div className="space-y-4">
-            <Card className="p-5 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Do I start with a provider-hosted Computer Use model or a framework?</h3>
-              <p className="text-sm text-muted-foreground">
+            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Do I start with a provider-hosted Computer Use model or a framework?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Start with provider-hosted to ship a demo today. Move to framework + infra when you need replay, audits, stealth control, data residency.
               </p>
-            </Card>
+            </div>
 
-            <Card className="p-5 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Is pixel better than DOM?</h3>
-              <p className="text-sm text-muted-foreground">
+            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Is pixel better than DOM?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Reading is easy either way. For write-heavy flows, DOM-first plus deterministic code paths often wins on latency and stability - pixel is improving fast.
               </p>
-            </Card>
+            </div>
 
-            <Card className="p-5 bg-muted/20">
-              <h3 className="font-semibold text-foreground mb-2">Why vertical agents?</h3>
-              <p className="text-sm text-muted-foreground">
+            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+              <h3 className="font-semibold text-foreground mb-3 text-base">Why vertical agents?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Context specialization and narrower action spaces raise reliability - the near-term path to production wins.
               </p>
-            </Card>
+            </div>
           </div>
         </section>
 
-        <footer className="mt-16 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground text-center">
+        <footer className="mt-24 pt-8 border-t border-border/30 max-w-5xl">
+          <p className="text-xs text-muted-foreground text-center">
             © 2025 Reliable Agents Leaderboard. All rights reserved.
           </p>
         </footer>
