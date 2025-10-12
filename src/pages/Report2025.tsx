@@ -90,87 +90,156 @@ const Report2025 = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto max-w-6xl px-4 py-6 md:py-12">
+      <div className="container mx-auto max-w-4xl px-4 py-6 md:py-12">
         <Link to="/">
-          <Button variant="ghost" size="sm" className="mb-4">
+          <Button variant="ghost" size="sm" className="mb-6">
             <ChevronLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
         </Link>
 
-        <header className="space-y-3 md:space-y-4 mb-8 md:mb-12">
+        <header className="space-y-4 mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-foreground">
-            The Current State of Agentic Web Automation
+            The Current State of Agentic Browser/Web/Computer Automation
           </h1>
-          <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
-            A comprehensive market map of companies and tools enabling AI agents to 
-            interact with the web and browsers.
-          </p>
+          <p className="text-lg text-muted-foreground">Q4 2025</p>
         </header>
 
-        <section className="space-y-6 md:space-y-8">
-          <div className="prose prose-sm md:prose-base max-w-none">
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Market Overview
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              The agentic web automation space is rapidly evolving, with solutions spanning 
-              from consumer-facing browsers to enterprise infrastructure. This market map 
-              categorizes {marketMap.reduce((sum, cat) => sum + cat.companies.length, 0)} 
-              companies and tools across {marketMap.length} key categories.
+        {/* INTRO Section */}
+        <section className="space-y-6 mb-16">
+          <h2 className="text-2xl font-bold text-foreground">INTRO</h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Gen AI / agents craze is at its peak. Deservedly, unlike some "luddites" may claim. 
+              BUT one piece of the puzzle is still not fully there. Agents being able to reliably 
+              (emphasis wink-wink) use browsers to browse the web and use computers.
+            </p>
+            <p>
+              If you're an agentic developer, how do you navigate the stack and what does the stack 
+              actually consist of? Market maps are great - but not really actionable.
+            </p>
+            <p>
+              We've tasked ourselves with digging through the mess and establishing a good answer to 
+              this question: what's the state of the art in browser automation and who are the best 
+              companies you can use as a developer!
+            </p>
+            <p className="font-medium text-foreground">
+              So, starting today and with this report, we're launching RAL (Reliable Agents Leaderboard) - 
+              your one-stop shop for understanding and benchmarking agentic automation.
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
+        {/* MARKET MAP Section */}
+        <section className="space-y-6 mb-16">
+          <h2 className="text-2xl font-bold text-foreground">MARKET MAP</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            Categorizing {marketMap.reduce((sum, cat) => sum + cat.companies.length, 0)} companies 
+            across {marketMap.length} key categories
+          </p>
+
+          <div className="space-y-6">
             {marketMap.map((category, idx) => (
-              <Card 
-                key={idx} 
-                className="p-4 md:p-6"
-                style={{ borderLeft: `4px solid ${category.color}` }}
-              >
-                <div className="space-y-4">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg md:text-xl font-semibold text-foreground">
-                      {category.name}
-                    </h3>
-                    <Badge variant="secondary" className="shrink-0">
-                      {category.companies.length} {category.companies.length === 1 ? 'company' : 'companies'}
-                    </Badge>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {category.companies.map((company, companyIdx) => (
-                      <div
-                        key={companyIdx}
-                        className="p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                      >
-                        <div className="flex items-start gap-2">
-                          <div 
-                            className="w-2 h-2 rounded-full shrink-0 mt-1.5"
-                            style={{ backgroundColor: category.color }}
-                          />
-                          <div className="min-w-0 flex-1">
-                            <p className="font-medium text-sm text-foreground truncate">
-                              {company.name}
-                            </p>
-                            {company.oneLiner && (
-                              <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
-                                {company.oneLiner}
-                              </p>
-                            )}
-                          </div>
+              <div key={idx} className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div 
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: category.color }}
+                  />
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {category.name}
+                  </h3>
+                  <Badge variant="outline" className="text-xs">
+                    {category.companies.length}
+                  </Badge>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                  {category.companies.map((company, companyIdx) => (
+                    <div
+                      key={companyIdx}
+                      className="group flex items-center gap-2 p-2 rounded-lg border border-border bg-card hover:bg-accent transition-colors"
+                      title={company.oneLiner}
+                    >
+                      <div className="w-6 h-6 rounded bg-muted flex items-center justify-center overflow-hidden shrink-0">
+                        <img
+                          src={`https://www.google.com/s2/favicons?domain=${company.name.toLowerCase().replace(/\s+/g, '')}.com&sz=64`}
+                          alt={company.name}
+                          className="w-full h-full object-contain"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const fallback = target.nextElementSibling as HTMLElement;
+                            if (fallback) fallback.style.display = 'flex';
+                          }}
+                        />
+                        <div 
+                          className="w-full h-full items-center justify-center text-xs font-bold text-muted-foreground hidden"
+                          style={{ display: 'none' }}
+                        >
+                          {company.name.charAt(0)}
                         </div>
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-xs font-medium text-foreground truncate">
+                        {company.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </section>
 
-        <footer className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-border">
-          <p className="text-xs md:text-sm text-muted-foreground text-center">
+        {/* WHERE TO START Section */}
+        <section className="space-y-6 mb-16">
+          <h2 className="text-2xl font-bold text-foreground">WHERE TO START</h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            Scary, right? These maps look impressive - but how do you actually navigate them?
+          </p>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">The stack you really control</h3>
+            <Card className="p-6 space-y-4 bg-muted/20">
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-foreground">1. Agent brain</p>
+                  <p className="text-sm text-muted-foreground">Your vertical logic + models</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">2. Agentic control layer</p>
+                  <p className="text-sm text-muted-foreground">Browser Use, Stagehand, Skyvern, LaVague (decide actions)</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">3. Browser control</p>
+                  <p className="text-sm text-muted-foreground">CDP, Playwright, Puppeteer (send actions to a browser)</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">4. Execution environment</p>
+                  <p className="text-sm text-muted-foreground">Local headless or cloud browsers: Anchor, Browserbase, Hyperbrowser</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">5. Desktop OS control (optional)</p>
+                  <p className="text-sm text-muted-foreground">Cua, SCRAPYBARA when there's no DOM, Citrix native apps</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">6. Orchestration</p>
+                  <p className="text-sm text-muted-foreground">Temporal, Inngest, LangGraph for retries, timeouts, state, audit</p>
+                </div>
+              </div>
+              
+              <div className="pt-4 border-t border-border">
+                <p className="text-sm font-medium text-foreground">
+                  💡 What you really care about: Pick the agentic control layer first, then pick where it runs. 
+                  Treat frameworks like Stagehand or Browser Use as your "React" - and Browserbase/Anchor/Hyperbrowser as your "Vercel".
+                </p>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <footer className="mt-16 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground text-center">
             © 2025 Reliable Agents Leaderboard. All rights reserved.
           </p>
         </footer>
