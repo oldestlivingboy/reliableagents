@@ -25,46 +25,91 @@ const Report2025 = () => {
   }, []);
 
   const getCompanyUrl = (companyName: string): string => {
-    // Clean up company name and create URL
     const cleanName = companyName
       .toLowerCase()
-      .replace(/\s*\(.*?\)\s*/g, '') // Remove parentheses content
-      .replace(/\s+/g, '')
-      .replace(/[^a-z0-9]/g, '');
+      .replace(/\s*\(.*?\)\s*/g, '')
+      .trim();
     
-    // Special cases
-    const specialCases: { [key: string]: string } = {
-      'browseruse': 'https://github.com/browser-use/browser-use',
-      'lavague': 'https://lavague.ai',
+    const urlMap: { [key: string]: string } = {
+      'dex': 'https://dex.ai',
+      'kairos': 'https://kairos.ai',
+      'please': 'https://please.com',
+      'convergence proxy': 'https://convergence.ai',
+      'godmode ai': 'https://godmode.space',
+      'general agents': 'https://generalagents.ai',
+      'nanobrowser': 'https://nanobrowser.com',
+      'dia': 'https://dia.so',
+      'opera': 'https://opera.com',
+      'perplexity search api': 'https://perplexity.ai',
+      'comet': 'https://comet.com',
+      'asteroid': 'https://asteroid.ai',
+      'basepilot': 'https://basepilot.ai',
+      'orby': 'https://orby.ai',
+      'h': 'https://h.company',
+      'copycat': 'https://copycat.ai',
+      'athena intelligence': 'https://athena.io',
+      'narada': 'https://narada.ai',
+      'twin': 'https://twin.so',
+      'emergence': 'https://emergence.ai',
       'skyvern': 'https://skyvern.com',
+      'simular': 'https://simular.ai',
+      'browser use': 'https://github.com/browser-use/browser-use',
+      'lavague': 'https://lavague.ai',
+      'hyperbrowser': 'https://hyperbrowser.ai',
+      'cua': 'https://cua.dev',
+      'trycua': 'https://cua.dev',
       'browserbase': 'https://browserbase.com',
       'stagehand': 'https://stagehand.dev',
-      'hyperbrowser': 'https://hyperbrowser.ai',
-      'playwright': 'https://playwright.dev',
-      'puppeteer': 'https://pptr.dev',
-      'firecrawl': 'https://firecrawl.dev',
-      'apify': 'https://apify.com',
-      'brightdata': 'https://brightdata.com',
-      'tavily': 'https://tavily.com',
-      'exaai': 'https://exa.ai',
+      'director': 'https://browserbase.com',
+      'anon': 'https://anon.com',
+      'openai operator': 'https://openai.com',
+      'google project mariner': 'https://deepmind.google/technologies/project-mariner',
+      'bytedance ui-tars': 'https://bytedance.com',
+      'amazon nova': 'https://aws.amazon.com/ai/generative-ai/nova',
+      'omniparser': 'https://github.com/microsoft/OmniParser',
+      'anthropic claude computer use': 'https://anthropic.com/claude',
+      'glm-4.5v': 'https://chatglm.cn',
+      'qwen2.5-vl': 'https://qwenlm.github.io',
+      'opencua': 'https://github.com/opencua/opencua',
+      'axiom-1': 'https://inductionlabs.ai',
+      'coact-1': 'https://coact.ai',
+      'inngest': 'https://inngest.com',
+      'ingnest': 'https://inngest.com',
       'temporal': 'https://temporal.io',
       'langgraph': 'https://langchain.com/langgraph',
-      'inngest': 'https://inngest.com',
-      'perplexity': 'https://perplexity.ai',
-      'anthropic': 'https://anthropic.com',
-      'openai': 'https://openai.com',
-      'google': 'https://deepmind.google',
+      'playwright': 'https://playwright.dev',
+      'puppeteer': 'https://pptr.dev',
+      'lightpanda': 'https://lightpanda.io',
+      'anchor browser': 'https://anchor.io',
+      'kernel': 'https://kernel.io',
+      's1': 'https://s1.ai',
+      'scrapybara': 'https://scrapybara.com',
+      'yutori': 'https://yutori.ai',
+      'manus': 'https://manus.app',
+      'google gemini 2.5': 'https://deepmind.google/gemini',
+      'chrome': 'https://google.com/chrome',
+      'microsoft edge copilot': 'https://microsoft.com/edge',
+      'kura ai': 'https://kura.ai',
+      'firecrawl': 'https://firecrawl.dev',
+      'trigger.dev': 'https://trigger.dev',
+      'apify': 'https://apify.com',
+      'bright data': 'https://brightdata.com',
+      'browser.ai': 'https://browser.ai',
+      'kaizen': 'https://kaizen.ai',
+      'halluminate': 'https://halluminate.ai',
+      'tavily': 'https://tavily.com',
+      'exa.ai': 'https://exa.ai',
+      'browserless': 'https://browserless.io',
+      'zyte.com': 'https://zyte.com',
+      'scrapy': 'https://scrapy.org',
     };
     
-    return specialCases[cleanName] || `https://${cleanName}.com`;
+    return urlMap[cleanName] || `https://${cleanName.replace(/\s+/g, '')}.com`;
   };
 
-  const getCompanyLogoUrl = (companyName: string): string => {
+  const getCompanyDomain = (companyName: string): string => {
     const url = getCompanyUrl(companyName);
-    const domain = url.replace('https://', '').replace('http://', '').split('/')[0];
-    
-    // Return multiple fallback URLs
-    return domain;
+    return url.replace('https://', '').replace('http://', '').split('/')[0];
   };
 
   const fetchMarketMapData = async () => {
@@ -174,6 +219,29 @@ const Report2025 = () => {
               your one-stop shop for understanding and benchmarking agentic automation.
             </p>
           </div>
+
+          {/* Created by Section */}
+          <Card className="p-6 bg-muted/20 mt-8">
+            <h3 className="text-lg font-semibold text-foreground mb-4">Created by:</h3>
+            <div className="space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="font-medium text-foreground">Alex</p>
+                <p>
+                  A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
+                  He also created No Cap, the world's first AI agent that invested in a company. 
+                  No Cap coached 10k+ founders and runs nc acc - an accelerator for solopreneurs.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Brian</p>
+                <p>
+                  Ex-Googler who worked on the company's first mobile ad server and started their DevRel team. 
+                  Co-founded Disconnect (privacy software shipped with most modern browsers - protecting 750,000,000 users) 
+                  and Massive (alternative to ads paywalls) - named Proxyway's 2025 "Newcomer of the Year" for bandwidth monetization.
+                </p>
+              </div>
+            </div>
+          </Card>
         </section>
 
         {/* MARKET MAP Section */}
@@ -184,62 +252,57 @@ const Report2025 = () => {
             across {marketMap.length} key categories
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {marketMap.map((category, idx) => (
-              <div key={idx} className="space-y-4">
-                <div className="flex items-center gap-3 pb-2 border-b-2" style={{ borderColor: category.color }}>
+              <div key={idx} className="space-y-2">
+                <div className="flex items-center gap-2 pb-1 border-b" style={{ borderColor: category.color }}>
                   <div 
-                    className="w-4 h-4 rounded-full"
+                    className="w-2 h-2 rounded-full"
                     style={{ backgroundColor: category.color }}
                   />
-                  <h3 className="text-lg font-bold text-foreground">
+                  <h3 className="text-sm font-bold text-foreground">
                     {category.name}
                   </h3>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-[10px] px-1 py-0">
                     {category.companies.length}
                   </Badge>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <div className="grid grid-cols-4 sm:grid-cols-5 gap-1.5">
                   {category.companies.map((company, companyIdx) => {
-                    const domain = getCompanyLogoUrl(company.name);
+                    const domain = getCompanyDomain(company.name);
                     return (
                       <a
                         key={companyIdx}
                         href={getCompanyUrl(company.name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-2 p-3 rounded-lg border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all hover:shadow-md"
-                        title={company.oneLiner || company.name}
+                        className="group flex flex-col items-center gap-1 p-1.5 rounded border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all"
+                        title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}`}
                       >
-                        <div className="w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden shrink-0 border border-border/50 p-1">
+                        <div className="w-8 h-8 rounded bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden border border-border/30 p-0.5">
                           <img
                             src={`https://logo.clearbit.com/${domain}`}
-                            alt={`${company.name} logo`}
+                            alt={company.name}
                             className="w-full h-full object-contain"
+                            loading="lazy"
                             onError={(e) => {
                               const img = e.target as HTMLImageElement;
-                              // Try Google favicon as fallback
                               if (img.src.includes('clearbit')) {
                                 img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
                               } else if (img.src.includes('google.com/s2/favicons')) {
-                                // Try logo.dev as second fallback
-                                img.src = `https://img.logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w&size=120`;
-                              } else if (img.src.includes('logo.dev')) {
-                                // Try brandfetch as third fallback
-                                img.src = `https://api.brandfetch.io/v2/logos/${domain}`;
+                                img.src = `https://logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w`;
                               } else {
-                                // Final fallback - hide image completely
                                 img.style.display = 'none';
                                 const parent = img.parentElement;
                                 if (parent) {
-                                  parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-2xl font-bold" style="color: ${category.color}">${company.name.charAt(0)}</div>`;
+                                  parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-sm font-bold" style="color: ${category.color}">${company.name.charAt(0)}</div>`;
                                 }
                               }
                             }}
                           />
                         </div>
-                        <span className="text-xs font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                        <span className="text-[10px] font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-1 leading-tight w-full px-0.5">
                           {company.name}
                         </span>
                       </a>
