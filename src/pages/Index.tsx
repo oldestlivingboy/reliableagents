@@ -11,12 +11,17 @@ const Index = () => {
       <main className="container mx-auto max-w-4xl px-4 space-y-6 md:space-y-12 pb-8 md:pb-24">
         <section className="space-y-3 md:space-y-6">
           <div className="border border-border rounded-lg p-6 md:p-8 bg-muted/20">
-            <h2 className="text-lg md:text-xl font-medium text-muted-foreground mb-2">
-              Leaderboard in the making
+            <h2 className="text-lg md:text-xl font-medium text-foreground mb-3">
+              Agentic Control Layer Leaderboard
             </h2>
-            <p className="text-sm text-muted-foreground">
-              We're currently benchmarking and analyzing agentic automation tools. The first comprehensive leaderboard will be published soon.
-            </p>
+            <div className="space-y-2">
+              <p className="text-sm text-muted-foreground">
+                We're benchmarking the leading agentic control layers including Browser Use, Stagehand, Skyvern, and LaVague to evaluate their performance across reliability, speed, and documentation quality.
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground italic">
+                Currently in development - comprehensive results coming soon.
+              </p>
+            </div>
           </div>
         </section>
 
