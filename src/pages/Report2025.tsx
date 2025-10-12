@@ -86,8 +86,11 @@ const Report2025 = () => {
         
         if (!name || !categoryRaw) return;
         
-        // Split multiple categories
-        const categories = categoryRaw.split(';').map(c => c.trim());
+        // Split multiple categories and clean up quotes
+        const categories = categoryRaw
+          .split(';')
+          .map(c => c.trim().replace(/^["']|["']$/g, ''))
+          .filter(c => c.length > 0);
         
         categories.forEach(category => {
           if (!categoriesMap.has(category)) {
