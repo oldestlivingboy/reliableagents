@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero";
 import LeaderboardChart from "@/components/LeaderboardChart";
 import LeaderboardTable from "@/components/LeaderboardTable";
-import UpcomingLeaderboards from "@/components/UpcomingLeaderboards";
+import VotingSection from "@/components/VotingSection";
+import SubscribeSection from "@/components/SubscribeSection";
+import CreatedBy from "@/components/CreatedBy";
 
 const Index = () => {
   return (
@@ -12,18 +14,19 @@ const Index = () => {
         <section className="space-y-3 md:space-y-6">
           <div className="space-y-1 md:space-y-2">
             <h2 className="text-xl md:text-2xl font-semibold text-foreground">
-              Featured: Agentic Control Layer
+              Leaderboard in the making
             </h2>
-            <p className="text-sm md:text-base text-muted-foreground">
-              Compare leading frameworks that enable agents to decide and execute web actions
-            </p>
           </div>
           
           <LeaderboardChart />
           <LeaderboardTable />
         </section>
 
-        <UpcomingLeaderboards />
+        <VotingSection />
+        
+        <SubscribeSection />
+
+        <CreatedBy />
       </main>
 
       <footer className="border-t border-border py-4 md:py-12 mt-8 md:mt-24">

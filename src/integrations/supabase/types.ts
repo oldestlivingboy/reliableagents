@@ -35,6 +35,30 @@ export type Database = {
         }
         Relationships: []
       }
+      votes: {
+        Row: {
+          category_id: string
+          category_title: string
+          created_at: string
+          id: string
+          vote_count: number
+        }
+        Insert: {
+          category_id: string
+          category_title: string
+          created_at?: string
+          id?: string
+          vote_count?: number
+        }
+        Update: {
+          category_id?: string
+          category_title?: string
+          created_at?: string
+          id?: string
+          vote_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
