@@ -1,6 +1,4 @@
 import Hero from "@/components/Hero";
-import LeaderboardChart from "@/components/LeaderboardChart";
-import LeaderboardTable from "@/components/LeaderboardTable";
 import VotingSection from "@/components/VotingSection";
 import SubscribeSection from "@/components/SubscribeSection";
 import CreatedBy from "@/components/CreatedBy";
@@ -12,14 +10,14 @@ const Index = () => {
       
       <main className="container mx-auto max-w-4xl px-4 space-y-6 md:space-y-12 pb-8 md:pb-24">
         <section className="space-y-3 md:space-y-6">
-          <div className="space-y-1 md:space-y-2">
-            <h2 className="text-xl md:text-2xl font-semibold text-foreground">
+          <div className="border border-border rounded-lg p-6 md:p-8 bg-muted/20">
+            <h2 className="text-lg md:text-xl font-medium text-muted-foreground mb-2">
               Leaderboard in the making
             </h2>
+            <p className="text-sm text-muted-foreground">
+              We're currently benchmarking and analyzing agentic automation tools. The first comprehensive leaderboard will be published soon.
+            </p>
           </div>
-          
-          <LeaderboardChart />
-          <LeaderboardTable />
         </section>
 
         <VotingSection />
