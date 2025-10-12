@@ -124,18 +124,18 @@ const VotingSection = () => {
 
   return (
     <section className="space-y-6">
-      <div className="space-y-2">
+      <div className="space-y-3">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-          Vote for the category/niche to benchmark/analyze next
+          Vote for the next benchmark
         </h2>
         <p className="text-base text-muted-foreground">
           Help us prioritize which leaderboard to create next. {totalVotes > 0 && (
-            <span className="font-medium text-foreground">{totalVotes} votes cast</span>
+            <span className="font-medium text-foreground">{totalVotes} votes</span>
           )}
         </p>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {sortedCategories.map((category, index) => {
           const Icon = category.icon;
           const voteCount = votes[category.id] || 0;
@@ -144,43 +144,41 @@ const VotingSection = () => {
           return (
             <div
               key={category.id}
-              className="group relative flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-gradient-to-br from-background to-muted/20 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300"
+              className="group relative flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-orange-500/40 hover:bg-orange-500/[0.02] transition-all duration-200"
             >
               {/* Upvote Button */}
               <button
                 onClick={() => handleVote(category.id, category.title)}
                 disabled={hasVoted}
                 className={`
-                  relative flex flex-col items-center justify-center gap-0.5 w-14 h-14 rounded-lg
-                  transition-all duration-300 flex-shrink-0 font-semibold
+                  flex flex-col items-center justify-center gap-0.5 w-12 h-12 rounded-lg flex-shrink-0 font-semibold transition-all duration-200
                   ${hasVoted 
-                    ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 scale-105' 
-                    : 'border-2 border-border bg-background hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:scale-105 active:scale-95'
+                    ? 'bg-orange-500 text-white shadow-md' 
+                    : 'border border-border hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/30 active:scale-95'
                   }
                 `}
                 aria-label={hasVoted ? 'Voted' : 'Vote'}
               >
                 <ArrowUp 
-                  className={`w-5 h-5 ${hasVoted ? '' : 'text-muted-foreground group-hover:text-orange-600'}`}
+                  className="w-4 h-4"
                   strokeWidth={2.5}
                 />
-                <span className={`text-sm tabular-nums ${hasVoted ? '' : 'text-foreground'}`}>
+                <span className="text-xs tabular-nums leading-none">
                   {voteCount}
                 </span>
               </button>
 
               {/* Content */}
-              <div className="flex items-center gap-4 flex-1 min-w-0">
-                {/* Icon with gradient background */}
+              <div className="flex items-center gap-3 flex-1 min-w-0">
                 <div className={`
-                  w-11 h-11 rounded-lg flex items-center justify-center flex-shrink-0
-                  ${index % 4 === 0 ? 'bg-gradient-to-br from-blue-500/10 to-blue-600/20' : ''}
-                  ${index % 4 === 1 ? 'bg-gradient-to-br from-purple-500/10 to-purple-600/20' : ''}
-                  ${index % 4 === 2 ? 'bg-gradient-to-br from-green-500/10 to-green-600/20' : ''}
-                  ${index % 4 === 3 ? 'bg-gradient-to-br from-pink-500/10 to-pink-600/20' : ''}
+                  w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0
+                  ${index % 4 === 0 ? 'bg-blue-500/10' : ''}
+                  ${index % 4 === 1 ? 'bg-purple-500/10' : ''}
+                  ${index % 4 === 2 ? 'bg-green-500/10' : ''}
+                  ${index % 4 === 3 ? 'bg-pink-500/10' : ''}
                 `}>
                   <Icon className={`
-                    w-5 h-5
+                    w-4 h-4
                     ${index % 4 === 0 ? 'text-blue-600 dark:text-blue-400' : ''}
                     ${index % 4 === 1 ? 'text-purple-600 dark:text-purple-400' : ''}
                     ${index % 4 === 2 ? 'text-green-600 dark:text-green-400' : ''}
@@ -188,19 +186,17 @@ const VotingSection = () => {
                   `} />
                 </div>
                 
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-base text-foreground leading-tight group-hover:text-orange-600 transition-colors">
-                    {category.title}
-                  </h3>
-                </div>
+                <h3 className="font-medium text-sm text-foreground leading-snug flex-1 group-hover:text-orange-600 transition-colors">
+                  {category.title}
+                </h3>
 
                 {/* Rank Badge */}
                 {index < 3 && voteCount > 0 && (
                   <div className={`
-                    px-2.5 py-1 rounded-full text-xs font-bold flex-shrink-0
-                    ${index === 0 ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-950' : ''}
-                    ${index === 1 ? 'bg-gradient-to-r from-gray-300 to-gray-400 text-gray-800' : ''}
-                    ${index === 2 ? 'bg-gradient-to-r from-orange-400 to-orange-500 text-orange-950' : ''}
+                    px-2 py-0.5 rounded-md text-xs font-bold flex-shrink-0
+                    ${index === 0 ? 'bg-yellow-400/20 text-yellow-700 dark:text-yellow-300' : ''}
+                    ${index === 1 ? 'bg-gray-300/30 text-gray-700 dark:text-gray-300' : ''}
+                    ${index === 2 ? 'bg-orange-400/20 text-orange-700 dark:text-orange-300' : ''}
                   `}>
                     #{index + 1}
                   </div>

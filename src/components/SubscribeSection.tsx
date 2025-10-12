@@ -57,36 +57,36 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section className="space-y-6">
-      <div className="border-2 border-orange-500/20 rounded-2xl p-8 md:p-10 bg-gradient-to-br from-orange-500/5 to-orange-600/10">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+    <section>
+      <div className="border border-orange-500/30 rounded-xl p-8 bg-gradient-to-br from-orange-500/[0.03] to-orange-600/[0.08]">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
           <div className="flex-shrink-0">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/25">
-              <Mail className="w-8 h-8 text-white" />
+            <div className="w-14 h-14 rounded-xl bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
+              <Mail className="w-7 h-7 text-white" />
             </div>
           </div>
-          <div className="flex-1 space-y-5">
+          <div className="flex-1 space-y-4">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Subscribe for future updates
+              <h2 className="text-xl md:text-2xl font-bold text-foreground">
+                Get future updates
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 We're testing every new big agentic automation update so that you get fresh hot takes in your inbox
               </p>
             </div>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5">
               <Input
                 type="email"
                 placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-base bg-background border-2 focus:border-orange-500 transition-colors"
+                className="flex-1 h-11 text-base bg-background border focus:border-orange-500 focus:ring-orange-500/20"
                 required
               />
               <Button 
                 type="submit" 
                 disabled={isLoading} 
-                className="h-12 px-8 text-base font-semibold bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/25 transition-all"
+                className="h-11 px-6 text-base font-semibold bg-orange-500 hover:bg-orange-600 text-white shadow-md hover:shadow-lg transition-all"
               >
                 {isLoading ? "Subscribing..." : "Subscribe"}
               </Button>
