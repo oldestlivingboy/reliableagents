@@ -58,20 +58,20 @@ const SubscribeSection = () => {
 
   return (
     <section>
-      <div className="border border-orange-500/30 rounded-xl p-8 bg-gradient-to-br from-orange-500/[0.03] to-orange-600/[0.08]">
+      <div className="border border-primary/20 rounded-xl p-6 md:p-8 bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
           <div className="flex-shrink-0">
-            <div className="w-14 h-14 rounded-xl bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
-              <Mail className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shadow-lg">
+              <Mail className="w-7 h-7 text-primary-foreground" />
             </div>
           </div>
           <div className="flex-1 space-y-4">
             <div className="space-y-2">
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">
                 Get future updates
-              </h2>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                We're testing every new big agentic automation update so that you get fresh hot takes in your inbox
+              </h3>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                Fresh hot takes on agentic automation delivered to your inbox
               </p>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5">
@@ -80,13 +80,13 @@ const SubscribeSection = () => {
                 placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-11 text-base bg-background border focus:border-orange-500 focus:ring-orange-500/20"
+                className="flex-1 h-11 text-base bg-background"
                 required
               />
               <Button 
                 type="submit" 
                 disabled={isLoading} 
-                className="h-11 px-6 text-base font-semibold bg-orange-500 hover:bg-orange-600 text-white shadow-md hover:shadow-lg transition-all"
+                className="h-11 px-6 text-base font-semibold shadow-md hover:shadow-lg transition-all"
               >
                 {isLoading ? "Subscribing..." : "Subscribe"}
               </Button>

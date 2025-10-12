@@ -38,16 +38,16 @@ const previewCategories = [
 export const MarketMapPreview = () => {
   return (
     <Link to="/2025" className="block group">
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-background p-8 transition-all hover:border-primary/50 hover:shadow-lg">
+      <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/40 to-background p-6 md:p-8 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
         <div className="relative z-10 space-y-6">
-          <div className="space-y-2">
-            <div className="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">
+          <div className="space-y-3">
+            <div className="inline-block px-3 py-1.5 text-xs font-semibold tracking-wide uppercase bg-primary/10 text-primary rounded-full border border-primary/20">
               New Report
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
               The Current State of Agentic Browser Automation
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               A comprehensive market map of 60+ companies across 9 categories
             </p>
           </div>
