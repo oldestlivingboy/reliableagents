@@ -22,6 +22,8 @@ const Report2025 = () => {
   const [marketMap, setMarketMap] = useState<CategoryData[]>([]);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
     fetchMarketMapData();
   }, []);
 
@@ -182,28 +184,28 @@ const Report2025 = () => {
 
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
-      <div className="container mx-auto max-w-6xl px-6 py-8 md:py-16">
+      <div className="container mx-auto max-w-6xl px-4 md:px-6 py-6 md:py-16">
         <Link to="/">
-          <Button variant="ghost" size="sm" className="mb-8 -ml-3 text-muted-foreground hover:text-foreground">
+          <Button variant="ghost" size="sm" className="mb-6 md:mb-8 -ml-3 text-muted-foreground hover:text-foreground">
             <ChevronLeft className="w-4 h-4 mr-1" />
             Back
           </Button>
         </Link>
 
-        <header className="space-y-6 mb-20 max-w-4xl">
+        <header className="space-y-4 md:space-y-6 mb-12 md:mb-20 max-w-4xl">
           <div className="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">
             Q4 2025
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
             The Current State of Agentic Browser/Web/Computer Automation
           </h1>
         </header>
 
         {/* INTRO Section */}
-        <section className="space-y-8 mb-24 max-w-3xl">
+        <section className="space-y-6 md:space-y-8 mb-16 md:mb-24 max-w-3xl">
           <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-6">Introduction</h2>
-            <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4 md:mb-6">Introduction</h2>
+            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
               <p>
                 Gen AI / agents craze is at its peak. Deservedly, unlike some "luddites" may claim. 
                 BUT one piece of the puzzle is still not fully there. Agents being able to reliably 
@@ -218,7 +220,7 @@ const Report2025 = () => {
                 this question: what's the state of the art in browser automation and who are the best 
                 companies you can use as a developer!
               </p>
-              <p className="font-semibold text-foreground text-xl">
+              <p className="font-semibold text-foreground text-lg md:text-xl">
                 So, starting today and with this report, we're launching RAL (Reliable Agents Leaderboard) - 
                 your one-stop shop for understanding and benchmarking agentic automation.
               </p>
