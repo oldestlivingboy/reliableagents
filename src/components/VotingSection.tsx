@@ -127,69 +127,47 @@ const VotingSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-2">
         {categories.map((category) => {
           const Icon = category.icon;
           const voteCount = votes[category.id] || 0;
           const hasVoted = votedCategories.has(category.id);
-          const percentage = totalVotes > 0 ? (voteCount / totalVotes) * 100 : 0;
 
           return (
             <div
               key={category.id}
-              className="group relative border border-border rounded-xl p-5 hover:border-foreground/20 transition-all duration-200 bg-card"
+              className="group flex items-center gap-4 border border-border rounded-lg p-4 hover:border-foreground/20 transition-all bg-card"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-foreground/70" />
+              <button
+                onClick={() => handleVote(category.id, category.title)}
+                disabled={hasVoted}
+                className={`
+                  flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-md
+                  transition-all duration-150 flex-shrink-0
+                  ${hasVoted 
+                    ? 'bg-foreground text-background' 
+                    : 'border border-border hover:border-foreground/40 hover:bg-muted/50 active:scale-95'
+                  }
+                `}
+                aria-label={hasVoted ? 'Voted' : 'Vote'}
+              >
+                <ArrowUp 
+                  className="w-4 h-4"
+                  strokeWidth={2.5}
+                />
+                <span className="text-xs font-semibold tabular-nums">
+                  {voteCount}
+                </span>
+              </button>
+
+              <div className="flex items-center gap-3 flex-1 min-w-0">
+                <div className="w-8 h-8 rounded-md bg-muted/50 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-4 h-4 text-foreground/60" />
                 </div>
                 
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-medium text-sm md:text-base text-foreground mb-3 leading-snug">
-                    {category.title}
-                  </h3>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="flex-1">
-                      <div className="flex items-baseline gap-2 mb-1.5">
-                        <span className="text-2xl font-semibold text-foreground tabular-nums">
-                          {voteCount}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {voteCount === 1 ? 'vote' : 'votes'}
-                        </span>
-                      </div>
-                      
-                      <div className="relative w-full h-1 bg-muted/50 rounded-full overflow-hidden">
-                        <div 
-                          className="absolute inset-y-0 left-0 bg-foreground/80 rounded-full transition-all duration-700 ease-out"
-                          style={{ width: `${percentage}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={() => handleVote(category.id, category.title)}
-                      disabled={hasVoted}
-                      className={`
-                        flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center
-                        transition-all duration-200 
-                        ${hasVoted 
-                          ? 'bg-foreground text-background cursor-default' 
-                          : 'bg-muted/50 hover:bg-foreground hover:text-background active:scale-95 cursor-pointer'
-                        }
-                      `}
-                      aria-label={hasVoted ? 'Voted' : 'Vote'}
-                    >
-                      <ArrowUp 
-                        className={`w-5 h-5 transition-transform duration-200 ${
-                          hasVoted ? '' : 'group-hover:translate-y-[-2px]'
-                        }`}
-                        strokeWidth={2.5}
-                      />
-                    </button>
-                  </div>
-                </div>
+                <h3 className="font-medium text-sm md:text-base text-foreground leading-snug">
+                  {category.title}
+                </h3>
               </div>
             </div>
           );
