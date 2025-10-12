@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { Button } from "./ui/button";
 import { CompanyLogo } from "./CompanyLogo";
 
 const previewCategories = [
@@ -38,26 +37,20 @@ const previewCategories = [
 
 export const MarketMapPreview = () => {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-background p-8">
-      <div className="relative z-10 space-y-6">
-        <div className="flex items-start justify-between gap-4">
+    <Link to="/2025" className="block group">
+      <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-background p-8 transition-all hover:border-primary/50 hover:shadow-lg">
+        <div className="relative z-10 space-y-6">
           <div className="space-y-2">
             <div className="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">
               New Report
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
               The Current State of Agentic Browser Automation
             </h2>
             <p className="text-muted-foreground">
               A comprehensive market map of 60+ companies across 9 categories
             </p>
           </div>
-          <Link to="/2025">
-            <Button variant="outline" size="sm" className="shrink-0 gap-2">
-              View Report <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
-        </div>
 
         <div className="space-y-4">
           {previewCategories.map((category, idx) => (
@@ -103,16 +96,17 @@ export const MarketMapPreview = () => {
           ))}
         </div>
 
-        <Link to="/2025">
-          <Button className="w-full gap-2 group">
-            Explore Full Market Map
+        <div className="pt-2">
+          <div className="flex items-center justify-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+            <span>View Full Report</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </Link>
+          </div>
+        </div>
       </div>
 
       {/* Decorative background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
-    </div>
+      </div>
+    </Link>
   );
 };
