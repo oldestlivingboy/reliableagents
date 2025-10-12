@@ -7,7 +7,7 @@ import { createObjectCsvWriter } from 'csv-writer';
 import { Stagehand } from '@browserbasehq/stagehand';
 
 const runnerRoot = path.dirname(fileURLToPath(import.meta.url));
-const tasksCsv = path.resolve(runnerRoot, '../../webbenchfinal.csv');
+const tasksCsv = path.resolve(runnerRoot, '../../webbench.csv');
 const resultsCsv = path.resolve(runnerRoot, '../../results/stagehand.csv');
 let fromTaskOrdinal: number;
 let toTaskOrdinal: number;
