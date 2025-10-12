@@ -9,9 +9,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero />
       
-      <main className="container mx-auto max-w-3xl px-4 space-y-16 pb-20">
+      <main className="container mx-auto max-w-3xl px-4 space-y-12 pb-20">
         {/* Market Map Report Preview */}
-        <section>
+        <section className="-mt-8">
           <MarketMapPreview />
         </section>
 

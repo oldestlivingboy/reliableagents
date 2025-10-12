@@ -8,7 +8,9 @@ const CreatedBy = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-border rounded-xl p-6 bg-card">
           <h3 className="text-lg font-bold text-foreground mb-3">
-            Alex
+            <a href="https://www.linkedin.com/in/ednevsky/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              Alex
+            </a>
           </h3>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
             <p>
@@ -27,7 +29,9 @@ const CreatedBy = () => {
 
         <div className="border border-border rounded-xl p-6 bg-card">
           <h3 className="text-lg font-bold text-foreground mb-3">
-            Brian
+            <a href="https://www.linkedin.com/in/oldestlivingboy/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              Brian
+            </a>
           </h3>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
             <p>
