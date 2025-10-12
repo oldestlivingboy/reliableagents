@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CompanyLogo } from "@/components/CompanyLogo";
 
 interface Company {
   name: string;
@@ -258,15 +259,15 @@ const Report2025 = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
             {marketMap.map((category, idx) => (
-              <div key={idx} className="space-y-4">
-                <div className="flex items-center gap-2.5">
+              <div key={idx} className="space-y-2.5">
+                <div className="flex items-center gap-2">
                   <div 
                     className="w-1.5 h-1.5 rounded-full"
                     style={{ backgroundColor: category.color }}
                   />
-                  <h3 className="text-sm font-semibold text-foreground tracking-tight">
+                  <h3 className="text-xs font-semibold text-foreground tracking-tight">
                     {category.name}
                   </h3>
                   <span className="text-[10px] text-muted-foreground font-medium">
@@ -274,7 +275,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-5 sm:grid-cols-6 gap-3">
+                <div className="grid grid-cols-6 sm:grid-cols-7 gap-2">
                   {category.companies.map((company, companyIdx) => {
                     const domain = getCompanyDomain(company.name);
                     return (
@@ -283,32 +284,17 @@ const Report2025 = () => {
                         href={getCompanyUrl(company.name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-1.5 transition-transform hover:scale-105"
+                        className="group flex flex-col items-center gap-1 transition-transform hover:scale-105"
                         title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}`}
                       >
-                        <div className="w-10 h-10 rounded-xl bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden border border-border/40 p-1.5 shadow-sm group-hover:shadow-md transition-shadow">
-                          <img
-                            src={`https://logo.clearbit.com/${domain}`}
-                            alt={company.name}
-                            className="w-full h-full object-contain"
-                            loading="lazy"
-                            onError={(e) => {
-                              const img = e.target as HTMLImageElement;
-                              if (img.src.includes('clearbit')) {
-                                img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
-                              } else if (img.src.includes('google.com/s2/favicons')) {
-                                img.src = `https://logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w`;
-                              } else {
-                                img.style.display = 'none';
-                                const parent = img.parentElement;
-                                if (parent) {
-                                  parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-sm font-bold" style="color: ${category.color}">${company.name.charAt(0)}</div>`;
-                                }
-                              }
-                            }}
+                        <div className="w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden border border-border/30 p-1 shadow-sm group-hover:shadow transition-shadow">
+                          <CompanyLogo
+                            companyName={company.name}
+                            domain={domain}
+                            categoryColor={category.color}
                           />
                         </div>
-                        <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                        <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                           {company.name}
                         </span>
                       </a>
