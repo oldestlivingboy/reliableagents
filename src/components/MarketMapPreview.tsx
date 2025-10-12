@@ -45,7 +45,7 @@ export const MarketMapPreview = () => {
               New Report
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-              The Current State of Agentic Browser Automation
+              The Current State of Agentic Browser/Web/Computer Automation
             </h2>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               A comprehensive market map of 60+ companies across 9 categories
