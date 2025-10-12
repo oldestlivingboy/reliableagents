@@ -19,6 +19,7 @@
   "dependencies": {
     "@browserbasehq/stagehand": "latest",
     "csv-parse": "^6.1.0",
+    "csv-writer": "^1.6.0",
     "dotenv": "^16.4.7"
   },
   "devDependencies": {

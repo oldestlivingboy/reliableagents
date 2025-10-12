@@ -3,6 +3,7 @@ import filesystem from 'fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'csv-parse/sync';
+import { createObjectCsvWriter } from 'csv-writer';
 import { Stagehand } from '@browserbasehq/stagehand';
 
 const runnerRoot = path.dirname(fileURLToPath(import.meta.url));
@@ -30,6 +31,20 @@ const taskRows = parse(
   filesystem.readFileSync(tasksCsv, 'utf8'),
   { columns: true, skip_empty_lines: true }
 ) as any[];
+const resultsWriter = createObjectCsvWriter({
+  path: resultsCsv,
+  header: [
+    { id: 'id', title: 'ID' },
+    { id: 'url', title: 'Starting URL' },
+    { id: 'category', title: 'Category' },
+    { id: 'difficulty', title: 'Difficulty' },
+    { id: 'task', title: 'Task' },
+    { id: 'result', title: 'Stagehand Output' },
+    { id: 'eval', title: 'Stagehand Success Eval' },
+    { id: 'reasoning', title: 'Stagehand Reasoning' }
+  ],
+  append: filesystem.existsSync(resultsCsv)
+});
 
 (async () => {
   const stagehand = new Stagehand({ env: 'BROWSERBASE' });
@@ -50,6 +65,7 @@ const taskRows = parse(
     const url = taskRows[i]['Starting URL'];
     const task = taskRows[i].Task;
     const category = taskRows[i].Category;
+    let result: any;
 
     if (!id || !url || !task || !category) throw new Error(`Task row #${taskOrdinal} malformed`);
 
@@ -58,11 +74,22 @@ const taskRows = parse(
     try {
       await stagehand.page.goto(url);
 
-      const result = await agent.execute(task);
+      result = await agent.execute(task);
 
       console.log('Result:', result);
     } catch (error: any) {
       console.error('Task execution failure:', error.message);
+    } finally {
+      await resultsWriter.writeRecords([{
+        id,
+        url,
+        category,
+        difficulty: '',
+        task,
+        result: JSON.stringify(result),
+        eval: result.success,
+        reasoning: String(result.message)
+      }]);
     }
   }
 
