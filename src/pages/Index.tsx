@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import VotingSection from "@/components/VotingSection";
 import SubscribeSection from "@/components/SubscribeSection";
 import CreatedBy from "@/components/CreatedBy";
+import { MarketMapPreview } from "@/components/MarketMapPreview";
 
 const Index = () => {
   return (
@@ -9,6 +10,11 @@ const Index = () => {
       <Hero />
       
       <main className="container mx-auto max-w-3xl px-4 space-y-16 pb-20">
+        {/* Market Map Report Preview */}
+        <section>
+          <MarketMapPreview />
+        </section>
+
         <section className="space-y-4">
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
