@@ -1,3 +1,5 @@
+import { Linkedin } from "lucide-react";
+
 const CreatedBy = () => {
   return (
     <section className="space-y-6">
@@ -7,11 +9,20 @@ const CreatedBy = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-border rounded-xl p-6 bg-card">
-          <h3 className="text-lg font-bold text-foreground mb-3">
-            <a href="https://www.linkedin.com/in/ednevsky/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-bold text-foreground">
               Alex
+            </h3>
+            <a 
+              href="https://www.linkedin.com/in/ednevsky/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Alex's LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
             </a>
-          </h3>
+          </div>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
             <p>
               A 3x founder with an AI exit (<strong className="text-foreground font-semibold">WANNA</strong>), where they built the 
@@ -28,11 +39,20 @@ const CreatedBy = () => {
         </div>
 
         <div className="border border-border rounded-xl p-6 bg-card">
-          <h3 className="text-lg font-bold text-foreground mb-3">
-            <a href="https://www.linkedin.com/in/oldestlivingboy/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-bold text-foreground">
               Brian
+            </h3>
+            <a 
+              href="https://www.linkedin.com/in/oldestlivingboy/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Brian's LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
             </a>
-          </h3>
+          </div>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
             <p>
               Ex-Googler who worked on the company's first mobile ad server and started 
