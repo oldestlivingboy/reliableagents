@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { 
-  ArrowUpCircle, 
+  ArrowUp,
   BarChart3, 
   Building2, 
   Code2, 
@@ -119,8 +117,8 @@ const VotingSection = () => {
   const totalVotes = Object.values(votes).reduce((sum, count) => sum + count, 0);
 
   return (
-    <section className="space-y-3 md:space-y-6">
-      <div className="space-y-1 md:space-y-2">
+    <section className="space-y-6 md:space-y-8">
+      <div className="space-y-2">
         <h2 className="text-xl md:text-2xl font-semibold text-foreground">
           Vote for the category/niche to benchmark/analyze next
         </h2>
@@ -129,7 +127,7 @@ const VotingSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {categories.map((category) => {
           const Icon = category.icon;
           const voteCount = votes[category.id] || 0;
@@ -137,51 +135,63 @@ const VotingSection = () => {
           const percentage = totalVotes > 0 ? (voteCount / totalVotes) * 100 : 0;
 
           return (
-            <Card 
-              key={category.id} 
-              className="p-4 md:p-6 hover:shadow-md transition-shadow"
+            <div
+              key={category.id}
+              className="group relative border border-border rounded-xl p-5 hover:border-foreground/20 transition-all duration-200 bg-card"
             >
-              <div className="flex items-start gap-3 md:gap-4">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-foreground/70" />
                 </div>
+                
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-sm md:text-base text-foreground mb-2">
+                  <h3 className="font-medium text-sm md:text-base text-foreground mb-3 leading-snug">
                     {category.title}
                   </h3>
                   
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-xs md:text-sm text-muted-foreground">
-                      <span>{voteCount} votes</span>
-                      <span>{percentage.toFixed(1)}%</span>
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1">
+                      <div className="flex items-baseline gap-2 mb-1.5">
+                        <span className="text-2xl font-semibold text-foreground tabular-nums">
+                          {voteCount}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {voteCount === 1 ? 'vote' : 'votes'}
+                        </span>
+                      </div>
+                      
+                      <div className="relative w-full h-1 bg-muted/50 rounded-full overflow-hidden">
+                        <div 
+                          className="absolute inset-y-0 left-0 bg-foreground/80 rounded-full transition-all duration-700 ease-out"
+                          style={{ width: `${percentage}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                      <div 
-                        className="bg-primary h-full transition-all duration-500 ease-out"
-                        style={{ width: `${percentage}%` }}
-                      />
-                    </div>
-                  </div>
 
-                  <Button
-                    onClick={() => handleVote(category.id, category.title)}
-                    disabled={hasVoted}
-                    variant={hasVoted ? "outline" : "default"}
-                    size="sm"
-                    className="mt-3 w-full"
-                  >
-                    {hasVoted ? (
-                      "Voted"
-                    ) : (
-                      <>
-                        <ArrowUpCircle className="w-4 h-4 mr-2" />
-                        Vote
-                      </>
-                    )}
-                  </Button>
+                    <button
+                      onClick={() => handleVote(category.id, category.title)}
+                      disabled={hasVoted}
+                      className={`
+                        flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center
+                        transition-all duration-200 
+                        ${hasVoted 
+                          ? 'bg-foreground text-background cursor-default' 
+                          : 'bg-muted/50 hover:bg-foreground hover:text-background active:scale-95 cursor-pointer'
+                        }
+                      `}
+                      aria-label={hasVoted ? 'Voted' : 'Vote'}
+                    >
+                      <ArrowUp 
+                        className={`w-5 h-5 transition-transform duration-200 ${
+                          hasVoted ? '' : 'group-hover:translate-y-[-2px]'
+                        }`}
+                        strokeWidth={2.5}
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </Card>
+            </div>
           );
         })}
       </div>
