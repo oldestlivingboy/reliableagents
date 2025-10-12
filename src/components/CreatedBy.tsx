@@ -3,13 +3,13 @@ import { Linkedin } from "lucide-react";
 const CreatedBy = () => {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+      <h2 className="text-2xl md:text-3xl font-bold text-foreground">
         Created By
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-border rounded-xl p-6 bg-card">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2 mb-3">
             <h3 className="text-lg font-bold text-foreground">
               Alex
             </h3>
@@ -20,7 +20,7 @@ const CreatedBy = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Alex's LinkedIn"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
             </a>
           </div>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
@@ -39,7 +39,7 @@ const CreatedBy = () => {
         </div>
 
         <div className="border border-border rounded-xl p-6 bg-card">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2 mb-3">
             <h3 className="text-lg font-bold text-foreground">
               Brian
             </h3>
@@ -50,7 +50,7 @@ const CreatedBy = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Brian's LinkedIn"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
             </a>
           </div>
           <div className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
