@@ -62,8 +62,9 @@ const Report2025 = () => {
   const getCompanyLogoUrl = (companyName: string): string => {
     const url = getCompanyUrl(companyName);
     const domain = url.replace('https://', '').replace('http://', '').split('/')[0];
-    // Use Clearbit logo API for better quality logos
-    return `https://logo.clearbit.com/${domain}`;
+    
+    // Return multiple fallback URLs
+    return domain;
   };
 
   const fetchMarketMapData = async () => {
@@ -183,7 +184,7 @@ const Report2025 = () => {
             across {marketMap.length} key categories
           </p>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {marketMap.map((category, idx) => (
               <div key={idx} className="space-y-4">
                 <div className="flex items-center gap-3 pb-2 border-b-2" style={{ borderColor: category.color }}>
@@ -199,43 +200,51 @@ const Report2025 = () => {
                   </Badge>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                  {category.companies.map((company, companyIdx) => (
-                    <a
-                      key={companyIdx}
-                      href={getCompanyUrl(company.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex flex-col items-center gap-2 p-3 rounded-lg border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all hover:shadow-md"
-                      title={company.oneLiner || company.name}
-                    >
-                      <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center overflow-hidden shrink-0 border border-border/50">
-                        <img
-                          src={getCompanyLogoUrl(company.name)}
-                          alt={`${company.name} logo`}
-                          className="w-8 h-8 object-contain"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            const fallback = target.nextElementSibling as HTMLElement;
-                            if (fallback) fallback.style.display = 'flex';
-                          }}
-                        />
-                        <div 
-                          className="w-full h-full items-center justify-center text-lg font-bold hidden"
-                          style={{ 
-                            display: 'none',
-                            color: category.color
-                          }}
-                        >
-                          {company.name.charAt(0)}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {category.companies.map((company, companyIdx) => {
+                    const domain = getCompanyLogoUrl(company.name);
+                    return (
+                      <a
+                        key={companyIdx}
+                        href={getCompanyUrl(company.name)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex flex-col items-center gap-2 p-3 rounded-lg border border-border bg-card hover:bg-accent hover:border-foreground/20 transition-all hover:shadow-md"
+                        title={company.oneLiner || company.name}
+                      >
+                        <div className="w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden shrink-0 border border-border/50 p-1">
+                          <img
+                            src={`https://logo.clearbit.com/${domain}`}
+                            alt={`${company.name} logo`}
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              const img = e.target as HTMLImageElement;
+                              // Try Google favicon as fallback
+                              if (img.src.includes('clearbit')) {
+                                img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+                              } else if (img.src.includes('google.com/s2/favicons')) {
+                                // Try logo.dev as second fallback
+                                img.src = `https://img.logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w&size=120`;
+                              } else if (img.src.includes('logo.dev')) {
+                                // Try brandfetch as third fallback
+                                img.src = `https://api.brandfetch.io/v2/logos/${domain}`;
+                              } else {
+                                // Final fallback - hide image completely
+                                img.style.display = 'none';
+                                const parent = img.parentElement;
+                                if (parent) {
+                                  parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-2xl font-bold" style="color: ${category.color}">${company.name.charAt(0)}</div>`;
+                                }
+                              }
+                            }}
+                          />
                         </div>
-                      </div>
-                      <span className="text-xs font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
-                        {company.name}
-                      </span>
-                    </a>
-                  ))}
+                        <span className="text-xs font-medium text-center text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                          {company.name}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             ))}
