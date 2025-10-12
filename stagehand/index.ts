@@ -1,46 +1,70 @@
-import "dotenv/config";
-import { Stagehand } from "@browserbasehq/stagehand";
+import 'dotenv/config';
+import filesystem from 'fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { parse } from 'csv-parse/sync';
+import { Stagehand } from '@browserbasehq/stagehand';
 
-async function main() {
-  const stagehand = new Stagehand({
-    env: "BROWSERBASE",
-  });
+const runnerRoot = path.dirname(fileURLToPath(import.meta.url));
+const tasksCsv = path.resolve(runnerRoot, '../../webbenchfinal.csv');
+const resultsCsv = path.resolve(runnerRoot, '../../results/stagehand.csv');
+let fromTaskOrdinal: number;
+let toTaskOrdinal: number;
+
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled rejection:', reason);
+
+  process.exit(1);
+});
+
+if (process.argv.length == 4) {
+  fromTaskOrdinal = Number(process.argv[2]);
+  toTaskOrdinal = Number(process.argv[3]);
+} else {
+  console.error('Usage: npm start -- from_task_ordinal to_task_ordinal');
+
+  process.exit(1);
+}
+
+const taskRows = parse(
+  filesystem.readFileSync(tasksCsv, 'utf8'),
+  { columns: true, skip_empty_lines: true }
+) as any[];
+
+(async () => {
+  const stagehand = new Stagehand({ env: 'BROWSERBASE' });
 
   await stagehand.init();
 
-  console.log(`Stagehand Session Started`);
   console.log(
-    `Watch live: https://browserbase.com/sessions/${stagehand.browserbaseSessionID}`
+    `Live Stagehand session: https://browserbase.com/sessions/${stagehand.browserbaseSessionID}\n`
   );
-
-  const page = stagehand.page;
-
-  await page.goto("https://stagehand.dev");
-
-  const extractResult = await page.extract(
-    "Extract the value proposition from the page."
-  );
-  console.log(`Extract result:\n`, extractResult);
-
-  const actResult = await page.act("Click the 'Evals' button.");
-  console.log(`Act result:\n`, actResult);
-
-  const observeResult = await page.observe("What can I click on this page?");
-  console.log(`Observe result:\n`, observeResult);
 
   const agent = stagehand.agent({
-    instructions: "You're a helpful assistant that can control a web browser.",
+    instructions: 'You’re a helpful assistant that can control a web browser.'
   });
 
-  const agentResult = await agent.execute(
-    "What is the most accurate model to use in Stagehand?"
-  );
-  console.log(`Agent result:\n`, agentResult);
+  for (let i = fromTaskOrdinal - 1; i < toTaskOrdinal && i < taskRows.length; i++) {
+    const taskOrdinal = i + 1;
+    const id = taskRows[i].ID;
+    const url = taskRows[i]['Starting URL'];
+    const task = taskRows[i].Task;
+    const category = taskRows[i].Category;
+
+    if (!id || !url || !task || !category) throw new Error(`Task row #${taskOrdinal} malformed`);
+
+    console.log(`${taskOrdinal}. URL: ${url}\nTask: ${task}\n`);
+
+    try {
+      await stagehand.page.goto(url);
+
+      const result = await agent.execute(task);
+
+      console.log('Result:', result);
+    } catch (error: any) {
+      console.error('Task execution failure:', error.message);
+    }
+  }
 
   await stagehand.close();
-}
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+})();
