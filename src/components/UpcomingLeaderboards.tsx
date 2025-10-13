@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Brain, Code, Globe, Monitor, Search, Linkedin, Database, Shield, Bell } from "lucide-react";
 import SubscribeDialog from "./SubscribeDialog";
+import { z } from "zod";
 
 const generalLeaderboards = [
   { icon: Brain, title: "Agent Brain Foundational Models", description: "Core AI models powering agent decision-making" },
@@ -36,7 +37,10 @@ const UpcomingLeaderboards = () => {
   const handleGeneralSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!generalEmail || !generalEmail.includes("@")) {
+    const emailSchema = z.string().email().max(255);
+    const validation = emailSchema.safeParse(generalEmail);
+    
+    if (!validation.success) {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address",
@@ -50,7 +54,7 @@ const UpcomingLeaderboards = () => {
     try {
       const { error } = await supabase
         .from("subscribers")
-        .insert({ email: generalEmail, subscription_type: "general_updates" });
+        .insert({ email: validation.data, subscription_type: "general_updates" });
 
       if (error) {
         if (error.code === "23505") {

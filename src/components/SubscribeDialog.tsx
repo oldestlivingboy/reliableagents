@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
 
 interface SubscribeDialogProps {
   open: boolean;
@@ -27,7 +28,10 @@ const SubscribeDialog = ({ open, onOpenChange, subscriptionType, title }: Subscr
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes("@")) {
+    const emailSchema = z.string().email().max(255);
+    const validation = emailSchema.safeParse(email);
+    
+    if (!validation.success) {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address",
@@ -41,7 +45,7 @@ const SubscribeDialog = ({ open, onOpenChange, subscriptionType, title }: Subscr
     try {
       const { error } = await supabase
         .from("subscribers")
-        .insert({ email, subscription_type: subscriptionType });
+        .insert({ email: validation.data, subscription_type: subscriptionType });
 
       if (error) {
         if (error.code === "23505") {

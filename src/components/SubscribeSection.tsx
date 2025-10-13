@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail } from "lucide-react";
+import { z } from "zod";
 
 const SubscribeSection = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +14,10 @@ const SubscribeSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes("@")) {
+    const emailSchema = z.string().email().max(255);
+    const validation = emailSchema.safeParse(email);
+    
+    if (!validation.success) {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address",
@@ -27,7 +31,7 @@ const SubscribeSection = () => {
     try {
       const { error } = await supabase
         .from("subscribers")
-        .insert({ email, subscription_type: "general_updates" });
+        .insert({ email: validation.data, subscription_type: "general_updates" });
 
       if (error) {
         if (error.code === "23505") {
