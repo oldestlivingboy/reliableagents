@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CompanyLogo } from "@/components/CompanyLogo";
+import { CalEmbed } from "@/components/CalEmbed";
 
 interface Company {
   name: string;
@@ -189,6 +190,7 @@ const Report2025 = () => {
 
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
+      <CalEmbed />
       <div className="container mx-auto max-w-6xl px-4 md:px-6 py-6 md:py-16">
         <Link to="/">
           <Button variant="ghost" size="sm" className="mb-6 md:mb-8 -ml-3 text-muted-foreground hover:text-foreground">

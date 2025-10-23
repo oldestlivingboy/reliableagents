@@ -7,52 +7,78 @@ declare global {
 }
 
 export const CalEmbed = () => {
-  const [showButton, setShowButton] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Show button after 10 seconds
-    const timer = setTimeout(() => {
-      setShowButton(true);
-    }, 10000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!showButton) return;
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]');
+    
+    if (existingScript) {
+      // Script already loaded, just initialize
+      if (window.Cal) {
+        initializeCal();
+      }
+      return;
+    }
 
     // Load Cal.com script
     const script = document.createElement("script");
     script.src = "https://app.cal.com/embed/embed.js";
     script.async = true;
+    script.type = "text/javascript";
+    
+    script.onload = () => {
+      setIsLoaded(true);
+      // Wait a bit for Cal to be fully ready
+      setTimeout(() => {
+        initializeCal();
+      }, 100);
+    };
+
+    script.onerror = () => {
+      console.error('Failed to load Cal.com embed script');
+    };
+
     document.head.appendChild(script);
 
-    script.onload = () => {
-      if (window.Cal) {
-        window.Cal("init", "quickie-with-alex-from-no-cap", {
-          origin: "https://app.cal.com"
-        });
-
-        window.Cal.ns["quickie-with-alex-from-no-cap"]("floatingButton", {
-          calLink: "ednevsky/quickie-with-alex-from-no-cap",
-          config: { layout: "month_view" },
-          buttonText: "Grab a free browser automation reliability consultation - last few slots left"
-        });
-
-        window.Cal.ns["quickie-with-alex-from-no-cap"]("ui", {
-          hideEventTypeDetails: false,
-          layout: "month_view"
-        });
-      }
-    };
-
     return () => {
-      // Cleanup
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
+      // Don't remove script on cleanup to prevent re-loading
     };
-  }, [showButton]);
+  }, []);
+
+  const initializeCal = () => {
+    if (!window.Cal) {
+      console.error('Cal is not available');
+      return;
+    }
+
+    try {
+      window.Cal("init", "quickie-with-alex-from-no-cap", {
+        origin: "https://app.cal.com"
+      });
+
+      // Wait for Cal to be initialized before setting up floating button
+      setTimeout(() => {
+        if (window.Cal?.ns?.["quickie-with-alex-from-no-cap"]) {
+          window.Cal.ns["quickie-with-alex-from-no-cap"]("floatingButton", {
+            calLink: "ednevsky/quickie-with-alex-from-no-cap",
+            config: { 
+              layout: "month_view",
+              theme: "auto"
+            },
+            buttonText: "🚀 Free Browser Automation Consultation"
+          });
+
+          window.Cal.ns["quickie-with-alex-from-no-cap"]("ui", {
+            hideEventTypeDetails: false,
+            layout: "month_view"
+          });
+        }
+      }, 500);
+    } catch (error) {
+      console.error('Error initializing Cal.com:', error);
+    }
+  };
 
   return null;
 };
