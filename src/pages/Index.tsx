@@ -2,10 +2,12 @@ import Hero from "@/components/Hero";
 import VotingSection from "@/components/VotingSection";
 import SubscribeSection from "@/components/SubscribeSection";
 import { MarketMapPreview } from "@/components/MarketMapPreview";
+import { CalEmbed } from "@/components/CalEmbed";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <CalEmbed />
       <Hero />
       
       <main className="container mx-auto max-w-3xl px-4 pb-24">
