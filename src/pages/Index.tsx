@@ -37,51 +37,37 @@ const Index = () => {
         </div>
       </main>
 
-      <footer className="border-t border-border bg-muted/30 py-12 mt-24">
+      <footer className="border-t border-border bg-muted/30 py-8 mt-24">
         <div className="container mx-auto max-w-3xl px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <h3 className="font-semibold text-foreground">Alex</h3>
+          <div className="space-y-4">
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Made by</p>
+              <div className="flex items-center gap-6">
                 <a 
                   href="https://www.linkedin.com/in/ednevsky/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label="Alex's LinkedIn"
+                  className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <span className="font-medium">Alex</span>
+                  <Linkedin className="w-3.5 h-3.5" />
                 </a>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
-                Created No Cap, the world's first AI agent that invested in a company. 
-                Runs nc/acc - an accelerator for solopreneurs.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <h3 className="font-semibold text-foreground">Brian</h3>
+                <span className="text-border">•</span>
                 <a 
                   href="https://www.linkedin.com/in/oldestlivingboy/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label="Brian's LinkedIn"
+                  className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <span className="font-medium">Brian</span>
+                  <Linkedin className="w-3.5 h-3.5" />
                 </a>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Ex-Googler who worked on the company's first mobile ad server. 
-                Co-founded Disconnect (privacy software protecting 750M+ users) 
-                and Massive - named Proxyway's 2025 "Newcomer of the Year".
-              </p>
             </div>
+            <p className="text-xs text-muted-foreground text-center pt-2 border-t border-border/50">
+              © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground text-center pt-6 border-t border-border/50">
-            © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
-          </p>
         </div>
       </footer>
     </div>
