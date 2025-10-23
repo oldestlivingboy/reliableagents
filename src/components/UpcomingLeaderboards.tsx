@@ -90,15 +90,17 @@ const UpcomingLeaderboards = () => {
           <div className="space-y-1 md:space-y-2">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Upcoming Leaderboards</h2>
             <p className="text-sm md:text-base text-muted-foreground">
-              More comprehensive benchmarks coming soon
+              New benchmarking updates/reports delivered to your inbox whenever they come out
             </p>
           </div>
           
-          <Card className="p-4 bg-primary/5 border-primary/20 md:min-w-[320px]">
-            <form onSubmit={handleGeneralSubscribe} className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Bell className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">Subscribe for all updates</span>
+          <Card className="p-5 bg-gradient-to-br from-primary/10 via-primary/5 to-background border-primary/20 md:min-w-[360px] shadow-lg">
+            <form onSubmit={handleGeneralSubscribe} className="space-y-4">
+              <div className="flex items-center gap-2.5">
+                <div className="p-1.5 rounded-md bg-primary/10">
+                  <Bell className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-semibold text-foreground">Get All Updates</span>
               </div>
               <div className="flex gap-2">
                 <Input
@@ -106,10 +108,10 @@ const UpcomingLeaderboards = () => {
                   placeholder="your@email.com"
                   value={generalEmail}
                   onChange={(e) => setGeneralEmail(e.target.value)}
-                  className="flex-1 h-9 text-sm bg-background"
+                  className="flex-1 h-10 text-sm bg-background border-border/50 focus:border-primary transition-colors"
                   required
                 />
-                <Button type="submit" size="sm" disabled={isLoading} className="whitespace-nowrap">
+                <Button type="submit" size="default" disabled={isLoading} className="whitespace-nowrap px-6">
                   {isLoading ? "..." : "Subscribe"}
                 </Button>
               </div>
