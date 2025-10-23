@@ -37,7 +37,7 @@ const previewCategories = [
 
 export const MarketMapPreview = () => {
   return (
-    <Link to="/2025" className="block group">
+    <Link to="/2025-Q4" className="block group">
       <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/40 to-background p-6 md:p-8 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
         <div className="relative z-10 space-y-6">
           <div className="space-y-3">
@@ -45,7 +45,7 @@ export const MarketMapPreview = () => {
               New Report
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-              The Current Landscape of Agent Browser/Computer Automation - Q4 2025
+              State of Agentic Browser/Computer Use - Q4 2025
             </h2>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               A comprehensive market map of 60+ companies across 9 categories

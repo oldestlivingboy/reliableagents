@@ -197,7 +197,7 @@ const Report2025 = () => {
             Q4 2025
           </div>
           <h1 className="text-3xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
-            The Current State of Agentic Browser/Web/Computer Automation
+            State of Agentic Browser/Computer Use - Q4 2025
           </h1>
         </header>
 
