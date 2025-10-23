@@ -19,7 +19,7 @@ const Hero = () => {
             Reliable Agents
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
             The definitive guide to understanding and benchmarking agentic automation, web browsing, and computer use.
           </p>
         </div>
