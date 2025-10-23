@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 declare global {
   interface Window {
@@ -7,17 +7,13 @@ declare global {
 }
 
 export const CalEmbed = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     // Check if script already exists
     const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]');
     
-    if (existingScript) {
+    if (existingScript && window.Cal) {
       // Script already loaded, just initialize
-      if (window.Cal) {
-        initializeCal();
-      }
+      initializeCal();
       return;
     }
 
@@ -28,55 +24,36 @@ export const CalEmbed = () => {
     script.type = "text/javascript";
     
     script.onload = () => {
-      setIsLoaded(true);
-      // Wait a bit for Cal to be fully ready
-      setTimeout(() => {
-        initializeCal();
-      }, 100);
+      initializeCal();
     };
 
-    script.onerror = () => {
-      console.error('Failed to load Cal.com embed script');
+    script.onerror = (error) => {
+      console.error('Failed to load Cal.com embed script:', error);
     };
 
     document.head.appendChild(script);
-
-    return () => {
-      // Don't remove script on cleanup to prevent re-loading
-    };
   }, []);
 
   const initializeCal = () => {
     if (!window.Cal) {
-      console.error('Cal is not available');
+      console.error('Cal is not available on window');
       return;
     }
 
     try {
-      window.Cal("init", "quickie-with-alex-from-no-cap", {
-        origin: "https://app.cal.com"
-      });
-
-      // Wait for Cal to be initialized before setting up floating button
-      setTimeout(() => {
-        if (window.Cal?.ns?.["quickie-with-alex-from-no-cap"]) {
-          window.Cal.ns["quickie-with-alex-from-no-cap"]("floatingButton", {
-            calLink: "ednevsky/quickie-with-alex-from-no-cap",
-            config: { 
-              layout: "month_view",
-              theme: "auto"
-            },
-            buttonText: "🚀 Free Browser Automation Consultation"
-          });
-
-          window.Cal.ns["quickie-with-alex-from-no-cap"]("ui", {
-            hideEventTypeDetails: false,
-            layout: "month_view"
-          });
+      // Simple floating button call - no namespaces needed
+      window.Cal.floatingButton({
+        calLink: "ednevsky/quickie-with-alex-from-no-cap",
+        buttonText: "🚀 Free Browser Automation Consultation",
+        buttonPosition: "bottom-right",
+        config: {
+          layout: "month_view"
         }
-      }, 500);
+      });
+      
+      console.log('Cal.com floating button initialized successfully');
     } catch (error) {
-      console.error('Error initializing Cal.com:', error);
+      console.error('Error initializing Cal.com floating button:', error);
     }
   };
 
