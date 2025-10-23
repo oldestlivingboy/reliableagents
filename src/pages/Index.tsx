@@ -22,7 +22,7 @@ const Index = () => {
                 <span className="text-xs font-medium text-primary">In Development</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Agentic Control Layer Leaderboard
+                Reliable Agents Leaderboard
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed">
                 We're benchmarking the leading agentic control layers to evaluate their performance across reliability, speed, and documentation quality.
@@ -36,19 +36,24 @@ const Index = () => {
         </div>
       </main>
 
-      <footer className="border-t border-border bg-muted/30 py-8 mt-24">
-        <div className="container mx-auto max-w-3xl px-4">
-          <div className="flex flex-col items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
-            </p>
+      <footer className="border-t border-border/50 mt-24">
+        <div className="container mx-auto max-w-3xl px-4 py-12">
+          <div className="flex flex-col items-center gap-6">
+            <div className="text-center space-y-2">
+              <p className="text-lg font-semibold text-foreground">
+                Reliable Agents
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Empowering agentic developers worldwide
+              </p>
+            </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>Created by</span>
               <a 
                 href="https://www.linkedin.com/in/ednevsky/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Alex
               </a>
@@ -57,11 +62,14 @@ const Index = () => {
                 href="https://www.linkedin.com/in/briansehn/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Brian
               </a>
             </div>
+            <p className="text-xs text-muted-foreground/60">
+              © 2025 All rights reserved
+            </p>
           </div>
         </div>
       </footer>

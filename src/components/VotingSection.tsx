@@ -9,8 +9,12 @@ import {
   Globe, 
   LineChart, 
   Briefcase, 
-  Rocket 
+  Rocket,
+  Plus,
+  Lightbulb
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const categories = [
   { id: "cat_1", title: "Browser use frameworks", icon: Rocket },
@@ -28,6 +32,8 @@ const categories = [
 const VotingSection = () => {
   const [votes, setVotes] = useState<Record<string, number>>({});
   const [votedCategories, setVotedCategories] = useState<Set<string>>(new Set());
+  const [customCategory, setCustomCategory] = useState("");
+  const [customCategories, setCustomCategories] = useState<Array<{ id: string; title: string }>>([]);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -43,14 +49,27 @@ const VotingSection = () => {
   const fetchVotes = async () => {
     const { data, error } = await supabase
       .from("votes")
-      .select("category_id, vote_count");
+      .select("category_id, category_title, vote_count");
 
     if (!error && data) {
       const votesMap: Record<string, number> = {};
+      const customCats: Array<{ id: string; title: string }> = [];
+      
       data.forEach((vote) => {
         votesMap[vote.category_id] = vote.vote_count;
+        
+        // Collect custom categories (those with "custom_" prefix)
+        if (vote.category_id.startsWith("custom_") && 
+            !customCats.some(c => c.id === vote.category_id)) {
+          customCats.push({
+            id: vote.category_id,
+            title: vote.category_title
+          });
+        }
       });
+      
       setVotes(votesMap);
+      setCustomCategories(customCats);
     }
   };
 
@@ -116,9 +135,79 @@ const VotingSection = () => {
     });
   };
 
+  const handleCustomCategorySubmit = async () => {
+    const trimmed = customCategory.trim();
+    
+    if (!trimmed) {
+      toast({
+        title: "Category name required",
+        description: "Please enter a category name",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    if (trimmed.length > 100) {
+      toast({
+        title: "Category name too long",
+        description: "Please keep it under 100 characters",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Create a unique ID for the custom category
+    const categoryId = `custom_${Date.now()}`;
+    
+    // Check if already voted for a custom category
+    const hasVotedForCustom = Array.from(votedCategories).some(id => id.startsWith("custom_"));
+    if (hasVotedForCustom) {
+      toast({
+        title: "Already voted",
+        description: "You've already voted for a custom category",
+      });
+      return;
+    }
+    
+    const { error } = await supabase
+      .from("votes")
+      .insert({ 
+        category_id: categoryId, 
+        category_title: trimmed,
+        vote_count: 1 
+      });
+
+    if (error) {
+      toast({
+        title: "Submission failed",
+        description: "Unable to submit your category. Please try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const newVoted = new Set(votedCategories).add(categoryId);
+    setVotedCategories(newVoted);
+    localStorage.setItem("votedCategories", JSON.stringify([...newVoted]));
+    setCustomCategory("");
+
+    toast({
+      title: "Category submitted!",
+      description: "Thank you for your suggestion",
+    });
+    
+    fetchVotes(); // Refresh to show new custom category
+  };
+
   const totalVotes = Object.values(votes).reduce((sum, count) => sum + count, 0);
 
   const sortedCategories = [...categories].sort((a, b) => {
+    const votesA = votes[a.id] || 0;
+    const votesB = votes[b.id] || 0;
+    return votesB - votesA;
+  });
+  
+  const sortedCustomCategories = [...customCategories].sort((a, b) => {
     const votesA = votes[a.id] || 0;
     const votesB = votes[b.id] || 0;
     return votesB - votesA;
@@ -128,10 +217,10 @@ const VotingSection = () => {
     <section className="space-y-6">
       <div className="space-y-3">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-          Vote for the next benchmark
+          Vote for which category to benchmark next
         </h2>
         <p className="text-base text-muted-foreground">
-          Help us prioritize which leaderboard to create next. {totalVotes > 0 && (
+          Help us prioritize which part of the stack to test next. {totalVotes > 0 && (
             <span className="font-medium text-foreground">{totalVotes} votes</span>
           )}
         </p>
@@ -207,6 +296,95 @@ const VotingSection = () => {
             </div>
           );
         })}
+      </div>
+
+      {/* Custom Category Section */}
+      <div className="pt-8 mt-8 border-t border-border/50">
+        <div className="space-y-4">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+            </div>
+            <div className="flex-1 space-y-3">
+              <div>
+                <h3 className="text-sm font-semibold text-foreground mb-1">
+                  Suggest your own category
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Don't see what you're looking for? Submit your own benchmark idea
+                </p>
+              </div>
+              
+              <div className="flex gap-2">
+                <Input
+                  value={customCategory}
+                  onChange={(e) => setCustomCategory(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleCustomCategorySubmit()}
+                  placeholder="e.g., Testing frameworks for agents"
+                  className="flex-1 text-sm"
+                  maxLength={100}
+                  disabled={Array.from(votedCategories).some(id => id.startsWith("custom_"))}
+                />
+                <Button
+                  onClick={handleCustomCategorySubmit}
+                  disabled={!customCategory.trim() || Array.from(votedCategories).some(id => id.startsWith("custom_"))}
+                  size="sm"
+                  className="gap-1.5"
+                >
+                  <Plus className="w-4 h-4" />
+                  Submit
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Display Custom Categories */}
+          {sortedCustomCategories.length > 0 && (
+            <div className="space-y-2 pt-4">
+              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                Community suggestions ({sortedCustomCategories.length})
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                {sortedCustomCategories.map((category) => {
+                  const voteCount = votes[category.id] || 0;
+                  const hasVoted = votedCategories.has(category.id);
+
+                  return (
+                    <div
+                      key={category.id}
+                      className="group relative flex items-center gap-3 p-3 rounded-lg border border-amber-500/20 bg-amber-500/5 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-200"
+                    >
+                      <button
+                        onClick={() => handleVote(category.id, category.title)}
+                        disabled={hasVoted}
+                        className={`
+                          flex flex-col items-center justify-center gap-0.5 w-11 h-11 rounded-lg flex-shrink-0 font-semibold transition-all duration-200
+                          ${hasVoted 
+                            ? 'bg-amber-600 text-white shadow-md' 
+                            : 'border border-amber-500/30 hover:border-amber-500 hover:bg-amber-500/10 active:scale-95'
+                          }
+                        `}
+                        aria-label={hasVoted ? 'Voted' : 'Vote'}
+                      >
+                        <ArrowUp 
+                          className="w-4 h-4"
+                          strokeWidth={2.5}
+                        />
+                        <span className="text-xs tabular-nums leading-none">
+                          {voteCount}
+                        </span>
+                      </button>
+
+                      <h3 className="font-medium text-sm text-foreground leading-tight flex-1 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                        {category.title}
+                      </h3>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container mx-auto max-w-3xl">
         <div className="space-y-5">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
-            Reliable Agents Leaderboard
+            Reliable Agents
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
