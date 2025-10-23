@@ -207,44 +207,26 @@ const Report2025 = () => {
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4 md:mb-6">Introduction</h2>
             <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
               <p>
-                Gen AI / agents craze is at its peak. Deservedly, unlike some "luddites" may claim. 
-                BUT one piece of the puzzle is still not fully there. Agents being able to reliably 
-                (emphasis wink-wink) use browsers to browse the web and use computers.
+                2025 hasn't quite been the "year of the agent"
+                <a href="https://www.barrons.com/articles/nvidia-ceo-says-2025-is-the-year-of-ai-agents-6ad2b4aa" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">1</a>{" "}
+                <a href="https://blog.samaltman.com/reflections" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">2</a>, 
+                but developers and investors are clearly pushing toward a near future of ubiquitous agents in work and everyday life
+                <a href="https://www.cbinsights.com/research/report/yc-2025-spring-batch-agentic-ai/" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">3</a>. 
+                What's missing for real agentic adoption is reliability – the ability to produce accurate, predictable results based on domain-specific knowledge and external sources of truth.
               </p>
               <p>
-                If you're an agentic developer, how do you navigate the stack and what does the stack 
-                actually consist of? Market maps are great - but not really actionable.
-              </p>
-              <p>
-                We've tasked ourselves with digging through the mess and establishing a good answer to 
-                this question: what's the state of the art in browser automation and who are the best 
-                companies you can use as a developer!
+                If you're a developer taking this challenge on, there are lots of new and existing tools and services offering to help – 
+                actually, an overwhelming amount – so we started sorting the mess out for ourselves and are sharing our findings. 
+                Given that market maps are useful but not actionable, we're going further to identify which developer tools perform best at particular tasks.
               </p>
               <p className="font-semibold text-foreground text-lg md:text-xl">
-                So, starting today and with this report, we're launching RAL (Reliable Agents Leaderboard) - 
-                your one-stop shop for understanding and benchmarking agentic automation.
+                Today, with this report, we're launching Reliable Agents – a one-stop shop for understanding and benchmarking the state of agentic automation!
               </p>
-            </div>
-          </div>
-
-          {/* Created by Section */}
-          <div className="pt-12 border-t border-border/50">
-            <h3 className="text-xs font-semibold tracking-widest uppercase text-primary mb-8">Created by</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-2">
-                <p className="font-semibold text-foreground text-lg">Alex</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
-                  He also created No Cap, the world's first AI agent that invested in a company. 
-                  No Cap coached 10k+ founders and runs nc acc - an accelerator for solopreneurs.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="font-semibold text-foreground text-lg">Brian</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ex-Googler who worked on the company's first mobile ad server and started their DevRel team. 
-                  Co-founded Disconnect (privacy software shipped with most modern browsers - protecting 750,000,000 users) 
-                  and Massive (alternative to ads paywalls) - named Proxyway's 2025 "Newcomer of the Year" for bandwidth monetization.
+              <div className="pt-6 border-t border-border/30 mt-8">
+                <p className="text-[11px] text-muted-foreground leading-relaxed space-y-1">
+                  <span className="block">1. <a href="https://www.barrons.com/articles/nvidia-ceo-says-2025-is-the-year-of-ai-agents-6ad2b4aa" target="_blank" rel="noopener noreferrer" className="hover:underline">Nvidia CEO Says 2025 Is the Year of AI Agents, Barron's</a></span>
+                  <span className="block">2. <a href="https://blog.samaltman.com/reflections" target="_blank" rel="noopener noreferrer" className="hover:underline">Reflections, Sam Altman</a></span>
+                  <span className="block">3. <a href="https://www.cbinsights.com/research/report/yc-2025-spring-batch-agentic-ai/" target="_blank" rel="noopener noreferrer" className="hover:underline">Y Combinator's 2025 Spring batch reveals the future of agentic AI, CB Insights</a></span>
                 </p>
               </div>
             </div>
@@ -254,15 +236,31 @@ const Report2025 = () => {
         {/* MARKET MAP Section */}
         <section className="space-y-8 mb-24">
           <div className="max-w-3xl">
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map</h2>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground">
-              Categorizing {marketMap.reduce((sum, cat) => sum + cat.companies.length, 0)} companies 
-              across {marketMap.length} key categories
+              An interactive overview of the agentic browser/computer use landscape
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
-            {marketMap.map((category, idx) => (
+          <div className="flex gap-6 items-start">
+            {/* Y-axis label */}
+            <div className="hidden lg:flex flex-col justify-between h-full pt-8 pb-4" style={{ minHeight: '600px' }}>
+              <div className="flex flex-col items-center gap-2 -rotate-180" style={{ writingMode: 'vertical-rl' }}>
+                <div className="text-xs font-medium text-muted-foreground tracking-wide">
+                  Higher levels
+                </div>
+                <div className="h-16 w-[1px] bg-gradient-to-t from-primary/40 to-transparent" />
+                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[8px] border-t-primary/40" />
+                <div className="h-16 w-[1px] bg-gradient-to-t from-transparent to-primary/40" />
+                <div className="text-xs font-medium text-muted-foreground tracking-wide">
+                  Bottom of stack
+                </div>
+              </div>
+            </div>
+
+            {/* Market map grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 flex-1">
+              {marketMap.map((category, idx) => (
               <div key={idx} className="space-y-2.5">
                 <div className="flex items-center gap-2">
                   <div 
@@ -304,21 +302,23 @@ const Report2025 = () => {
                   })}
                 </div>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* WHERE TO START Section */}
-        <section className="space-y-8 mb-24 max-w-4xl">
+        <section className="space-y-12 mb-24 max-w-4xl">
           <div>
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Scary, right? These maps look impressive - but how do you actually navigate them?
+              Practical tips for navigating the map
             </p>
           </div>
 
+          {/* The stack you can control */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">The stack you really control</h3>
+            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">The stack you can control</h3>
             <div className="space-y-1 bg-muted/30 rounded-2xl p-8 border border-border/40">
               <div className="grid gap-6">
                 <div className="flex gap-4">
@@ -373,129 +373,125 @@ const Report2025 = () => {
               </div>
             </div>
           </div>
-        </section>
 
-        {/* DECISION FLOW Section */}
-        <section className="space-y-8 mb-24 max-w-4xl">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-6">Decision Flow</h2>
+          {/* Decision Flow */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Decision Flow</h3>
 
-          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
-            <div>
-              <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, forms, upload, pagination)</span></h3>
-              <div className="space-y-2 ml-4 text-sm">
-                <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → use Firecrawl or similar crawler to fetch content cheaply</p>
-                <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
+            <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
+              <div>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, forms, upload, pagination)</span></h3>
+                <div className="space-y-2 ml-4 text-sm">
+                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → use Firecrawl or similar crawler to fetch content cheaply</p>
+                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick control layer</h3>
+                <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
+                  <li>• Browser Use for speed</li>
+                  <li>• Stagehand for reliability</li>
+                  <li>• Skyvern for vision-heavy pages</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick infrastructure</h3>
+                <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
+                  <li>• Browserbase if you need replay and observability</li>
+                  <li>• Anchor for simple scalable sessions</li>
+                  <li>• Hyperbrowser for anti-bot heavy environments</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick model</h3>
+                <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
+                  <li>• Claude Computer Use or OpenAI CUA for pixel control</li>
+                  <li>• Gemini 2.5 for balanced performance</li>
+                  <li>• Or a strong general LLM for DOM/code stacks</li>
+                </ul>
               </div>
             </div>
-
-            <div>
-              <h3 className="font-semibold text-foreground mb-3 text-base">Pick control layer</h3>
-              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                <li>• Browser Use for speed</li>
-                <li>• Stagehand for reliability</li>
-                <li>• Skyvern for vision-heavy pages</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-foreground mb-3 text-base">Pick infrastructure</h3>
-              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                <li>• Browserbase if you need replay and observability</li>
-                <li>• Anchor for simple scalable sessions</li>
-                <li>• Hyperbrowser for anti-bot heavy environments</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-foreground mb-3 text-base">Pick model</h3>
-              <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                <li>• Claude Computer Use or OpenAI CUA for pixel control</li>
-                <li>• Gemini 2.5 for balanced performance</li>
-                <li>• Or a strong general LLM for DOM/code stacks</li>
-              </ul>
-            </div>
           </div>
-        </section>
 
-        {/* COMMON PROBLEMS Section */}
-        <section className="space-y-8 mb-24 max-w-4xl">
-          <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Common Problems</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          {/* Common Problems */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Common Problems</h3>
+            <p className="text-base text-muted-foreground leading-relaxed">
               Why do agents still face-plant in production?
             </p>
+
+            <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-4">
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Timeouts</p>
+                  <p className="text-sm text-muted-foreground">Long trajectories, slow DOMs, flaky waits</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Pop-ups & modals</p>
+                  <p className="text-sm text-muted-foreground">Can't close or mis-detect overlays</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Captcha & fingerprinting</p>
+                  <p className="text-sm text-muted-foreground">Infra issues often block agents more than reasoning does</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Auth flows</p>
+                  <p className="text-sm text-muted-foreground">Login, MFA, device checks, bot walls</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Slow execution</p>
+                  <p className="text-sm text-muted-foreground">Vision loops for trivial steps explode cost & latency</p>
+                </div>
+              </div>
+              <div className="pt-6 mt-6 border-t border-border/50">
+                <p className="text-sm font-semibold text-foreground">
+                  Translation: fix infra first - then policy.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-4">
-            <div className="flex gap-4 items-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
-              <div>
-                <p className="font-semibold text-foreground mb-1">Timeouts</p>
-                <p className="text-sm text-muted-foreground">Long trajectories, slow DOMs, flaky waits</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
-              <div>
-                <p className="font-semibold text-foreground mb-1">Pop-ups & modals</p>
-                <p className="text-sm text-muted-foreground">Can't close or mis-detect overlays</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
-              <div>
-                <p className="font-semibold text-foreground mb-1">Captcha & fingerprinting</p>
-                <p className="text-sm text-muted-foreground">Infra issues often block agents more than reasoning does</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
-              <div>
-                <p className="font-semibold text-foreground mb-1">Auth flows</p>
-                <p className="text-sm text-muted-foreground">Login, MFA, device checks, bot walls</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
-              <div>
-                <p className="font-semibold text-foreground mb-1">Slow execution</p>
-                <p className="text-sm text-muted-foreground">Vision loops for trivial steps explode cost & latency</p>
-              </div>
-            </div>
-            <div className="pt-6 mt-6 border-t border-border/50">
-              <p className="text-sm font-semibold text-foreground">
-                Translation: fix infra first - then policy.
-              </p>
-            </div>
-          </div>
-        </section>
+          {/* Quick FAQ */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Quick FAQ</h3>
 
-        {/* RAL LAUNCH Section */}
-        <section className="space-y-8 mb-24 max-w-4xl">
-          <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">RAL Launch</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, we're launching RAL (Reliable Agents Leaderboard) with a focus on agentic control layers + browser infra combinations.
-            </p>
-          </div>
+            <div className="space-y-4">
+              <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+                <h4 className="font-semibold text-foreground mb-3 text-base">Do I start with a provider-hosted Computer Use model or a framework?</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Start with provider-hosted to ship a demo today. Move to framework + infra when you need replay, audits, stealth control, data residency.
+                </p>
+              </div>
 
-          <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-6">
-            <div>
-              <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide mb-4">Method - simple and reproducible</h3>
-              <ul className="space-y-2.5 text-sm text-muted-foreground">
-                <li className="flex gap-3"><span className="text-primary">•</span> Separate READ vs WRITE task classes</li>
-                <li className="flex gap-3"><span className="text-primary">•</span> 3 canonical flows: login + 2FA, paginate & extract, form submit + upload</li>
-                <li className="flex gap-3"><span className="text-primary">•</span> Require replay video + console + HAR + DOM snapshots per attempt</li>
-                <li className="flex gap-3"><span className="text-primary">•</span> Report: success rate, median steps, p50 time, cost per successful task, human handoff rate</li>
-                <li className="flex gap-3"><span className="text-primary">•</span> Keep proxy, fingerprint, captcha policies identical across runs</li>
-                <li className="flex gap-3"><span className="text-primary">•</span> Log infra vs agent failure root causes</li>
-              </ul>
-            </div>
-            <div className="pt-4 border-t border-border/50">
-              <p className="text-sm text-foreground/80 leading-relaxed">
-                <span className="font-semibold">Why this matters:</span> you can finally compare apples to apples. Frameworks are tested like frameworks. 
-                Infra is tested like infra. Models are held constant where appropriate.
-              </p>
+              <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+                <h4 className="font-semibold text-foreground mb-3 text-base">Is pixel better than DOM?</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Reading is easy either way. For write-heavy flows, DOM-first plus deterministic code paths often wins on latency and stability - pixel is improving fast.
+                </p>
+              </div>
+
+              <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+                <h4 className="font-semibold text-foreground mb-3 text-base">Why vertical agents?</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Context specialization and narrower action spaces raise reliability - the near-term path to production wins.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -504,7 +500,9 @@ const Report2025 = () => {
         <section className="space-y-8 mb-24 max-w-5xl">
           <div>
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-2">Future Leaderboards</h2>
-            <p className="text-sm text-muted-foreground">Subscribe to stay updated!</p>
+            <p className="text-sm text-muted-foreground">
+              Help shape our roadmap! <Link to="/" className="text-primary hover:underline font-medium">Vote on the homepage</Link> for which leaderboard you'd like to see next.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -535,37 +533,39 @@ const Report2025 = () => {
           </div>
         </section>
 
-        {/* APPENDIX - QUICK FAQ Section */}
-        <section className="space-y-8 mb-24 max-w-4xl">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-primary">Quick FAQ</h2>
-
-          <div className="space-y-4">
-            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
-              <h3 className="font-semibold text-foreground mb-3 text-base">Do I start with a provider-hosted Computer Use model or a framework?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Start with provider-hosted to ship a demo today. Move to framework + infra when you need replay, audits, stealth control, data residency.
-              </p>
-            </div>
-
-            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
-              <h3 className="font-semibold text-foreground mb-3 text-base">Is pixel better than DOM?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Reading is easy either way. For write-heavy flows, DOM-first plus deterministic code paths often wins on latency and stability - pixel is improving fast.
-              </p>
-            </div>
-
-            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
-              <h3 className="font-semibold text-foreground mb-3 text-base">Why vertical agents?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Context specialization and narrower action spaces raise reliability - the near-term path to production wins.
-              </p>
-            </div>
+        <footer className="mt-24 pt-8 border-t border-border/30 max-w-5xl space-y-6">
+          <div className="max-w-3xl">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <span className="font-semibold text-foreground">P.S.</span> Created & maintained by{" "}
+              <a 
+                href="https://www.linkedin.com/in/ednevsky/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Alex
+              </a>
+              {" "}—{" "}
+              A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
+              He also created No Cap, the world's first AI agent that invested in a company. 
+              No Cap coached 10k+ founders and runs nc acc - an accelerator for solopreneurs.
+              {" "}& {" "}
+              <a 
+                href="https://www.linkedin.com/in/caseyoppenheim/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Brian
+              </a>
+              {" "}—{" "}
+              Ex-Googler who worked on the company's first mobile ad server and started their DevRel team. 
+              Co-founded Disconnect (privacy software shipped with most modern browsers - protecting 750,000,000 users) 
+              and Massive (alternative to ads paywalls) - named Proxyway's 2025 "Newcomer of the Year" for bandwidth monetization.
+            </p>
           </div>
-        </section>
-
-        <footer className="mt-24 pt-8 border-t border-border/30 max-w-5xl">
-          <p className="text-xs text-muted-foreground text-center">
-            © 2025 Reliable Agents Leaderboard. All rights reserved.
+          <p className="text-xs text-muted-foreground text-center pt-4 border-t border-border/30">
+            © 2025 Reliable Agents. All rights reserved.
           </p>
         </footer>
       </div>
