@@ -384,7 +384,12 @@ const Report2025 = () => {
             </p>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto relative">
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-24 rotate-[-90deg] origin-center">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider whitespace-nowrap">
+                Bottom of stack → Higher levels
+              </p>
+            </div>
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-border/50">
@@ -396,58 +401,64 @@ const Report2025 = () => {
               </thead>
               <tbody className="text-muted-foreground text-sm">
                 <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Consumer agents</td>
-                  <td className="py-3 px-4">1-2</td>
-                  <td className="py-3 px-4">Agent brain + agentic control</td>
-                  <td className="py-3 px-4">Manus, Yutori, DEX, KAIROS</td>
-                </tr>
-                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">AI browsers</td>
-                  <td className="py-3 px-4">2, 4</td>
-                  <td className="py-3 px-4">Built-in agent layer + execution env</td>
-                  <td className="py-3 px-4">Dia, Opera, Comet</td>
-                </tr>
-                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Enterprise agents</td>
-                  <td className="py-3 px-4">1-2, 6</td>
-                  <td className="py-3 px-4">Compliance, audit, SSO</td>
-                  <td className="py-3 px-4">Orby, CopyCat, Athena, Narada</td>
-                </tr>
-                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Frameworks & libraries</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Browser use frameworks</td>
                   <td className="py-3 px-4">2</td>
                   <td className="py-3 px-4">Decide actions - plan, click, type, recover</td>
                   <td className="py-3 px-4">Browser Use, Stagehand, Skyvern, LaVague</td>
                 </tr>
                 <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Browser control & protocols</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Browser use libraries/protocols</td>
                   <td className="py-3 px-4">3</td>
                   <td className="py-3 px-4">Send actions to the browser</td>
                   <td className="py-3 px-4">Playwright, Puppeteer, CDP</td>
                 </tr>
                 <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Browser-as-a-Service infra</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Specialized browser use</td>
+                  <td className="py-3 px-4">2</td>
+                  <td className="py-3 px-4">Vision-heavy pages, specialized parsing</td>
+                  <td className="py-3 px-4">Skyvern, LaVague, specialized tools</td>
+                </tr>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Browsers as a service</td>
                   <td className="py-3 px-4">4</td>
                   <td className="py-3 px-4">Hosted cloud browser sessions, proxies, replay</td>
                   <td className="py-3 px-4">Browserbase, Anchor, Hyperbrowser</td>
                 </tr>
                 <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Desktop OS control</td>
-                  <td className="py-3 px-4">5</td>
-                  <td className="py-3 px-4">Automate non-web UIs, VDI, Citrix</td>
-                  <td className="py-3 px-4">Cua, SCRAPYBARA</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Supporting infrastructure</td>
+                  <td className="py-3 px-4">5-6</td>
+                  <td className="py-3 px-4">Orchestration, auth, retries, state management</td>
+                  <td className="py-3 px-4">Temporal, Inngest, LangGraph, Anon</td>
                 </tr>
                 <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Orchestration</td>
-                  <td className="py-3 px-4">6</td>
-                  <td className="py-3 px-4">Retries, state, timeouts, audit, SLAs</td>
-                  <td className="py-3 px-4">Temporal, Inngest, LangGraph</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Scraping & crawling APIs</td>
+                  <td className="py-3 px-4">-</td>
+                  <td className="py-3 px-4">Fetch content without interaction</td>
+                  <td className="py-3 px-4">Firecrawl, Apify, Tavily, Exa.ai</td>
+                </tr>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Computer use models</td>
+                  <td className="py-3 px-4">1</td>
+                  <td className="py-3 px-4">Foundation models for computer/browser control</td>
+                  <td className="py-3 px-4">Claude Computer Use, OpenAI CUA, Gemini 2.5</td>
+                </tr>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Enterprise automation</td>
+                  <td className="py-3 px-4">1-2, 6</td>
+                  <td className="py-3 px-4">Compliance, audit, SSO, enterprise features</td>
+                  <td className="py-3 px-4">Orby, CopyCat, Athena, Narada</td>
+                </tr>
+                <tr className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">Consumer automation</td>
+                  <td className="py-3 px-4">1-2</td>
+                  <td className="py-3 px-4">Consumer-facing agents and automation</td>
+                  <td className="py-3 px-4">Manus, Yutori, DEX, KAIROS</td>
                 </tr>
                 <tr className="hover:bg-muted/20 transition-colors">
-                  <td className="py-3 px-4 font-medium text-foreground">Computer Use models</td>
-                  <td className="py-3 px-4">1</td>
-                  <td className="py-3 px-4">Policy reasoning</td>
-                  <td className="py-3 px-4">Claude Computer Use, OpenAI CUA, Gemini 2.5</td>
+                  <td className="py-3 px-4 font-medium text-foreground">Consumer browsers</td>
+                  <td className="py-3 px-4">2, 4</td>
+                  <td className="py-3 px-4">Built-in agent features in browsers</td>
+                  <td className="py-3 px-4">Dia, Opera, Chrome with Gemini</td>
                 </tr>
               </tbody>
             </table>

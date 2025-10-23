@@ -13,14 +13,16 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { id: "general_0", title: "General Consumer Agentic Browsing", icon: Globe },
-  { id: "general_1", title: "AI Browsers with Automations", icon: Code2 },
-  { id: "general_2", title: "Enterprise Agentic Automations", icon: Building2 },
-  { id: "general_3", title: "General Go-to Frameworks", icon: Rocket },
-  { id: "vertical_0", title: "Browser-as-a-Service Infrastructure", icon: BarChart3 },
-  { id: "vertical_1", title: "Computer Use Foundation Models", icon: LineChart },
-  { id: "vertical_2", title: "Crawlers/Scrapers/APIs", icon: Code2 },
-  { id: "vertical_3", title: "Supporting Infrastructure", icon: Briefcase },
+  { id: "cat_1", title: "Browser use frameworks", icon: Rocket },
+  { id: "cat_2", title: "Browser use libraries/protocols", icon: Code2 },
+  { id: "cat_3", title: "Specialized browser use", icon: LineChart },
+  { id: "cat_4", title: "Browsers as a service", icon: BarChart3 },
+  { id: "cat_5", title: "Supporting infrastructure", icon: Briefcase },
+  { id: "cat_6", title: "Scraping & crawling APIs", icon: Globe },
+  { id: "cat_7", title: "Computer use models", icon: Building2 },
+  { id: "cat_8", title: "Enterprise automation", icon: Briefcase },
+  { id: "cat_9", title: "Consumer automation", icon: Globe },
+  { id: "cat_10", title: "Consumer browsers", icon: Code2 },
 ];
 
 const VotingSection = () => {
