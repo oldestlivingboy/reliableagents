@@ -34,77 +34,82 @@ const Report2025 = () => {
       .trim();
     
     const urlMap: { [key: string]: string } = {
-      'dex': 'https://dex.ai',
-      'kairos': 'https://kairos.ai',
-      'please': 'https://please.com',
-      'convergence proxy': 'https://convergence.ai',
-      'godmode ai': 'https://godmode.space',
-      'general agents': 'https://generalagents.ai',
-      'nanobrowser': 'https://nanobrowser.com',
-      'dia': 'https://dia.so',
-      'opera': 'https://opera.com',
-      'perplexity search api': 'https://perplexity.ai',
-      'comet': 'https://comet.com',
-      'asteroid': 'https://asteroid.ai',
-      'basepilot': 'https://basepilot.ai',
-      'orby': 'https://orby.ai',
-      'h': 'https://h.company',
-      'copycat': 'https://copycat.ai',
-      'athena intelligence': 'https://athena.io',
-      'narada': 'https://narada.ai',
-      'twin': 'https://twin.so',
-      'emergence': 'https://emergence.ai',
-      'skyvern': 'https://skyvern.com',
-      'simular': 'https://simular.ai',
-      'browser use': 'https://github.com/browser-use/browser-use',
-      'lavague': 'https://lavague.ai',
-      'hyperbrowser': 'https://hyperbrowser.ai',
-      'cua': 'https://cua.dev',
-      'trycua': 'https://cua.dev',
-      'browserbase': 'https://browserbase.com',
-      'stagehand': 'https://stagehand.dev',
-      'director': 'https://browserbase.com',
-      'anon': 'https://anon.com',
-      'openai operator': 'https://openai.com',
-      'google project mariner': 'https://deepmind.google/technologies/project-mariner',
-      'bytedance ui-tars': 'https://bytedance.com',
-      'amazon nova': 'https://aws.amazon.com/ai/generative-ai/nova',
-      'omniparser': 'https://github.com/microsoft/OmniParser',
-      'anthropic claude computer use': 'https://anthropic.com/claude',
-      'glm-4.5v': 'https://chatglm.cn',
-      'qwen2.5-vl': 'https://qwenlm.github.io',
-      'opencua': 'https://github.com/opencua/opencua',
-      'axiom-1': 'https://inductionlabs.ai',
-      'coact-1': 'https://coact.ai',
-      'inngest': 'https://inngest.com',
-      'ingnest': 'https://inngest.com',
-      'temporal': 'https://temporal.io',
-      'langgraph': 'https://langchain.com/langgraph',
-      'playwright': 'https://playwright.dev',
-      'puppeteer': 'https://pptr.dev',
-      'lightpanda': 'https://lightpanda.io',
-      'anchor browser': 'https://anchor.io',
-      'kernel': 'https://kernel.io',
-      's1': 'https://s1.ai',
-      'scrapybara': 'https://scrapybara.com',
-      'yutori': 'https://yutori.ai',
-      'manus': 'https://manus.app',
-      'google gemini 2.5': 'https://deepmind.google/gemini',
-      'chrome': 'https://google.com/chrome',
-      'microsoft edge copilot': 'https://microsoft.com/edge',
-      'kura ai': 'https://kura.ai',
-      'firecrawl': 'https://firecrawl.dev',
-      'trigger.dev': 'https://trigger.dev',
-      'apify': 'https://apify.com',
-      'bright data': 'https://brightdata.com',
-      'browser.ai': 'https://browser.ai',
-      'kaizen': 'https://kaizen.ai',
-      'halluminate': 'https://halluminate.ai',
-      'tavily': 'https://tavily.com',
-      'exa.ai': 'https://exa.ai',
-      'browserless': 'https://browserless.io',
-      'zyte.com': 'https://zyte.com',
-      'scrapy': 'https://scrapy.org',
+      'magnitude.run': 'https://magnitude.run/',
+      'trigger.dev': 'https://trigger.dev/',
+      'browserbase': 'https://www.browserbase.com/',
+      'stagehand': 'https://www.browserbase.com/',
+      'director': 'https://www.browserbase.com/',
+      'browser use': 'https://github.com/a-r-n-o-l-d/browser-use',
+      'simular': 'https://www.simular.ai/',
+      'skyvern': 'https://www.skyvern.com/',
+      'puppeteer': 'https://pptr.dev/',
+      'playwright': 'https://playwright.dev/',
+      'scrapybara': 'https://scrapybara.com/',
+      'cua': 'https://cua.ai/',
+      'trycua': 'https://cua.ai/',
+      'lavague': 'https://lavague.ai/',
+      'steel.dev': 'https://steel.dev/',
+      'browserless': 'https://www.browserless.io/',
+      'kernel': 'https://www.onkernel.com/',
+      'anchor browser': 'https://anchorbrowser.io/',
+      'hyperbrowser': 'https://www.hyperbrowser.ai/',
+      'morph.so': 'https://www.morph.so/',
+      'halluminate': 'https://halluminate.ai/',
+      'lightpanda': 'https://lightpanda.io/',
+      'langgraph': 'https://www.langchain.com/langgraph',
+      'temporal': 'https://temporal.io/',
+      'inngest': 'https://www.inngest.com/',
+      'ingnest': 'https://www.inngest.com/',
+      'anon': 'https://www.anon.com/',
+      'riveterhq.com': 'https://riveterhq.com/',
+      'zyte.com': 'https://www.zyte.com/',
+      'scrapy': 'https://www.zyte.com/',
+      'exa.ai': 'https://exa.ai/',
+      'tavily': 'https://tavily.com/',
+      'kaizen': 'https://kaizen.com/',
+      'bright data': 'https://brightdata.com/',
+      'browser.ai': 'https://brightdata.com/',
+      'apify': 'https://apify.com/',
+      'firecrawl': 'https://www.firecrawl.dev/',
+      'omniparser': 'https://microsoft.github.io/OmniParser/',
+      'google gemini 2.5': 'https://gemini.google.com/',
+      'chrome': 'https://www.google.com/chrome/',
+      'coact-1': 'https://linxins.net/coact/',
+      'axiom-1': 'https://inductionlabs.com/',
+      'opencua': 'https://opencua.xlang.ai/',
+      'qwen2.5-vl': 'https://qwenlm.github.io/blog/qwen2.5-vl/',
+      'glm-4.5v': 'https://bigmodel.cn/',
+      'anthropic claude computer use': 'https://www.anthropic.com/',
+      'amazon nova': 'https://nova.amazon.com/',
+      'bytedance ui-tars': 'https://seed.bytedance.com/en/ui-tars',
+      'google project mariner': 'https://deepmind.google/models/project-mariner/',
+      'openai operator': 'https://openai.com/',
+      'openai cua': 'https://openai.com/',
+      'openai atlas': 'https://openai.com/',
+      'notte.cc': 'https://www.notte.cc/',
+      'kura ai': 'https://www.trykura.com/',
+      'emergence': 'https://www.emergence.ai/',
+      'twin': 'https://twin.so/',
+      'narada': 'https://www.narada.ai/',
+      'athena intelligence': 'https://www.athenaintel.com/',
+      'copycat': 'https://www.ycombinator.com/companies/copycat',
+      'h': 'https://www.hcompany.ai/',
+      'orby': 'https://www.uniphore.com/orby-ai/',
+      'basepilot': 'https://www.basepilot.com/',
+      'asteroid': 'https://asteroid.ai/',
+      'yutori': 'https://yutori.com/',
+      'manus': 'https://manus.im/',
+      'nanobrowser': 'https://nanobrowser.ai/',
+      'general agents': 'https://generalagents.com/',
+      'godmode ai': 'https://app.godmode.space/',
+      'convergence proxy': 'https://www.aiapps.com/items/proxy-by-convergence-ai/',
+      'kairos': 'https://www.kairos.computer/',
+      'dex': 'https://thirdlayer.inc/',
+      'microsoft edge copilot': 'https://www.microsoft.com/en-us/edge/copilot',
+      'perplexity search api': 'https://www.perplexity.ai/',
+      'comet': 'https://www.perplexity.ai/',
+      'opera': 'https://www.opera.com/',
+      'dia': 'https://www.diabrowser.com/',
     };
     
     return urlMap[cleanName] || `https://${cleanName.replace(/\s+/g, '')}.com`;
@@ -278,22 +283,30 @@ const Report2025 = () => {
                 <div className="grid grid-cols-6 sm:grid-cols-7 gap-2">
                   {category.companies.map((company, companyIdx) => {
                     const domain = getCompanyDomain(company.name);
+                    const categoryCount = company.category.split(';').length;
+                    const isMultiCategory = categoryCount > 1;
+                    
                     return (
                       <a
                         key={companyIdx}
                         href={getCompanyUrl(company.name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-1 transition-transform hover:scale-105"
-                        title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}`}
+                        className="group flex flex-col items-center gap-1 transition-transform hover:scale-105 relative"
+                        title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                       >
-                        <div className="w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden border border-border/30 p-1 shadow-sm group-hover:shadow transition-shadow">
+                        <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 shadow-sm group-hover:shadow transition-all ${isMultiCategory ? 'border-2 border-primary/30' : 'border border-border/30'}`}>
                           <CompanyLogo
                             companyName={company.name}
                             domain={domain}
                             categoryColor={category.color}
                           />
                         </div>
+                        {isMultiCategory && (
+                          <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
+                            <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                          </div>
+                        )}
                         <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                           {company.name}
                         </span>

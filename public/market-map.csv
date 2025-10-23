@@ -1,64 +1,76 @@
-﻿Company / Tool,Appears in (Source → Category),Categories,Date,One-liner,Place
-DEX (ThirdLayer),Market Map → Consumer,General consumer agentic browsing,,Browser copilot that turns intent into on-page actions.,
-KAIROS,Market Map → Consumer,General consumer agentic browsing,,Show-and-repeat consumer automation of recorded workflows.,
-Please,Market Map → Consumer,General consumer agentic browsing,,Planning assistant that generates and runs life/project plans.,
-Convergence Proxy,Market Map → Consumer,General consumer agentic browsing,,Consumer-facing agent with session/proxy execution.,
-Godmode AI,Market Map → Consumer,General consumer agentic browsing,,Delegate repetitive web tasks to an agent.,
-General Agents,Market Map → Consumer,General consumer agentic browsing,,Team building autonomous “AI coworkers” for web tools.,
-Nanobrowser,Market Map → Consumer,General consumer agentic browsing,,Lightweight agentic browser/extension for local tasks.,
-Dia,Market Map → AI Browsers,AI browsers with automations,,AI browser (Arc successor) with agentic features.,
-Opera,Market Map → AI Browsers,AI browsers with automations,,Mainstream browser adding agentic/AI browsing features.,
-Perplexity Search API / Comet,Market Map → AI Browsers,"AI browsers with automations, Crawlers/scrapers/APIs",,AI browser with built-in assistant navigation.,
-Asteroid,Market Map → Enterprise,Enterprise agentic automations,,Enterprise browser-agent automation for internal ops.,
-basepilot,Market Map → Enterprise,Enterprise agentic automations,,AI workers for insurance/operational browser workflows.,
-Orby,Market Map → Enterprise,Enterprise agentic automations,,Enterprise AI agents focused on reliability/compliance.,
-H (H Company),Market Map → Enterprise,Enterprise agentic automations,,Browser-only agents powered by the H stack.,
-CopyCat,Market Map → Enterprise,Enterprise agentic automations,,AI RPA using browser agents to replace brittle scripts.,
-Athena Intelligence,Market Map → Enterprise,Enterprise agentic automations,,Artificial data-analyst copilot for analytics tasks.,
-Narada,Market Map → Enterprise,Enterprise agentic automations,,Agentic process automation with large action models.,
-twin,Market Map → Enterprise,Enterprise agentic automations,,Skilled agents that operate apps without APIs to run ops.,
-emergence,Market Map → Enterprise,Enterprise agentic automations,,Enterprise agent platform (listed on map).,
-Skyvern,Market Map → Frameworks; a16z → Interaction Frameworks,"Browser-as-a-service infra, General go-to frameworks",,"Vision-augmented, LLM-first web-automation framework.",
-SIMULAR,Market Map → Frameworks; a16z → Full-stack applications,General go-to frameworks,,Agent framework; also shown as full-stack app.,
-Browser Use,Market Map → Frameworks; a16z → Interaction Frameworks,General go-to frameworks,,Python library to let agents control a browser (DOM + vision).,
-LaVague,Market Map → Frameworks,More specialized frameworks,,Open-source framework for building web agents/tests.,
-hyperbrowser,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),Browser-as-a-service infra,,Cloud browser/agent infra for scaling agents.,
-Cua / trycua,Market Map → Infrastructure; a16z → Interaction Frameworks & Desktop Infra,More specialized frameworks,,OS-level UI control + desktop infra for computer-use agents.,
-Browserbase  / Stagehand / Director,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),"Browser-as-a-service infra, General consumer agentic browsing, General go-to frameworks",,Managed headless browsers + monitoring at scale.,
-Anon,Market Map → Infrastructure,Supporting infra,,Secure auth/access so agents can log in and act safely.,
-OpenAI Operator/CUA,Market Map → Foundation Models; a16z → Full-stack apps & Models,"Computer use foundation models, General consumer agentic browsing",,OpenAI’s computer-using agent/model; also full-stack app.,
-Google Project Mariner,Market Map → Foundation Models,Computer use foundation models,,DeepMind project for browser task automation.,
-Bytedance UI-TARS,Market Map → Foundation Models,Computer use foundation models,,ByteDance computer-use/GUI agent model family.,
-Amazon Nova (acq Adept AI),Market Map → Foundation Models,Computer use foundation models,,Amazon multimodal model family used as agent backends.,
-OmniParser,a16z → Interaction Frameworks,Crawlers/scrapers/APIs,,Model pipeline (with YOLO-tuned vision) for parsing UIs.,
-Anthropic Claude Computer Use,a16z → Models (Pixel-based),"Computer use foundation models, General consumer agentic browsing",,General model variant used for computer-use.,
-GLM-4.5V,a16z → Models (Pixel-based),Computer use foundation models,,Vision-language model listed for computer-use.,
-Qwen2.5-VL,a16z → Models (Pixel-based),Computer use foundation models,,Vision-language model listed for computer-use.,
-OpenCUA,a16z → Models (Pixel-based),Computer use foundation models,,Open computer-use model family.,
-Axiom-1 (Induction Labs),a16z → Models (Pixel-based),Computer use foundation models,,Computer-use/agent model variant.,
-CoAct-1,a16z → Models (Pixel-based),Computer use foundation models,,Computer-use/agent model variant.,
-ingnest,a16z → Durable Execution & Orchestration,Supporting infra,,Durable execution/orchestration for agent workflows.,
-Temporal,a16z → Durable Execution & Orchestration,Supporting infra,,Workflow engine for long-running agent tasks.,
-LangGraph,a16z → Durable Execution & Orchestration,Supporting infra,,Orchestration framework for LLM agent graphs.,
-Playwright,a16z → Browser Control Layers,Libraries & protocols,,Modern automation library to control browsers (DOM-based).,
-Puppeteer,a16z → Browser Control Layers,Libraries & protocols,,Headless Chrome/Chromium control library.,
-Lightpanda,a16z → Browsers,Supporting infra,,Browser/engine listed as an option in the stack.,
-Anchor Browser,a16z → Execution Environments (Browser Infra),Browser-as-a-service infra,,Hosted browser infrastructure provider.,
-Kernel,a16z → Execution Environments (Browser Infra),Browser-as-a-service infra,,Provider listed for hosted browser-infra.,
-S1,a16z → Execution Environments (Browser Infra),Browser-as-a-service infra,,Provider listed for hosted browser-infra.,
-SCRAPYBARA,a16z → Execution Environments (Desktop Infra),More specialized frameworks,,Desktop automation/infra for GUI control.,
-Yutori,Market Map → Consumer,General consumer agentic browsing,,Consumer agent that monitors and acts on web tasks.,
-Manus,Market Map → Consumer; a16z → Full-stack applications,General consumer agentic browsing,,Full-stack agent that executes multi-step tasks for users.,
-Google Gemini 2.5 / Chrome,,"AI browsers with automations, Computer use foundation models, General consumer agentic browsing",,,
-Microsoft Edge Copilot,,AI browsers with automations,,,
-Kura AI,,Enterprise agentic automations,,,
-Firecrawl,,Crawlers/scrapers/APIs,,,
-Trigger.dev,,General go-to frameworks,,,
-Apify,,Crawlers/scrapers/APIs,,,
-Bright Data / Browser.ai,,"Browser-as-a-service infra, Crawlers/scrapers/APIs",,,
-Kaizen,,Crawlers/scrapers/APIs,,,
-Halluminate,,Supporting infra,,,
-Tavily,,Crawlers/scrapers/APIs,,,
-Exa.ai,,Crawlers/scrapers/APIs,,,
-Browserless,,Browser-as-a-service infra,,,
-http://Zyte.com / Scrapy,,"Crawlers/scrapers/APIs, Libraries & protocols, More specialized frameworks",,,
+Company,Source,Category,Date,One-liner,URL
+magnitude.run,,1. Browser use frameworks,,,https://magnitude.run/
+Trigger.dev,,1. Browser use frameworks,,,https://trigger.dev/
+Browserbase,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
+Stagehand,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
+Director,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
+Browser Use,,1. Browser use frameworks,,,https://github.com/a-r-n-o-l-d/browser-use
+SIMULAR,,1. Browser use frameworks,,,https://www.simular.ai/
+Skyvern,,1. Browser use frameworks; 4. Browsers as a service,,,https://www.skyvern.com/
+Puppeteer,,2. Browser use libraries/protocols,,,https://pptr.dev/
+Playwright,,2. Browser use libraries/protocols,,,https://playwright.dev/
+SCRAPYBARA,,3. Specialized browser use,,,https://scrapybara.com/
+Cua,,3. Specialized browser use,,,https://cua.ai/
+trycua,,3. Specialized browser use,,,https://cua.ai/
+LaVague,,3. Specialized browser use,,,https://lavague.ai/
+steel.dev,,4. Browsers as a service,,,https://steel.dev/
+Browserless,,4. Browsers as a service,,,https://www.browserless.io/
+Kernel,,4. Browsers as a service,,,https://www.onkernel.com/
+Anchor Browser,,4. Browsers as a service,,,https://anchorbrowser.io/
+hyperbrowser,,4. Browsers as a service,,,https://www.hyperbrowser.ai/
+morph.so,,5. Supporting infrastructure,,,https://www.morph.so/
+Halluminate,,5. Supporting infrastructure,,,https://halluminate.ai/
+Lightpanda,,5. Supporting infrastructure,,,https://lightpanda.io/
+LangGraph,,5. Supporting infrastructure,,,https://www.langchain.com/langgraph
+Temporal,,5. Supporting infrastructure,,,https://temporal.io/
+Inngest,,5. Supporting infrastructure,,,https://www.inngest.com/
+Anon,,5. Supporting infrastructure,,,https://www.anon.com/
+riveterhq.com,,6. Scraping & crawling APIs,,,https://riveterhq.com/
+Zyte.com,,2. Browser use libraries/protocols; 3. Specialized browser use; 6. Scraping & crawling APIs,,,https://www.zyte.com/
+Scrapy,,2. Browser use libraries/protocols; 3. Specialized browser use; 6. Scraping & crawling APIs,,,https://www.zyte.com/
+Exa.ai,,6. Scraping & crawling APIs,,,https://exa.ai/
+Tavily,,6. Scraping & crawling APIs,,,https://tavily.com/
+Kaizen,,6. Scraping & crawling APIs,,,https://kaizen.com/
+Bright Data,,4. Browsers as a service; 6. Scraping & crawling APIs,,,https://brightdata.com/
+Browser.ai,,4. Browsers as a service; 6. Scraping & crawling APIs,,,https://brightdata.com/
+Apify,,6. Scraping & crawling APIs,,,https://apify.com/
+Firecrawl,,6. Scraping & crawling APIs,,,https://www.firecrawl.dev/
+OmniParser,,6. Scraping & crawling APIs,,,https://microsoft.github.io/OmniParser/
+Google Gemini 2.5,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://gemini.google.com/
+Chrome,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://www.google.com/chrome/
+CoAct-1,,7. Computer use models,,,https://linxins.net/coact/
+Axiom-1,,7. Computer use models,,,https://inductionlabs.com/
+OpenCUA,,7. Computer use models,,,https://opencua.xlang.ai/
+Qwen2.5-VL,,7. Computer use models,,,https://qwenlm.github.io/blog/qwen2.5-vl/
+GLM-4.5V,,7. Computer use models,,,https://bigmodel.cn/
+Anthropic Claude Computer Use,,7. Computer use models; 9. Consumer automation,,,https://www.anthropic.com/
+Amazon Nova,,7. Computer use models,,,https://nova.amazon.com/
+Bytedance UI-TARS,,7. Computer use models,,,https://seed.bytedance.com/en/ui-tars
+Google Project Mariner,,7. Computer use models,,,https://deepmind.google/models/project-mariner/
+OpenAI Operator,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
+OpenAI CUA,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
+OpenAI Atlas,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
+Notte.cc,,8. Enterprise automation,,,https://www.notte.cc/
+Kura AI,,8. Enterprise automation,,,https://www.trykura.com/
+emergence,,8. Enterprise automation,,,https://www.emergence.ai/
+twin,,8. Enterprise automation,,,https://twin.so/
+Narada,,8. Enterprise automation,,,https://www.narada.ai/
+Athena Intelligence,,8. Enterprise automation,,,https://www.athenaintel.com/
+CopyCat,,8. Enterprise automation,,,https://www.ycombinator.com/companies/copycat
+H,,8. Enterprise automation,,,https://www.hcompany.ai/
+Orby,,8. Enterprise automation,,,https://www.uniphore.com/orby-ai/
+basepilot,,8. Enterprise automation,,,https://www.basepilot.com/
+Asteroid,,8. Enterprise automation,,,https://asteroid.ai/
+Yutori,,9. Consumer automation,,,https://yutori.com/
+Manus,,9. Consumer automation,,,https://manus.im/
+Nanobrowser,,9. Consumer automation,,,https://nanobrowser.ai/
+General Agents,,9. Consumer automation,,,https://generalagents.com/
+Godmode AI,,9. Consumer automation,,,https://app.godmode.space/
+Convergence Proxy,,9. Consumer automation,,,https://www.aiapps.com/items/proxy-by-convergence-ai/
+KAIROS,,9. Consumer automation,,,https://www.kairos.computer/
+DEX,,9. Consumer automation,,,https://thirdlayer.inc/
+Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot
+Perplexity Search API,,10. Consumer browsers; 6. Scraping & crawling APIs,,,https://www.perplexity.ai/
+Comet,,10. Consumer browsers; 6. Scraping & crawling APIs,,,https://www.perplexity.ai/
+Opera,,10. Consumer browsers,,,https://www.opera.com/
+Dia,,10. Consumer browsers,,,https://www.diabrowser.com/
