@@ -39,17 +39,17 @@ const Index = () => {
       </main>
 
       <footer className="border-t border-border mt-24">
-        <div className="container mx-auto max-w-3xl px-4 py-12">
-          <div className="flex flex-col items-center gap-6">
-            <div className="text-center space-y-2">
-              <p className="text-lg font-semibold text-foreground">
+        <div className="container mx-auto max-w-3xl px-4 py-8">
+          <div className="flex flex-col items-center gap-4">
+            <div className="text-center space-y-1">
+              <p className="text-base font-semibold text-foreground">
                 Reliable Agents
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 Empowering agentic developers worldwide
               </p>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <span>Created by</span>
               <a 
                 href="https://www.linkedin.com/in/ednevsky/" 
@@ -69,7 +69,7 @@ const Index = () => {
                 Brian
               </a>
             </div>
-            <p className="text-xs text-muted-foreground/60">
+            <p className="text-[10px] text-muted-foreground/50">
               © 2025 All rights reserved
             </p>
           </div>
