@@ -10,8 +10,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            The definitive source for benchmarking and knowledge about agentic automation, 
-            web browsing agents, and computer use tools.
+            The definitive guide to understanding and benchmarking agentic automation, web browsing, and computer use.
           </p>
         </div>
       </div>

@@ -62,40 +62,34 @@ const SubscribeSection = () => {
 
   return (
     <section>
-      <div className="border border-primary/20 rounded-xl p-6 md:p-8 bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
-          <div className="flex-shrink-0">
-            <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shadow-lg">
-              <Mail className="w-7 h-7 text-primary-foreground" />
-            </div>
+      <div className="border border-primary/20 rounded-xl p-5 bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]">
+        <div className="space-y-3">
+          <div className="space-y-1">
+            <h3 className="text-base font-semibold text-foreground">
+              Get Future Updates
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              New benchmarking updates/reports delivered to your inbox whenever they come out
+            </p>
           </div>
-          <div className="flex-1 space-y-4">
-            <div className="space-y-2">
-              <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                Get future updates
-              </h3>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Fresh hot takes on agentic automation delivered to your inbox
-              </p>
-            </div>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5">
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-11 text-base bg-background"
-                required
-              />
-              <Button 
-                type="submit" 
-                disabled={isLoading} 
-                className="h-11 px-6 text-base font-semibold shadow-md hover:shadow-lg transition-all"
-              >
-                {isLoading ? "Subscribing..." : "Subscribe"}
-              </Button>
-            </form>
-          </div>
+          <form onSubmit={handleSubmit} className="flex gap-2">
+            <Input
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 h-9 text-sm bg-background"
+              required
+            />
+            <Button 
+              type="submit" 
+              disabled={isLoading} 
+              size="sm"
+              className="whitespace-nowrap"
+            >
+              {isLoading ? "..." : "Subscribe"}
+            </Button>
+          </form>
         </div>
       </div>
     </section>

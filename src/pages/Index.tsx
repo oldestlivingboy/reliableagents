@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import VotingSection from "@/components/VotingSection";
 import SubscribeSection from "@/components/SubscribeSection";
-import CreatedBy from "@/components/CreatedBy";
 import { MarketMapPreview } from "@/components/MarketMapPreview";
 
 const Index = () => {
@@ -26,7 +25,7 @@ const Index = () => {
                 Agentic Control Layer Leaderboard
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed">
-                We're benchmarking the leading agentic control layers including Browser Use, Stagehand, Skyvern, and LaVague to evaluate their performance across reliability, speed, and documentation quality.
+                We're benchmarking the leading agentic control layers to evaluate their performance across reliability, speed, and documentation quality.
               </p>
             </div>
             
@@ -34,16 +33,36 @@ const Index = () => {
           </section>
 
           <VotingSection />
-
-          <CreatedBy />
         </div>
       </main>
 
-      <footer className="border-t border-border bg-muted/30 py-12 mt-24">
+      <footer className="border-t border-border bg-muted/30 py-8 mt-24">
         <div className="container mx-auto max-w-3xl px-4">
-          <p className="text-sm text-muted-foreground text-center">
-            © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
-          </p>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2025 Reliable Agents Leaderboard. Empowering agentic developers worldwide.
+            </p>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span>Created by</span>
+              <a 
+                href="https://www.linkedin.com/in/ednevsky/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Alex
+              </a>
+              <span>and</span>
+              <a 
+                href="https://www.linkedin.com/in/briansehn/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Brian
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
