@@ -59,7 +59,16 @@ const Index = () => {
                 >
                   🚀 Alex
                 </a>
-                {" "}and{" "}
+                , a repeat AI founder with an exit and creator of{" "}
+                <a 
+                  href="https://nocap.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                >
+                  No Cap
+                </a>
+                , a viral AI investing agent, and{" "}
                 <a 
                   href="https://www.linkedin.com/in/briansehn/" 
                   target="_blank" 
@@ -68,8 +77,7 @@ const Index = () => {
                 >
                   🌐 Brian
                 </a>
-                . Alex is a repeat AI founder with an exit and creator of No Cap, a viral AI investing agent. 
-                Brian is the first DevRel at Google and founder of multiple browser-related companies.
+                , the first DevRel at Google and founder of multiple browser-related companies.
               </p>
             </div>
             
