@@ -817,8 +817,8 @@ const Report2025 = () => {
         </section>
 
 
-        <footer className="border-t border-border mt-12">
-          <div className="container mx-auto max-w-3xl px-4 py-8 pb-4">
+        <footer className="border-t border-border mt-24">
+          <div className="container mx-auto max-w-3xl px-4 py-8">
             <div className="flex flex-col items-center gap-6">
               <div className="text-center space-y-1 max-w-2xl mx-auto">
                 <p className="text-base font-semibold text-foreground">
