@@ -20,6 +20,14 @@ import tavilyLogo from '@/assets/logos/tavily.png';
 import temporalLogo from '@/assets/logos/temporal.png';
 import triggerdevLogo from '@/assets/logos/triggerdev.png';
 import zyteLogo from '@/assets/logos/zyte.png';
+import openaiLogo from '@/assets/logos/openai.png';
+import anthropicLogo from '@/assets/logos/anthropic.png';
+import chromeLogo from '@/assets/logos/chrome.svg';
+import googleLogo from '@/assets/logos/google.png';
+import microsoftLogo from '@/assets/logos/microsoft.png';
+import amazonLogo from '@/assets/logos/amazon.png';
+import skyvernLogo from '@/assets/logos/skyvern-new.png';
+import steelLogo from '@/assets/logos/steel-new.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -29,6 +37,8 @@ const logoMap: { [key: string]: string } = {
   'director (browserbase)': stagehandLogo,
   'trigger.dev': triggerdevLogo,
   'magnitude.run': triggerdevLogo, // placeholder
+  'skyvern': skyvernLogo,
+  'steel.dev': steelLogo,
   
   // Libraries
   'playwright': playwrightLogo,
@@ -56,6 +66,17 @@ const logoMap: { [key: string]: string } = {
   'zyte': zyteLogo,
   'zyte.com': zyteLogo,
   'perplexity search api': perplexityLogo,
+  
+  // Computer use models
+  'openai operator': openaiLogo,
+  'openai computer-using agent (cua)': openaiLogo,
+  'chatgpt atlas': openaiLogo,
+  'anthropic claude': anthropicLogo,
+  'google gemini 2.5 computer use model': googleLogo,
+  'google project mariner': googleLogo,
+  'google chrome': chromeLogo,
+  'amazon nova (acq adept ai)': amazonLogo,
+  'microsoft edge copilot': microsoftLogo,
   
   // Browsers
   'opera': operaLogo,
