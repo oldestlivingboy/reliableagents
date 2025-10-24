@@ -157,14 +157,20 @@ const Report2025 = () => {
 
   const fetchMarketMapData = async () => {
     try {
-      const response = await fetch('/market-map.csv');
+      // Add cache busting to force reload
+      const response = await fetch(`/market-map.csv?v=${Date.now()}`);
       const csvText = await response.text();
+      
+      console.log('CSV loaded, first 200 chars:', csvText.substring(0, 200));
       
       // Use Papa Parse for proper CSV parsing
       const parsed = Papa.parse(csvText, {
         header: true,
         skipEmptyLines: true,
       });
+      
+      console.log('Parsed data sample:', parsed.data.slice(0, 2));
+      console.log('Column headers:', parsed.meta.fields);
       
       const categoriesMap = new Map<string, Company[]>();
       
@@ -174,7 +180,10 @@ const Report2025 = () => {
         const oneLiner = row['One-liner']?.trim() || '';
         const logoPath = row['Logo Path']?.trim() || '';
         
-        if (!name || !categoryRaw) return;
+        if (!name || !categoryRaw) {
+          console.log('Skipping row - missing name or category:', row);
+          return;
+        }
         
         // Skip if logo is "No distinct logo" or "N/A"
         const validLogoPath = (logoPath && logoPath !== 'No distinct logo' && logoPath !== 'N/A') ? logoPath : undefined;
@@ -197,6 +206,9 @@ const Report2025 = () => {
           });
         });
       });
+
+      console.log('Categories found:', Array.from(categoriesMap.keys()));
+      console.log('Total companies processed:', Array.from(categoriesMap.values()).reduce((sum, arr) => sum + arr.length, 0));
 
       const categoryColors = [
         'hsl(220 70% 50%)',
