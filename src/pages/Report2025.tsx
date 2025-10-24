@@ -309,7 +309,6 @@ const Report2025 = () => {
               <div className="relative flex flex-col items-center justify-between py-4 w-16 flex-shrink-0 min-h-[600px]">
                 {/* Top label */}
                 <div className="text-center space-y-1">
-                  <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Top</div>
                   <div className="text-[11px] font-semibold text-foreground leading-snug">Dev Tools<br/><span className="text-[9px] text-muted-foreground">(bottom of stack)</span></div>
                 </div>
                 
@@ -322,13 +321,69 @@ const Report2025 = () => {
                 {/* Bottom label */}
                 <div className="text-center space-y-1">
                   <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools<br/><span className="text-[9px] text-muted-foreground">(top of stack)</span></div>
-                  <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Bottom</div>
                 </div>
               </div>
 
-              {/* Categories grid - more compact */}
-              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
-                {marketMap.map((category, idx) => {
+              {/* Categories - first 3 on one line, rest in grid */}
+              <div className="flex-1 space-y-3">
+                {/* Categories 1-3 horizontal */}
+                <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+                  {marketMap.slice(0, 3).map((category, idx) => {
+                    const CategoryIcon = getCategoryIcon(category.name);
+                    return (
+                    <div key={idx} className="space-y-1.5">
+                      <div className="flex items-center gap-2 pb-0.5">
+                        <CategoryIcon className="w-3.5 h-3.5 text-primary flex-shrink-0" strokeWidth={2.5} />
+                        <h3 className="text-[11px] font-semibold text-foreground tracking-tight">
+                          {category.name.replace(/^\d+\.\s*/, '')}
+                        </h3>
+                        <span className="text-[9px] text-muted-foreground font-medium">
+                          ({category.companies.length})
+                        </span>
+                      </div>
+                      
+                      <div className="grid grid-cols-7 gap-1">
+                      {category.companies.map((company, companyIdx) => {
+                        const domain = getCompanyDomain(company.name);
+                        const categoryCount = company.category.split(';').length;
+                        const isMultiCategory = categoryCount > 1;
+                        
+                        return (
+                          <a
+                            key={companyIdx}
+                            href={getCompanyUrl(company.name)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-105 relative"
+                            title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
+                          >
+                            <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/30' : 'border border-border/30'}`}>
+                              <CompanyLogo
+                                companyName={company.name}
+                                domain={domain}
+                                categoryColor={category.color}
+                              />
+                            </div>
+                            {isMultiCategory && (
+                              <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
+                                <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                              </div>
+                            )}
+                            <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                            {company.name}
+                          </span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+                );
+                })}
+              </div>
+
+              {/* Categories 4+ in 2-column grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
+                {marketMap.slice(3).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
                   <div key={idx} className="space-y-1.5">
@@ -379,6 +434,7 @@ const Report2025 = () => {
               </div>
               );
               })}
+            </div>
             </div>
             </div>
           </div>
