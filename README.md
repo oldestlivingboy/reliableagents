@@ -1,6 +1,6 @@
 # ⚙️ Reliable Agents
 
-![Reliable Agents Logo](ChatGPT%20Image%20Oct%2024%2C%202025%2C%2001_15_04%20PM.png)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/80835082-8120-494d-998f-a5f4d3530783" />
 
 The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
 
