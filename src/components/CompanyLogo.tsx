@@ -26,8 +26,37 @@ import chromeLogo from '@/assets/logos/chrome.svg';
 import googleLogo from '@/assets/logos/google.png';
 import microsoftLogo from '@/assets/logos/microsoft.png';
 import amazonLogo from '@/assets/logos/amazon.png';
-import skyvernLogo from '@/assets/logos/skyvern-new.png';
-import steelLogo from '@/assets/logos/steel-new.png';
+import magnitudeLogo from '@/assets/logos/magnitude.png';
+import simularLogo from '@/assets/logos/simular.png';
+import steelLogo from '@/assets/logos/steel.png';
+import morphLogo from '@/assets/logos/morph.png';
+import halluminateLogo from '@/assets/logos/halluminate.svg';
+import lightpandaLogo from '@/assets/logos/lightpanda.png';
+import anonLogo from '@/assets/logos/anon.svg';
+import riveterhqLogo from '@/assets/logos/riveterhq.png';
+import kaizenLogo from '@/assets/logos/kaizen.png';
+import omniparserLogo from '@/assets/logos/omniparser.png';
+import notteLogo from '@/assets/logos/notte.svg';
+import kuraLogo from '@/assets/logos/kura.png';
+import emergenceLogo from '@/assets/logos/emergence.svg';
+import twinLogo from '@/assets/logos/twin.png';
+import naradaLogo from '@/assets/logos/narada.svg';
+import athenaLogo from '@/assets/logos/athena.png';
+import copycatLogo from '@/assets/logos/copycat.png';
+import hcompanyLogo from '@/assets/logos/h-company.svg';
+import basepilotLogo from '@/assets/logos/basepilot.png';
+import asteroidLogo from '@/assets/logos/asteroid.webp';
+import manusLogo from '@/assets/logos/manus.svg';
+import nanobrowserLogo from '@/assets/logos/nanobrowser.png';
+import generalagentsLogo from '@/assets/logos/generalagents.svg';
+import godmodeLogo from '@/assets/logos/godmode.png';
+import convergenceLogo from '@/assets/logos/convergence.png';
+import dexLogo from '@/assets/logos/dex.svg';
+import scrapybaraLogo from '@/assets/logos/scrapybara.png';
+import cuaLogo from '@/assets/logos/cua.svg';
+import lavagueLogo from '@/assets/logos/lavague.png';
+import anchorLogo from '@/assets/logos/anchor.svg';
+import kernelLogo from '@/assets/logos/kernel.svg';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -36,35 +65,51 @@ const logoMap: { [key: string]: string } = {
   'director': stagehandLogo,
   'director (browserbase)': stagehandLogo,
   'trigger.dev': triggerdevLogo,
-  'magnitude.run': triggerdevLogo, // placeholder
-  'skyvern': skyvernLogo,
-  'steel.dev': steelLogo,
+  'magnitude.run': magnitudeLogo,
+  'simular': simularLogo,
+  'skyvern': openaiLogo, // Will fallback to Clearbit
   
-  // Libraries
+  // Libraries & specialized
   'playwright': playwrightLogo,
   'puppeteer': puppeteerLogo,
   'scrapy': scrapyLogo,
+  'scrapybara': scrapybaraLogo,
+  'cua': cuaLogo,
+  'trycua': cuaLogo,
+  'lavague': lavagueLogo,
   
   // Browsers as service
   'browserbase': browserbaseLogo,
-  'hyperbrowser': hyperbrowserLogo,
+  'steel.dev': steelLogo,
   'browserless': browserlessLogo,
+  'kernel': kernelLogo,
+  'anchor browser': anchorLogo,
+  'hyperbrowser': hyperbrowserLogo,
   
   // Infrastructure
+  'morph.so': morphLogo,
+  'halluminate': halluminateLogo,
+  'lightpanda': lightpandaLogo,
   'temporal': temporalLogo,
   'inngest': inngestLogo,
   'ingnest': inngestLogo,
   'langgraph': langgraphLogo,
+  'anon': anonLogo,
+  'thirdlayer': dexLogo, // ThirdLayer created DEX
   
   // Scraping/APIs
+  'riveterhq': riveterhqLogo,
+  'zyte': zyteLogo,
+  'zyte.com': zyteLogo,
+  'exa.ai': apifyLogo, // Will fallback to Clearbit
+  'tavily': tavilyLogo,
+  'kaizen': kaizenLogo,
   'firecrawl': firecrawlLogo,
   'apify': apifyLogo,
   'bright data': brightdataLogo,
   'browser.ai': brightdataLogo,
   'browser.ai (bright data)': brightdataLogo,
-  'tavily': tavilyLogo,
-  'zyte': zyteLogo,
-  'zyte.com': zyteLogo,
+  'omniparser': omniparserLogo,
   'perplexity search api': perplexityLogo,
   
   // Computer use models
@@ -74,14 +119,36 @@ const logoMap: { [key: string]: string } = {
   'anthropic claude': anthropicLogo,
   'google gemini 2.5 computer use model': googleLogo,
   'google project mariner': googleLogo,
-  'google chrome': chromeLogo,
   'amazon nova (acq adept ai)': amazonLogo,
-  'microsoft edge copilot': microsoftLogo,
+  
+  // Enterprise automation
+  'notte.cc': notteLogo,
+  'kura ai': kuraLogo,
+  'emergence': emergenceLogo,
+  'twin': twinLogo,
+  'narada': naradaLogo,
+  'athena intelligence': athenaLogo,
+  'copycat': copycatLogo,
+  'h': hcompanyLogo,
+  'h (h company)': hcompanyLogo,
+  'basepilot': basepilotLogo,
+  'asteroid': asteroidLogo,
+  
+  // Consumer automation
+  'manus': manusLogo,
+  'nanobrowser': nanobrowserLogo,
+  'general agents': generalagentsLogo,
+  'godmode ai': godmodeLogo,
+  'convergence proxy': convergenceLogo,
+  'dex': dexLogo,
+  'dex (thirdlayer)': dexLogo,
   
   // Browsers
-  'opera': operaLogo,
+  'google chrome': chromeLogo,
+  'microsoft edge copilot': microsoftLogo,
   'perplexity comet browser': perplexityLogo,
   'comet': perplexityLogo,
+  'opera': operaLogo,
 };
 
 interface CompanyLogoProps {
