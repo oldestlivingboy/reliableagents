@@ -89,33 +89,27 @@ const ConsultationPopup = () => {
               How reliable is your browser automation?
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Grab a free consultation & share your use-case
+              Grab a free consultation & share your use-case — <span className="text-amber-600 dark:text-amber-500 font-semibold">limited slots</span>
             </p>
           </div>
 
-          {/* CTA with limited spots */}
-          <div className="flex items-center justify-between pt-2 pr-2">
-            <div className="flex items-center gap-2.5">
-              <span className="text-sm font-semibold text-primary">Book your slot</span>
-              <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
-                <svg 
-                  className="w-2.5 h-2.5 text-primary" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2.5} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/25">
-              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-              <span className="text-[10px] font-bold tracking-wide text-amber-600 dark:text-amber-500 uppercase">Limited</span>
+          {/* CTA */}
+          <div className="flex items-center gap-2.5 pt-2">
+            <span className="text-sm font-semibold text-primary">Book your slot</span>
+            <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
+              <svg 
+                className="w-2.5 h-2.5 text-primary" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2.5} 
+                  d="M9 5l7 7-7 7" 
+                />
+              </svg>
             </div>
           </div>
         </div>
