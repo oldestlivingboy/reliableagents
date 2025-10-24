@@ -6,6 +6,10 @@ import brightdataLogo from '@/assets/logos/brightdata.png';
 import browserbaseLogo from '@/assets/logos/browserbase.png';
 import browserlessLogo from '@/assets/logos/browserless.png';
 import browseruseLogo from '@/assets/logos/browseruse.png';
+import skyvernLogo from '@/assets/logos/skyvern-new.png';
+import exaLogo from '@/assets/logos/exa.png';
+import salesforceLogo from '@/assets/logos/salesforce.png';
+import pleaseLogo from '@/assets/logos/please.png';
 import firecrawlLogo from '@/assets/logos/firecrawl.png';
 import hyperbrowserLogo from '@/assets/logos/hyperbrowser.png';
 import inngestLogo from '@/assets/logos/inngest.png';
@@ -67,7 +71,7 @@ const logoMap: { [key: string]: string } = {
   'trigger.dev': triggerdevLogo,
   'magnitude.run': magnitudeLogo,
   'simular': simularLogo,
-  'skyvern': openaiLogo, // Will fallback to Clearbit
+  'skyvern': skyvernLogo,
   
   // Libraries & specialized
   'playwright': playwrightLogo,
@@ -75,8 +79,8 @@ const logoMap: { [key: string]: string } = {
   'scrapy': scrapyLogo,
   'scrapybara': scrapybaraLogo,
   'cua': cuaLogo,
-  'trycua': cuaLogo,
   'lavague': lavagueLogo,
+  'opencua': cuaLogo,
   
   // Browsers as service
   'browserbase': browserbaseLogo,
@@ -92,16 +96,14 @@ const logoMap: { [key: string]: string } = {
   'lightpanda': lightpandaLogo,
   'temporal': temporalLogo,
   'inngest': inngestLogo,
-  'ingnest': inngestLogo,
   'langgraph': langgraphLogo,
   'anon': anonLogo,
-  'thirdlayer': dexLogo, // ThirdLayer created DEX
   
   // Scraping/APIs
   'riveterhq': riveterhqLogo,
   'zyte': zyteLogo,
   'zyte.com': zyteLogo,
-  'exa.ai': apifyLogo, // Will fallback to Clearbit
+  'exa.ai': exaLogo,
   'tavily': tavilyLogo,
   'kaizen': kaizenLogo,
   'firecrawl': firecrawlLogo,
@@ -120,6 +122,7 @@ const logoMap: { [key: string]: string } = {
   'google gemini 2.5 computer use model': googleLogo,
   'google project mariner': googleLogo,
   'amazon nova (acq adept ai)': amazonLogo,
+  'axiom-1 by induction labs': openaiLogo,
   
   // Enterprise automation
   'notte.cc': notteLogo,
@@ -139,9 +142,12 @@ const logoMap: { [key: string]: string } = {
   'nanobrowser': nanobrowserLogo,
   'general agents': generalagentsLogo,
   'godmode ai': godmodeLogo,
-  'convergence proxy': convergenceLogo,
   'dex': dexLogo,
   'dex (thirdlayer)': dexLogo,
+  'please': pleaseLogo,
+  
+  // Enterprise automation
+  'salesforce (acq. convergence)': salesforceLogo,
   
   // Browsers
   'google chrome': chromeLogo,
