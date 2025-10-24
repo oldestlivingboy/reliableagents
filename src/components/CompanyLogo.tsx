@@ -68,20 +68,24 @@ interface CompanyLogoProps {
   domain: string;
   categoryColor: string;
   className?: string;
+  logoPath?: string;
 }
 
-export const CompanyLogo = ({ companyName, domain, categoryColor, className = '' }: CompanyLogoProps) => {
+export const CompanyLogo = ({ companyName, domain, categoryColor, className = '', logoPath }: CompanyLogoProps) => {
   const [errorCount, setErrorCount] = useState(0);
   const cleanName = companyName.toLowerCase().trim();
   
   // Check if we have a local logo
   const localLogo = logoMap[cleanName];
   
+  // Priority: CSV logoPath > local logo > Clearbit
+  const initialSrc = logoPath || localLogo || `https://logo.clearbit.com/${domain}`;
+  
   const handleError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const img = e.currentTarget;
     setErrorCount(prev => prev + 1);
     
-    if (errorCount === 0 && !localLogo) {
+    if (errorCount === 0 && !logoPath && !localLogo) {
       // Try Clearbit
       img.src = `https://logo.clearbit.com/${domain}`;
     } else if (errorCount === 1) {
@@ -102,7 +106,7 @@ export const CompanyLogo = ({ companyName, domain, categoryColor, className = ''
   
   return (
     <img
-      src={localLogo || `https://logo.clearbit.com/${domain}`}
+      src={initialSrc}
       alt={companyName}
       className={`w-full h-full object-contain ${className}`}
       loading="lazy"

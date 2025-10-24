@@ -12,6 +12,7 @@ interface Company {
   name: string;
   category: string;
   oneLiner: string;
+  logoPath?: string;
 }
 
 interface CategoryData {
@@ -171,8 +172,12 @@ const Report2025 = () => {
         const name = row['Company / Tool']?.trim();
         const categoryRaw = row['Categories']?.trim();
         const oneLiner = row['One-liner']?.trim() || '';
+        const logoPath = row['Logo Path']?.trim() || '';
         
         if (!name || !categoryRaw) return;
+        
+        // Skip if logo is "No distinct logo" or "N/A"
+        const validLogoPath = (logoPath && logoPath !== 'No distinct logo' && logoPath !== 'N/A') ? logoPath : undefined;
         
         // Split multiple categories by semicolon
         const categories = categoryRaw
@@ -187,7 +192,8 @@ const Report2025 = () => {
           categoriesMap.get(category)?.push({
             name,
             category,
-            oneLiner
+            oneLiner,
+            logoPath: validLogoPath
           });
         });
       });
@@ -344,6 +350,7 @@ const Report2025 = () => {
                               companyName={company.name}
                               domain={domain}
                               categoryColor={category.color}
+                              logoPath={company.logoPath}
                             />
                           </div>
                           {isMultiCategory && (
