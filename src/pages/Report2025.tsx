@@ -282,20 +282,27 @@ const Report2025 = () => {
             </p>
           </div>
 
-          <div className="flex gap-4 md:gap-6 items-start">
-            {/* Y-axis label */}
-            <div className="flex flex-col justify-between pt-4 pb-4 w-16 md:w-20" style={{ minHeight: '800px' }}>
-              <div className="flex flex-col items-center gap-3 h-full">
-                <div className="text-[10px] md:text-xs font-semibold text-primary tracking-wide text-center leading-tight">
-                  Consumer<br/>Tooling
+          <div className="flex gap-3 md:gap-5 items-stretch relative">
+            {/* Y-axis visualization */}
+            <div className="relative flex flex-col justify-between w-12 md:w-14 pt-6 pb-6 flex-shrink-0">
+              {/* Top label */}
+              <div className="text-[9px] md:text-[10px] font-bold text-primary/80 tracking-wider text-center leading-tight uppercase">
+                Consumer<br/>Tooling
+              </div>
+              
+              {/* Center axis line with arrow */}
+              <div className="absolute left-1/2 top-0 bottom-0 flex flex-col items-center justify-center -translate-x-1/2">
+                <div className="h-full w-[2px] bg-gradient-to-b from-primary/70 via-primary/50 to-primary/30 relative">
+                  {/* Arrow at bottom */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[2px]">
+                    <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary/70" />
+                  </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center justify-center gap-2">
-                  <div className="h-full w-[2px] bg-gradient-to-b from-primary/60 to-primary/20" />
-                  <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[10px] border-t-primary/60" />
-                </div>
-                <div className="text-[10px] md:text-xs font-semibold text-primary tracking-wide text-center leading-tight">
-                  Dev<br/>Tooling
-                </div>
+              </div>
+              
+              {/* Bottom label */}
+              <div className="text-[9px] md:text-[10px] font-bold text-primary/80 tracking-wider text-center leading-tight uppercase">
+                Dev<br/>Tooling
               </div>
             </div>
 
@@ -303,12 +310,8 @@ const Report2025 = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 flex-1">
               {marketMap.map((category, idx) => (
               <div key={idx} className="space-y-2.5">
-                <div className="flex items-center gap-2.5">
-                  <span className="text-base">{getCategoryEmoji(category.name)}</span>
-                  <div 
-                    className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: category.color }}
-                  />
+                <div className="flex items-center gap-2">
+                  <span className="text-xl leading-none">{getCategoryEmoji(category.name)}</span>
                   <h3 className="text-xs font-semibold text-foreground tracking-tight">
                     {category.name.replace(/^\d+\.\s*/, '')}
                   </h3>

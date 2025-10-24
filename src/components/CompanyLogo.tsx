@@ -1,50 +1,66 @@
 import { useState } from 'react';
 
 // Import available logos
-import browserbaseLogo from '@/assets/logos/browserbase.png';
-import hyperbrowserLogo from '@/assets/logos/hyperbrowser.png';
-import playwrightLogo from '@/assets/logos/playwright.png';
-import temporalLogo from '@/assets/logos/temporal.png';
-import inngestLogo from '@/assets/logos/inngest.png';
-import firecrawlLogo from '@/assets/logos/firecrawl.png';
 import apifyLogo from '@/assets/logos/apify.png';
 import brightdataLogo from '@/assets/logos/brightdata.png';
-import browseruseLogo from '@/assets/logos/browseruse.png';
-import stagehandLogo from '@/assets/logos/stagehand.png';
-import puppeteerLogo from '@/assets/logos/puppeteer.png';
-import perplexityLogo from '@/assets/logos/perplexity.png';
-import tavilyLogo from '@/assets/logos/tavily.png';
-import operaLogo from '@/assets/logos/opera.png';
-import zyteLogo from '@/assets/logos/zyte.png';
-import scrapyLogo from '@/assets/logos/scrapy.png';
+import browserbaseLogo from '@/assets/logos/browserbase.png';
 import browserlessLogo from '@/assets/logos/browserless.png';
-import triggerdevLogo from '@/assets/logos/triggerdev.png';
+import browseruseLogo from '@/assets/logos/browseruse.png';
+import firecrawlLogo from '@/assets/logos/firecrawl.png';
+import hyperbrowserLogo from '@/assets/logos/hyperbrowser.png';
+import inngestLogo from '@/assets/logos/inngest.png';
 import langgraphLogo from '@/assets/logos/langgraph.png';
+import operaLogo from '@/assets/logos/opera.png';
+import perplexityLogo from '@/assets/logos/perplexity.png';
+import playwrightLogo from '@/assets/logos/playwright.png';
+import puppeteerLogo from '@/assets/logos/puppeteer.png';
+import scrapyLogo from '@/assets/logos/scrapy.png';
+import stagehandLogo from '@/assets/logos/stagehand.png';
+import tavilyLogo from '@/assets/logos/tavily.png';
+import temporalLogo from '@/assets/logos/temporal.png';
+import triggerdevLogo from '@/assets/logos/triggerdev.png';
+import zyteLogo from '@/assets/logos/zyte.png';
 
 const logoMap: { [key: string]: string } = {
+  // Frameworks
+  'browser use': browseruseLogo,
+  'stagehand': stagehandLogo,
+  'director': stagehandLogo,
+  'director (browserbase)': stagehandLogo,
+  'trigger.dev': triggerdevLogo,
+  'magnitude.run': triggerdevLogo, // placeholder
+  
+  // Libraries
+  'playwright': playwrightLogo,
+  'puppeteer': puppeteerLogo,
+  'scrapy': scrapyLogo,
+  
+  // Browsers as service
   'browserbase': browserbaseLogo,
   'hyperbrowser': hyperbrowserLogo,
-  'playwright': playwrightLogo,
+  'browserless': browserlessLogo,
+  
+  // Infrastructure
   'temporal': temporalLogo,
   'inngest': inngestLogo,
   'ingnest': inngestLogo,
+  'langgraph': langgraphLogo,
+  
+  // Scraping/APIs
   'firecrawl': firecrawlLogo,
   'apify': apifyLogo,
   'bright data': brightdataLogo,
   'browser.ai': brightdataLogo,
-  'browser use': browseruseLogo,
-  'stagehand': stagehandLogo,
-  'director': stagehandLogo,
-  'puppeteer': puppeteerLogo,
-  'perplexity search api': perplexityLogo,
-  'comet': perplexityLogo,
+  'browser.ai (bright data)': brightdataLogo,
   'tavily': tavilyLogo,
-  'opera': operaLogo,
+  'zyte': zyteLogo,
   'zyte.com': zyteLogo,
-  'scrapy': scrapyLogo,
-  'browserless': browserlessLogo,
-  'trigger.dev': triggerdevLogo,
-  'langgraph': langgraphLogo,
+  'perplexity search api': perplexityLogo,
+  
+  // Browsers
+  'opera': operaLogo,
+  'perplexity comet browser': perplexityLogo,
+  'comet': perplexityLogo,
 };
 
 interface CompanyLogoProps {
