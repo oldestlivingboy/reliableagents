@@ -313,10 +313,10 @@ const Report2025 = () => {
           </div>
 
           {/* Market map with side axis */}
-          <div className="relative bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-border/20">
-            <div className="flex gap-8 items-stretch">
-              {/* Vertical axis - clean and minimal */}
-              <div className="relative flex flex-col items-center justify-between py-8 w-12 flex-shrink-0 min-h-[700px]">
+          <div className="relative bg-white dark:bg-gray-950 rounded-2xl p-4 md:p-6 lg:p-8 border border-border/20">
+            <div className="flex gap-4 md:gap-8 items-stretch">
+              {/* Vertical axis - hidden on mobile, visible on desktop */}
+              <div className="hidden lg:flex relative flex-col items-center justify-between py-8 w-12 flex-shrink-0 min-h-[700px]">
                 {/* Top label */}
                 <div className="text-center space-y-2">
                   <div className="text-xs font-medium text-foreground/60">Dev Tools</div>
@@ -339,16 +339,16 @@ const Report2025 = () => {
               </div>
 
               {/* Categories - redesigned with better organization */}
-              <div className="flex-1 space-y-6">
-                {/* Categories 1-3: 3-column grid */}
-                <div className="grid grid-cols-3 gap-4">
+              <div className="flex-1 space-y-4 md:space-y-6">
+                {/* Categories 1-3: responsive grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
                   {marketMap.slice(0, 3).map((category, idx) => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
-                    <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+                    <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
                 <div className="flex items-center gap-2">
                   <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
-                  <h3 className="text-xs font-semibold text-foreground">
+                  <h3 className="text-xs md:text-sm font-semibold text-foreground">
                     {category.name.replace(/^\d+\.\s*/, '')}
                   </h3>
                   <span className="text-[10px] text-muted-foreground">
@@ -356,7 +356,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                       
-                      <div className="grid grid-cols-4 gap-1.5">
+                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-1.5 md:gap-2">
                       {category.companies.map((company, companyIdx) => {
                         const domain = getCompanyDomain(company.name);
                         const categoryCount = company.category.split(';').length;
@@ -395,15 +395,15 @@ const Report2025 = () => {
                 })}
               </div>
 
-              {/* Categories 4-6: 3-column grid */}
-              <div className="grid grid-cols-3 gap-4">
+              {/* Categories 4-6: responsive grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
                 {marketMap.slice(3, 6).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
-                  <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+                  <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
                     <div className="flex items-center gap-2">
                       <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
-                      <h3 className="text-xs font-semibold text-foreground">
+                      <h3 className="text-xs md:text-sm font-semibold text-foreground">
                         {category.name.replace(/^\d+\.\s*/, '')}
                       </h3>
                       <span className="text-[10px] text-muted-foreground">
@@ -411,7 +411,7 @@ const Report2025 = () => {
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-5 gap-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-1.5 md:gap-2">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -465,7 +465,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-12 gap-2">
+                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -507,10 +507,10 @@ const Report2025 = () => {
           {marketMap.slice(7, 8).map((category, idx) => {
             const CategoryIcon = getCategoryIcon(category.name);
             return (
-            <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+            <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
               <div className="flex items-center gap-2">
                 <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
-                <h3 className="text-xs font-semibold text-foreground">
+                <h3 className="text-xs md:text-sm font-semibold text-foreground">
                   {category.name.replace(/^\d+\.\s*/, '')}
                 </h3>
                 <span className="text-[10px] text-muted-foreground">
@@ -518,7 +518,7 @@ const Report2025 = () => {
                 </span>
               </div>
               
-                <div className="grid grid-cols-12 gap-2">
+                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -556,15 +556,15 @@ const Report2025 = () => {
         );
         })}
 
-        {/* Categories 9-10: Consumer automation and browsers - on same line */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* Categories 9-10: Consumer automation and browsers - responsive grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
           {marketMap.slice(8, 10).map((category, idx) => {
             const CategoryIcon = getCategoryIcon(category.name);
             return (
-            <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+            <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
               <div className="flex items-center gap-2">
                 <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
-                <h3 className="text-xs font-semibold text-foreground">
+                <h3 className="text-xs md:text-sm font-semibold text-foreground">
                   {category.name.replace(/^\d+\.\s*/, '')}
                 </h3>
                 <span className="text-[10px] text-muted-foreground">
@@ -572,7 +572,7 @@ const Report2025 = () => {
                 </span>
               </div>
               
-              <div className="grid grid-cols-6 gap-2">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-1.5 md:gap-2">
               {category.companies.map((company, companyIdx) => {
                 const domain = getCompanyDomain(company.name);
                 const categoryCount = company.category.split(';').length;
