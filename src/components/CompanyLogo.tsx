@@ -28,15 +28,16 @@ import openaiLogo from '@/assets/logos/openai.png';
 import anthropicLogo from '@/assets/logos/anthropic.png';
 import chromeLogo from '@/assets/logos/chrome.svg';
 import googleLogo from '@/assets/logos/google.png';
-import microsoftLogo from '@/assets/logos/microsoft.png';
+import microsoftLogo from '@/assets/logos/microsoft-copilot.png';
 import amazonLogo from '@/assets/logos/amazon.png';
+import atlasLogo from '@/assets/logos/atlas.jpg';
 import magnitudeLogo from '@/assets/logos/magnitude.png';
 import simularLogo from '@/assets/logos/simular.png';
 import steelLogo from '@/assets/logos/steel-new.png';
 import morphLogo from '@/assets/logos/morph.png';
 import halluminateLogo from '@/assets/logos/halluminate.svg';
 import lightpandaLogo from '@/assets/logos/lightpanda.png';
-import anonLogo from '@/assets/logos/anon.svg';
+import anonLogo from '@/assets/logos/anon-new.png';
 import riveterhqLogo from '@/assets/logos/riveterhq.png';
 import kaizenLogo from '@/assets/logos/kaizen.png';
 import omniparserLogo from '@/assets/logos/omniparser.png';
@@ -118,7 +119,6 @@ const logoMap: { [key: string]: string } = {
   // Computer use models
   'openai operator': openaiLogo,
   'openai computer-using agent (cua)': openaiLogo,
-  'chatgpt atlas': openaiLogo,
   'anthropic claude': anthropicLogo,
   'google gemini 2.5 computer use model': googleLogo,
   'google project mariner': googleLogo,
@@ -156,6 +156,7 @@ const logoMap: { [key: string]: string } = {
   'perplexity comet browser': perplexityLogo,
   'comet': perplexityLogo,
   'opera': operaLogo,
+  'chatgpt atlas': atlasLogo,
 };
 
 interface CompanyLogoProps {
