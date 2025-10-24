@@ -168,8 +168,8 @@ const Report2025 = () => {
       const categoriesMap = new Map<string, Company[]>();
       
       parsed.data.forEach((row: any) => {
-        const name = row['Company']?.trim();
-        const categoryRaw = row['Category']?.trim();
+        const name = row['Company / Tool']?.trim();
+        const categoryRaw = row['Categories']?.trim();
         const oneLiner = row['One-liner']?.trim() || '';
         
         if (!name || !categoryRaw) return;
@@ -286,23 +286,23 @@ const Report2025 = () => {
           {/* Market map with side axis */}
           <div className="relative border border-border/40 rounded-2xl bg-gradient-to-br from-muted/20 to-background p-6 md:p-8">
             {/* Y-axis integrated into layout */}
-            <div className="flex gap-6 items-start">
-              {/* Vertical axis */}
-              <div className="relative flex flex-col items-center pt-8 pb-8 w-16 flex-shrink-0">
+            <div className="flex gap-6 items-stretch">
+              {/* Vertical axis - spans full height */}
+              <div className="relative flex flex-col items-center pt-6 pb-6 w-16 flex-shrink-0">
                 {/* Top label */}
-                <div className="text-center space-y-1 mb-6">
+                <div className="text-center space-y-1 mb-4">
                   <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Top</div>
                   <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools</div>
                 </div>
                 
-                {/* Vertical line with gradient */}
-                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary min-h-[400px]" />
+                {/* Vertical line with gradient - flex-1 makes it span available space */}
+                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary" />
                 
                 {/* Arrow */}
                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary -mt-0.5" />
                 
                 {/* Bottom label */}
-                <div className="text-center space-y-1 mt-6">
+                <div className="text-center space-y-1 mt-4">
                   <div className="text-[11px] font-semibold text-foreground leading-snug">Dev<br/>Tools</div>
                   <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Bottom</div>
                 </div>
