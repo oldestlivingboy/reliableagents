@@ -6,6 +6,7 @@ import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import ConsultationPopup from "@/components/ConsultationPopup";
+import Papa from 'papaparse';
 
 interface Company {
   name: string;
@@ -157,26 +158,26 @@ const Report2025 = () => {
     try {
       const response = await fetch('/market-map.csv');
       const csvText = await response.text();
-      const lines = csvText.split('\n').slice(1); // Skip header
+      
+      // Use Papa Parse for proper CSV parsing
+      const parsed = Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+      });
       
       const categoriesMap = new Map<string, Company[]>();
       
-      lines.forEach(line => {
-        if (!line.trim()) return;
-        
-        const parts = line.split(',');
-        if (parts.length < 3) return;
-        
-        const name = parts[0]?.replace(/^﻿/, '').trim();
-        const categoryRaw = parts[2]?.trim();
-        const oneLiner = parts[3]?.trim() || '';
+      parsed.data.forEach((row: any) => {
+        const name = row['Company / Tool']?.trim();
+        const categoryRaw = row['Categories']?.trim();
+        const oneLiner = row['One-liner']?.trim() || '';
         
         if (!name || !categoryRaw) return;
         
-        // Split multiple categories and clean up quotes
+        // Split multiple categories by comma
         const categories = categoryRaw
-          .split(';')
-          .map(c => c.trim().replace(/^["']|["']$/g, ''))
+          .split(',')
+          .map(c => c.trim())
           .filter(c => c.length > 0);
         
         categories.forEach(category => {
@@ -282,27 +283,33 @@ const Report2025 = () => {
             </p>
           </div>
 
-          <div className="flex gap-3 md:gap-5 items-stretch relative">
-            {/* Y-axis visualization */}
-            <div className="relative flex flex-col justify-between w-12 md:w-14 pt-6 pb-6 flex-shrink-0">
+          <div className="flex gap-6 items-stretch relative">
+            {/* Y-axis visualization - Clean minimal design */}
+            <div className="relative flex flex-col items-center w-20 pt-4 pb-4 flex-shrink-0">
               {/* Top label */}
-              <div className="text-[9px] md:text-[10px] font-bold text-primary/80 tracking-wider text-center leading-tight uppercase">
-                Consumer<br/>Tooling
+              <div className="mb-4">
+                <div className="text-[10px] font-bold text-primary tracking-wider text-center leading-tight uppercase px-2 py-1.5 bg-primary/10 rounded-md border border-primary/20">
+                  Consumer
+                </div>
               </div>
               
-              {/* Center axis line with arrow */}
-              <div className="absolute left-1/2 top-0 bottom-0 flex flex-col items-center justify-center -translate-x-1/2">
-                <div className="h-full w-[2px] bg-gradient-to-b from-primary/70 via-primary/50 to-primary/30 relative">
-                  {/* Arrow at bottom */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[2px]">
-                    <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary/70" />
-                  </div>
+              {/* Vertical line spanning full height */}
+              <div className="flex-1 flex flex-col items-center w-full relative" style={{ minHeight: '600px' }}>
+                <div className="absolute inset-0 flex flex-col items-center justify-between py-2">
+                  <div className="w-[3px] flex-1 bg-gradient-to-b from-primary/80 via-primary/50 to-primary/80 rounded-full shadow-sm" />
+                </div>
+                
+                {/* Arrow pointing down */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
+                  <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[14px] border-t-primary/80 drop-shadow-sm" />
                 </div>
               </div>
               
               {/* Bottom label */}
-              <div className="text-[9px] md:text-[10px] font-bold text-primary/80 tracking-wider text-center leading-tight uppercase">
-                Dev<br/>Tooling
+              <div className="mt-4">
+                <div className="text-[10px] font-bold text-primary tracking-wider text-center leading-tight uppercase px-2 py-1.5 bg-primary/10 rounded-md border border-primary/20">
+                  Dev Tools
+                </div>
               </div>
             </div>
 
