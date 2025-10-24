@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Wrench, BookOpen, Settings, Cloud, Building2, Bug, Brain, Briefcase, User, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import ConsultationPopup from "@/components/ConsultationPopup";
@@ -122,20 +122,20 @@ const Report2025 = () => {
     return url.replace('https://', '').replace('http://', '').split('/')[0];
   };
 
-  const getCategoryEmoji = (categoryName: string): string => {
-    const emojiMap: { [key: string]: string } = {
-      '1. Browser use frameworks': '🔧',
-      '2. Browser use libraries/protocols': '📚',
-      '3. Specialized browser use': '⚙️',
-      '4. Browsers as a service': '☁️',
-      '5. Supporting infrastructure': '🏗️',
-      '6. Scraping & crawling APIs': '🕷️',
-      '7. Computer use models': '🤖',
-      '8. Enterprise automation': '🏢',
-      '9. Consumer automation': '👤',
-      '10. Consumer browsers': '🌐',
+  const getCategoryIcon = (categoryName: string) => {
+    const iconMap: { [key: string]: any } = {
+      '1. Browser use frameworks': Wrench,
+      '2. Browser use libraries/protocols': BookOpen,
+      '3. Specialized browser use': Settings,
+      '4. Browsers as a service': Cloud,
+      '5. Supporting infrastructure': Building2,
+      '6. Scraping & crawling APIs': Bug,
+      '7. Computer use models': Brain,
+      '8. Enterprise automation': Briefcase,
+      '9. Consumer automation': User,
+      '10. Consumer browsers': Globe,
     };
-    return emojiMap[categoryName] || '';
+    return iconMap[categoryName] || Settings;
   };
 
   const getCategoryOrder = (categoryName: string): number => {
@@ -284,50 +284,61 @@ const Report2025 = () => {
           </div>
 
           <div className="flex gap-6 items-stretch relative">
-            {/* Y-axis visualization - Clean minimal design */}
-            <div className="relative flex flex-col items-center w-20 pt-4 pb-4 flex-shrink-0">
+            {/* Y-axis visualization */}
+            <div className="relative flex flex-col items-center w-24 pt-6 pb-6 flex-shrink-0">
               {/* Top label */}
-              <div className="mb-4">
-                <div className="text-[10px] font-bold text-primary tracking-wider text-center leading-tight uppercase px-2 py-1.5 bg-primary/10 rounded-md border border-primary/20">
-                  Consumer
+              <div className="mb-6">
+                <div className="text-[11px] font-bold text-primary tracking-wide text-center leading-snug px-3 py-2 bg-gradient-to-br from-primary/15 to-primary/5 rounded-lg border-2 border-primary/30 shadow-sm">
+                  <div className="whitespace-nowrap">Top of the stack</div>
+                  <div className="text-[9px] font-semibold text-primary/70 mt-0.5">Consumer tools</div>
                 </div>
               </div>
               
-              {/* Vertical line spanning full height */}
+              {/* Vertical gradient line with enhanced styling */}
               <div className="flex-1 flex flex-col items-center w-full relative" style={{ minHeight: '600px' }}>
-                <div className="absolute inset-0 flex flex-col items-center justify-between py-2">
-                  <div className="w-[3px] flex-1 bg-gradient-to-b from-primary/80 via-primary/50 to-primary/80 rounded-full shadow-sm" />
+                <div className="absolute inset-0 flex flex-col items-center">
+                  <div className="w-1 flex-1 bg-gradient-to-b from-primary via-primary/60 to-primary rounded-full shadow-lg relative">
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 w-1 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/40 blur-sm rounded-full" />
+                  </div>
                 </div>
                 
-                {/* Arrow pointing down */}
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
-                  <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[14px] border-t-primary/80 drop-shadow-sm" />
+                {/* Enhanced arrow pointing down */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1">
+                  <div className="relative">
+                    <div className="w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[16px] border-t-primary drop-shadow-md" />
+                    {/* Arrow glow */}
+                    <div className="absolute inset-0 w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[16px] border-t-primary/30 blur-sm -translate-y-1" />
+                  </div>
                 </div>
               </div>
               
               {/* Bottom label */}
-              <div className="mt-4">
-                <div className="text-[10px] font-bold text-primary tracking-wider text-center leading-tight uppercase px-2 py-1.5 bg-primary/10 rounded-md border border-primary/20">
-                  Dev Tools
+              <div className="mt-6">
+                <div className="text-[11px] font-bold text-primary tracking-wide text-center leading-snug px-3 py-2 bg-gradient-to-br from-primary/15 to-primary/5 rounded-lg border-2 border-primary/30 shadow-sm">
+                  <div className="whitespace-nowrap">Bottom of the stack</div>
+                  <div className="text-[9px] font-semibold text-primary/70 mt-0.5">Dev tools</div>
                 </div>
               </div>
             </div>
 
             {/* Market map grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 flex-1">
-              {marketMap.map((category, idx) => (
-              <div key={idx} className="space-y-2.5">
-                <div className="flex items-center gap-2">
-                  <span className="text-xl leading-none">{getCategoryEmoji(category.name)}</span>
-                  <h3 className="text-xs font-semibold text-foreground tracking-tight">
-                    {category.name.replace(/^\d+\.\s*/, '')}
-                  </h3>
-                  <span className="text-[10px] text-muted-foreground font-medium">
-                    {category.companies.length}
-                  </span>
-                </div>
-                
-                <div className="grid grid-cols-6 sm:grid-cols-7 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 flex-1">
+              {marketMap.map((category, idx) => {
+                const CategoryIcon = getCategoryIcon(category.name);
+                return (
+                <div key={idx} className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <CategoryIcon className="w-3.5 h-3.5 text-primary" strokeWidth={2.5} />
+                    <h3 className="text-xs font-semibold text-foreground tracking-tight">
+                      {category.name.replace(/^\d+\.\s*/, '')}
+                    </h3>
+                    <span className="text-[10px] text-muted-foreground font-medium">
+                      {category.companies.length}
+                    </span>
+                  </div>
+                  
+                  <div className="grid grid-cols-6 sm:grid-cols-7 gap-1.5">
                   {category.companies.map((company, companyIdx) => {
                     const domain = getCompanyDomain(company.name);
                     const categoryCount = company.category.split(';').length;
@@ -362,7 +373,8 @@ const Report2025 = () => {
                   })}
                 </div>
               </div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
