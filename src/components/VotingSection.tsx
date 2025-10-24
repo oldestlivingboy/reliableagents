@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
+import { toast as sonnerToast } from "sonner";
 import { 
   ArrowUp,
   BarChart3, 
@@ -33,7 +33,6 @@ const VotingSection = () => {
   const [votes, setVotes] = useState<Record<string, number>>({});
   const [votedCategories, setVotedCategories] = useState<Set<string>>(new Set());
   const [customCategory, setCustomCategory] = useState("");
-  const { toast } = useToast();
 
   useEffect(() => {
     fetchVotes();
@@ -84,10 +83,7 @@ const VotingSection = () => {
 
   const handleVote = async (categoryId: string, categoryTitle: string) => {
     if (votedCategories.has(categoryId)) {
-      toast({
-        title: "Already voted",
-        description: "You've already voted for this category",
-      });
+      sonnerToast.info("Already voted for this category");
       return;
     }
 
@@ -105,11 +101,7 @@ const VotingSection = () => {
       );
 
     if (error) {
-      toast({
-        title: "Vote failed",
-        description: "Unable to register your vote. Please try again.",
-        variant: "destructive",
-      });
+      sonnerToast.error("Unable to register your vote");
       return;
     }
 
@@ -117,45 +109,24 @@ const VotingSection = () => {
     setVotedCategories(newVoted);
     localStorage.setItem("votedCategories", JSON.stringify([...newVoted]));
 
-    toast({
-      title: "Vote recorded!",
-      description: "Thank you for helping shape our next benchmark",
-    });
+    sonnerToast.success("Vote recorded!");
   };
 
   const handleCustomCategorySubmit = async () => {
     const trimmed = customCategory.trim();
     
     if (!trimmed) {
-      toast({
-        title: "Category name required",
-        description: "Please enter a category name",
-        variant: "destructive",
-      });
+      sonnerToast.error("Please enter a category name");
       return;
     }
     
     if (trimmed.length > 100) {
-      toast({
-        title: "Category name too long",
-        description: "Please keep it under 100 characters",
-        variant: "destructive",
-      });
+      sonnerToast.error("Please keep it under 100 characters");
       return;
     }
     
     // Create a unique ID for the custom category
     const categoryId = `custom_${Date.now()}`;
-    
-    // Check if already voted for a custom category
-    const hasVotedForCustom = Array.from(votedCategories).some(id => id.startsWith("custom_"));
-    if (hasVotedForCustom) {
-      toast({
-        title: "Already voted",
-        description: "You've already voted for a custom category",
-      });
-      return;
-    }
     
     const { error } = await supabase
       .from("votes")
@@ -166,11 +137,7 @@ const VotingSection = () => {
       });
 
     if (error) {
-      toast({
-        title: "Submission failed",
-        description: "Unable to submit your category. Please try again.",
-        variant: "destructive",
-      });
+      sonnerToast.error("Unable to submit your category");
       return;
     }
 
@@ -179,10 +146,7 @@ const VotingSection = () => {
     localStorage.setItem("votedCategories", JSON.stringify([...newVoted]));
     setCustomCategory("");
 
-    toast({
-      title: "Category submitted!",
-      description: "Thank you for your suggestion",
-    });
+    sonnerToast.success("Category submitted!");
     
     fetchVotes(); // Refresh to show new custom category
   };
@@ -305,11 +269,10 @@ const VotingSection = () => {
                   placeholder="e.g., Testing frameworks for agents"
                   className="flex-1 text-sm"
                   maxLength={100}
-                  disabled={Array.from(votedCategories).some(id => id.startsWith("custom_"))}
                 />
                 <Button
                   onClick={handleCustomCategorySubmit}
-                  disabled={!customCategory.trim() || Array.from(votedCategories).some(id => id.startsWith("custom_"))}
+                  disabled={!customCategory.trim()}
                   size="sm"
                   className="gap-1.5"
                 >

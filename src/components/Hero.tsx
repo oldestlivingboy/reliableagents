@@ -16,11 +16,11 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="flex items-center justify-center gap-4 mb-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src={shieldLogo} 
               alt="Reliable Agents Shield" 
-              className="w-24 h-24 md:w-32 md:h-32 animate-fade-in"
+              className="w-20 h-20 md:w-28 md:h-28 animate-fade-in"
             />
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] animate-fade-in">
               Reliable Agents
