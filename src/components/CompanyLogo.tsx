@@ -32,7 +32,7 @@ import microsoftLogo from '@/assets/logos/microsoft.png';
 import amazonLogo from '@/assets/logos/amazon.png';
 import magnitudeLogo from '@/assets/logos/magnitude.png';
 import simularLogo from '@/assets/logos/simular.png';
-import steelLogo from '@/assets/logos/steel.png';
+import steelLogo from '@/assets/logos/steel-new.png';
 import morphLogo from '@/assets/logos/morph.png';
 import halluminateLogo from '@/assets/logos/halluminate.svg';
 import lightpandaLogo from '@/assets/logos/lightpanda.png';
