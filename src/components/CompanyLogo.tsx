@@ -58,6 +58,7 @@ import convergenceLogo from '@/assets/logos/convergence.png';
 import dexLogo from '@/assets/logos/dex.svg';
 import scrapybaraLogo from '@/assets/logos/scrapybara.png';
 import cuaLogo from '@/assets/logos/cua.svg';
+import opencuaLogo from '@/assets/logos/opencua.png';
 import lavagueLogo from '@/assets/logos/lavague.png';
 import anchorLogo from '@/assets/logos/anchor.svg';
 import kernelLogo from '@/assets/logos/kernel.svg';
@@ -80,7 +81,7 @@ const logoMap: { [key: string]: string } = {
   'scrapybara': scrapybaraLogo,
   'cua': cuaLogo,
   'lavague': lavagueLogo,
-  'opencua': cuaLogo,
+  'opencua': opencuaLogo,
   
   // Browsers as service
   'browserbase': browserbaseLogo,
