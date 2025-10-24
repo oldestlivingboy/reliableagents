@@ -78,14 +78,14 @@ export const CompanyLogo = ({ companyName, domain, categoryColor, className = ''
   // Check if we have a local logo
   const localLogo = logoMap[cleanName];
   
-  // Priority: CSV logoPath > local logo > Clearbit
-  const initialSrc = logoPath || localLogo || `https://logo.clearbit.com/${domain}`;
+  // Priority: local logo > Clearbit (ignore CSV logoPath as they're not reliable)
+  const initialSrc = localLogo || `https://logo.clearbit.com/${domain}`;
   
   const handleError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const img = e.currentTarget;
     setErrorCount(prev => prev + 1);
     
-    if (errorCount === 0 && !logoPath && !localLogo) {
+    if (errorCount === 0 && !localLogo) {
       // Try Clearbit
       img.src = `https://logo.clearbit.com/${domain}`;
     } else if (errorCount === 1) {
@@ -93,7 +93,7 @@ export const CompanyLogo = ({ companyName, domain, categoryColor, className = ''
       img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
     } else if (errorCount === 2) {
       // Try logo.dev
-      img.src = `https://logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w`;
+      img.src = `https://img.logo.dev/${domain}?token=pk_X-NykimYQeaw19u1busJ7w&size=200`;
     } else {
       // Final fallback to letter
       img.style.display = 'none';

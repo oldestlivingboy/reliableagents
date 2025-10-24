@@ -304,35 +304,35 @@ const Report2025 = () => {
           {/* Market map with side axis */}
           <div className="relative border border-border/40 rounded-2xl bg-gradient-to-br from-muted/20 to-background p-6 md:p-8">
             {/* Y-axis integrated into layout */}
-            <div className="flex gap-6 items-start">
-              {/* Vertical axis */}
-              <div className="relative flex flex-col items-center pt-6 pb-6 w-16 flex-shrink-0">
+            <div className="flex gap-6 items-stretch">
+              {/* Vertical axis - spans full height */}
+              <div className="relative flex flex-col items-center justify-between py-4 w-16 flex-shrink-0 min-h-[600px]">
                 {/* Top label */}
-                <div className="text-center space-y-1 mb-4">
+                <div className="text-center space-y-1">
                   <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Top</div>
-                  <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools</div>
+                  <div className="text-[11px] font-semibold text-foreground leading-snug">Dev Tools<br/><span className="text-[9px] text-muted-foreground">(bottom of stack)</span></div>
                 </div>
                 
-                {/* Vertical line with gradient */}
-                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary min-h-[500px]" />
+                {/* Vertical line with gradient - flex-1 makes it span available space */}
+                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary my-3" />
                 
                 {/* Arrow */}
                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary -mt-0.5" />
                 
                 {/* Bottom label */}
-                <div className="text-center space-y-1 mt-4">
-                  <div className="text-[11px] font-semibold text-foreground leading-snug">Dev<br/>Tools</div>
+                <div className="text-center space-y-1">
+                  <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools<br/><span className="text-[9px] text-muted-foreground">(top of stack)</span></div>
                   <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Bottom</div>
                 </div>
               </div>
 
-              {/* Categories grid */}
-              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-5">
+              {/* Categories grid - more compact */}
+              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
                 {marketMap.map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
-                  <div key={idx} className="space-y-2">
-                    <div className="flex items-center gap-2 pb-1">
+                  <div key={idx} className="space-y-1.5">
+                    <div className="flex items-center gap-2 pb-0.5">
                       <CategoryIcon className="w-3.5 h-3.5 text-primary flex-shrink-0" strokeWidth={2.5} />
                       <h3 className="text-[11px] font-semibold text-foreground tracking-tight">
                         {category.name.replace(/^\d+\.\s*/, '')}
@@ -342,7 +342,7 @@ const Report2025 = () => {
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-7 gap-1.5">
+                    <div className="grid grid-cols-7 gap-1">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -354,7 +354,7 @@ const Report2025 = () => {
                           href={getCompanyUrl(company.name)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex flex-col items-center gap-1 transition-transform hover:scale-105 relative"
+                          className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-105 relative"
                           title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                         >
                           <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/30' : 'border border-border/30'}`}>
@@ -362,7 +362,6 @@ const Report2025 = () => {
                               companyName={company.name}
                               domain={domain}
                               categoryColor={category.color}
-                              logoPath={company.logoPath}
                             />
                           </div>
                           {isMultiCategory && (
