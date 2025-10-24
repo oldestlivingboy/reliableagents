@@ -1,5 +1,7 @@
 # ⚙️ Reliable Agents
 
+![Reliable Agents Logo](ChatGPT%20Image%20Oct%2024%2C%202025%2C%2001_15_04%20PM.png)
+
 The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
 
 ---
@@ -12,7 +14,7 @@ It was created by **Alex Nevedovsky** and **Brian Kennish**, founders and operat
 
 > “Which agents can we actually trust to work — every time?”
 
-The project began as part of the **No Cap** initiative to identify, test, and benchmark the world’s most consistent AI agents — and has since expanded into a shared knowledge base for builders, researchers, and investors navigating the agentic stack.
+The project began as part of the **[No Cap](https://nocap.so)** initiative to identify, test, and benchmark the world’s most consistent AI agents — and has since expanded into a shared knowledge base for builders, researchers, and investors navigating the agentic stack.
 
 ---
 
@@ -78,7 +80,6 @@ Each listing is reviewed for:
 ## Credits
 
 Created by **Alex Nevedovsky** and **Brian Kennish**  
-Part of the **No Cap** initiative ([nocap.so](https://nocap.so))
 
 ---
 
