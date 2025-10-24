@@ -70,7 +70,9 @@ const Index = () => {
                 >
                   No Cap
                 </a>
-                , a viral AI investing agent, and{" "}
+                , a viral AI investing agent,{" "}
+                <br className="hidden sm:inline" />
+                and{" "}
                 <a 
                   href="https://www.linkedin.com/in/briansehn/" 
                   target="_blank" 
