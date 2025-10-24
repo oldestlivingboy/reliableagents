@@ -52,18 +52,21 @@ export const MarketMapPreview = () => {
               Q4 2025
             </div>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              A comprehensive market map of 80+ companies across 10 categories
+              with an interactive market map of projects across 10 categories (vibe-coded & collected with browser use, of course)
             </p>
+            
+            <div className="pt-2">
+              <div className="flex items-center justify-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                <span>View Full Report</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
           </div>
 
         <div className="space-y-4">
           {previewCategories.map((category, idx) => (
             <div key={idx} className="space-y-2">
               <div className="flex items-center gap-2">
-                <div 
-                  className="w-1.5 h-1.5 rounded-full"
-                  style={{ backgroundColor: category.color }}
-                />
                 <h3 className="text-xs font-semibold text-foreground">
                   {category.name}
                 </h3>
@@ -98,13 +101,6 @@ export const MarketMapPreview = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="pt-2">
-          <div className="flex items-center justify-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
-            <span>View Full Report</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </div>
         </div>
       </div>
 
