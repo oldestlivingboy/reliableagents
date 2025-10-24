@@ -48,37 +48,35 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex flex-col items-center gap-3 text-xs">
-              <p className="text-muted-foreground">Created by</p>
+            <div className="space-y-3 text-sm">
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <span className="text-muted-foreground">Created by</span>
+                <a 
+                  href="https://www.linkedin.com/in/ednevsky/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                >
+                  🚀 Alex
+                </a>
+                <span className="text-muted-foreground/50">and</span>
+                <a 
+                  href="https://www.linkedin.com/in/briansehn/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                >
+                  🌐 Brian
+                </a>
+              </div>
               
-              <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
-                <div className="space-y-1">
-                  <a 
-                    href="https://www.linkedin.com/in/ednevsky/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"
-                  >
-                    🚀 Alex
-                  </a>
-                  <p className="text-muted-foreground max-w-[280px]">
-                    Repeat AI founder with an exit and creator of No Cap, a viral AI investing agent
-                  </p>
-                </div>
-                
-                <div className="space-y-1">
-                  <a 
-                    href="https://www.linkedin.com/in/briansehn/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"
-                  >
-                    🌐 Brian
-                  </a>
-                  <p className="text-muted-foreground max-w-[280px]">
-                    First DevRel at Google and founder of multiple browser-related companies
-                  </p>
-                </div>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-xs text-center">
+                <p className="text-muted-foreground max-w-[280px] mx-auto md:mx-0">
+                  <span className="font-medium">Alex:</span> Repeat AI founder with an exit and creator of No Cap, a viral AI investing agent
+                </p>
+                <p className="text-muted-foreground max-w-[280px] mx-auto md:mx-0">
+                  <span className="font-medium">Brian:</span> First DevRel at Google and founder of multiple browser-related companies
+                </p>
               </div>
             </div>
             
