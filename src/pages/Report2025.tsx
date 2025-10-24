@@ -607,15 +607,15 @@ const Report2025 = () => {
         {/* WHERE TO START Section */}
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Where to Start</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Where to Start</h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
               Practical tips for navigating the map and building your stack
             </p>
           </div>
 
-          {/* The stack you can control */}
+          {/* Building Your Stack */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Building Your Stack</h3>
+            <h3 className="text-xl font-semibold text-foreground">Building Your Stack</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
                 The market map shows <strong>10 categories</strong>, but developers should focus on the first <strong>8 categories</strong> (1–8) to build their stack. 
@@ -693,7 +693,7 @@ const Report2025 = () => {
 
           {/* Decision Flow */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Decision Flow</h3>
+            <h3 className="text-xl font-semibold text-foreground">Decision Flow</h3>
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
               <div>
@@ -735,7 +735,7 @@ const Report2025 = () => {
 
           {/* Common Problems */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Common Problems</h3>
+            <h3 className="text-xl font-semibold text-foreground">Common Problems</h3>
             <p className="text-base text-foreground/70">
               Why do agents still face-plant in production?
             </p>
@@ -786,7 +786,7 @@ const Report2025 = () => {
 
           {/* Quick FAQ */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Quick FAQ</h3>
+            <h3 className="text-xl font-semibold text-foreground">FAQ</h3>
 
             <div className="space-y-4">
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
@@ -813,52 +813,57 @@ const Report2025 = () => {
           </div>
         </section>
 
-        {/* FUTURE LEADERBOARDS Section */}
-        <section className="space-y-8 mb-24 max-w-5xl">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Future Leaderboards</h2>
-            <p className="text-base text-foreground/70 leading-relaxed">
-              Help shape our roadmap! Vote for which leaderboard you'd like to see next.
-            </p>
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm"
-            >
-              Vote on the Homepage
-              <span className="text-lg">→</span>
-            </Link>
-          </div>
+        {/* FUTURE LEADERBOARDS CTA */}
+        <section className="mb-12 max-w-5xl">
+          <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-10 border border-primary/20">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground mb-3">Help Shape the Future</h2>
+                <p className="text-base text-foreground/70 leading-relaxed">
+                  Vote for which leaderboard you'd like to see next
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Enterprise agents</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Verticalized flows with compliance</p>
+                </div>
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Consumer agents</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Prosumer UX and speed</p>
+                </div>
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Desktop OS control</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Citrix, legacy clients</p>
+                </div>
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Memory services</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Persistence across tasks</p>
+                </div>
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Anti-bot setups</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Proxies and fingerprints</p>
+                </div>
+                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
+                  <h3 className="font-medium text-foreground mb-1 text-sm">Model fine-tuning</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Action space optimizations</p>
+                </div>
+              </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Enterprise agents</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Verticalized flows with compliance, audit, replay, residency</p>
-            </div>
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Consumer agents & AI browsers</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Prosumer UX, speed, utility</p>
-            </div>
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Desktop OS control</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Citrix, legacy thick clients</p>
-            </div>
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Memory services</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Persistence, retrieval, tutoring across repeated tasks</p>
-            </div>
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Anti-bot setups</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Proxies, fingerprints, captchas compared fairly</p>
-            </div>
-            <div className="p-5 bg-muted/30 rounded-xl border border-border/40 hover:border-border transition-colors">
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Training environments</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">Sandbox replicas for safe RL/SFT on real flows</p>
+              <Link 
+                to="/" 
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm"
+              >
+                Vote on the Homepage
+                <span className="text-lg">→</span>
+              </Link>
             </div>
           </div>
         </section>
 
-        <footer className="border-t border-border mt-24">
-          <div className="container mx-auto max-w-3xl px-4 py-8">
+        <footer className="border-t border-border mt-12">
+          <div className="container mx-auto max-w-3xl px-4 py-8 pb-4">
             <div className="flex flex-col items-center gap-6">
               <div className="text-center space-y-1 max-w-2xl mx-auto">
                 <p className="text-base font-semibold text-foreground">
