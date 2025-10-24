@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="container mx-auto max-w-4xl relative">
         <div className="space-y-8 text-center">
           <div className="inline-block">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-6 animate-fade-in hover-scale">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Live Benchmarks & Analysis
             </div>
@@ -20,7 +20,7 @@ const Hero = () => {
             <img 
               src={shieldLogo} 
               alt="Reliable Agents Shield" 
-              className="w-16 h-16 md:w-20 md:h-20 animate-fade-in"
+              className="w-24 h-24 md:w-32 md:h-32 animate-fade-in"
             />
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] animate-fade-in">
               Reliable Agents
