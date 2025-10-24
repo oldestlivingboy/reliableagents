@@ -245,8 +245,8 @@ const Report2025 = () => {
       <ConsultationPopup />
       <div className="container mx-auto max-w-6xl px-4 md:px-6 py-6 md:py-16">
         <Link to="/">
-          <Button variant="ghost" size="sm" className="mb-6 md:mb-8 -ml-3 text-muted-foreground hover:text-foreground">
-            <ChevronLeft className="w-4 h-4 mr-1" />
+          <Button variant="ghost" className="mb-6 md:mb-8 -ml-2 md:-ml-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group">
+            <ChevronLeft className="w-4 h-4 mr-1 transition-transform group-hover:-translate-x-1" />
             Back
           </Button>
         </Link>
@@ -340,8 +340,8 @@ const Report2025 = () => {
 
               {/* Categories - redesigned with better organization */}
               <div className="flex-1 space-y-4 md:space-y-6">
-                {/* Categories 1-3: responsive grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+                {/* Categories 1-3: 1 col mobile, 3 cols desktop (ORIGINAL LAYOUT RESTORED) */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4">
                   {marketMap.slice(0, 3).map((category, idx) => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
@@ -356,7 +356,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                       
-                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-1.5 md:gap-2">
+                      <div className="grid grid-cols-3 sm:grid-cols-4 gap-1.5 md:gap-2">
                       {category.companies.map((company, companyIdx) => {
                         const domain = getCompanyDomain(company.name);
                         const categoryCount = company.category.split(';').length;
@@ -395,8 +395,8 @@ const Report2025 = () => {
                 })}
               </div>
 
-              {/* Categories 4-6: responsive grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+              {/* Categories 4-6: 1 col mobile, 3 cols desktop (ORIGINAL LAYOUT RESTORED) */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4">
                 {marketMap.slice(3, 6).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
@@ -411,7 +411,7 @@ const Report2025 = () => {
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-1.5 md:gap-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-5 gap-1.5 md:gap-2">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -465,7 +465,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
+                <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -518,7 +518,7 @@ const Report2025 = () => {
                 </span>
               </div>
               
-                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
+                <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -556,7 +556,7 @@ const Report2025 = () => {
         );
         })}
 
-        {/* Categories 9-10: Consumer automation and browsers - responsive grid */}
+        {/* Categories 9-10: Consumer automation and browsers - 1 col mobile, 2 cols desktop (ORIGINAL LAYOUT RESTORED) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
           {marketMap.slice(8, 10).map((category, idx) => {
             const CategoryIcon = getCategoryIcon(category.name);
