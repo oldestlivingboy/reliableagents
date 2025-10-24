@@ -52,7 +52,7 @@ export const MarketMapPreview = () => {
               Q4 2025
             </div>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
-              with an interactive market map of projects across 10 categories (vibe-coded & collected with browser use, of course)
+              with an interactive market map of projects across 10 categories (vibe-coded & collected with browser automation, of course)
             </p>
             
             <div className="pt-3">

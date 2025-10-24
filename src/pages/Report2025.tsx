@@ -297,7 +297,7 @@ const Report2025 = () => {
           <div className="max-w-3xl space-y-4">
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              An interactive overview of the agentic browser/computer use landscape - of course, vibe coded, generated & maintained using browser use 🫡
+              An interactive overview of the agentic browser/computer use landscape - of course, vibe coded, generated & maintained using browser automation 🫡
             </p>
             
             {/* Contact info - prominent */}
