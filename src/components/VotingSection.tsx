@@ -11,8 +11,7 @@ import {
   Briefcase, 
   Rocket,
   Plus,
-  Lightbulb,
-  Github
+  Lightbulb
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -321,28 +320,6 @@ const VotingSection = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* GitHub Section */}
-      <div className="pt-4">
-        <a 
-          href="https://github.com/ednevsky/reliableagents"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/40 hover:bg-primary/[0.02] transition-all duration-200 group"
-        >
-          <div className="w-8 h-8 rounded-lg bg-foreground/5 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary/10 transition-colors">
-            <Github className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
-              Contribute on GitHub
-            </h3>
-            <p className="text-xs text-muted-foreground">
-              This project is open source. Star the repo, report issues, or submit improvements
-            </p>
-          </div>
-        </a>
       </div>
     </section>
   );

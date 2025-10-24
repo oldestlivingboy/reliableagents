@@ -48,7 +48,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-xs">
               <div className="flex flex-wrap items-center justify-center gap-2">
                 <span className="text-muted-foreground">Created by</span>
                 <a 
@@ -70,14 +70,10 @@ const Index = () => {
                 </a>
               </div>
               
-              <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-xs text-center">
-                <p className="text-muted-foreground max-w-[280px] mx-auto md:mx-0">
-                  <span className="font-medium">Alex:</span> Repeat AI founder with an exit and creator of No Cap, a viral AI investing agent
-                </p>
-                <p className="text-muted-foreground max-w-[280px] mx-auto md:mx-0">
-                  <span className="font-medium">Brian:</span> First DevRel at Google and founder of multiple browser-related companies
-                </p>
-              </div>
+              <p className="text-muted-foreground text-center max-w-2xl mx-auto leading-relaxed">
+                Alex is a repeat AI founder with an exit and creator of No Cap, a viral AI investing agent. 
+                Brian is the first DevRel at Google and founder of multiple browser-related companies.
+              </p>
             </div>
             
             <p className="text-[10px] text-muted-foreground/50">

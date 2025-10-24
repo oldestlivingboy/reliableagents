@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Mail } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 import { z } from "zod";
 
 const SubscribeSection = () => {
@@ -61,38 +61,59 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section>
-      <div className="border border-primary/20 rounded-xl p-5 bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]">
-        <div className="space-y-3">
-          <div className="space-y-1">
-            <h3 className="text-base font-semibold text-foreground">
-              Get Future Updates
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              New benchmarking updates/reports delivered to your inbox whenever they come out
-            </p>
+    <div className="space-y-4">
+      <section>
+        <div className="border border-primary/20 rounded-xl p-5 bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]">
+          <div className="space-y-3">
+            <div className="space-y-1">
+              <h3 className="text-base font-semibold text-foreground">
+                Get Future Updates
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                New benchmarking updates/reports delivered to your inbox whenever they come out
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 h-9 text-sm bg-background"
+                required
+              />
+              <Button 
+                type="submit" 
+                disabled={isLoading} 
+                size="sm"
+                className="whitespace-nowrap"
+              >
+                {isLoading ? "..." : "Subscribe"}
+              </Button>
+            </form>
           </div>
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <Input
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 h-9 text-sm bg-background"
-              required
-            />
-            <Button 
-              type="submit" 
-              disabled={isLoading} 
-              size="sm"
-              className="whitespace-nowrap"
-            >
-              {isLoading ? "..." : "Subscribe"}
-            </Button>
-          </form>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <a 
+        href="https://github.com/ednevsky/reliableagents"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/40 hover:bg-primary/[0.02] transition-all duration-200 group"
+      >
+        <div className="w-8 h-8 rounded-lg bg-foreground/5 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary/10 transition-colors">
+          <Github className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+            Contribute on GitHub
+          </h3>
+          <p className="text-xs text-muted-foreground">
+            This project is open source. Star the repo, report issues, or submit improvements
+          </p>
+        </div>
+      </a>
+    </div>
   );
 };
 
