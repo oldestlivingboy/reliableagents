@@ -62,14 +62,12 @@ const ConsultationPopup = () => {
 
   return (
     <div className="fixed bottom-8 right-8 z-50 animate-scale-in">
-      <div className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden max-w-[340px]">
-        {/* Clickable overlay for cal.com */}
-        <div
-          data-cal-link="oldestlivingboy/reliableagents"
-          data-cal-namespace="reliableagents"
-          data-cal-config='{"layout":"month_view"}'
-          className="absolute inset-0 cursor-pointer z-0"
-        />
+      <div 
+        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden max-w-[340px] cursor-pointer"
+        data-cal-link="oldestlivingboy/reliableagents"
+        data-cal-namespace="reliableagents"
+        data-cal-config='{"layout":"month_view"}'
+      >
         {/* Close button */}
         <button
           onClick={handleDismiss}
@@ -90,30 +88,8 @@ const ConsultationPopup = () => {
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Grab a free consultation & share your use-case{" "}
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/25">
-                <span className="text-[10px] font-semibold tracking-wide text-amber-600 dark:text-amber-500 uppercase">Limited Slots</span>
-              </span>
+              <span className="text-amber-600 dark:text-amber-500 font-medium">(limited slots)</span>
             </p>
-          </div>
-
-          {/* CTA */}
-          <div className="flex items-center gap-2.5 pt-2">
-            <span className="text-sm font-semibold text-primary">Book your slot</span>
-            <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
-              <svg 
-                className="w-2.5 h-2.5 text-primary" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2.5} 
-                  d="M9 5l7 7-7 7" 
-                />
-              </svg>
-            </div>
           </div>
         </div>
 
