@@ -62,16 +62,18 @@ const ConsultationPopup = () => {
 
   return (
     <div className="fixed bottom-8 right-8 z-50 animate-scale-in">
-      <div
-        data-cal-link="oldestlivingboy/reliableagents"
-        data-cal-namespace="reliableagents"
-        data-cal-config='{"layout":"month_view"}'
-        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer overflow-hidden max-w-[340px]"
-      >
+      <div className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden max-w-[340px]">
+        {/* Clickable overlay for cal.com */}
+        <div
+          data-cal-link="oldestlivingboy/reliableagents"
+          data-cal-namespace="reliableagents"
+          data-cal-config='{"layout":"month_view"}'
+          className="absolute inset-0 cursor-pointer z-0"
+        />
         {/* Close button */}
         <button
           onClick={handleDismiss}
-          className="absolute top-4 right-4 w-7 h-7 rounded-full bg-muted/60 hover:bg-muted backdrop-blur-sm transition-all duration-200 flex items-center justify-center z-10 group/close"
+          className="absolute top-4 right-4 w-7 h-7 rounded-full bg-muted/60 hover:bg-muted backdrop-blur-sm transition-all duration-200 flex items-center justify-center z-20 group/close"
         >
           <X className="w-3.5 h-3.5 text-muted-foreground group-hover/close:text-foreground transition-colors" />
         </button>
@@ -80,7 +82,7 @@ const ConsultationPopup = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-60" />
         
         {/* Content */}
-        <div className="relative px-7 py-6 space-y-5">
+        <div className="relative px-7 py-6 space-y-5 z-10">
           {/* Main content */}
           <div className="space-y-2.5 pr-4">
             <h3 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
