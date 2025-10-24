@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import shieldLogo from "@/assets/shield-logo.png";
 
 const Hero = () => {
   return (
@@ -15,9 +16,16 @@ const Hero = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] animate-fade-in">
-            Reliable Agents
-          </h1>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src={shieldLogo} 
+              alt="Reliable Agents Shield" 
+              className="w-16 h-16 md:w-20 md:h-20 animate-fade-in"
+            />
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] animate-fade-in">
+              Reliable Agents
+            </h1>
+          </div>
           
           <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
             The definitive guide to understanding and benchmarking agentic automation, web browsing, and computer use.
