@@ -275,70 +275,56 @@ const Report2025 = () => {
         </section>
 
         {/* MARKET MAP Section */}
-        <section className="space-y-8 mb-24">
+        <section className="space-y-6 mb-24">
           <div className="max-w-3xl">
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-3">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground">
               An interactive overview of the agentic browser/computer use landscape
             </p>
           </div>
 
-          <div className="flex gap-6 items-stretch relative">
-            {/* Y-axis visualization */}
-            <div className="relative flex flex-col items-center w-24 pt-6 pb-6 flex-shrink-0">
-              {/* Top label */}
-              <div className="mb-6">
-                <div className="text-[11px] font-bold text-primary tracking-wide text-center leading-snug px-3 py-2 bg-gradient-to-br from-primary/15 to-primary/5 rounded-lg border-2 border-primary/30 shadow-sm">
-                  <div className="whitespace-nowrap">Top of the stack</div>
-                  <div className="text-[9px] font-semibold text-primary/70 mt-0.5">Consumer tools</div>
-                </div>
+          {/* Market map container with integrated axis */}
+          <div className="relative pl-16 pr-4">
+            {/* Y-axis - Absolute positioned overlay on left edge */}
+            <div className="absolute left-0 top-0 bottom-0 w-14 flex flex-col items-end justify-between py-3">
+              {/* Top label - Consumer */}
+              <div className="text-right">
+                <div className="text-[9px] font-bold text-primary/90 tracking-wide leading-none mb-0.5">TOP</div>
+                <div className="text-[10px] font-semibold text-foreground leading-tight">Consumer</div>
+                <div className="text-[10px] font-semibold text-foreground leading-tight">Tools</div>
               </div>
               
-              {/* Vertical gradient line with enhanced styling */}
-              <div className="flex-1 flex flex-col items-center w-full relative" style={{ minHeight: '600px' }}>
-                <div className="absolute inset-0 flex flex-col items-center">
-                  <div className="w-1 flex-1 bg-gradient-to-b from-primary via-primary/60 to-primary rounded-full shadow-lg relative">
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 w-1 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/40 blur-sm rounded-full" />
-                  </div>
-                </div>
-                
-                {/* Enhanced arrow pointing down */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1">
-                  <div className="relative">
-                    <div className="w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[16px] border-t-primary drop-shadow-md" />
-                    {/* Arrow glow */}
-                    <div className="absolute inset-0 w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[16px] border-t-primary/30 blur-sm -translate-y-1" />
-                  </div>
-                </div>
-              </div>
+              {/* Vertical line */}
+              <div className="absolute right-3 top-16 bottom-16 w-[2px] bg-gradient-to-b from-primary via-primary/40 to-primary" />
               
-              {/* Bottom label */}
-              <div className="mt-6">
-                <div className="text-[11px] font-bold text-primary tracking-wide text-center leading-snug px-3 py-2 bg-gradient-to-br from-primary/15 to-primary/5 rounded-lg border-2 border-primary/30 shadow-sm">
-                  <div className="whitespace-nowrap">Bottom of the stack</div>
-                  <div className="text-[9px] font-semibold text-primary/70 mt-0.5">Dev tools</div>
-                </div>
+              {/* Arrow at bottom */}
+              <div className="absolute right-[10px] bottom-12 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[10px] border-t-primary" />
+              
+              {/* Bottom label - Dev Tools */}
+              <div className="text-right">
+                <div className="text-[10px] font-semibold text-foreground leading-tight">Dev</div>
+                <div className="text-[10px] font-semibold text-foreground leading-tight">Tools</div>
+                <div className="text-[9px] font-bold text-primary/90 tracking-wide leading-none mt-0.5">BOTTOM</div>
               </div>
             </div>
 
-            {/* Market map grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 flex-1">
+            {/* Dense market map grid - 3 columns on desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-3">
               {marketMap.map((category, idx) => {
                 const CategoryIcon = getCategoryIcon(category.name);
                 return (
-                <div key={idx} className="space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <CategoryIcon className="w-3.5 h-3.5 text-primary" strokeWidth={2.5} />
-                    <h3 className="text-xs font-semibold text-foreground tracking-tight">
+                <div key={idx} className="space-y-1">
+                  <div className="flex items-center gap-1.5 pb-0.5">
+                    <CategoryIcon className="w-3 h-3 text-primary flex-shrink-0" strokeWidth={2.5} />
+                    <h3 className="text-[11px] font-semibold text-foreground tracking-tight leading-none">
                       {category.name.replace(/^\d+\.\s*/, '')}
                     </h3>
-                    <span className="text-[10px] text-muted-foreground font-medium">
+                    <span className="text-[9px] text-muted-foreground font-medium">
                       {category.companies.length}
                     </span>
                   </div>
                   
-                  <div className="grid grid-cols-6 sm:grid-cols-7 gap-1.5">
+                  <div className="grid grid-cols-8 gap-1">
                   {category.companies.map((company, companyIdx) => {
                     const domain = getCompanyDomain(company.name);
                     const categoryCount = company.category.split(';').length;
@@ -350,10 +336,10 @@ const Report2025 = () => {
                         href={getCompanyUrl(company.name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-1 transition-transform hover:scale-105 relative"
+                        className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-110 relative"
                         title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                       >
-                        <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 shadow-sm group-hover:shadow transition-all ${isMultiCategory ? 'border-2 border-primary/30' : 'border border-border/30'}`}>
+                        <div className={`w-8 h-8 rounded-md bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-0.5 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/40' : 'border border-border/40'}`}>
                           <CompanyLogo
                             companyName={company.name}
                             domain={domain}
@@ -361,11 +347,11 @@ const Report2025 = () => {
                           />
                         </div>
                         {isMultiCategory && (
-                          <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
-                            <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                          <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-primary rounded-full border border-background flex items-center justify-center">
+                            <span className="text-[5px] font-bold text-primary-foreground">{categoryCount}</span>
                           </div>
                         )}
-                        <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                        <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-[0.6rem] w-full px-0.5">
                           {company.name}
                         </span>
                       </a>
