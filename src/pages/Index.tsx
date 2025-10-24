@@ -17,7 +17,8 @@ const Index = () => {
             <MarketMapPreview />
           </section>
 
-          <section className="space-y-4">
+          {/* Reliable Agents Leaderboard Block */}
+          <section className="space-y-8">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
@@ -32,9 +33,12 @@ const Index = () => {
             </div>
             
             <SubscribeSection />
+            
+            {/* Divider */}
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent my-8" />
+            
+            <VotingSection />
           </section>
-
-          <VotingSection />
         </div>
       </main>
 
@@ -63,7 +67,7 @@ const Index = () => {
                 </a>
                 , a repeat AI founder with an exit and creator of{" "}
                 <a 
-                  href="https://nocap.ai" 
+                  href="https://nocap.so" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"

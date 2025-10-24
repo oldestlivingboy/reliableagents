@@ -162,10 +162,10 @@ const VotingSection = () => {
   return (
     <section className="space-y-6">
       <div className="space-y-3">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+        <h3 className="text-xl md:text-2xl font-bold text-foreground">
           Vote for which category to benchmark next
-        </h2>
-        <p className="text-base text-muted-foreground">
+        </h3>
+        <p className="text-sm md:text-base text-muted-foreground">
           Help us prioritize which part of the stack to test next. {totalVotes > 0 && (
             <span className="font-medium text-foreground">{totalVotes} votes</span>
           )}
