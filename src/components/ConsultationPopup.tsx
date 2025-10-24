@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 const ConsultationPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,42 +61,68 @@ const ConsultationPopup = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
-      <Button
+    <div className="fixed bottom-8 right-8 z-50 animate-scale-in">
+      <div
         data-cal-link="oldestlivingboy/reliableagents"
         data-cal-namespace="reliableagents"
         data-cal-config='{"layout":"month_view"}'
-        onClick={() => {}}
-        className="group relative bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-6 h-auto rounded-2xl max-w-sm"
+        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer overflow-hidden max-w-[340px]"
       >
+        {/* Close button */}
         <button
           onClick={handleDismiss}
-          className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-background border border-border shadow-md hover:bg-muted transition-colors flex items-center justify-center"
+          className="absolute top-4 right-4 w-7 h-7 rounded-full bg-muted/60 hover:bg-muted backdrop-blur-sm transition-all duration-200 flex items-center justify-center z-10 group/close"
         >
-          <X className="w-3 h-3 text-muted-foreground" />
+          <X className="w-3.5 h-3.5 text-muted-foreground group-hover/close:text-foreground transition-colors" />
         </button>
+
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-60" />
         
-        <div className="flex items-start gap-3">
-          <div className="shrink-0 mt-1">
-            <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-              <Sparkles className="w-5 h-5" />
-            </div>
+        {/* Content */}
+        <div className="relative px-7 py-6 space-y-4">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            <span className="text-[10px] font-semibold tracking-wide text-primary uppercase">Limited Spots</span>
           </div>
           
-          <div className="text-left space-y-2">
-            <p className="font-semibold text-base leading-tight">
+          {/* Main content */}
+          <div className="space-y-2.5 pr-4">
+            <h3 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
               How reliable is your browser automation?
-            </p>
-            <p className="text-sm opacity-90 leading-snug">
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Grab a free consultation & share your use-case
             </p>
-            <p className="text-xs opacity-75 flex items-center gap-1">
-              <span>⏰</span>
-              <span className="font-medium">Limited spots</span>
-            </p>
+          </div>
+
+          {/* CTA indicator */}
+          <div className="flex items-center gap-2 pt-1">
+            <span className="text-xs font-medium text-primary">Book your slot</span>
+            <div className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg 
+                className="w-2.5 h-2.5 text-primary" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2.5} 
+                  d="M9 5l7 7-7 7" 
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </Button>
+
+        {/* Hover effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+        </div>
+      </div>
     </div>
   );
 };
