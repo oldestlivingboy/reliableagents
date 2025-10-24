@@ -335,15 +335,15 @@ const Report2025 = () => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
                     <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
-                      <div className="flex items-center gap-2">
-                        <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
-                        <h3 className="text-xs font-semibold text-foreground">
-                          {category.name.replace(/^\d+\.\s*/, '')}
-                        </h3>
-                        <span className="text-[10px] text-muted-foreground ml-auto">
-                          {category.companies.length}
-                        </span>
-                      </div>
+                <div className="flex items-center gap-2">
+                  <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                  <h3 className="text-xs font-semibold text-foreground">
+                    {category.name.replace(/^\d+\.\s*/, '')}
+                  </h3>
+                  <span className="text-[10px] text-muted-foreground">
+                    ({category.companies.length})
+                  </span>
+                </div>
                       
                       <div className="grid grid-cols-4 gap-1.5">
                       {category.companies.map((company, companyIdx) => {
@@ -395,8 +395,8 @@ const Report2025 = () => {
                       <h3 className="text-xs font-semibold text-foreground">
                         {category.name.replace(/^\d+\.\s*/, '')}
                       </h3>
-                      <span className="text-[10px] text-muted-foreground ml-auto">
-                        {category.companies.length}
+                      <span className="text-[10px] text-muted-foreground">
+                        ({category.companies.length})
                       </span>
                     </div>
                     
@@ -449,8 +449,8 @@ const Report2025 = () => {
                   <h3 className="text-xs font-semibold text-foreground">
                     {category.name.replace(/^\d+\.\s*/, '')}
                   </h3>
-                  <span className="text-[10px] text-muted-foreground ml-auto">
-                    {category.companies.length}
+                  <span className="text-[10px] text-muted-foreground">
+                    ({category.companies.length})
                   </span>
                 </div>
                 
@@ -502,8 +502,8 @@ const Report2025 = () => {
                 <h3 className="text-xs font-semibold text-foreground">
                   {category.name.replace(/^\d+\.\s*/, '')}
                 </h3>
-                <span className="text-[10px] text-muted-foreground ml-auto">
-                  {category.companies.length}
+                <span className="text-[10px] text-muted-foreground">
+                  ({category.companies.length})
                 </span>
               </div>
               
@@ -556,8 +556,8 @@ const Report2025 = () => {
                 <h3 className="text-xs font-semibold text-foreground">
                   {category.name.replace(/^\d+\.\s*/, '')}
                 </h3>
-                <span className="text-[10px] text-muted-foreground ml-auto">
-                  {category.companies.length}
+                <span className="text-[10px] text-muted-foreground">
+                  ({category.companies.length})
                 </span>
               </div>
               
