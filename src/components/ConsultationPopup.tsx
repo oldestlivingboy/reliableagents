@@ -89,7 +89,10 @@ const ConsultationPopup = () => {
               How reliable is your browser automation?
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Grab a free consultation & share your use-case — <span className="text-amber-600 dark:text-amber-500 font-semibold">limited slots</span>
+              Grab a free consultation & share your use-case{" "}
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/25">
+                <span className="text-[10px] font-semibold tracking-wide text-amber-600 dark:text-amber-500 uppercase">Limited Slots</span>
+              </span>
             </p>
           </div>
 
