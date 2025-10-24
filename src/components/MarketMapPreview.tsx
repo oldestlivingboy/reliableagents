@@ -4,33 +4,34 @@ import { CompanyLogo } from "./CompanyLogo";
 
 const previewCategories = [
   {
-    name: "General go-to frameworks",
-    color: "hsl(var(--primary))",
+    name: "🔧 Browser use frameworks",
+    color: "hsl(220 70% 50%)",
     companies: [
       { name: "Browser Use", domain: "github.com" },
       { name: "Stagehand", domain: "stagehand.dev" },
       { name: "Skyvern", domain: "skyvern.com" },
-      { name: "LaVague", domain: "lavague.ai" },
+      { name: "Magnitude", domain: "magnitude.run" },
       { name: "Trigger.dev", domain: "trigger.dev" },
     ]
   },
   {
-    name: "Browser-as-a-service infra",
-    color: "hsl(var(--secondary))",
+    name: "☁️ Browsers as a service",
+    color: "hsl(200 80% 55%)",
     companies: [
       { name: "Browserbase", domain: "browserbase.com" },
       { name: "hyperbrowser", domain: "hyperbrowser.ai" },
       { name: "Browserless", domain: "browserless.io" },
+      { name: "Steel.dev", domain: "steel.dev" },
     ]
   },
   {
-    name: "Crawlers/scrapers/APIs",
-    color: "hsl(var(--accent))",
+    name: "🤖 Computer use models",
+    color: "hsl(340 70% 55%)",
     companies: [
-      { name: "Firecrawl", domain: "firecrawl.dev" },
-      { name: "Apify", domain: "apify.com" },
-      { name: "Tavily", domain: "tavily.com" },
-      { name: "Bright Data", domain: "brightdata.com" },
+      { name: "OpenAI Operator", domain: "openai.com" },
+      { name: "Google Gemini", domain: "gemini.google.com" },
+      { name: "Anthropic Claude", domain: "anthropic.com" },
+      { name: "Amazon Nova", domain: "nova.amazon.com" },
     ]
   }
 ];
@@ -45,10 +46,13 @@ export const MarketMapPreview = () => {
               New Report
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-              State of Agentic Browser/Computer Use - Q4 2025
+              State of Agentic Browser/Computer Use 🤖
             </h2>
+            <div className="inline-block px-2.5 py-1 text-xs font-semibold tracking-wide bg-primary/10 text-primary rounded-full border border-primary/20">
+              Q4 2025
+            </div>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              A comprehensive market map of 60+ companies across 9 categories
+              A comprehensive market map of 80+ companies across 10 categories
             </p>
           </div>
 

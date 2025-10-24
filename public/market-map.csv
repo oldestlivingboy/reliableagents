@@ -1,76 +1,80 @@
-Company,Source,Category,Date,One-liner,URL
-magnitude.run,,1. Browser use frameworks,,,https://magnitude.run/
-Trigger.dev,,1. Browser use frameworks,,,https://trigger.dev/
-Browserbase,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
-Stagehand,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
-Director,,1. Browser use frameworks; 4. Browsers as a service; 9. Consumer automation,,,https://www.browserbase.com/
-Browser Use,,1. Browser use frameworks,,,https://github.com/a-r-n-o-l-d/browser-use
-SIMULAR,,1. Browser use frameworks,,,https://www.simular.ai/
-Skyvern,,1. Browser use frameworks; 4. Browsers as a service,,,https://www.skyvern.com/
-Puppeteer,,2. Browser use libraries/protocols,,,https://pptr.dev/
-Playwright,,2. Browser use libraries/protocols,,,https://playwright.dev/
-SCRAPYBARA,,3. Specialized browser use,,,https://scrapybara.com/
-Cua,,3. Specialized browser use,,,https://cua.ai/
-trycua,,3. Specialized browser use,,,https://cua.ai/
-LaVague,,3. Specialized browser use,,,https://lavague.ai/
-steel.dev,,4. Browsers as a service,,,https://steel.dev/
-Browserless,,4. Browsers as a service,,,https://www.browserless.io/
-Kernel,,4. Browsers as a service,,,https://www.onkernel.com/
-Anchor Browser,,4. Browsers as a service,,,https://anchorbrowser.io/
-hyperbrowser,,4. Browsers as a service,,,https://www.hyperbrowser.ai/
-morph.so,,5. Supporting infrastructure,,,https://www.morph.so/
-Halluminate,,5. Supporting infrastructure,,,https://halluminate.ai/
-Lightpanda,,5. Supporting infrastructure,,,https://lightpanda.io/
-LangGraph,,5. Supporting infrastructure,,,https://www.langchain.com/langgraph
-Temporal,,5. Supporting infrastructure,,,https://temporal.io/
-Inngest,,5. Supporting infrastructure,,,https://www.inngest.com/
-Anon,,5. Supporting infrastructure,,,https://www.anon.com/
-riveterhq.com,,6. Scraping & crawling APIs,,,https://riveterhq.com/
-Zyte.com,,2. Browser use libraries/protocols; 3. Specialized browser use; 6. Scraping & crawling APIs,,,https://www.zyte.com/
-Scrapy,,2. Browser use libraries/protocols; 3. Specialized browser use; 6. Scraping & crawling APIs,,,https://www.zyte.com/
-Exa.ai,,6. Scraping & crawling APIs,,,https://exa.ai/
-Tavily,,6. Scraping & crawling APIs,,,https://tavily.com/
-Kaizen,,6. Scraping & crawling APIs,,,https://kaizen.com/
-Bright Data,,4. Browsers as a service; 6. Scraping & crawling APIs,,,https://brightdata.com/
-Browser.ai,,4. Browsers as a service; 6. Scraping & crawling APIs,,,https://brightdata.com/
-Apify,,6. Scraping & crawling APIs,,,https://apify.com/
-Firecrawl,,6. Scraping & crawling APIs,,,https://www.firecrawl.dev/
-OmniParser,,6. Scraping & crawling APIs,,,https://microsoft.github.io/OmniParser/
-Google Gemini 2.5,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://gemini.google.com/
-Chrome,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://www.google.com/chrome/
-CoAct-1,,7. Computer use models,,,https://linxins.net/coact/
-Axiom-1,,7. Computer use models,,,https://inductionlabs.com/
-OpenCUA,,7. Computer use models,,,https://opencua.xlang.ai/
-Qwen2.5-VL,,7. Computer use models,,,https://qwenlm.github.io/blog/qwen2.5-vl/
-GLM-4.5V,,7. Computer use models,,,https://bigmodel.cn/
-Anthropic Claude Computer Use,,7. Computer use models; 9. Consumer automation,,,https://www.anthropic.com/
-Amazon Nova,,7. Computer use models,,,https://nova.amazon.com/
-Bytedance UI-TARS,,7. Computer use models,,,https://seed.bytedance.com/en/ui-tars
-Google Project Mariner,,7. Computer use models,,,https://deepmind.google/models/project-mariner/
-OpenAI Operator,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
-OpenAI CUA,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
-OpenAI Atlas,,10. Consumer browsers; 7. Computer use models; 9. Consumer automation,,,https://openai.com/
-Notte.cc,,8. Enterprise automation,,,https://www.notte.cc/
-Kura AI,,8. Enterprise automation,,,https://www.trykura.com/
-emergence,,8. Enterprise automation,,,https://www.emergence.ai/
-twin,,8. Enterprise automation,,,https://twin.so/
-Narada,,8. Enterprise automation,,,https://www.narada.ai/
-Athena Intelligence,,8. Enterprise automation,,,https://www.athenaintel.com/
-CopyCat,,8. Enterprise automation,,,https://www.ycombinator.com/companies/copycat
-H,,8. Enterprise automation,,,https://www.hcompany.ai/
-Orby,,8. Enterprise automation,,,https://www.uniphore.com/orby-ai/
-basepilot,,8. Enterprise automation,,,https://www.basepilot.com/
-Asteroid,,8. Enterprise automation,,,https://asteroid.ai/
-Yutori,,9. Consumer automation,,,https://yutori.com/
-Manus,,9. Consumer automation,,,https://manus.im/
-Nanobrowser,,9. Consumer automation,,,https://nanobrowser.ai/
-General Agents,,9. Consumer automation,,,https://generalagents.com/
-Godmode AI,,9. Consumer automation,,,https://app.godmode.space/
-Convergence Proxy,,9. Consumer automation,,,https://www.aiapps.com/items/proxy-by-convergence-ai/
-KAIROS,,9. Consumer automation,,,https://www.kairos.computer/
-DEX,,9. Consumer automation,,,https://thirdlayer.inc/
-Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot
-Perplexity Search API,,10. Consumer browsers; 6. Scraping & crawling APIs,,,https://www.perplexity.ai/
-Comet,,10. Consumer browsers; 6. Scraping & crawling APIs,,,https://www.perplexity.ai/
-Opera,,10. Consumer browsers,,,https://www.opera.com/
-Dia,,10. Consumer browsers,,,https://www.diabrowser.com/
+Company / Tool,In touch/comments?,Categories,One-liner,Appears in (Source → Category),Verified URL,Logo Path
+Magnitude.run,,1. Browser use frameworks,,,https://magnitude.run/,/home/ubuntu/upload/search_images/magnitude_logo.png
+Trigger.dev,,1. Browser use frameworks,,,https://trigger.dev/,/home/ubuntu/upload/search_images/trigger_dev_logo.png
+Browserbase,,4. Browsers as a service,Managed headless browsers + monitoring at scale.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.browserbase.com/,/home/ubuntu/upload/search_images/ZHBqvgdxhVBF.png
+Stagehand,,1. Browser use frameworks,AI Browser Automation framework to control web browsers with natural language and code.,Market Map → Frameworks; a16z → Interaction Frameworks,https://docs.stagehand.dev/,/home/ubuntu/upload/search_images/ZHBqvgdxhVBF.png
+Director (Browserbase),,9. Consumer automation,An agent that allows building Stagehand workflows using natural language.,Market Map → Frameworks; a16z → Interaction Frameworks,https://www.browserbase.com/blog/introducing-director,/home/ubuntu/upload/search_images/2R0Ibq9X1o7C.png
+Browser Use,,1. Browser use frameworks,Python library to let agents control a browser (DOM + vision).,Market Map → Frameworks; a16z → Interaction Frameworks,https://github.com/a-r-n-o-l-d/browser-use,/home/ubuntu/upload/search_images/browser_use_logo.png
+SIMULAR,,1. Browser use frameworks,Agent framework; also shown as full-stack app.,Market Map → Frameworks; a16z → Full-stack applications,https://www.simular.ai/,/home/ubuntu/upload/search_images/simular_logo.png
+Skyvern,"Yes, WA","1. Browser use frameworks, 4. Browsers as a service","Vision-augmented, LLM-first web-automation framework.",Market Map → Frameworks; a16z → Interaction Frameworks,https://www.skyvern.com/,/home/ubuntu/upload/search_images/skyvern_logo.png
+Puppeteer,,2. Browser use libraries/protocols,Headless Chrome/Chromium control library.,a16z → Browser Control Layers,https://pptr.dev/,/home/ubuntu/upload/search_images/puppeteer_logo.png
+Playwright,,2. Browser use libraries/protocols,Modern automation library to control browsers (DOM-based).,a16z → Browser Control Layers,https://playwright.dev/,/home/ubuntu/upload/search_images/playwright_logo.png
+SCRAPYBARA,,3. Specialized browser use,Desktop automation/infra for GUI control.,a16z → Execution Environments (Desktop Infra),https://scrapybara.com/,/home/ubuntu/upload/search_images/scrapybara_logo.png
+Cua,,"3. Specialized browser use, 7. Computer use models",Open-source infrastructure for Computer-Use Agents (Docker for CUA).,Market Map → Infrastructure; a16z → Interaction Frameworks & Desktop Infra,https://github.com/trycua/cua,/home/ubuntu/upload/search_images/k5I7astVtGv2.jpg
+trycua,,"3. Specialized browser use, 4. Browsers as a service",Cloud platform for running Cua computers/agents in virtual containers.,Market Map → Infrastructure; a16z → Execution Environments (Desktop Infra),https://trycua.com/,/home/ubuntu/upload/search_images/k5I7astVtGv2.jpg
+LaVague,,3. Specialized browser use,Open-source framework for building web agents/tests.,Market Map → Frameworks,https://lavague.ai/,/home/ubuntu/upload/search_images/lavague_logo.png
+Steel.dev,,4. Browsers as a service,,,https://steel.dev/,/home/ubuntu/upload/search_images/steel_dev_logo.png
+Browserless,,4. Browsers as a service,,,https://www.browserless.io/,/home/ubuntu/upload/search_images/browserless_logo.png
+SentinelOne (S1),,4. Browsers as a service,"Cybersecurity platform, listed as a provider for hosted browser-infra (S1).",a16z → Execution Environments (Browser Infra) (SentinelOne Identity Confirmed),https://www.sentinelone.com/,/home/ubuntu/upload/search_images/3L8v9a3YvquZ.png
+Kernel,"Yes, twi/email",4. Browsers as a service,Provider listed for hosted browser-infra.,a16z → Execution Environments (Browser Infra),https://www.onkernel.com/,/home/ubuntu/upload/search_images/kernel_ai_logo.jpg
+Anchor Browser,,4. Browsers as a service,Hosted browser infrastructure provider.,a16z → Execution Environments (Browser Infra),https://anchorbrowser.io/,/home/ubuntu/upload/search_images/anchor_browser_logo.png
+hyperbrowser,,4. Browsers as a service,Cloud browser/agent infra for scaling agents.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.hyperbrowser.ai/,/home/ubuntu/upload/search_images/hyperbrowser_ai_logo.png
+Morph.so,,5. Supporting infrastructure,,,https://www.morph.so/,/home/ubuntu/upload/search_images/morph_so_logo.png
+Halluminate,,5. Supporting infrastructure,,,https://halluminate.ai/,/home/ubuntu/upload/search_images/halluminate_ai_logo.jpg
+Lightpanda,,5. Supporting infrastructure,Browser/engine listed as an option in the stack.,a16z → Browsers,https://lightpanda.io/,/home/ubuntu/upload/search_images/lightpanda_browser_logo.png
+LangGraph,,5. Supporting infrastructure,Orchestration framework for LLM agent graphs.,a16z → Durable Execution & Orchestration,https://www.langchain.com/langgraph,/home/ubuntu/upload/search_images/langgraph_logo.png
+Temporal,,5. Supporting infrastructure,Workflow engine for long-running agent tasks.,a16z → Durable Execution & Orchestration,https://temporal.io/,/home/ubuntu/upload/search_images/temporal_logo.png
+Inngest,,5. Supporting infrastructure,Durable execution/orchestration for agent workflows.,a16z → Durable Execution & Orchestration,https://www.inngest.com/,/home/ubuntu/upload/search_images/inngest_logo.jpg
+Anon,,5. Supporting infrastructure,Secure auth/access so agents can log in and act safely.,Market Map → Infrastructure,https://www.anon.com/,/home/ubuntu/upload/search_images/anon_ai_logo.jpg
+RiveterHQ,,6. Scraping & crawling APIs,,,https://riveterhq.com/,/home/ubuntu/upload/search_images/riveterhq_logo.png
+Zyte,,6. Scraping & crawling APIs,Web data platform offering scraping services and APIs.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.zyte.com/,/home/ubuntu/upload/search_images/zyte_logo.png
+Scrapy,,"2. Browser use libraries/protocols, 6. Scraping & crawling APIs",Open-source collaborative framework for extracting data from websites.,a16z → Browser Control Layers,https://scrapy.org/,/home/ubuntu/upload/search_images/wcE2EUvFb3iH.jpg
+Exa.ai,"Yes, twi",6. Scraping & crawling APIs,,,https://exa.ai/,/home/ubuntu/upload/search_images/exa_ai_logo.png
+Tavily,,6. Scraping & crawling APIs,,,https://tavily.com/,/home/ubuntu/upload/search_images/tavily_logo.png
+Kaizen,,6. Scraping & crawling APIs,,,https://kaizen.com/,/home/ubuntu/upload/search_images/kaizen_institute_logo.png
+Bright Data,,"4. Browsers as a service, 6. Scraping & crawling APIs","World's largest web data platform offering proxy, scraping, and browser infrastructure.",Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/,/home/ubuntu/upload/search_images/24Z0vexrgsFR.jpg
+Browser.ai (Bright Data),,4. Browsers as a service,AI-Ready Browser and Scraping Browser for scalable and block-free agent execution.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/products/scraping-browser,/home/ubuntu/upload/search_images/z5ciDvlxqVOb.jpg
+Apify,"Yes, WA",6. Scraping & crawling APIs,,,https://apify.com/,/home/ubuntu/upload/search_images/apify_logo.png
+Firecrawl,,6. Scraping & crawling APIs,,,https://www.firecrawl.dev/,/home/ubuntu/upload/search_images/firecrawl_logo.png
+OmniParser,,6. Scraping & crawling APIs,Model pipeline (with YOLO-tuned vision) for parsing UIs.,a16z → Interaction Frameworks,https://microsoft.github.io/OmniParser/,/home/ubuntu/upload/search_images/omniparser_microsoft_logo.png
+Google Gemini 2.5 Computer Use Model,,7. Computer use models,A model from the Gemini family optimized for browser and mobile task automation.,Market Map → Foundation Models; a16z → Models (Pixel-based),https://ai.google.dev/gemini-api/docs/computer-use,/home/ubuntu/upload/search_images/google_gemini_logo.png
+Google Chrome,,10. Consumer browsers,Mainstream web browser.,Market Map → AI Browsers,https://www.google.com/chrome/,/home/ubuntu/upload/search_images/eIjeHNLWrKCd.png
+CoAct-1,,7. Computer use models,Computer-use/agent model variant.,a16z → Models (Pixel-based),https://linxins.net/coact/,/home/ubuntu/upload/search_images/coact_1_logo.png
+Axiom-1,,7. Computer use models,"A unified model that sees software, plans, and acts directly.",a16z → Models (Pixel-based),https://inductionlabs.com/news/axiom-1,/home/ubuntu/upload/search_images/k1S7k4IwXQBU.png
+Induction Labs,,7. Computer use models,The lab that developed the Axiom-1 model.,a16z → Models (Pixel-based),https://inductionlabs.com/,/home/ubuntu/upload/search_images/induction_labs_logo.jpg
+OpenCUA,,7. Computer use models,Open computer-use model family.,a16z → Models (Pixel-based),https://opencua.xlang.ai/,/home/ubuntu/upload/search_images/opencua_logo.png
+Qwen2.5-VL,,7. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://qwenlm.github.io/blog/qwen2.5-vl/,/home/ubuntu/upload/search_images/qwen_logo.jpg
+GLM-4.5V,,7. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://bigmodel.cn/,/home/ubuntu/upload/search_images/glm_4_5v_logo.jpg
+Anthropic Claude,,7. Computer use models,General LLM variant used for computer-use tasks.,a16z → Models (Pixel-based),https://www.anthropic.com/claude,/home/ubuntu/upload/search_images/UFBgODnDSkNM.jpg
+Amazon Nova (acq Adept AI),,7. Computer use models,Amazon multimodal model family used as agent backends.,Market Map → Foundation Models,https://nova.amazon.com/,/home/ubuntu/upload/search_images/amazon_nova_logo.png
+Bytedance UI-TARS,,7. Computer use models,ByteDance computer-use/GUI agent model family.,Market Map → Foundation Models,https://seed.bytedance.com/en/ui-tars,/home/ubuntu/upload/search_images/bytedance_ui_tars_logo.jpg
+Google Project Mariner,,7. Computer use models,DeepMind project for browser task automation.,Market Map → Foundation Models,https://deepmind.google/models/project-mariner/,/home/ubuntu/upload/search_images/google_project_mariner_logo.jpg
+OpenAI Operator,,9. Consumer automation,An AI agent capable of doing work for the user independently by navigating the web.,Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/introducing-operator/,/home/ubuntu/upload/search_images/jVuEcHpfTNbI.png
+OpenAI Computer-Using Agent (CUA),,7. Computer use models,"The model powering Operator, combining GPT-4o's vision with advanced reasoning.",Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/computer-using-agent/,/home/ubuntu/upload/search_images/KsnaoOVjSEqi.png
+ChatGPT Atlas,,10. Consumer browsers,"A new web browser built with ChatGPT at its core, designed for AI-first browsing.",Market Map → AI Browsers,https://openai.com/index/introducing-chatgpt-atlas/,/home/ubuntu/upload/search_images/gFMEAlsGtqfB.jpg
+Notte.cc,,8. Enterprise automation,,,https://www.notte.cc/,/home/ubuntu/upload/search_images/notte_cc_logo.png
+Kura AI,,8. Enterprise automation,,,https://www.trykura.com/,/home/ubuntu/upload/search_images/kura_ai_logo.jpg
+emergence,,8. Enterprise automation,Enterprise agent platform (listed on map).,Market Map → Enterprise,https://www.emergence.ai/,/home/ubuntu/upload/search_images/emergence_ai_logo.jpg
+twin,,8. Enterprise automation,Skilled agents that operate apps without APIs to run ops.,Market Map → Enterprise,https://twin.so/,/home/ubuntu/upload/search_images/twin_ai_logo.png
+Narada,,8. Enterprise automation,Agentic process automation with large action models.,Market Map → Enterprise,https://www.narada.ai/,/home/ubuntu/upload/search_images/narada_ai_logo.png
+Athena Intelligence,,8. Enterprise automation,Artificial data-analyst copilot for analytics tasks.,Market Map → Enterprise,https://www.athenaintel.com/,/home/ubuntu/upload/search_images/athena_intelligence_logo.png
+CopyCat,,8. Enterprise automation,AI RPA using browser agents to replace brittle scripts.,Market Map → Enterprise,https://www.ycombinator.com/companies/copycat,/home/ubuntu/upload/search_images/copycat_ai_rpa_logo.png
+H (H Company),"Yes, WA",8. Enterprise automation,Browser-only agents powered by the H stack.,Market Map → Enterprise,https://www.hcompany.ai/,/home/ubuntu/upload/search_images/h_company_ai_logo.jpg
+Orby,,8. Enterprise automation,Enterprise AI agents focused on reliability/compliance.,Market Map → Enterprise,https://www.uniphore.com/orby-ai/,/home/ubuntu/upload/search_images/orby_ai_logo.png
+basepilot,,8. Enterprise automation,AI workers for insurance/operational browser workflows.,Market Map → Enterprise,https://www.basepilot.com/,/home/ubuntu/upload/search_images/basepilot_logo.png
+Asteroid,,8. Enterprise automation,Enterprise browser-agent automation for internal ops.,Market Map → Enterprise,https://asteroid.ai/,/home/ubuntu/upload/search_images/asteroid_ai_logo.png
+Yutori,,9. Consumer automation,Consumer agent that monitors and acts on web tasks.,Market Map → Consumer,https://yutori.com/,/home/ubuntu/upload/search_images/yutori_ai_logo.jpg
+Manus,,9. Consumer automation,Full-stack agent that executes multi-step tasks for users.,Market Map → Consumer; a16z → Full-stack applications,https://manus.im/,/home/ubuntu/upload/search_images/manus_ai_logo.png
+Nanobrowser,,9. Consumer automation,Lightweight agentic browser/extension for local tasks.,Market Map → Consumer,https://nanobrowser.ai/,/home/ubuntu/upload/search_images/nanobrowser_logo.jpg
+General Agents,,9. Consumer automation,Team building autonomous “AI coworkers” for web tools.,Market Map → Consumer,https://generalagents.com/,/home/ubuntu/upload/search_images/general_agents_logo.jpg
+Godmode AI,,9. Consumer automation,Delegate repetitive web tasks to an agent.,Market Map → Consumer,https://app.godmode.space/,/home/ubuntu/upload/search_images/godmode_ai_logo.png
+Convergence Proxy,,9. Consumer automation,Consumer-facing agent with session/proxy execution.,Market Map → Consumer,https://www.aiapps.com/items/proxy-by-convergence-ai/,/home/ubuntu/upload/search_images/convergence_ai_proxy_logo.png
+Please,,9. Consumer automation,Planning assistant that generates and runs life/project plans.,Market Map → Consumer,https://www.please.ai/,/home/ubuntu/upload/search_images/please_ai_logo.png
+KAIROS,,9. Consumer automation,Show-and-repeat consumer automation of recorded workflows.,Market Map → Consumer,https://www.kairos.computer/,/home/ubuntu/upload/search_images/kairos_computer_logo.png
+DEX (ThirdLayer),,9. Consumer automation,Browser copilot that turns intent into on-page actions.,Market Map → Consumer,https://getdex.com/,/home/ubuntu/upload/search_images/dex_thirdlayer_logo.jpg
+ThirdLayer,,5. Supporting infrastructure,Applied research and product lab that developed DEX.,Market Map → Consumer,https://thirdlayer.inc/,/home/ubuntu/upload/search_images/dex_thirdlayer_logo.jpg
+Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot,/home/ubuntu/upload/search_images/microsoft_edge_copilot_logo.png
+Perplexity Search API,,6. Scraping & crawling APIs,API to get raw web search results with advanced filtering and customization options.,Market Map → AI Browsers,https://docs.perplexity.ai/guides/search-guide,/home/ubuntu/upload/search_images/2Z1U2tfge3OR.png
+Perplexity Comet Browser,,10. Consumer browsers,The AI browser that acts as a personal assistant to automate tasks and research the web.,Market Map → AI Browsers,https://www.perplexity.ai/comet/,/home/ubuntu/upload/search_images/gFMEAlsGtqfB.jpg
+Opera,,10. Consumer browsers,Mainstream browser adding agentic/AI browsing features.,Market Map → AI Browsers,https://www.opera.com/,/home/ubuntu/upload/search_images/opera_logo.png
+Dia,,10. Consumer browsers,AI browser (Arc successor) with agentic features.,Market Map → AI Browsers,https://www.diabrowser.com/,/home/ubuntu/upload/search_images/dia_browser_logo.png

@@ -121,6 +121,38 @@ const Report2025 = () => {
     return url.replace('https://', '').replace('http://', '').split('/')[0];
   };
 
+  const getCategoryEmoji = (categoryName: string): string => {
+    const emojiMap: { [key: string]: string } = {
+      '1. Browser use frameworks': '🔧',
+      '2. Browser use libraries/protocols': '📚',
+      '3. Specialized browser use': '⚙️',
+      '4. Browsers as a service': '☁️',
+      '5. Supporting infrastructure': '🏗️',
+      '6. Scraping & crawling APIs': '🕷️',
+      '7. Computer use models': '🤖',
+      '8. Enterprise automation': '🏢',
+      '9. Consumer automation': '👤',
+      '10. Consumer browsers': '🌐',
+    };
+    return emojiMap[categoryName] || '';
+  };
+
+  const getCategoryOrder = (categoryName: string): number => {
+    const orderMap: { [key: string]: number } = {
+      '1. Browser use frameworks': 1,
+      '2. Browser use libraries/protocols': 2,
+      '3. Specialized browser use': 3,
+      '4. Browsers as a service': 4,
+      '5. Supporting infrastructure': 5,
+      '6. Scraping & crawling APIs': 6,
+      '7. Computer use models': 7,
+      '8. Enterprise automation': 8,
+      '9. Consumer automation': 9,
+      '10. Consumer browsers': 10,
+    };
+    return orderMap[categoryName] || 999;
+  };
+
   const fetchMarketMapData = async () => {
     try {
       const response = await fetch('/market-map.csv');
@@ -137,7 +169,7 @@ const Report2025 = () => {
         
         const name = parts[0]?.replace(/^﻿/, '').trim();
         const categoryRaw = parts[2]?.trim();
-        const oneLiner = parts[4]?.trim() || '';
+        const oneLiner = parts[3]?.trim() || '';
         
         if (!name || !categoryRaw) return;
         
@@ -160,29 +192,30 @@ const Report2025 = () => {
       });
 
       const categoryColors = [
-        'hsl(var(--primary))',
-        'hsl(var(--secondary))',
-        'hsl(var(--accent))',
-        'hsl(210 100% 50%)',
-        'hsl(280 100% 60%)',
-        'hsl(160 100% 40%)',
-        'hsl(30 100% 50%)',
-        'hsl(340 100% 50%)',
+        'hsl(220 70% 50%)',
+        'hsl(190 70% 50%)',
+        'hsl(280 60% 55%)',
+        'hsl(200 80% 55%)',
+        'hsl(160 60% 45%)',
+        'hsl(30 75% 55%)',
+        'hsl(340 70% 55%)',
+        'hsl(260 70% 55%)',
+        'hsl(140 60% 50%)',
+        'hsl(210 75% 60%)',
       ];
 
       const categorizedData: CategoryData[] = [];
-      let colorIndex = 0;
       
       categoriesMap.forEach((companies, categoryName) => {
+        const order = getCategoryOrder(categoryName);
         categorizedData.push({
           name: categoryName,
           companies: companies.sort((a, b) => a.name.localeCompare(b.name)),
-          color: categoryColors[colorIndex % categoryColors.length]
+          color: categoryColors[(order - 1) % categoryColors.length]
         });
-        colorIndex++;
       });
 
-      setMarketMap(categorizedData.sort((a, b) => b.companies.length - a.companies.length));
+      setMarketMap(categorizedData.sort((a, b) => getCategoryOrder(a.name) - getCategoryOrder(b.name)));
     } catch (error) {
       console.error('Error loading market map:', error);
     }
@@ -200,12 +233,12 @@ const Report2025 = () => {
         </Link>
 
         <header className="space-y-4 md:space-y-6 mb-12 md:mb-20 max-w-4xl">
-          <div className="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">
+          <h1 className="text-3xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
+            State of Agentic Browser/Computer Use 🤖
+          </h1>
+          <div className="inline-block px-3 py-1.5 text-sm font-semibold tracking-wide bg-primary/10 text-primary rounded-full border border-primary/20">
             Q4 2025
           </div>
-          <h1 className="text-3xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
-            State of Agentic Browser/Computer Use - Q4 2025
-          </h1>
         </header>
 
         {/* INTRO Section */}
@@ -249,18 +282,19 @@ const Report2025 = () => {
             </p>
           </div>
 
-          <div className="flex gap-6 items-start">
+          <div className="flex gap-4 md:gap-6 items-start">
             {/* Y-axis label */}
-            <div className="hidden lg:flex flex-col justify-between h-full pt-8 pb-4" style={{ minHeight: '600px' }}>
-              <div className="flex flex-col items-center gap-2 -rotate-180" style={{ writingMode: 'vertical-rl' }}>
-                <div className="text-xs font-medium text-muted-foreground tracking-wide">
-                  Higher levels
+            <div className="flex flex-col justify-between pt-4 pb-4 w-16 md:w-20" style={{ minHeight: '800px' }}>
+              <div className="flex flex-col items-center gap-3 h-full">
+                <div className="text-[10px] md:text-xs font-semibold text-primary tracking-wide text-center leading-tight">
+                  Consumer<br/>Tooling
                 </div>
-                <div className="h-16 w-[1px] bg-gradient-to-t from-primary/40 to-transparent" />
-                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[8px] border-t-primary/40" />
-                <div className="h-16 w-[1px] bg-gradient-to-t from-transparent to-primary/40" />
-                <div className="text-xs font-medium text-muted-foreground tracking-wide">
-                  Bottom of stack
+                <div className="flex-1 flex flex-col items-center justify-center gap-2">
+                  <div className="h-full w-[2px] bg-gradient-to-b from-primary/60 to-primary/20" />
+                  <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[10px] border-t-primary/60" />
+                </div>
+                <div className="text-[10px] md:text-xs font-semibold text-primary tracking-wide text-center leading-tight">
+                  Dev<br/>Tooling
                 </div>
               </div>
             </div>
@@ -269,13 +303,14 @@ const Report2025 = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 flex-1">
               {marketMap.map((category, idx) => (
               <div key={idx} className="space-y-2.5">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-base">{getCategoryEmoji(category.name)}</span>
                   <div 
-                    className="w-1.5 h-1.5 rounded-full"
+                    className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                     style={{ backgroundColor: category.color }}
                   />
                   <h3 className="text-xs font-semibold text-foreground tracking-tight">
-                    {category.name}
+                    {category.name.replace(/^\d+\.\s*/, '')}
                   </h3>
                   <span className="text-[10px] text-muted-foreground font-medium">
                     {category.companies.length}
