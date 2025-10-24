@@ -302,47 +302,50 @@ const Report2025 = () => {
           </div>
 
           {/* Market map with side axis */}
-          <div className="relative border border-border/40 rounded-2xl bg-gradient-to-br from-muted/20 to-background p-6 md:p-8">
-            {/* Y-axis integrated into layout */}
-            <div className="flex gap-6 items-stretch">
-              {/* Vertical axis - spans full height */}
-              <div className="relative flex flex-col items-center justify-between py-4 w-16 flex-shrink-0 min-h-[600px]">
+          <div className="relative bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-border/20">
+            <div className="flex gap-8 items-stretch">
+              {/* Vertical axis - clean and minimal */}
+              <div className="relative flex flex-col items-center justify-between py-8 w-12 flex-shrink-0 min-h-[700px]">
                 {/* Top label */}
-                <div className="text-center space-y-1">
-                  <div className="text-[11px] font-semibold text-foreground leading-snug">Dev Tools<br/><span className="text-[9px] text-muted-foreground">(bottom of stack)</span></div>
+                <div className="text-center space-y-2">
+                  <div className="text-xs font-medium text-foreground/60">Dev Tools</div>
+                  <div className="text-[10px] text-muted-foreground">(bottom of stack)</div>
                 </div>
                 
-                {/* Vertical line with gradient - flex-1 makes it span available space */}
-                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary my-3" />
+                {/* Thin vertical line */}
+                <div className="flex-1 relative w-[2px] bg-gradient-to-b from-primary/40 via-primary/30 to-primary/40 my-4" />
                 
-                {/* Arrow */}
-                <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary -mt-0.5" />
+                {/* Simple arrow */}
+                <div className="relative">
+                  <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[8px] border-t-primary/60" />
+                </div>
                 
                 {/* Bottom label */}
-                <div className="text-center space-y-1">
-                  <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools<br/><span className="text-[9px] text-muted-foreground">(top of stack)</span></div>
+                <div className="text-center space-y-2 mt-2">
+                  <div className="text-[10px] text-muted-foreground">(top of stack)</div>
+                  <div className="text-xs font-medium text-foreground/60">Consumer Tools</div>
                 </div>
               </div>
 
-              {/* Categories - first 3 on one line, rest in grid */}
-              <div className="flex-1 space-y-3">
+              {/* Categories - redesigned with better organization */}
+              <div className="flex-1 space-y-6">
                 {/* Categories 1-3 horizontal */}
-                <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+                <div className="grid grid-cols-3 gap-4">
                   {marketMap.slice(0, 3).map((category, idx) => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
-                    <div key={idx} className="space-y-1.5">
-                      <div className="flex items-center gap-2 pb-0.5">
-                        <CategoryIcon className="w-3.5 h-3.5 text-primary flex-shrink-0" strokeWidth={2.5} />
-                        <h3 className="text-[11px] font-semibold text-foreground tracking-tight">
+                    <div key={idx} className="space-y-3 p-4 rounded-xl border border-border/30 bg-gradient-to-br from-background to-muted/10">
+                      <div className="flex items-center gap-2">
+                        <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                        <h3 className="text-xs font-semibold text-foreground">
                           {category.name.replace(/^\d+\.\s*/, '')}
                         </h3>
-                        <span className="text-[9px] text-muted-foreground font-medium">
-                          ({category.companies.length})
+                        <span className="text-[10px] text-muted-foreground ml-auto">
+                          {category.companies.length}
                         </span>
                       </div>
                       
-                      <div className="grid grid-cols-7 gap-0.5">
+                      <div className="grid grid-cols-4 gap-1.5">
                       {category.companies.map((company, companyIdx) => {
                         const domain = getCompanyDomain(company.name);
                         const categoryCount = company.category.split(';').length;
@@ -354,10 +357,10 @@ const Report2025 = () => {
                             href={getCompanyUrl(company.name)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-105 relative"
+                            className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
                             title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                           >
-                            <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/30' : 'border border-border/30'}`}>
+                            <div className={`w-10 h-10 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                               <CompanyLogo
                                 companyName={company.name}
                                 domain={domain}
@@ -365,11 +368,11 @@ const Report2025 = () => {
                               />
                             </div>
                             {isMultiCategory && (
-                              <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
-                                <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                              <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/90 rounded-full border-2 border-background flex items-center justify-center shadow-sm">
+                                <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
                               </div>
                             )}
-                            <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                            <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                             {company.name}
                           </span>
                         </a>
@@ -382,22 +385,22 @@ const Report2025 = () => {
               </div>
 
               {/* Categories 4+ in 2-column grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
+              <div className="grid grid-cols-2 gap-4">
                 {marketMap.slice(3).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
-                  <div key={idx} className="space-y-1.5">
-                    <div className="flex items-center gap-2 pb-0.5">
-                      <CategoryIcon className="w-3.5 h-3.5 text-primary flex-shrink-0" strokeWidth={2.5} />
-                      <h3 className="text-[11px] font-semibold text-foreground tracking-tight">
+                  <div key={idx} className="space-y-3 p-4 rounded-xl border border-border/30 bg-gradient-to-br from-background to-muted/10">
+                    <div className="flex items-center gap-2">
+                      <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                      <h3 className="text-xs font-semibold text-foreground">
                         {category.name.replace(/^\d+\.\s*/, '')}
                       </h3>
-                      <span className="text-[9px] text-muted-foreground font-medium">
-                        ({category.companies.length})
+                      <span className="text-[10px] text-muted-foreground ml-auto">
+                        {category.companies.length}
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-7 gap-0.5">
+                    <div className="grid grid-cols-7 gap-1.5">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -409,10 +412,10 @@ const Report2025 = () => {
                           href={getCompanyUrl(company.name)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-105 relative"
+                          className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
                           title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                         >
-                          <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/30' : 'border border-border/30'}`}>
+                          <div className={`w-10 h-10 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                             <CompanyLogo
                               companyName={company.name}
                               domain={domain}
@@ -420,11 +423,11 @@ const Report2025 = () => {
                             />
                           </div>
                           {isMultiCategory && (
-                            <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
-                              <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                            <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/90 rounded-full border-2 border-background flex items-center justify-center shadow-sm">
+                              <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
                             </div>
                           )}
-                          <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                          <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                           {company.name}
                         </span>
                       </a>
