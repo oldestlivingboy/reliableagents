@@ -41,7 +41,7 @@ const Index = () => {
       <footer className="border-t border-border mt-24">
         <div className="container mx-auto max-w-3xl px-4 py-8">
           <div className="flex flex-col items-center gap-6">
-            <div className="text-center space-y-1">
+            <div className="text-center space-y-1 max-w-2xl mx-auto">
               <p className="text-base font-semibold text-foreground">
                 Reliable Agents
               </p>
@@ -50,8 +50,8 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="space-y-3 text-xs">
-              <p className="text-muted-foreground text-center max-w-2xl mx-auto leading-relaxed">
+            <div className="space-y-3 text-xs max-w-2xl mx-auto">
+              <p className="text-muted-foreground text-center leading-relaxed">
                 Created by{" "}
                 <a 
                   href="https://www.linkedin.com/in/ednevsky/" 
@@ -83,7 +83,7 @@ const Index = () => {
               </p>
             </div>
             
-            <p className="text-[10px] text-muted-foreground/50">
+            <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
               © 2025 All rights reserved
             </p>
           </div>
