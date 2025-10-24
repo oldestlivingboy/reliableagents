@@ -87,20 +87,14 @@ const VotingSection = () => {
       return;
     }
 
-    const currentVotes = votes[categoryId] || 0;
-    
-    const { error } = await supabase
-      .from("votes")
-      .upsert(
-        { 
-          category_id: categoryId, 
-          category_title: categoryTitle,
-          vote_count: currentVotes + 1 
-        },
-        { onConflict: "category_id" }
-      );
+    // Use secure RPC function for atomic vote increment
+    const { data, error } = await supabase.rpc('increment_vote', {
+      p_category_id: categoryId,
+      p_category_title: categoryTitle,
+    });
 
     if (error) {
+      console.error("Error voting:", error);
       sonnerToast.error("Unable to register your vote");
       return;
     }
@@ -108,6 +102,9 @@ const VotingSection = () => {
     const newVoted = new Set(votedCategories).add(categoryId);
     setVotedCategories(newVoted);
     localStorage.setItem("votedCategories", JSON.stringify([...newVoted]));
+
+    // Update local state with new count from server
+    setVotes(prev => ({ ...prev, [categoryId]: data }));
 
     sonnerToast.success("Vote recorded!");
   };
@@ -128,15 +125,14 @@ const VotingSection = () => {
     // Create a unique ID for the custom category
     const categoryId = `custom_${Date.now()}`;
     
-    const { error } = await supabase
-      .from("votes")
-      .insert({ 
-        category_id: categoryId, 
-        category_title: trimmed,
-        vote_count: 1 
-      });
+    // Use secure RPC function for atomic vote increment
+    const { data, error } = await supabase.rpc('increment_vote', {
+      p_category_id: categoryId,
+      p_category_title: trimmed,
+    });
 
     if (error) {
+      console.error("Error submitting category:", error);
       sonnerToast.error("Unable to submit your category");
       return;
     }
@@ -145,6 +141,9 @@ const VotingSection = () => {
     setVotedCategories(newVoted);
     localStorage.setItem("votedCategories", JSON.stringify([...newVoted]));
     setCustomCategory("");
+
+    // Update local state with new count from server
+    setVotes(prev => ({ ...prev, [categoryId]: data }));
 
     sonnerToast.success("Category submitted!");
     

@@ -35,6 +35,30 @@ export type Database = {
         }
         Relationships: []
       }
+      subscription_rate_limits: {
+        Row: {
+          attempted_at: string
+          email: string
+          id: string
+          ip_address: string
+          subscription_type: string
+        }
+        Insert: {
+          attempted_at?: string
+          email: string
+          id?: string
+          ip_address: string
+          subscription_type: string
+        }
+        Update: {
+          attempted_at?: string
+          email?: string
+          id?: string
+          ip_address?: string
+          subscription_type?: string
+        }
+        Relationships: []
+      }
       votes: {
         Row: {
           category_id: string
@@ -64,7 +88,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_vote: {
+        Args: { p_category_id: string; p_category_title: string }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never
