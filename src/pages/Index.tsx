@@ -49,8 +49,8 @@ const Index = () => {
             </div>
             
             <div className="space-y-3 text-xs">
-              <div className="flex flex-wrap items-center justify-center gap-2">
-                <span className="text-muted-foreground">Created by</span>
+              <p className="text-muted-foreground text-center max-w-2xl mx-auto leading-relaxed">
+                Created by{" "}
                 <a 
                   href="https://www.linkedin.com/in/ednevsky/" 
                   target="_blank" 
@@ -59,7 +59,7 @@ const Index = () => {
                 >
                   🚀 Alex
                 </a>
-                <span className="text-muted-foreground/50">and</span>
+                {" "}and{" "}
                 <a 
                   href="https://www.linkedin.com/in/briansehn/" 
                   target="_blank" 
@@ -68,10 +68,7 @@ const Index = () => {
                 >
                   🌐 Brian
                 </a>
-              </div>
-              
-              <p className="text-muted-foreground text-center max-w-2xl mx-auto leading-relaxed">
-                Alex is a repeat AI founder with an exit and creator of No Cap, a viral AI investing agent. 
+                . Alex is a repeat AI founder with an exit and creator of No Cap, a viral AI investing agent. 
                 Brian is the first DevRel at Google and founder of multiple browser-related companies.
               </p>
             </div>
