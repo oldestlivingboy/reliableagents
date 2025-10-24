@@ -126,7 +126,7 @@ const Report2025 = () => {
   const getCategoryIcon = (categoryName: string) => {
     const iconMap: { [key: string]: any } = {
       '1. Browser use frameworks': Wrench,
-      '2. Browser use libraries/protocols': BookOpen,
+      '2. Browser use libraries': BookOpen,
       '3. Specialized browser use': Settings,
       '4. Browsers as a service': Cloud,
       '5. Supporting infrastructure': Building2,
@@ -142,7 +142,7 @@ const Report2025 = () => {
   const getCategoryOrder = (categoryName: string): number => {
     const orderMap: { [key: string]: number } = {
       '1. Browser use frameworks': 1,
-      '2. Browser use libraries/protocols': 2,
+      '2. Browser use libraries': 2,
       '3. Specialized browser use': 3,
       '4. Browsers as a service': 4,
       '5. Supporting infrastructure': 5,
@@ -607,8 +607,8 @@ const Report2025 = () => {
         {/* WHERE TO START Section */}
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Where to Start</h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
+            <p className="text-base text-foreground/70 leading-relaxed">
               Practical tips for navigating the map and building your stack
             </p>
           </div>
@@ -634,7 +634,7 @@ const Report2025 = () => {
                 <div className="flex gap-4">
                   <div className="text-primary font-bold text-sm shrink-0 w-8">2</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Browser use libraries/protocols</p>
+                    <p className="font-semibold text-foreground">Browser use libraries</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, CDP — these send actions to the browser. Most frameworks use these under the hood.</p>
                   </div>
                 </div>
@@ -823,33 +823,6 @@ const Report2025 = () => {
                   Vote for which leaderboard you'd like to see next
                 </p>
               </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Enterprise agents</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Verticalized flows with compliance</p>
-                </div>
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Consumer agents</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Prosumer UX and speed</p>
-                </div>
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Desktop OS control</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Citrix, legacy clients</p>
-                </div>
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Memory services</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Persistence across tasks</p>
-                </div>
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Anti-bot setups</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Proxies and fingerprints</p>
-                </div>
-                <div className="p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/40">
-                  <h3 className="font-medium text-foreground mb-1 text-sm">Model fine-tuning</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Action space optimizations</p>
-                </div>
-              </div>
 
               <Link 
                 to="/" 
@@ -887,7 +860,7 @@ const Report2025 = () => {
                   </a>
                   , a repeat AI founder with an exit and creator of{" "}
                   <a 
-                    href="https://nocap.ai" 
+                    href="https://nocap.so" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
