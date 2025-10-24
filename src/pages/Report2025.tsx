@@ -607,18 +607,16 @@ const Report2025 = () => {
         {/* WHERE TO START Section */}
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
-            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
-              <p>
-                Practical tips for navigating the map
-              </p>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Where to Start</h2>
+            <p className="text-lg text-foreground/70 leading-relaxed">
+              Practical tips for navigating the map and building your stack
+            </p>
           </div>
 
           {/* The stack you can control */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground">The stack you can control</h3>
-            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
+            <h3 className="text-2xl font-bold text-foreground">Building Your Stack</h3>
+            <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
                 The market map shows <strong>10 categories</strong>, but developers should focus on the first <strong>8 categories</strong> (1–8) to build their stack. 
                 Categories 9–10 are consumer-facing products. Here's how to think through categories 1–8:
@@ -695,7 +693,7 @@ const Report2025 = () => {
 
           {/* Decision Flow */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground">Decision Flow</h3>
+            <h3 className="text-2xl font-bold text-foreground">Decision Flow</h3>
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
               <div>
@@ -737,12 +735,10 @@ const Report2025 = () => {
 
           {/* Common Problems */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground">Common Problems</h3>
-            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
-              <p>
-                Why do agents still face-plant in production?
-              </p>
-            </div>
+            <h3 className="text-2xl font-bold text-foreground">Common Problems</h3>
+            <p className="text-base text-foreground/70">
+              Why do agents still face-plant in production?
+            </p>
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-4">
               <div className="flex gap-4 items-start">
@@ -790,7 +786,7 @@ const Report2025 = () => {
 
           {/* Quick FAQ */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground">Quick FAQ</h3>
+            <h3 className="text-2xl font-bold text-foreground">Quick FAQ</h3>
 
             <div className="space-y-4">
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
@@ -819,11 +815,18 @@ const Report2025 = () => {
 
         {/* FUTURE LEADERBOARDS Section */}
         <section className="space-y-8 mb-24 max-w-5xl">
-          <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-2">Future Leaderboards</h2>
-            <p className="text-sm text-muted-foreground">
-              Help shape our roadmap! <Link to="/" className="text-primary hover:underline font-medium">Vote on the homepage</Link> for which leaderboard you'd like to see next.
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Future Leaderboards</h2>
+            <p className="text-base text-foreground/70 leading-relaxed">
+              Help shape our roadmap! Vote for which leaderboard you'd like to see next.
             </p>
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm"
+            >
+              Vote on the Homepage
+              <span className="text-lg">→</span>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
