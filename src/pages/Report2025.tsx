@@ -294,28 +294,26 @@ const Report2025 = () => {
 
         {/* MARKET MAP Section */}
         <section className="space-y-8 mb-24">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl space-y-4">
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               An interactive overview of the agentic browser/computer use landscape - of course, vibe coded, generated & maintained using browser use 🫡
             </p>
+            
+            {/* Contact info - prominent */}
+            <div className="inline-flex items-center gap-2 text-xs bg-primary/5 hover:bg-primary/10 px-4 py-2.5 rounded-lg border border-primary/20 transition-colors">
+              <span className="text-muted-foreground">📧 Corrections or updates?</span>
+              <a 
+                href="mailto:ednevsky+ra@gmail.com" 
+                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-primary/30 hover:decoration-primary underline-offset-2"
+              >
+                ednevsky+ra@gmail.com
+              </a>
+            </div>
           </div>
 
           {/* Market map with side axis */}
           <div className="relative bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-border/20">
-            {/* Contact info badge - top right */}
-            <div className="absolute top-4 right-4 z-20">
-              <div className="text-[10px] text-muted-foreground/70 bg-background/80 backdrop-blur-sm px-2.5 py-1.5 rounded-lg border border-border/40">
-                📧 Corrections? Email{" "}
-                <a 
-                  href="mailto:ednevsky+ra@gmail.com" 
-                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-2"
-                >
-                  Alex
-                </a>
-              </div>
-            </div>
-            
             <div className="flex gap-8 items-stretch">
               {/* Vertical axis - clean and minimal */}
               <div className="relative flex flex-col items-center justify-between py-8 w-12 flex-shrink-0 min-h-[700px]">
