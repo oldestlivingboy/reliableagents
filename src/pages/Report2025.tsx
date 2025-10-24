@@ -377,64 +377,86 @@ const Report2025 = () => {
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              Practical tips for navigating the map
-            </p>
+            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
+              <p>
+                Practical tips for navigating the map
+              </p>
+            </div>
           </div>
 
           {/* The stack you can control */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">The stack you can control</h3>
+            <h3 className="text-xl font-bold text-foreground">The stack you can control</h3>
+            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
+              <p>
+                The market map shows <strong>10 categories</strong>, but developers should focus on the first <strong>8 categories</strong> (1–8) to build their stack. 
+                Categories 9–10 are consumer-facing products. Here's how to think through categories 1–8:
+              </p>
+            </div>
             <div className="space-y-1 bg-muted/30 rounded-2xl p-8 border border-border/40">
               <div className="grid gap-6">
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">01</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">1</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Agent brain</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Your vertical logic + models</p>
+                    <p className="font-semibold text-foreground">Browser use frameworks</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Start here: Stagehand, Browser Use, Skyvern, etc. These are your "React" — they decide what action to take next.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">02</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">2</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Agentic control layer</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Browser Use, Stagehand, Skyvern, LaVague (decide actions)</p>
+                    <p className="font-semibold text-foreground">Browser use libraries/protocols</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, CDP — these send actions to the browser. Most frameworks use these under the hood.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">03</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">3</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Browser control</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">CDP, Playwright, Puppeteer (send actions to a browser)</p>
+                    <p className="font-semibold text-foreground">Specialized browser use</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, SCRAPYBARA for specialized control or desktop OS access when there's no DOM.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">04</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">4</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Execution environment</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Local headless or cloud browsers: Anchor, Browserbase, Hyperbrowser</p>
+                    <p className="font-semibold text-foreground">Browsers as a service</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — your "Vercel". Decide where your framework runs (local or cloud).</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">05</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">5</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Desktop OS control <span className="text-xs text-muted-foreground">(optional)</span></p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Cua, SCRAPYBARA when there's no DOM, Citrix native apps</p>
+                    <p className="font-semibold text-foreground">Supporting infrastructure</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for orchestration, retries, state. Anon for secure auth.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">06</div>
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">6</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Orchestration</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for retries, timeouts, state, audit</p>
+                    <p className="font-semibold text-foreground">Scraping & crawling APIs</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — use these if you don't need interaction. Cheaper and faster than agents.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">7</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Computer use models</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that power your agent's brain.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="text-primary font-bold text-sm shrink-0 w-8">8</div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Enterprise automation</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Narada, twin, H — full-stack enterprise solutions if you want an all-in-one platform.</p>
                   </div>
                 </div>
               </div>
               
               <div className="pt-6 mt-6 border-t border-border/50">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  <span className="font-semibold">Key insight:</span> Pick the agentic control layer first, then pick where it runs. 
-                  Treat frameworks like Stagehand or Browser Use as your "React" - and Browserbase/Anchor/Hyperbrowser as your "Vercel".
+                  <span className="font-semibold">Key insight:</span> Pick your framework first (category 1), then pick where it runs (category 4). 
+                  Treat frameworks like your "React" and browser services like your "Vercel".
                 </p>
               </div>
             </div>
@@ -442,7 +464,7 @@ const Report2025 = () => {
 
           {/* Decision Flow */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Decision Flow</h3>
+            <h3 className="text-xl font-bold text-foreground">Decision Flow</h3>
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
               <div>
@@ -484,10 +506,12 @@ const Report2025 = () => {
 
           {/* Common Problems */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Common Problems</h3>
-            <p className="text-base text-muted-foreground leading-relaxed">
-              Why do agents still face-plant in production?
-            </p>
+            <h3 className="text-xl font-bold text-foreground">Common Problems</h3>
+            <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
+              <p>
+                Why do agents still face-plant in production?
+              </p>
+            </div>
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-4">
               <div className="flex gap-4 items-start">
@@ -535,7 +559,7 @@ const Report2025 = () => {
 
           {/* Quick FAQ */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Quick FAQ</h3>
+            <h3 className="text-xl font-bold text-foreground">Quick FAQ</h3>
 
             <div className="space-y-4">
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
@@ -599,40 +623,58 @@ const Report2025 = () => {
           </div>
         </section>
 
-        <footer className="mt-24 pt-8 border-t border-border/30 max-w-5xl space-y-6">
-          <div className="max-w-3xl">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <span className="font-semibold text-foreground">P.S.</span> Created & maintained by{" "}
-              <a 
-                href="https://www.linkedin.com/in/ednevsky/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-              >
-                Alex
-              </a>
-              {" "}—{" "}
-              A 3x founder with an AI exit (WANNA virtual try-on tech later sold to Farfetch). 
-              He also created No Cap, the world's first AI agent that invested in a company. 
-              No Cap coached 10k+ founders and runs nc acc - an accelerator for solopreneurs.
-              {" "}& {" "}
-              <a 
-                href="https://www.linkedin.com/in/caseyoppenheim/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-              >
-                Brian
-              </a>
-              {" "}—{" "}
-              Ex-Googler who worked on the company's first mobile ad server and started their DevRel team. 
-              Co-founded Disconnect (privacy software shipped with most modern browsers - protecting 750,000,000 users) 
-              and Massive (alternative to ads paywalls) - named Proxyway's 2025 "Newcomer of the Year" for bandwidth monetization.
-            </p>
+        <footer className="border-t border-border mt-24">
+          <div className="container mx-auto max-w-3xl px-4 py-8">
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center space-y-1 max-w-2xl mx-auto">
+                <p className="text-base font-semibold text-foreground">
+                  Reliable Agents
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Empowering agentic developers worldwide
+                </p>
+              </div>
+              
+              <div className="space-y-3 text-xs max-w-2xl mx-auto">
+                <p className="text-muted-foreground text-center leading-relaxed">
+                  Created by{" "}
+                  <a 
+                    href="https://www.linkedin.com/in/ednevsky/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    🚀 Alex
+                  </a>
+                  , a repeat AI founder with an exit and creator of{" "}
+                  <a 
+                    href="https://nocap.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    No Cap
+                  </a>
+                  , a viral AI investing agent,{" "}
+                  <br className="hidden sm:inline" />
+                  and{" "}
+                  <a 
+                    href="https://www.linkedin.com/in/briansehn/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    🌐 Brian
+                  </a>
+                  , the first DevRel at Google and founder of multiple browser-related companies.
+                </p>
+              </div>
+              
+              <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
+                © 2025 All rights reserved
+              </p>
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground text-center pt-4 border-t border-border/30">
-            © 2025 Reliable Agents. All rights reserved.
-          </p>
         </footer>
       </div>
     </div>
