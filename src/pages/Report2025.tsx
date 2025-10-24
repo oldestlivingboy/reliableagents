@@ -329,12 +329,12 @@ const Report2025 = () => {
 
               {/* Categories - redesigned with better organization */}
               <div className="flex-1 space-y-6">
-                {/* Categories 1-3 horizontal */}
+                {/* Categories 1-3: 3-column grid */}
                 <div className="grid grid-cols-3 gap-4">
                   {marketMap.slice(0, 3).map((category, idx) => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
-                    <div key={idx} className="space-y-3 p-4 rounded-xl border border-border/30 bg-gradient-to-br from-background to-muted/10">
+                    <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
                       <div className="flex items-center gap-2">
                         <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
                         <h3 className="text-xs font-semibold text-foreground">
@@ -360,7 +360,7 @@ const Report2025 = () => {
                             className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
                             title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                           >
-                            <div className={`w-10 h-10 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                            <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                               <CompanyLogo
                                 companyName={company.name}
                                 domain={domain}
@@ -372,7 +372,7 @@ const Report2025 = () => {
                                 <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
                               </div>
                             )}
-                            <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                            <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full px-0.5">
                             {company.name}
                           </span>
                         </a>
@@ -384,12 +384,12 @@ const Report2025 = () => {
                 })}
               </div>
 
-              {/* Categories 4+ in 2-column grid */}
-              <div className="grid grid-cols-2 gap-4">
-                {marketMap.slice(3).map((category, idx) => {
+              {/* Categories 4-6: 3-column grid */}
+              <div className="grid grid-cols-3 gap-4">
+                {marketMap.slice(3, 6).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
-                  <div key={idx} className="space-y-3 p-4 rounded-xl border border-border/30 bg-gradient-to-br from-background to-muted/10">
+                  <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
                     <div className="flex items-center gap-2">
                       <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
                       <h3 className="text-xs font-semibold text-foreground">
@@ -400,7 +400,7 @@ const Report2025 = () => {
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-7 gap-1.5">
+                    <div className="grid grid-cols-5 gap-1.5">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -415,7 +415,7 @@ const Report2025 = () => {
                           className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
                           title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                         >
-                          <div className={`w-10 h-10 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                          <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                             <CompanyLogo
                               companyName={company.name}
                               domain={domain}
@@ -427,7 +427,7 @@ const Report2025 = () => {
                               <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
                             </div>
                           )}
-                          <span className="text-[8px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
+                          <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full px-0.5">
                           {company.name}
                         </span>
                       </a>
@@ -438,6 +438,167 @@ const Report2025 = () => {
               );
               })}
             </div>
+
+            {/* Category 7: Computer use models - separate full width */}
+            {marketMap.slice(6, 7).map((category, idx) => {
+              const CategoryIcon = getCategoryIcon(category.name);
+              return (
+              <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                  <h3 className="text-xs font-semibold text-foreground">
+                    {category.name.replace(/^\d+\.\s*/, '')}
+                  </h3>
+                  <span className="text-[10px] text-muted-foreground ml-auto">
+                    {category.companies.length}
+                  </span>
+                </div>
+                
+                <div className="grid grid-cols-12 gap-1.5">
+                {category.companies.map((company, companyIdx) => {
+                  const domain = getCompanyDomain(company.name);
+                  const categoryCount = company.category.split(';').length;
+                  const isMultiCategory = categoryCount > 1;
+                  
+                  return (
+                    <a
+                      key={companyIdx}
+                      href={getCompanyUrl(company.name)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
+                      title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
+                    >
+                      <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                        <CompanyLogo
+                          companyName={company.name}
+                          domain={domain}
+                          categoryColor={category.color}
+                        />
+                      </div>
+                      {isMultiCategory && (
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/90 rounded-full border-2 border-background flex items-center justify-center shadow-sm">
+                          <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
+                        </div>
+                      )}
+                      <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full px-0.5">
+                      {company.name}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+          );
+          })}
+
+          {/* Category 8: Enterprise automation - full width */}
+          {marketMap.slice(7, 8).map((category, idx) => {
+            const CategoryIcon = getCategoryIcon(category.name);
+            return (
+            <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+              <div className="flex items-center gap-2">
+                <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                <h3 className="text-xs font-semibold text-foreground">
+                  {category.name.replace(/^\d+\.\s*/, '')}
+                </h3>
+                <span className="text-[10px] text-muted-foreground ml-auto">
+                  {category.companies.length}
+                </span>
+              </div>
+              
+              <div className="grid grid-cols-12 gap-1.5">
+              {category.companies.map((company, companyIdx) => {
+                const domain = getCompanyDomain(company.name);
+                const categoryCount = company.category.split(';').length;
+                const isMultiCategory = categoryCount > 1;
+                
+                return (
+                  <a
+                    key={companyIdx}
+                    href={getCompanyUrl(company.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
+                    title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
+                  >
+                    <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                      <CompanyLogo
+                        companyName={company.name}
+                        domain={domain}
+                        categoryColor={category.color}
+                      />
+                    </div>
+                    {isMultiCategory && (
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/90 rounded-full border-2 border-background flex items-center justify-center shadow-sm">
+                        <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
+                      </div>
+                    )}
+                    <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full px-0.5">
+                    {company.name}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        );
+        })}
+
+        {/* Categories 9-10: Consumer automation and browsers - on same line */}
+        <div className="grid grid-cols-2 gap-4">
+          {marketMap.slice(8, 10).map((category, idx) => {
+            const CategoryIcon = getCategoryIcon(category.name);
+            return (
+            <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
+              <div className="flex items-center gap-2">
+                <CategoryIcon className="w-4 h-4 text-primary" strokeWidth={2} />
+                <h3 className="text-xs font-semibold text-foreground">
+                  {category.name.replace(/^\d+\.\s*/, '')}
+                </h3>
+                <span className="text-[10px] text-muted-foreground ml-auto">
+                  {category.companies.length}
+                </span>
+              </div>
+              
+              <div className="grid grid-cols-6 gap-1.5">
+              {category.companies.map((company, companyIdx) => {
+                const domain = getCompanyDomain(company.name);
+                const categoryCount = company.category.split(';').length;
+                const isMultiCategory = categoryCount > 1;
+                
+                return (
+                  <a
+                    key={companyIdx}
+                    href={getCompanyUrl(company.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
+                    title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
+                  >
+                    <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                      <CompanyLogo
+                        companyName={company.name}
+                        domain={domain}
+                        categoryColor={category.color}
+                      />
+                    </div>
+                    {isMultiCategory && (
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/90 rounded-full border-2 border-background flex items-center justify-center shadow-sm">
+                        <span className="text-[8px] font-bold text-primary-foreground">{categoryCount}</span>
+                      </div>
+                    )}
+                    <span className="text-[9px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full px-0.5">
+                    {company.name}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        );
+        })}
+      </div>
             </div>
             </div>
           </div>
