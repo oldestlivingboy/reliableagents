@@ -297,7 +297,10 @@ const Report2025 = () => {
           <div className="max-w-3xl">
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground">
-              An interactive overview of the agentic browser/computer use landscape
+              An interactive overview of the agentic browser/computer use landscape - of course, vibe coded, generated & maintained using browser use 🫡
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              For corrections, updates or future reports, email Alex at ednevsky+ra@gmail.com
             </p>
           </div>
 
@@ -608,7 +611,7 @@ const Report2025 = () => {
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
             <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
-            <p className="text-base text-foreground/70 leading-relaxed">
+            <p className="text-sm text-muted-foreground">
               Practical tips for navigating the map and building your stack
             </p>
           </div>
@@ -813,27 +816,6 @@ const Report2025 = () => {
           </div>
         </section>
 
-        {/* FUTURE LEADERBOARDS CTA */}
-        <section className="mb-12 max-w-5xl">
-          <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-10 border border-primary/20">
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-3">Help Shape the Future</h2>
-                <p className="text-base text-foreground/70 leading-relaxed">
-                  Vote for which leaderboard you'd like to see next
-                </p>
-              </div>
-
-              <Link 
-                to="/" 
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm"
-              >
-                Vote on the Homepage
-                <span className="text-lg">→</span>
-              </Link>
-            </div>
-          </div>
-        </section>
 
         <footer className="border-t border-border mt-12">
           <div className="container mx-auto max-w-3xl px-4 py-8 pb-4">
