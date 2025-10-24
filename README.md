@@ -1,8 +1,8 @@
 # ⚙️ Reliable Agents
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/80835082-8120-494d-998f-a5f4d3530783" />
-
 The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
+
+<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/80835082-8120-494d-998f-a5f4d3530783" />
 
 ---
 
