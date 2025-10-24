@@ -275,83 +275,83 @@ const Report2025 = () => {
         </section>
 
         {/* MARKET MAP Section */}
-        <section className="space-y-6 mb-24">
+        <section className="space-y-8 mb-24">
           <div className="max-w-3xl">
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-3">Market Map (as of Q4 2025)</h2>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Market Map (as of Q4 2025)</h2>
             <p className="text-sm text-muted-foreground">
               An interactive overview of the agentic browser/computer use landscape
             </p>
           </div>
 
-          {/* Market map container with integrated axis */}
-          <div className="relative pl-16 pr-4">
-            {/* Y-axis - Absolute positioned overlay on left edge */}
-            <div className="absolute left-0 top-0 bottom-0 w-14 flex flex-col items-end justify-between py-3">
-              {/* Top label - Consumer */}
-              <div className="text-right">
-                <div className="text-[9px] font-bold text-primary/90 tracking-wide leading-none mb-0.5">TOP</div>
-                <div className="text-[10px] font-semibold text-foreground leading-tight">Consumer</div>
-                <div className="text-[10px] font-semibold text-foreground leading-tight">Tools</div>
+          {/* Market map with side axis */}
+          <div className="relative border border-border/40 rounded-2xl bg-gradient-to-br from-muted/20 to-background p-6 md:p-8">
+            {/* Y-axis integrated into layout */}
+            <div className="flex gap-6 items-start">
+              {/* Vertical axis */}
+              <div className="relative flex flex-col items-center pt-8 pb-8 w-16 flex-shrink-0">
+                {/* Top label */}
+                <div className="text-center space-y-1 mb-6">
+                  <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Top</div>
+                  <div className="text-[11px] font-semibold text-foreground leading-snug">Consumer<br/>Tools</div>
+                </div>
+                
+                {/* Vertical line with gradient */}
+                <div className="flex-1 relative w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary min-h-[400px]" />
+                
+                {/* Arrow */}
+                <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[12px] border-t-primary -mt-0.5" />
+                
+                {/* Bottom label */}
+                <div className="text-center space-y-1 mt-6">
+                  <div className="text-[11px] font-semibold text-foreground leading-snug">Dev<br/>Tools</div>
+                  <div className="text-[10px] font-bold text-primary uppercase tracking-wider">Bottom</div>
+                </div>
               </div>
-              
-              {/* Vertical line */}
-              <div className="absolute right-3 top-16 bottom-16 w-[2px] bg-gradient-to-b from-primary via-primary/40 to-primary" />
-              
-              {/* Arrow at bottom */}
-              <div className="absolute right-[10px] bottom-12 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[10px] border-t-primary" />
-              
-              {/* Bottom label - Dev Tools */}
-              <div className="text-right">
-                <div className="text-[10px] font-semibold text-foreground leading-tight">Dev</div>
-                <div className="text-[10px] font-semibold text-foreground leading-tight">Tools</div>
-                <div className="text-[9px] font-bold text-primary/90 tracking-wide leading-none mt-0.5">BOTTOM</div>
-              </div>
-            </div>
 
-            {/* Dense market map grid - 3 columns on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-3">
-              {marketMap.map((category, idx) => {
-                const CategoryIcon = getCategoryIcon(category.name);
-                return (
-                <div key={idx} className="space-y-1">
-                  <div className="flex items-center gap-1.5 pb-0.5">
-                    <CategoryIcon className="w-3 h-3 text-primary flex-shrink-0" strokeWidth={2.5} />
-                    <h3 className="text-[11px] font-semibold text-foreground tracking-tight leading-none">
-                      {category.name.replace(/^\d+\.\s*/, '')}
-                    </h3>
-                    <span className="text-[9px] text-muted-foreground font-medium">
-                      {category.companies.length}
-                    </span>
-                  </div>
-                  
-                  <div className="grid grid-cols-8 gap-1">
-                  {category.companies.map((company, companyIdx) => {
-                    const domain = getCompanyDomain(company.name);
-                    const categoryCount = company.category.split(';').length;
-                    const isMultiCategory = categoryCount > 1;
+              {/* Categories grid */}
+              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-5">
+                {marketMap.map((category, idx) => {
+                  const CategoryIcon = getCategoryIcon(category.name);
+                  return (
+                  <div key={idx} className="space-y-2">
+                    <div className="flex items-center gap-2 pb-1">
+                      <CategoryIcon className="w-3.5 h-3.5 text-primary flex-shrink-0" strokeWidth={2.5} />
+                      <h3 className="text-[11px] font-semibold text-foreground tracking-tight">
+                        {category.name.replace(/^\d+\.\s*/, '')}
+                      </h3>
+                      <span className="text-[9px] text-muted-foreground font-medium">
+                        ({category.companies.length})
+                      </span>
+                    </div>
                     
-                    return (
-                      <a
-                        key={companyIdx}
-                        href={getCompanyUrl(company.name)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-0.5 transition-transform hover:scale-110 relative"
-                        title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
-                      >
-                        <div className={`w-8 h-8 rounded-md bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-0.5 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/40' : 'border border-border/40'}`}>
-                          <CompanyLogo
-                            companyName={company.name}
-                            domain={domain}
-                            categoryColor={category.color}
-                          />
-                        </div>
-                        {isMultiCategory && (
-                          <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-primary rounded-full border border-background flex items-center justify-center">
-                            <span className="text-[5px] font-bold text-primary-foreground">{categoryCount}</span>
+                    <div className="grid grid-cols-7 gap-1.5">
+                    {category.companies.map((company, companyIdx) => {
+                      const domain = getCompanyDomain(company.name);
+                      const categoryCount = company.category.split(';').length;
+                      const isMultiCategory = categoryCount > 1;
+                      
+                      return (
+                        <a
+                          key={companyIdx}
+                          href={getCompanyUrl(company.name)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex flex-col items-center gap-1 transition-transform hover:scale-105 relative"
+                          title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
+                        >
+                          <div className={`w-9 h-9 rounded-lg bg-white dark:bg-gray-950 flex items-center justify-center overflow-hidden p-1 group-hover:shadow-md transition-all ${isMultiCategory ? 'ring-2 ring-primary/30' : 'border border-border/30'}`}>
+                            <CompanyLogo
+                              companyName={company.name}
+                              domain={domain}
+                              categoryColor={category.color}
+                            />
                           </div>
-                        )}
-                        <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-[0.6rem] w-full px-0.5">
+                          {isMultiCategory && (
+                            <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full border border-background flex items-center justify-center">
+                              <span className="text-[6px] font-bold text-primary-foreground">{categoryCount}</span>
+                            </div>
+                          )}
+                          <span className="text-[7px] font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2 leading-tight w-full">
                           {company.name}
                         </span>
                       </a>
@@ -361,6 +361,7 @@ const Report2025 = () => {
               </div>
               );
               })}
+            </div>
             </div>
           </div>
         </section>
