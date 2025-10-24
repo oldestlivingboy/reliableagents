@@ -80,13 +80,7 @@ const ConsultationPopup = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-60" />
         
         {/* Content */}
-        <div className="relative px-7 py-6 space-y-4">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20">
-            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="text-[10px] font-semibold tracking-wide text-primary uppercase">Limited Spots</span>
-          </div>
-          
+        <div className="relative px-7 py-6 space-y-5">
           {/* Main content */}
           <div className="space-y-2.5 pr-4">
             <h3 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
@@ -97,23 +91,29 @@ const ConsultationPopup = () => {
             </p>
           </div>
 
-          {/* CTA indicator */}
-          <div className="flex items-center gap-2 pt-1">
-            <span className="text-xs font-medium text-primary">Book your slot</span>
-            <div className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <svg 
-                className="w-2.5 h-2.5 text-primary" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2.5} 
-                  d="M9 5l7 7-7 7" 
-                />
-              </svg>
+          {/* CTA with limited spots */}
+          <div className="flex items-center justify-between pt-2 pr-2">
+            <div className="flex items-center gap-2.5">
+              <span className="text-sm font-semibold text-primary">Book your slot</span>
+              <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
+                <svg 
+                  className="w-2.5 h-2.5 text-primary" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2.5} 
+                    d="M9 5l7 7-7 7" 
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/25">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+              <span className="text-[10px] font-bold tracking-wide text-amber-600 dark:text-amber-500 uppercase">Limited</span>
             </div>
           </div>
         </div>
