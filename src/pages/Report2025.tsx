@@ -168,15 +168,15 @@ const Report2025 = () => {
       const categoriesMap = new Map<string, Company[]>();
       
       parsed.data.forEach((row: any) => {
-        const name = row['Company / Tool']?.trim();
-        const categoryRaw = row['Categories']?.trim();
+        const name = row['Company']?.trim();
+        const categoryRaw = row['Category']?.trim();
         const oneLiner = row['One-liner']?.trim() || '';
         
         if (!name || !categoryRaw) return;
         
-        // Split multiple categories by comma
+        // Split multiple categories by semicolon
         const categories = categoryRaw
-          .split(',')
+          .split(';')
           .map(c => c.trim())
           .filter(c => c.length > 0);
         
