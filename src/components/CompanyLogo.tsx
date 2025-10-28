@@ -8,7 +8,6 @@ import browserlessLogo from '@/assets/logos/browserless.png';
 import browseruseLogo from '@/assets/logos/browseruse.png';
 import skyvernLogo from '@/assets/logos/skyvern-new.png';
 import exaLogo from '@/assets/logos/exa.png';
-import salesforceLogo from '@/assets/logos/salesforce.png';
 import pleaseLogo from '@/assets/logos/please.png';
 import firecrawlLogo from '@/assets/logos/firecrawl.png';
 import hyperbrowserLogo from '@/assets/logos/hyperbrowser.png';
@@ -54,7 +53,6 @@ import manusLogo from '@/assets/logos/manus.svg';
 import nanobrowserLogo from '@/assets/logos/nanobrowser.png';
 import generalagentsLogo from '@/assets/logos/generalagents.svg';
 import godmodeLogo from '@/assets/logos/godmode.png';
-import convergenceLogo from '@/assets/logos/convergence.png';
 import dexLogo from '@/assets/logos/dex.svg';
 import scrapybaraLogo from '@/assets/logos/scrapybara.png';
 import cuaLogo from '@/assets/logos/cua-new.png';
@@ -133,7 +131,6 @@ const logoMap: { [key: string]: string } = {
   'notte.cc': notteLogo,
   'kura ai': kuraLogo,
   'emergence': emergenceLogo,
-  'twin': twinLogo,
   'narada': naradaLogo,
   'athena intelligence': athenaLogo,
   'copycat': copycatLogo,
@@ -152,9 +149,7 @@ const logoMap: { [key: string]: string } = {
   'dex': dexLogo,
   'dex (thirdlayer)': dexLogo,
   'please': pleaseLogo,
-  
-  // Enterprise automation
-  'salesforce (acq. convergence)': salesforceLogo,
+  'twin': twinLogo,
   
   // Browsers
   'google chrome': chromeLogo,
