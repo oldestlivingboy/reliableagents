@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="flex items-center justify-start md:justify-center gap-3 mb-4">
+          <div className="flex flex-row-reverse md:flex-row items-center justify-end md:justify-center gap-3 mb-4">
             <img 
               src={shieldLogo} 
               alt="Reliable Agents Shield" 
