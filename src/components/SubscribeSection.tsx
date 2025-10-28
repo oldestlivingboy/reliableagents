@@ -80,7 +80,7 @@ const SubscribeSection = () => {
           <div className="space-y-3">
             <div className="space-y-1">
               <h3 className="text-base font-semibold text-foreground">
-                Get Future Updates
+                👻 Get Future Updates
               </h3>
               <p className="text-sm text-muted-foreground">
                 New benchmarking updates/reports delivered to your inbox whenever they come out

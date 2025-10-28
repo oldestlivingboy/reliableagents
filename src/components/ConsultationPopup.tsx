@@ -84,7 +84,7 @@ const ConsultationPopup = () => {
           {/* Main content */}
           <div className="space-y-2.5 pr-4">
             <h3 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
-              How reliable is your browser automation?
+              🕷️ How reliable is your browser automation?
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Grab a free consultation & share your use-case{" "}
