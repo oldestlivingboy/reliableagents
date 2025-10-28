@@ -255,7 +255,7 @@ const VotingSection = () => {
             <div className="flex-1 space-y-3">
               <div>
                 <h3 className="text-sm font-semibold text-foreground mb-1">
-                  Suggest your own category
+                  Suggest your own custom category
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   Don't see what you're looking for? Submit your own benchmark idea.
@@ -267,7 +267,7 @@ const VotingSection = () => {
                   value={customCategory}
                   onChange={(e) => setCustomCategory(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleCustomCategorySubmit()}
-                  placeholder="e.g., Testing frameworks for agents"
+                  placeholder="e.g., Testing unlogged LinkedIn scraping"
                   className="flex-1 text-sm"
                   maxLength={100}
                 />
