@@ -833,9 +833,9 @@ const Report2025 = () => {
             </div>
           </div>
 
-          {/* Things to Come */}
+          {/* Things To Come */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-foreground">Things to Come</h3>
+            <h3 className="text-xl font-semibold text-foreground">Things To Come</h3>
             <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
               <p className="text-sm text-muted-foreground leading-relaxed">
                 We're working on a number of benchmarks —{" "}
