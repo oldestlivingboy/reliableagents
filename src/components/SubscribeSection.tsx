@@ -109,7 +109,7 @@ const SubscribeSection = () => {
       </section>
 
       <a 
-        href="https://github.com/ednevsky/reliableagents"
+        href="https://github.com/oldestlivingboy/reliableagents"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/40 hover:bg-primary/[0.02] transition-all duration-200 group"
