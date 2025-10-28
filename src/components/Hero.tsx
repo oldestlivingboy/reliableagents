@@ -12,11 +12,15 @@ const Hero = () => {
           <div className="inline-block">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-6 animate-fade-in">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              🎃 Live benchmarks & analysis
+              Live benchmarks & analysis
             </div>
           </div>
           
-          <div className="flex items-center justify-start md:justify-center gap-3 mb-4">
+          <div className="flex items-center justify-start md:justify-center gap-3 mb-4 relative">
+            {/* Subtle floating Halloween emoji */}
+            <span className="absolute -top-6 -right-2 md:-right-8 text-2xl opacity-40 animate-[subtle-bounce_3s_ease-in-out_infinite]">
+              🎃
+            </span>
             <img 
               src={shieldLogo} 
               alt="Reliable Agents Shield" 

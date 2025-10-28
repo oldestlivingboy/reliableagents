@@ -68,6 +68,17 @@ const ConsultationPopup = () => {
         data-cal-namespace="reliableagents"
         data-cal-config='{"layout":"month_view"}'
       >
+        {/* Halloween emoji background pattern */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none select-none overflow-hidden">
+          <div className="absolute top-2 left-4 text-xl">🎃</div>
+          <div className="absolute top-8 right-6 text-sm">👻</div>
+          <div className="absolute bottom-4 left-8 text-base">🕷️</div>
+          <div className="absolute bottom-12 right-4 text-lg">🦇</div>
+          <div className="absolute top-16 left-16 text-xs">🕸️</div>
+          <div className="absolute top-20 right-12 text-sm">🎃</div>
+          <div className="absolute bottom-20 left-4 text-base">👻</div>
+        </div>
+        
         {/* Close button */}
         <button
           onClick={handleDismiss}
