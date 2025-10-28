@@ -63,10 +63,13 @@ const ConsultationPopup = () => {
   return (
     <div className="fixed bottom-4 right-4 left-4 sm:bottom-8 sm:right-8 sm:left-auto z-50 flex justify-center sm:justify-end">
       <div 
-        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer animate-[scale-in_0.4s_ease-out,fade-in_0.4s_ease-out] hover:animate-none [animation-delay:0.4s] animate-float"
+        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer"
         data-cal-link="oldestlivingboy/reliableagents"
         data-cal-namespace="reliableagents"
         data-cal-config='{"layout":"month_view"}'
+        style={{
+          animation: 'scale-in 0.4s ease-out, fade-in 0.4s ease-out, float 4s ease-in-out 0.5s infinite'
+        }}
       >
         {/* Halloween emoji background pattern - lots of small emojis */}
         <div className="absolute inset-0 opacity-[0.15] pointer-events-none select-none overflow-hidden text-sm leading-relaxed">
