@@ -44,6 +44,21 @@ All colors MUST be HSL.
     --chart-4: 0 0% 65%;
     --chart-5: 0 0% 80%;
 
+    /* Category colors - cohesive palette */
+    --category-1: 220 70% 50%;
+    --category-2: 260 60% 50%;
+    --category-3: 160 60% 45%;
+    --category-4: 340 65% 50%;
+    
+    /* Status colors */
+    --status-warning: 38 92% 50%;
+    --status-success: 160 60% 45%;
+    
+    /* Rank colors */
+    --rank-gold: 45 93% 47%;
+    --rank-silver: 0 0% 60%;
+    --rank-bronze: 25 75% 47%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -97,6 +112,21 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Category colors - cohesive palette (dark mode) */
+    --category-1: 220 70% 60%;
+    --category-2: 260 60% 60%;
+    --category-3: 160 60% 55%;
+    --category-4: 340 65% 60%;
+    
+    /* Status colors (dark mode) */
+    --status-warning: 38 92% 50%;
+    --status-success: 160 60% 55%;
+    
+    /* Rank colors (dark mode) */
+    --rank-gold: 45 93% 55%;
+    --rank-silver: 0 0% 65%;
+    --rank-bronze: 25 75% 55%;
   }
 }
 

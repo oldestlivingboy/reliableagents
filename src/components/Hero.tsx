@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
           
           <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 leading-relaxed max-w-3xl md:mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            The definitive guide to understanding and benchmarking agentic automation, web browsing, and computer use.
+            The definitive guide to understanding and benchmarking agentic automation, web browsing, and computer use
           </p>
         </div>
       </div>

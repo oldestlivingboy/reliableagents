@@ -20,15 +20,21 @@ const Index = () => {
           {/* Reliable Agents Leaderboard Block */}
           <section className="space-y-8">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                <span className="text-xs font-medium text-amber-600 dark:text-amber-500">In Development</span>
+              <div 
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border"
+                style={{ 
+                  backgroundColor: 'hsl(var(--status-warning) / 0.1)',
+                  borderColor: 'hsl(var(--status-warning) / 0.2)'
+                }}
+              >
+                <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: 'hsl(var(--status-warning))' }} />
+                <span className="text-xs font-medium" style={{ color: 'hsl(var(--status-warning))' }}>In Development</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                 Reliable Agents Leaderboard
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed">
-                We're benchmarking the leading agentic control layers to evaluate their performance across reliability, speed, and documentation quality.
+                We're benchmarking the leading agentic control layers to evaluate their performance across <strong className="text-foreground font-semibold">reliability</strong>, speed, and documentation quality.
               </p>
             </div>
             
@@ -56,7 +62,7 @@ const Index = () => {
             
             <div className="space-y-3 text-xs max-w-2xl mx-auto">
               <p className="text-muted-foreground text-center leading-relaxed">
-                Created by{" "}
+                Made by{" "}
                 <a 
                   href="https://www.linkedin.com/in/ednevsky/" 
                   target="_blank" 
@@ -65,7 +71,7 @@ const Index = () => {
                 >
                   🚀 Alex
                 </a>
-                , a repeat AI founder with an exit and creator of{" "}
+                , repeat founder with an AI exit and creator of{" "}
                 <a 
                   href="https://nocap.so" 
                   target="_blank" 
@@ -74,18 +80,18 @@ const Index = () => {
                 >
                   No Cap
                 </a>
-                , a viral AI investing agent,{" "}
+                , viral AI investing agent,{" "}
                 <br className="hidden sm:inline" />
                 and{" "}
                 <a 
-                  href="https://www.linkedin.com/in/briansehn/" 
+                  href="https://oldestlivingboy.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
                 >
                   🌐 Brian
                 </a>
-                , the first DevRel at Google and founder of multiple browser-related companies.
+                , first devrel engineer at Google and founder of two profitable browser and networking companies.
               </p>
             </div>
             

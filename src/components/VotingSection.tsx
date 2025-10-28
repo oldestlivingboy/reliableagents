@@ -206,20 +206,18 @@ const VotingSection = () => {
 
               {/* Content */}
               <div className="flex items-center gap-2.5 flex-1 min-w-0">
-                <div className={`
-                  w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0
-                  ${index % 4 === 0 ? 'bg-blue-500/10' : ''}
-                  ${index % 4 === 1 ? 'bg-purple-500/10' : ''}
-                  ${index % 4 === 2 ? 'bg-green-500/10' : ''}
-                  ${index % 4 === 3 ? 'bg-pink-500/10' : ''}
-                `}>
-                  <Icon className={`
-                    w-4 h-4
-                    ${index % 4 === 0 ? 'text-blue-600 dark:text-blue-400' : ''}
-                    ${index % 4 === 1 ? 'text-purple-600 dark:text-purple-400' : ''}
-                    ${index % 4 === 2 ? 'text-green-600 dark:text-green-400' : ''}
-                    ${index % 4 === 3 ? 'text-pink-600 dark:text-pink-400' : ''}
-                  `} />
+                <div 
+                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{
+                    backgroundColor: `hsl(var(--category-${(index % 4) + 1}) / 0.1)`
+                  }}
+                >
+                  <Icon 
+                    className="w-4 h-4"
+                    style={{
+                      color: `hsl(var(--category-${(index % 4) + 1}))`
+                    }}
+                  />
                 </div>
                 
                 <h3 className="font-medium text-sm text-foreground leading-tight flex-1 group-hover:text-primary transition-colors">
@@ -228,12 +226,17 @@ const VotingSection = () => {
 
                 {/* Rank Badge */}
                 {index < 3 && voteCount > 0 && (
-                  <div className={`
-                    px-2 py-0.5 rounded-md text-xs font-bold flex-shrink-0
-                    ${index === 0 ? 'bg-yellow-400/20 text-yellow-700 dark:text-yellow-300' : ''}
-                    ${index === 1 ? 'bg-gray-300/30 text-gray-700 dark:text-gray-300' : ''}
-                    ${index === 2 ? 'bg-orange-400/20 text-orange-700 dark:text-orange-300' : ''}
-                  `}>
+                  <div 
+                    className="px-2 py-0.5 rounded-md text-xs font-bold flex-shrink-0"
+                    style={{
+                      backgroundColor: index === 0 ? 'hsl(var(--rank-gold) / 0.2)' : 
+                                     index === 1 ? 'hsl(var(--rank-silver) / 0.3)' :
+                                     'hsl(var(--rank-bronze) / 0.2)',
+                      color: index === 0 ? 'hsl(var(--rank-gold))' : 
+                            index === 1 ? 'hsl(var(--rank-silver))' :
+                            'hsl(var(--rank-bronze))'
+                    }}
+                  >
                     #{index + 1}
                   </div>
                 )}
@@ -247,8 +250,11 @@ const VotingSection = () => {
       <div className="pt-8 mt-8 border-t border-border/50">
         <div className="space-y-4">
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-              <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+            <div 
+              className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+              style={{ backgroundColor: 'hsl(var(--status-warning) / 0.1)' }}
+            >
+              <Lightbulb className="w-4 h-4" style={{ color: 'hsl(var(--status-warning))' }} />
             </div>
             <div className="flex-1 space-y-3">
               <div>
@@ -256,7 +262,7 @@ const VotingSection = () => {
                   Suggest your own category
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  Don't see what you're looking for? Submit your own benchmark idea
+                  Don't see what you're looking for? Submit your own benchmark idea.
                 </p>
               </div>
               
