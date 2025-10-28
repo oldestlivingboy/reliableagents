@@ -790,10 +790,10 @@ const Report2025 = () => {
               onClick={() => window.open('https://app.cal.com/oldestlivingboy/reliableagents', '_blank')}
             >
               <h4 className="font-semibold text-foreground mb-3 text-base">
-                🎃 How reliable is your browser automation workflow?
+                Facing one of these problems and would like to know how to avoid them?
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Grab a free expert consultation & share your use case{" "}
+                Grab a free expert consultation to get immediate insights on these problems{" "}
                 <span className="font-medium text-primary">(limited slots)</span>
               </p>
             </div>

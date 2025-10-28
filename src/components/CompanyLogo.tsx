@@ -18,7 +18,6 @@ import operaLogo from '@/assets/logos/opera.png';
 import perplexityLogo from '@/assets/logos/perplexity.png';
 import playwrightLogo from '@/assets/logos/playwright-new.svg';
 import puppeteerLogo from '@/assets/logos/puppeteer.png';
-import scrapyLogo from '@/assets/logos/scrapy.png';
 import stagehandLogo from '@/assets/logos/stagehand.png';
 import tavilyLogo from '@/assets/logos/tavily.png';
 import temporalLogo from '@/assets/logos/temporal.png';
@@ -63,6 +62,11 @@ import opencuaLogo from '@/assets/logos/opencua-new.png';
 import lavagueLogo from '@/assets/logos/lavague.png';
 import anchorLogo from '@/assets/logos/anchor.svg';
 import kernelLogo from '@/assets/logos/kernel.svg';
+import jsonifyLogo from '@/assets/logos/jsonify.png';
+import sentiusLogo from '@/assets/logos/sentius.png';
+import parseraLogo from '@/assets/logos/parsera.png';
+import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png';
+import cometLogo from '@/assets/logos/comet.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -78,7 +82,6 @@ const logoMap: { [key: string]: string } = {
   // Libraries & specialized
   'playwright': playwrightLogo,
   'puppeteer': puppeteerLogo,
-  'scrapy': scrapyLogo,
   'scrapybara': scrapybaraLogo,
   'cua': cuaLogo,
   'lavague': lavagueLogo,
@@ -105,6 +108,7 @@ const logoMap: { [key: string]: string } = {
   'riveterhq': riveterhqLogo,
   'zyte': zyteLogo,
   'zyte.com': zyteLogo,
+  'parsera': parseraLogo,
   'exa.ai': exaLogo,
   'tavily': tavilyLogo,
   'kaizen': kaizenLogo,
@@ -137,6 +141,8 @@ const logoMap: { [key: string]: string } = {
   'h (h company)': hcompanyLogo,
   'basepilot': basepilotLogo,
   'asteroid': asteroidLogo,
+  'jsonify': jsonifyLogo,
+  'sentius ai': sentiusLogo,
   
   // Consumer automation
   'manus': manusLogo,
@@ -152,9 +158,9 @@ const logoMap: { [key: string]: string } = {
   
   // Browsers
   'google chrome': chromeLogo,
-  'microsoft edge copilot': microsoftLogo,
-  'perplexity comet browser': perplexityLogo,
-  'comet': perplexityLogo,
+  'microsoft edge copilot': microsoftEdgeCopilotLogo,
+  'perplexity comet browser': cometLogo,
+  'comet': cometLogo,
   'opera': operaLogo,
   'chatgpt atlas': atlasLogo,
 };
