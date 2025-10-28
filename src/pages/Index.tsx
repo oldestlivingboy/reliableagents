@@ -3,11 +3,18 @@ import VotingSection from "@/components/VotingSection";
 import SubscribeSection from "@/components/SubscribeSection";
 import { MarketMapPreview } from "@/components/MarketMapPreview";
 import ConsultationPopup from "@/components/ConsultationPopup";
+import HalloweenSquash from "@/components/HalloweenSquash";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <ConsultationPopup />
+      
+      {/* Halloween squash decorations */}
+      <HalloweenSquash position={{ top: "20%", left: "5%" }} />
+      <HalloweenSquash position={{ top: "50%", right: "8%" }} />
+      <HalloweenSquash position={{ bottom: "30%", left: "10%" }} />
+      
       <Hero />
       
       <main className="container mx-auto max-w-3xl px-4 pb-24">

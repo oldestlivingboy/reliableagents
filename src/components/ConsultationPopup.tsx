@@ -61,9 +61,9 @@ const ConsultationPopup = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 left-4 sm:bottom-8 sm:right-8 sm:left-auto z-50 animate-scale-in flex justify-center sm:justify-end">
+    <div className="fixed bottom-4 right-4 left-4 sm:bottom-8 sm:right-8 sm:left-auto z-50 flex justify-center sm:justify-end">
       <div 
-        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer"
+        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer animate-[scale-in_0.4s_ease-out,fade-in_0.4s_ease-out]"
         data-cal-link="oldestlivingboy/reliableagents"
         data-cal-namespace="reliableagents"
         data-cal-config='{"layout":"month_view"}'
