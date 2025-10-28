@@ -857,54 +857,58 @@ const Report2025 = () => {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         </div>
 
-        <footer className="pt-8 pb-6">
-          <div className="text-center space-y-1 max-w-2xl mx-auto">
-            <p className="text-base font-semibold text-foreground">
-              Reliable Agents
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Empowering agentic developers worldwide
-            </p>
+        <footer className="pt-8">
+          <div className="container mx-auto max-w-3xl px-4 pb-8">
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center space-y-1 max-w-2xl mx-auto">
+                <p className="text-base font-semibold text-foreground">
+                  Reliable Agents
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Empowering agentic developers worldwide
+                </p>
+              </div>
+              
+              <div className="space-y-3 text-xs max-w-2xl mx-auto">
+                <p className="text-muted-foreground text-center leading-relaxed">
+                  Made by{" "}
+                  <a 
+                    href="https://www.linkedin.com/in/ednevsky/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    🚀 Alex
+                  </a>
+                  , repeat founder with an AI exit and Creator of{" "}
+                  <a 
+                    href="https://nocap.so" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    No Cap
+                  </a>
+                  , viral AI investing agent, and{" "}
+                  <a 
+                    href="https://oldestlivingboy.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                  >
+                    🌐 Brian
+                  </a>
+                  ,{" "}
+                  <br className="hidden sm:inline" />
+                  first devrel engineer at Google and founder of two profitable browser and networking companies.
+                </p>
+              </div>
+              
+              <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
+                © 2025 All rights reserved
+              </p>
+            </div>
           </div>
-          
-          <div className="space-y-3 text-xs max-w-2xl mx-auto mt-6">
-            <p className="text-muted-foreground text-center leading-relaxed">
-              Created by{" "}
-              <a 
-                href="https://www.linkedin.com/in/ednevsky/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-              >
-                🚀 Alex
-              </a>
-              , a repeat AI founder with an exit and creator of{" "}
-              <a 
-                href="https://nocap.so" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-              >
-                No Cap
-              </a>
-              , a viral AI investing agent,{" "}
-              <br className="hidden sm:inline" />
-              and{" "}
-              <a 
-                href="https://www.linkedin.com/in/briansehn/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-              >
-                🌐 Brian
-              </a>
-              , the first DevRel at Google and founder of multiple browser-related companies.
-            </p>
-          </div>
-          
-          <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto text-center mt-6">
-            © 2025 All rights reserved
-          </p>
         </footer>
       </div>
     </div>
