@@ -49,9 +49,9 @@ const Index = () => {
       </main>
 
       <footer className="border-t border-border mt-24">
-        <div className="container mx-auto max-w-3xl px-4 py-8">
-          <div className="flex flex-col items-center gap-6">
-            <div className="text-center space-y-1 max-w-2xl mx-auto">
+        <div className="container mx-auto max-w-4xl px-4 py-12">
+          <div className="flex flex-col items-center gap-8">
+            <div className="text-center space-y-1">
               <p className="text-base font-semibold text-foreground">
                 Reliable Agents
               </p>
@@ -60,42 +60,56 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="space-y-3 text-xs max-w-2xl mx-auto">
-              <p className="text-muted-foreground text-center leading-relaxed">
-                Made by{" "}
-                <a 
-                  href="https://www.linkedin.com/in/ednevsky/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                >
-                  🚀 Alex
-                </a>
-                , repeat founder with an AI exit and creator of{" "}
-                <a 
-                  href="https://nocap.so" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                >
-                  No Cap
-                </a>
-                , viral AI investing agent,{" "}
-                <br className="hidden sm:inline" />
-                and{" "}
-                <a 
-                  href="https://oldestlivingboy.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                >
-                  🌐 Brian
-                </a>
-                , first devrel engineer at Google and founder of two profitable browser and networking companies.
+            <div className="w-full max-w-2xl space-y-4">
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                Made by
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+                <div className="space-y-2">
+                  <p className="text-sm">
+                    <a 
+                      href="https://www.linkedin.com/in/ednevsky/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors font-semibold underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                    >
+                      🚀 Alex
+                    </a>
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Repeat founder with an AI exit and creator of{" "}
+                    <a 
+                      href="https://nocap.so" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                    >
+                      No Cap
+                    </a>
+                    , viral AI investing agent
+                  </p>
+                </div>
+                
+                <div className="space-y-2">
+                  <p className="text-sm">
+                    <a 
+                      href="https://oldestlivingboy.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors font-semibold underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                    >
+                      🌐 Brian
+                    </a>
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    First devrel engineer at Google and founder of two profitable browser and networking companies
+                  </p>
+                </div>
+              </div>
             </div>
             
-            <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
+            <p className="text-[10px] text-muted-foreground/50">
               © 2025 All rights reserved
             </p>
           </div>
