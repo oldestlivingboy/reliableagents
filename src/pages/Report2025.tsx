@@ -782,41 +782,17 @@ const Report2025 = () => {
             </div>
 
             {/* Static Consultation Widget */}
-            <div className="relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl overflow-hidden max-w-2xl mx-auto cursor-pointer"
+            <div 
+              className="bg-muted/30 rounded-xl p-6 border border-border/40 cursor-pointer hover:border-primary/40 transition-colors"
               onClick={() => window.open('https://app.cal.com/oldestlivingboy/reliableagents', '_blank')}
             >
-              {/* Halloween emoji background pattern */}
-              <div className="absolute inset-0 opacity-[0.15] pointer-events-none select-none overflow-hidden text-sm leading-relaxed">
-                <div className="grid grid-cols-8 gap-3 p-3">
-                  {['🎃', '👻', '🎃', '🦇', '🕸️', '🎃', '👻', '🦇',
-                    '🦇', '🕸️', '🎃', '👻', '🎃', '🦇', '🕸️', '🎃',
-                    '👻', '🎃', '🦇', '🕸️', '🎃', '👻', '🦇', '🕸️',
-                    '🕸️', '🎃', '👻', '🎃', '🦇', '🕸️', '🎃', '👻'].map((emoji, i) => (
-                    <span key={i} className="inline-block">{emoji}</span>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-60" />
-              
-              {/* Content */}
-              <div className="relative px-7 py-6 space-y-4 z-10">
-                <div className="space-y-2.5">
-                  <h4 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
-                    🎃 How reliable is your browser automation workflow?
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Grab a free expert consultation & share your use case{" "}
-                    <span className="font-medium" style={{ color: 'hsl(var(--status-warning))' }}>(limited slots)</span>
-                  </p>
-                </div>
-              </div>
-
-              {/* Hover effect */}
-              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-              </div>
+              <h4 className="font-semibold text-foreground mb-3 text-base">
+                🎃 How reliable is your browser automation workflow?
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Grab a free expert consultation & share your use case{" "}
+                <span className="font-medium text-primary">(limited slots)</span>
+              </p>
             </div>
           </div>
 
@@ -854,61 +830,74 @@ const Report2025 = () => {
               </div>
             </div>
           </div>
-        </section>
 
-
-        <footer className="border-t border-border mt-24">
-          <div className="container mx-auto max-w-3xl px-4 py-8">
-            <div className="flex flex-col items-center gap-6">
-              <div className="text-center space-y-1 max-w-2xl mx-auto">
-                <p className="text-base font-semibold text-foreground">
-                  Reliable Agents
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Empowering agentic developers worldwide
-                </p>
-              </div>
-              
-              <div className="space-y-3 text-xs max-w-2xl mx-auto">
-                <p className="text-muted-foreground text-center leading-relaxed">
-                  Created by{" "}
-                  <a 
-                    href="https://www.linkedin.com/in/ednevsky/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                  >
-                    🚀 Alex
-                  </a>
-                  , a repeat AI founder with an exit and creator of{" "}
-                  <a 
-                    href="https://nocap.so" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                  >
-                    No Cap
-                  </a>
-                  , a viral AI investing agent,{" "}
-                  <br className="hidden sm:inline" />
-                  and{" "}
-                  <a 
-                    href="https://www.linkedin.com/in/briansehn/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                  >
-                    🌐 Brian
-                  </a>
-                  , the first DevRel at Google and founder of multiple browser-related companies.
-                </p>
-              </div>
-              
-              <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
-                © 2025 All rights reserved
+          {/* Things to Come */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-foreground">Things to Come</h3>
+            <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We're working on a number of benchmarks —{" "}
+                <a 
+                  href="/#voting" 
+                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-2"
+                >
+                  vote for the one you think we should prioritize on the home page
+                </a>
+                .
               </p>
             </div>
           </div>
+        </section>
+
+
+        <footer className="border-t border-border mt-24 pt-8 pb-6">
+          <div className="text-center space-y-1 max-w-2xl mx-auto">
+            <p className="text-base font-semibold text-foreground">
+              Reliable Agents
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Empowering agentic developers worldwide
+            </p>
+          </div>
+          
+          <div className="space-y-3 text-xs max-w-2xl mx-auto mt-6">
+            <p className="text-muted-foreground text-center leading-relaxed">
+              Created by{" "}
+              <a 
+                href="https://www.linkedin.com/in/ednevsky/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+              >
+                🚀 Alex
+              </a>
+              , a repeat AI founder with an exit and creator of{" "}
+              <a 
+                href="https://nocap.so" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+              >
+                No Cap
+              </a>
+              , a viral AI investing agent,{" "}
+              <br className="hidden sm:inline" />
+              and{" "}
+              <a 
+                href="https://www.linkedin.com/in/briansehn/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+              >
+                🌐 Brian
+              </a>
+              , the first DevRel at Google and founder of multiple browser-related companies.
+            </p>
+          </div>
+          
+          <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto text-center mt-6">
+            © 2025 All rights reserved
+          </p>
         </footer>
       </div>
     </div>
