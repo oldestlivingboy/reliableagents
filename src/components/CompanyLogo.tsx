@@ -29,7 +29,7 @@ import chromeLogo from '@/assets/logos/chrome.svg';
 import googleLogo from '@/assets/logos/google.png';
 import microsoftLogo from '@/assets/logos/microsoft-copilot.png';
 import amazonLogo from '@/assets/logos/amazon.png';
-import atlasLogo from '@/assets/logos/atlas.jpg';
+import atlasLogo from '@/assets/logos/atlas.png';
 import magnitudeLogo from '@/assets/logos/magnitude.png';
 import simularLogo from '@/assets/logos/simular.png';
 import steelLogo from '@/assets/logos/steel-new.png';
