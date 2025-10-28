@@ -266,7 +266,6 @@ const Report2025 = () => {
         {/* INTRO Section */}
         <section className="space-y-6 md:space-y-8 mb-16 md:mb-24 max-w-3xl">
           <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4 md:mb-6">Introduction</h2>
             <div className="space-y-4 md:space-y-6 text-foreground/80 leading-relaxed text-base md:text-lg">
               <p>
                 2025 hasn't quite been the "year of the agent"
@@ -618,10 +617,10 @@ const Report2025 = () => {
           </div>
         </section>
 
-        {/* WHERE TO START Section */}
+        {/* AUTOMATION PLAYBOOK Section */}
         <section className="space-y-12 mb-24 max-w-4xl">
           <div>
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Where to Start</h2>
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-primary mb-4">Automation Playbook</h2>
             <p className="text-sm text-muted-foreground">
               Practical tips for navigating the map and building your stack
             </p>
@@ -853,7 +852,12 @@ const Report2025 = () => {
         </section>
 
 
-        <footer className="border-t border-border mt-24 pt-8 pb-6">
+        {/* Visual separator before footer */}
+        <div className="mt-32 mb-8">
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+
+        <footer className="pt-8 pb-6">
           <div className="text-center space-y-1 max-w-2xl mx-auto">
             <p className="text-base font-semibold text-foreground">
               Reliable Agents
