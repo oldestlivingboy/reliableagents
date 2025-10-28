@@ -101,12 +101,21 @@ export default {
             transform: "scale(1.05)",
           }
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-8px)",
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "subtle-bounce": "subtle-bounce 2s ease-in-out infinite",
+        "float": "float 4s ease-in-out infinite",
       },
     },
   },

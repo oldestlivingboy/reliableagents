@@ -63,7 +63,7 @@ const ConsultationPopup = () => {
   return (
     <div className="fixed bottom-4 right-4 left-4 sm:bottom-8 sm:right-8 sm:left-auto z-50 flex justify-center sm:justify-end">
       <div 
-        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer animate-[scale-in_0.4s_ease-out,fade-in_0.4s_ease-out]"
+        className="group relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden w-full sm:max-w-[340px] cursor-pointer animate-[scale-in_0.4s_ease-out,fade-in_0.4s_ease-out] hover:animate-none [animation-delay:0.4s] animate-float"
         data-cal-link="oldestlivingboy/reliableagents"
         data-cal-namespace="reliableagents"
         data-cal-config='{"layout":"month_view"}'
@@ -100,7 +100,7 @@ const ConsultationPopup = () => {
           {/* Main content */}
           <div className="space-y-2.5 pr-4">
             <h3 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
-              How reliable is your browser automation?
+              🎃 How reliable is your browser automation?
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Grab a free consultation & share your use-case{" "}
