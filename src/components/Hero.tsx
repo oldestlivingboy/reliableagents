@@ -16,11 +16,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="flex items-center justify-start md:justify-center gap-3 mb-4 relative">
-            {/* Subtle floating Halloween emoji */}
-            <span className="absolute -top-6 -right-2 md:-right-8 text-2xl opacity-40 animate-[subtle-bounce_3s_ease-in-out_infinite]">
-              🎃
-            </span>
+          <div className="flex items-center justify-start md:justify-center gap-3 mb-4">
             <img 
               src={shieldLogo} 
               alt="Reliable Agents Shield" 
