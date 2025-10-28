@@ -27,7 +27,7 @@ Inngest,,5. Supporting infrastructure,Durable execution/orchestration for agent 
 Anon,,5. Supporting infrastructure,Secure auth/access so agents can log in and act safely.,Market Map → Infrastructure,https://www.anon.com/,https://cdn.prod.website-files.com/689bc3805f94765d37f8acd7/68bf5e2914f06cb650e509db_151462d7d320b52ecdfd6605fc35a695_option_anon.svg
 RiveterHQ,,6. Scraping & crawling APIs,,,https://riveterhq.com/,https://framerusercontent.com/images/3jiyWMBSmsgvoQg8Awfgrn622LU.png?width=1980&height=532
 Zyte,,6. Scraping & crawling APIs,Web data platform offering scraping services and APIs.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.zyte.com/,https://logowik.com/content/uploads/images/zyte3602.jpg
-Scrapy,,6. Scraping & crawling APIs,Open-source collaborative framework for extracting data from websites.,a16z → Browser Control Layers,https://scrapy.org/,https://scrapy.org/img/scrapylogo.png
+Parsera,,6. Scraping & crawling APIs,,,https://parsera.org/,src/assets/logos/parsera.png
 Exa.ai,"Yes, twi",6. Scraping & crawling APIs,,,https://exa.ai/,https://exa.ai/images/testimonial/cursor_monochrome.svg
 Tavily,,6. Scraping & crawling APIs,,,https://tavily.com/,https://www.tavily.com/images/logo.svg
 Kaizen,,6. Scraping & crawling APIs,,,https://kaizen.com/,https://framerusercontent.com/images/KaapmT1KfqX3ZEnD8PksGbXTqmk.png?width=492&height=532
@@ -58,6 +58,8 @@ H (H Company),"Yes, WA",8. Enterprise automation,Browser-only agents powered by 
 Orby,,8. Enterprise automation,Enterprise AI agents focused on reliability/compliance.,Market Map → Enterprise,https://www.uniphore.com/orby-ai/,https://www.uniphore.com/wp-content/uploads/2025/06/Uniphore–Logo–Gradient–Dark.svg
 basepilot,,8. Enterprise automation,AI workers for insurance/operational browser workflows.,Market Map → Enterprise,https://www.basepilot.com/,https://framerusercontent.com/images/T4lo1XGuxi8SeG23tjVLhfQKE.png
 Asteroid,,8. Enterprise automation,Enterprise browser-agent automation for internal ops.,Market Map → Enterprise,https://asteroid.ai/,https://asteroid.ai/meteor.webp
+Jsonify,,8. Enterprise automation,,,https://jsonify.com/,src/assets/logos/jsonify.png
+Sentius AI,,8. Enterprise automation,,,https://www.sentius.ai/,src/assets/logos/sentius.png
 OpenAI Operator,,9. Consumer automation,An AI agent capable of doing work for the user independently by navigating the web.,Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/introducing-operator/,https://images.ctfassets.net/kftzwdyauwt9/1CgBJ2rSQnriAldNvIdInw/32befbf64486d1cabe6377b42a06d4a9/Infographic_Transparent__Web_.png
 Yutori,,9. Consumer automation,Consumer agent that monitors and acts on web tasks.,Market Map → Consumer,https://yutori.com/,https://ml.globenewswire.com/Resource/Download/4cd46bc5-e97e-476d-9559-39da1c81e5d5
 Manus,,9. Consumer automation,Full-stack agent that executes multi-step tasks for users.,Market Map → Consumer; a16z → Full-stack applications,https://manus.im/,https://files.manuscdn.com/assets/image/brand/image/Manus-Logo-Black.svg
@@ -70,8 +72,8 @@ KAIROS,,9. Consumer automation,Show-and-repeat consumer automation of recorded w
 DEX (ThirdLayer),,9. Consumer automation,Browser copilot that turns intent into on-page actions.,Market Map → Consumer,https://getdex.com/,https://getdex.com/_astro/dex_logo_v3.CoPGVUpy_2wukN3.svg
 Google Chrome,,10. Consumer browsers,Mainstream web browser.,Market Map → AI Browsers,https://www.google.com/chrome/,https://www.google.com/chrome/static/images/chrome-logo-m100.svg
 ChatGPT Atlas,,10. Consumer browsers,"A new web browser built with ChatGPT at its core, designed for AI-first browsing.",Market Map → AI Browsers,https://openai.com/index/introducing-chatgpt-atlas/,https://cdn.openai.com/API/images/atlas-logo.svg
-Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot,https://cdn.worldvectorlogo.com/logos/microsoft-edge.svg
-Perplexity Comet Browser,,10. Consumer browsers,The AI browser that acts as a personal assistant to automate tasks and research the web.,Market Map → AI Browsers,https://www.perplexity.ai/comet/,https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg
+Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot,src/assets/logos/microsoft-edge-copilot.png
+Perplexity Comet Browser,,10. Consumer browsers,The AI browser that acts as a personal assistant to automate tasks and research the web.,Market Map → AI Browsers,https://www.perplexity.ai/comet/,src/assets/logos/comet.png
 Opera,,10. Consumer browsers,Mainstream browser adding agentic/AI browsing features.,Market Map → AI Browsers,https://www.opera.com/,https://www.vectorlogo.zone/logos/opera/opera-icon.svg
 Dia,,10. Consumer browsers,AI browser (Arc successor) with agentic features.,Market Map → AI Browsers,https://www.diabrowser.com/,https://static.wikia.nocookie.net/logopedia/images/3/39/Dia_2025.svg
 Strawberry Browser,,10. Consumer browsers,AI-native browser with built-in agent capabilities and natural language control.,Market Map → AI Browsers,https://www.strawberrybrowser.com/,https://www.strawberrybrowser.com/logo.svg
