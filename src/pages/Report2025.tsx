@@ -126,7 +126,7 @@ const Report2025 = () => {
   const getCategoryIcon = (categoryName: string) => {
     const iconMap: { [key: string]: any } = {
       '1. Browser use frameworks': Wrench,
-      '2. Browser use libraries': BookOpen,
+      '2. Low-level browser use': BookOpen,
       '3. Specialized browser use': Settings,
       '4. Browsers as a service': Cloud,
       '5. Supporting infrastructure': Building2,
@@ -142,7 +142,7 @@ const Report2025 = () => {
   const getCategoryOrder = (categoryName: string): number => {
     const orderMap: { [key: string]: number } = {
       '1. Browser use frameworks': 1,
-      '2. Browser use libraries': 2,
+      '2. Low-level browser use': 2,
       '3. Specialized browser use': 3,
       '4. Browsers as a service': 4,
       '5. Supporting infrastructure': 5,
@@ -629,63 +629,55 @@ const Report2025 = () => {
             <h3 className="text-xl font-semibold text-foreground">Building Your Stack</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
-                The market map shows <strong>10 categories</strong>, but developers should focus on the first <strong>8 categories</strong> (1–8) to build their stack. 
-                Categories 9–10 are consumer-facing products. Here's how to think through categories 1–8:
+                The market map shows ten categories, but developers should focus on the first eight to build their stack. 
+                The last two are consumer-facing products. Here's how to think through the developer categories:
               </p>
             </div>
             <div className="space-y-1 bg-muted/30 rounded-2xl p-8 border border-border/40">
               <div className="grid gap-6">
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">1</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Browser use frameworks</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Start here: Stagehand, Browser Use, Skyvern, etc. These are your "React" — they decide what action to take next.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">2</div>
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Browser use libraries</p>
+                    <p className="font-semibold text-foreground">Low-level browser use</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, CDP — these send actions to the browser. Most frameworks use these under the hood.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">3</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Specialized browser use</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, SCRAPYBARA for specialized control or desktop OS access when there's no DOM.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">4</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Browsers as a service</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — your "Vercel". Decide where your framework runs (local or cloud).</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">5</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Supporting infrastructure</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for orchestration, retries, state. Anon for secure auth.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">6</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Scraping & crawling APIs</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — use these if you don't need interaction. Cheaper and faster than agents.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">7</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Computer use models</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that power your agent's brain.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-primary font-bold text-sm shrink-0 w-8">8</div>
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">Enterprise automation</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Narada, twin, H — full-stack enterprise solutions if you want an all-in-one platform.</p>
@@ -710,35 +702,35 @@ const Report2025 = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, forms, upload, pagination)</span></h3>
                 <div className="space-y-2 ml-4 text-sm">
-                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → use Firecrawl or similar crawler to fetch content cheaply</p>
+                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → consider tools like Firecrawl or similar crawlers (category 6) to fetch content cheaply</p>
                   <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-semibold text-foreground mb-3 text-base">Pick control layer</h3>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick control layer <span className="text-sm text-muted-foreground font-normal">(category 1: Browser use frameworks)</span></h3>
                 <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                  <li>• Browser Use for speed</li>
-                  <li>• Stagehand for reliability</li>
-                  <li>• Skyvern for vision-heavy pages</li>
+                  <li>• Options include Browser Use, Stagehand, or Skyvern depending on your needs</li>
+                  <li>• Consider speed vs. reliability tradeoffs</li>
+                  <li>• Vision-based approaches may work better for certain page types</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-semibold text-foreground mb-3 text-base">Pick infrastructure</h3>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick infrastructure <span className="text-sm text-muted-foreground font-normal">(category 4: Browsers as a service)</span></h3>
                 <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                  <li>• Browserbase if you need replay and observability</li>
-                  <li>• Anchor for simple scalable sessions</li>
-                  <li>• Hyperbrowser for anti-bot heavy environments</li>
+                  <li>• Options include Browserbase, Anchor, or Hyperbrowser</li>
+                  <li>• Consider needs like replay, observability, session management, and anti-bot capabilities</li>
+                  <li>• Some use cases may benefit from local development before moving to cloud</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-semibold text-foreground mb-3 text-base">Pick model</h3>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Pick model <span className="text-sm text-muted-foreground font-normal">(category 7: Computer use models)</span></h3>
                 <ul className="space-y-1.5 ml-4 text-sm text-muted-foreground">
-                  <li>• Claude Computer Use or OpenAI CUA for pixel control</li>
-                  <li>• Gemini 2.5 for balanced performance</li>
-                  <li>• Or a strong general LLM for DOM/code stacks</li>
+                  <li>• Options include Claude Computer Use, OpenAI CUA, or Gemini 2.5</li>
+                  <li>• Pixel-based control vs. DOM-based approaches have different strengths</li>
+                  <li>• Consider cost, latency, and accuracy tradeoffs for your use case</li>
                 </ul>
               </div>
             </div>
@@ -755,42 +747,37 @@ const Report2025 = () => {
               <div className="flex gap-4 items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Timeouts</p>
-                  <p className="text-sm text-muted-foreground">Long trajectories, slow DOMs, flaky waits</p>
+                  <p className="font-semibold text-foreground mb-1">Captchas & bot detection</p>
+                  <p className="text-sm text-muted-foreground">Gatekeepers like Cloudflare, Google, and DataDome are increasingly limiting automated access with fingerprinting and behavioral scoring.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Pop-ups & modals</p>
-                  <p className="text-sm text-muted-foreground">Can't close or mis-detect overlays</p>
+                  <p className="font-semibold text-foreground mb-1">Timeouts & race conditions</p>
+                  <p className="text-sm text-muted-foreground">Nondeterministic server responsiveness and network latency disrupt any brittle, timing-dependent logic and expectations.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Captcha & fingerprinting</p>
-                  <p className="text-sm text-muted-foreground">Infra issues often block agents more than reasoning does</p>
+                  <p className="font-semibold text-foreground mb-1">Layout & selector drift</p>
+                  <p className="text-sm text-muted-foreground">DOM heuristics that once worked break as sites update normally or randomize their elements on purpose.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Auth flows</p>
-                  <p className="text-sm text-muted-foreground">Login, MFA, device checks, bot walls</p>
+                  <p className="font-semibold text-foreground mb-1">Authentication & checkout flows</p>
+                  <p className="text-sm text-muted-foreground">Current models can struggle when attempting complex, stateful interactions like submitting login or payment forms.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Slow execution</p>
-                  <p className="text-sm text-muted-foreground">Vision loops for trivial steps explode cost & latency</p>
+                  <p className="font-semibold text-foreground mb-1">Cost & scaling constraints</p>
+                  <p className="text-sm text-muted-foreground">Browsers have expensive CPU and memory demands, vision or perception loops add cost, and managing many concurrent sessions is nontrivial.</p>
                 </div>
-              </div>
-              <div className="pt-6 mt-6 border-t border-border/50">
-                <p className="text-sm font-semibold text-foreground">
-                  Translation: fix infra first - then policy.
-                </p>
               </div>
             </div>
           </div>
@@ -801,17 +788,24 @@ const Report2025 = () => {
 
             <div className="space-y-4">
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
-                <h4 className="font-semibold text-foreground mb-3 text-base">Do I start with a provider-hosted Computer Use model or a framework?</h4>
+                <h4 className="font-semibold text-foreground mb-3 text-base">Should you start with a computer-use model or lower-level infrastructure layer or framework?</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Start with provider-hosted to ship a demo today. Move to framework + infra when you need replay, audits, stealth control, data residency.
+                  If your goal is to ship a demo quickly, starting with a managed computer-use model makes sense. As you productionize your agent and need more control, you can move down the stack to an infrastructure layer or framework that exposes fingerprint management, session replay, data residency, and other advanced features.
                 </p>
               </div>
 
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
-                <h4 className="font-semibold text-foreground mb-3 text-base">Is pixel better than DOM?</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Reading is easy either way. For write-heavy flows, DOM-first plus deterministic code paths often wins on latency and stability - pixel is improving fast.
-                </p>
+                <h4 className="font-semibold text-foreground mb-3 text-base">Does DOM- or vision-based interaction perform better?</h4>
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <p>
+                    DOM automation has historically outperformed vision automation in speed, robustness, and maintenance cost.<a href="https://sepl.dibris.unige.it/publications/2014-leotta-ICWE.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">1</a> However, hybrid approaches that use the DOM when possible and fall back to vision have been gaining traction<a href="https://aclanthology.org/2025.findings-acl.1158.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">2</a> and vision-only approaches are also improving rapidly<a href="https://cs231n.stanford.edu/papers/text_file_840592471-CS_231N_Final_Report.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] align-super text-primary hover:underline">3</a>.
+                  </p>
+                  <div className="pt-3 border-t border-border/30 mt-3 space-y-1.5 text-[11px]">
+                    <p>1. <a href="https://sepl.dibris.unige.it/publications/2014-leotta-ICWE.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">Visual vs. DOM-based Web Locators: An Empirical Study</a>, Maurizio Leotta et al.</p>
+                    <p>2. <a href="https://aclanthology.org/2025.findings-acl.1158.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">GUI Agents: A Survey</a>, Dang Nguyen et al.</p>
+                    <p>3. <a href="https://cs231n.stanford.edu/papers/text_file_840592471-CS_231N_Final_Report.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">WebSight: A Vision-First Architecture for Robust Web Agents</a>, Tanvir Bhathal and Asanshay Gupta</p>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-muted/30 rounded-xl p-6 border border-border/40">
