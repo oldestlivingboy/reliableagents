@@ -637,49 +637,49 @@ const Report2025 = () => {
               <div className="grid gap-6">
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Browser use frameworks</p>
+                    <p className="font-semibold text-foreground">1. Browser use frameworks</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Start here: Stagehand, Browser Use, Skyvern, etc. These are your "React" — they decide what action to take next.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Low-level browser use</p>
+                    <p className="font-semibold text-foreground">2. Low-level browser use</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, CDP — these send actions to the browser. Most frameworks use these under the hood.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Specialized browser use</p>
+                    <p className="font-semibold text-foreground">3. Specialized browser use</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, SCRAPYBARA for specialized control or desktop OS access when there's no DOM.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Browsers as a service</p>
+                    <p className="font-semibold text-foreground">4. Browsers as a service</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — your "Vercel". Decide where your framework runs (local or cloud).</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Supporting infrastructure</p>
+                    <p className="font-semibold text-foreground">5. Supporting infrastructure</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for orchestration, retries, state. Anon for secure auth.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Scraping & crawling APIs</p>
+                    <p className="font-semibold text-foreground">6. Scraping & crawling APIs</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — use these if you don't need interaction. Cheaper and faster than agents.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Computer use models</p>
+                    <p className="font-semibold text-foreground">7. Computer use models</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that power your agent's brain.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Enterprise automation</p>
+                    <p className="font-semibold text-foreground">8. Enterprise automation</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Narada, twin, H — full-stack enterprise solutions if you want an all-in-one platform.</p>
                   </div>
                 </div>
@@ -778,6 +778,44 @@ const Report2025 = () => {
                   <p className="font-semibold text-foreground mb-1">Cost & scaling constraints</p>
                   <p className="text-sm text-muted-foreground">Browsers have expensive CPU and memory demands, vision or perception loops add cost, and managing many concurrent sessions is nontrivial.</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Static Consultation Widget */}
+            <div className="relative bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-xl border border-border/40 rounded-3xl shadow-2xl overflow-hidden max-w-2xl mx-auto cursor-pointer"
+              onClick={() => window.open('https://app.cal.com/oldestlivingboy/reliableagents', '_blank')}
+            >
+              {/* Halloween emoji background pattern */}
+              <div className="absolute inset-0 opacity-[0.15] pointer-events-none select-none overflow-hidden text-sm leading-relaxed">
+                <div className="grid grid-cols-8 gap-3 p-3">
+                  {['🎃', '👻', '🎃', '🦇', '🕸️', '🎃', '👻', '🦇',
+                    '🦇', '🕸️', '🎃', '👻', '🎃', '🦇', '🕸️', '🎃',
+                    '👻', '🎃', '🦇', '🕸️', '🎃', '👻', '🦇', '🕸️',
+                    '🕸️', '🎃', '👻', '🎃', '🦇', '🕸️', '🎃', '👻'].map((emoji, i) => (
+                    <span key={i} className="inline-block">{emoji}</span>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-60" />
+              
+              {/* Content */}
+              <div className="relative px-7 py-6 space-y-4 z-10">
+                <div className="space-y-2.5">
+                  <h4 className="text-lg font-semibold text-foreground leading-tight tracking-tight">
+                    🎃 How reliable is your browser automation workflow?
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Grab a free expert consultation & share your use case{" "}
+                    <span className="font-medium" style={{ color: 'hsl(var(--status-warning))' }}>(limited slots)</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Hover effect */}
+              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
               </div>
             </div>
           </div>
