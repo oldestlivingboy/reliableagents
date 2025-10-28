@@ -19,13 +19,9 @@ import { Button } from "@/components/ui/button";
 const categories = [
   { id: "cat_1", title: "Browser use frameworks", icon: Rocket },
   { id: "cat_2", title: "Browser use libraries/protocols", icon: Code2 },
-  { id: "cat_3", title: "Specialized browser use", icon: LineChart },
   { id: "cat_4", title: "Browsers as a service", icon: BarChart3 },
-  { id: "cat_5", title: "Supporting infrastructure", icon: Briefcase },
   { id: "cat_6", title: "Scraping & crawling APIs", icon: Globe },
   { id: "cat_7", title: "Computer use models", icon: Building2 },
-  { id: "cat_8", title: "Enterprise automation", icon: Briefcase },
-  { id: "cat_9", title: "Consumer automation", icon: Globe },
   { id: "cat_10", title: "Consumer browsers", icon: Code2 },
 ];
 
