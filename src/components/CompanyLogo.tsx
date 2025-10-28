@@ -65,6 +65,7 @@ import sentiusLogo from '@/assets/logos/sentius.png';
 import parseraLogo from '@/assets/logos/parsera.png';
 import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png';
 import cometLogo from '@/assets/logos/comet.png';
+import marinerLogo from '@/assets/logos/mariner.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -123,7 +124,7 @@ const logoMap: { [key: string]: string } = {
   'openai computer-using agent (cua)': openaiLogo,
   'anthropic claude': anthropicLogo,
   'google gemini 2.5 computer use model': googleLogo,
-  'google project mariner': googleLogo,
+  'google project mariner': marinerLogo,
   'amazon nova (acq adept ai)': amazonLogo,
   'axiom-1 by induction labs': openaiLogo,
   
