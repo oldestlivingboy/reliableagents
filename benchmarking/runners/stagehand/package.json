@@ -1,16 +1,16 @@
 {
   "name": "stagehand-runner",
   "version": "1.0.0",
-  "description": "Stagehand runner for web reliability benchmarking.",
+  "description": "Stagehand runner for Reliable Agents benchmarking.",
   "keywords": [
-    "web",
-    "reliability",
+    "reliable",
+    "agents",
     "benchmarking",
     "stagehand",
     "runner"
   ],
   "author": "Brian Kennish <oldestlivingboy@gmail.com>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oldestlivingboy/webreliability"
+    "url": "https://github.com/oldestlivingboy/reliableagents"
   }
 }
