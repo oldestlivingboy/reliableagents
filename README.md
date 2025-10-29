@@ -83,6 +83,20 @@ Created by **Alex Nevedovsky** and **Brian Kennish**
 
 ---
 
-### Tagline (for GitHub description)
+## License
 
-> Tracking the frameworks, benchmarks, and breakthroughs powering the reliable agent era.
+Copyright 2025– Alex Nevedovsky and Brian Kennish.
+
+This program is free software, excluding the brand features identified in the
+[Exceptions](#exceptions) below: you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+[GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
+
+## Exceptions
+
+The **Reliable Agents** logos, trademarks, domain names, and other brand features used in this
+program cannot be reused without permission and no license is granted thereto.
