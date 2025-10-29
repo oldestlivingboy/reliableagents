@@ -1,10 +1,6 @@
-# ⚙️ Reliable Agents
+# [![Reliable Agents](assets/logotype-optimized.png)](https://reliableagents.ai/)
 
 The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
-
-<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/80835082-8120-494d-998f-a5f4d3530783" />
-
----
 
 ## About
 
@@ -16,19 +12,9 @@ It was created by **Alex Nevedovsky** and **Brian Kennish**, founders and operat
 
 The project began as part of the **[No Cap](https://nocap.so)** initiative to identify, test, and benchmark the world’s most consistent AI agents — and has since expanded into a shared knowledge base for builders, researchers, and investors navigating the agentic stack.
 
----
-
 ## Live Resource
 
 🔗 [View ReliableAgents.ai](https://reliableagents.ai)
-
----
-
-## Featured In
-
-_Coming soon — media coverage, benchmarks, and technical deep dives._
-
----
 
 ## What’s Inside
 
@@ -40,20 +26,16 @@ The resource currently catalogs and analyzes:
 - Performance and reproducibility metrics across use cases
 - Verified public tests and community submissions
 
----
-
 ## Key Metrics Tracked
 
 For each agent or system, we highlight:
 
-- **Reliability Score** – consistent task success rate across runs  
-- **Reproducibility** – ability to yield identical outcomes under identical prompts  
-- **Autonomy Depth** – degree of self-planning and multi-step execution  
-- **Browser Competence** – capability in real-world web tasks  
-- **Integration Stack** – model, framework, and runtime details  
-- **Last Verified Date** – to ensure freshness and trust  
-
----
+- **Reliability Score** – consistent task success rate across runs
+- **Reproducibility** – ability to yield identical outcomes under identical prompts
+- **Autonomy Depth** – degree of self-planning and multi-step execution
+- **Browser Competence** – capability in real-world web tasks
+- **Integration Stack** – model, framework, and runtime details
+- **Last Verified Date** – to ensure freshness and trust
 
 ## Submission Guidelines
 
@@ -65,27 +47,24 @@ You can:
 - Submit a Pull Request to this repository
 - Include documentation or demo results when available
 
----
-
 ## Verification
 
 Each listing is reviewed for:
 
-- Technical credibility and source transparency  
-- Reproducible evidence (videos, logs, or open benchmarks)  
-- Community validation or publication references  
+- Technical credibility and source transparency
+- Reproducible evidence (videos, logs, or open benchmarks)
+- Community validation or publication references
 
----
+## Contributors
 
-## Credits
-
-Created by **Alex Nevedovsky** and **Brian Kennish**  
-
----
+**Reliable Agents** is made by [Alex](https://www.linkedin.com/in/ednevsky/), a repeat founder with
+an AI exit and the creator of the viral investing agent [No Cap](https://nocap.so/), and by
+[Brian](https://oldestlivingboy.com/), Google’s first devrel engineer and a founder of two
+profitable browser-related companies.
 
 ## License
 
-Copyright 2025– Alex Nevedovsky and Brian Kennish.
+Copyright 2025– **Alex Nevedovsky** and **Brian Kennish**.
 
 This program is free software, excluding the brand features identified in the
 [Exceptions](#exceptions) below: you can redistribute it and/or modify it under the terms of the GNU
