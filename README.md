@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# ⚙️ Reliable Agents
 
-## Project info
+The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
 
-**URL**: https://lovable.dev/projects/3d61adb5-4798-44b5-9e26-3a5987202a7c
+<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/80835082-8120-494d-998f-a5f4d3530783" />
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## About
 
-**Use Lovable**
+**Reliable Agents** is a public resource and ecosystem map documenting the frameworks, benchmarks, and breakthroughs shaping the agentic future — from browser-capable systems to self-improving reasoning models.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d61adb5-4798-44b5-9e26-3a5987202a7c) and start prompting.
+It was created by **Alex Nevedovsky** and **Brian Kennish**, founders and operators obsessed with one question:
 
-Changes made via Lovable will be committed automatically to this repo.
+> “Which agents can we actually trust to work — every time?”
 
-**Use your preferred IDE**
+The project began as part of the **[No Cap](https://nocap.so)** initiative to identify, test, and benchmark the world’s most consistent AI agents — and has since expanded into a shared knowledge base for builders, researchers, and investors navigating the agentic stack.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Live Resource
 
-Follow these steps:
+🔗 [View ReliableAgents.ai](https://reliableagents.ai)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Featured In
 
-# Step 3: Install the necessary dependencies.
-npm i
+_Coming soon — media coverage, benchmarks, and technical deep dives._
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## What’s Inside
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The resource currently catalogs and analyzes:
 
-**Use GitHub Codespaces**
+- Agent frameworks and SDKs (e.g. CrewAI, AutoGen, LangGraph)
+- Reliable browsing / automation stacks (e.g. Browserbase, Stagehand, Claude Computer Use)
+- Benchmark datasets and evaluation methodologies
+- Performance and reproducibility metrics across use cases
+- Verified public tests and community submissions
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## Key Metrics Tracked
 
-This project is built with:
+For each agent or system, we highlight:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Reliability Score** – consistent task success rate across runs  
+- **Reproducibility** – ability to yield identical outcomes under identical prompts  
+- **Autonomy Depth** – degree of self-planning and multi-step execution  
+- **Browser Competence** – capability in real-world web tasks  
+- **Integration Stack** – model, framework, and runtime details  
+- **Last Verified Date** – to ensure freshness and trust  
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/3d61adb5-4798-44b5-9e26-3a5987202a7c) and click on Share -> Publish.
+## Submission Guidelines
 
-## Can I connect a custom domain to my Lovable project?
+Know an agent, benchmark, or framework that should be included?
 
-Yes, you can!
+You can:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Email tips or data points to **[ednevsky+ra@gmail.com](mailto:ednevsky+ra@gmail.com)**
+- Submit a Pull Request to this repository
+- Include documentation or demo results when available
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## Verification
+
+Each listing is reviewed for:
+
+- Technical credibility and source transparency  
+- Reproducible evidence (videos, logs, or open benchmarks)  
+- Community validation or publication references  
+
+---
+
+## Credits
+
+Created by **Alex Nevedovsky** and **Brian Kennish**  
+
+---
+
+### Tagline (for GitHub description)
+
+> Tracking the frameworks, benchmarks, and breakthroughs powering the reliable agent era.
