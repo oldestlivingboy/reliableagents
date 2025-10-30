@@ -1,6 +1,6 @@
-# [![Reliable Agents](assets/logotype-optimized.png)](https://reliableagents.ai/)
+[![Reliable Agents](assets/logotype-optimized.png)](https://reliableagents.ai/)
 
-The official resource tracking the rise of reliable, autonomous, and agentic systems powering the next generation of AI-native software.
+*Documenting the emerging stack for AI-native, agentic software.*
 
 ## About
 
@@ -37,16 +37,6 @@ For each agent or system, we highlight:
 - **Integration Stack** – model, framework, and runtime details
 - **Last Verified Date** – to ensure freshness and trust
 
-## Submission Guidelines
-
-Know an agent, benchmark, or framework that should be included?
-
-You can:
-
-- Email tips or data points to **[ednevsky+ra@gmail.com](mailto:ednevsky+ra@gmail.com)**
-- Submit a Pull Request to this repository
-- Include documentation or demo results when available
-
 ## Verification
 
 Each listing is reviewed for:
@@ -55,12 +45,23 @@ Each listing is reviewed for:
 - Reproducible evidence (videos, logs, or open benchmarks)
 - Community validation or publication references
 
+## Submission Guidelines
+
+Know a tool or service that should be included?
+
+You can:
+
+* Email tips to ednevsky+ra@gmail.com
+* Submit a pull request to this repository
+
+Where possible, include data, demos, or other documentation.
+
 ## Contributors
 
-**Reliable Agents** is made by [Alex](https://www.linkedin.com/in/ednevsky/), a repeat founder with
-an AI exit and the creator of the viral investing agent [No Cap](https://nocap.so/), and by
+**Reliable Agents** is compiled by [Alex](https://www.linkedin.com/in/ednevsky/), a repeat founder
+with an AI exit and the creator of the viral investing agent [No Cap](https://nocap.so/), and by
 [Brian](https://oldestlivingboy.com/), Google’s first devrel engineer and a founder of two
-profitable browser-related companies.
+profitable browser-based companies.
 
 ## License
 
