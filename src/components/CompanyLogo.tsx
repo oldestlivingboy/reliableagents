@@ -130,7 +130,6 @@ const logoMap: { [key: string]: string } = {
   'google gemini 2.5 computer use model': googleLogo,
   'google project mariner': marinerLogo,
   'amazon nova (acq adept ai)': amazonLogo,
-  'axiom-1 by induction labs': openaiLogo,
   
   // Enterprise automation
   'notte.cc': notteLogo,
