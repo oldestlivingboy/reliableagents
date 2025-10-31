@@ -80,7 +80,9 @@ const Index = () => {
                 >
                   No Cap
                 </a>
-                , viral AI investing agent, and{" "}
+                , viral AI investing agent,{" "}
+                <br className="hidden sm:inline" />
+                and{" "}
                 <a 
                   href="https://oldestlivingboy.com/" 
                   target="_blank" 
@@ -89,14 +91,12 @@ const Index = () => {
                 >
                   🌐 Brian
                 </a>
-                ,{" "}
-                <br className="hidden sm:inline" />
-                first devrel engineer at Google and founder of two profitable browser and networking companies.
+                , first devrel engineer at Google and founder of two profitable browser-related companies.
               </p>
             </div>
             
             <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
-              © 2025 All rights reserved
+              © 2025 Some rights reserved
             </p>
           </div>
         </div>

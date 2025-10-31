@@ -106,7 +106,7 @@ const ConsultationPopup = () => {
               🎃 How reliable is your browser automation?
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Grab a free expert consultation & share your use-case with community{" "}
+              Grab a free expert consultation & share your use case with community{" "}
               <span className="font-medium" style={{ color: 'hsl(var(--status-warning))' }}>(limited slots)</span>
             </p>
           </div>

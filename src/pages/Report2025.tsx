@@ -641,43 +641,43 @@ const Report2025 = () => {
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">1. Browser use frameworks</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Start here: Stagehand, Browser Use, Skyvern, etc. These are your "React" — they decide what action to take next.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Stagehand, Browser Use, Skyvern — a convenient abstraction layer for you to work at, like React is for web development</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">2. Low-level browser use</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, CDP — these send actions to the browser. Most frameworks use these under the hood.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer — automation runtimes that issue browser commands, often on behalf of the frameworks and similarly to how JavaScript controls web apps</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">3. Specialized browser use</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, SCRAPYBARA for specialized control or desktop OS access when there's no DOM.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, Scrapybara — OS access or other control when there's no DOM</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">4. Browsers as a service</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — your "Vercel". Decide where your framework runs (local or cloud).</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — cloud infrastructure for your browsers, analogous to Vercel for web hosting</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">5. Supporting infrastructure</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph for orchestration, retries, state. Anon for secure auth. Massive for ethical proxy networks.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph, Anon — orchestration, retries, state, and secure authentication</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">6. Scraping & crawling APIs</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — use these if you don't need interaction. Cheaper and faster than agents.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — mostly "read-only" web extraction that can be more economical than a fully interactive agent</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">7. Computer use models</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that power your agent's brain.</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that serve as your agent's brain</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -690,8 +690,8 @@ const Report2025 = () => {
               
               <div className="pt-6 mt-6 border-t border-border/50">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  <span className="font-semibold">Key insight:</span> Pick your framework first (category 1), then pick where it runs (category 4). 
-                  Treat frameworks like your "React" and browser services like your "Vercel".
+                  <span className="font-semibold">Key insight:</span> Choose a framework first (category 1), then choose where to host the framework (category 4). 
+                  Think of browser use frameworks like web frameworks (e.g., React) and browsers as a service like hosting platforms (e.g., Vercel).
                 </p>
               </div>
             </div>
@@ -703,9 +703,9 @@ const Report2025 = () => {
 
             <div className="bg-muted/30 rounded-2xl p-8 border border-border/40 space-y-8">
               <div>
-                <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, forms, upload, pagination)</span></h3>
+                <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, form submission, file upload, pagination)</span></h3>
                 <div className="space-y-2 ml-4 text-sm">
-                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → consider tools like Firecrawl or similar crawlers (category 6) to fetch content cheaply</p>
+                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → consider scraping tools (category 6) to fetch content cheaply</p>
                   <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
                 </div>
               </div>
@@ -787,14 +787,16 @@ const Report2025 = () => {
             {/* Static Consultation Widget */}
             <div 
               className="bg-muted/30 rounded-xl p-6 border border-border/40 cursor-pointer hover:border-primary/40 transition-colors"
-              onClick={() => window.open('https://app.cal.com/oldestlivingboy/reliableagents', '_blank')}
+              data-cal-link="oldestlivingboy/reliableagents"
+              data-cal-namespace="reliableagents"
+              data-cal-config='{"layout":"month_view"}'
             >
               <h4 className="font-semibold text-foreground mb-3 text-base">
-                Facing one of these problems and would like to know how to avoid them?
+                Running into any of these problems and want to talk through how to solve them?
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Grab a free expert consultation to get immediate insights on these problems{" "}
-                <span className="font-medium text-primary">(limited slots)</span>
+                Grab a free expert consultation — we'll help accelerate your agent development and you'll help us learn more to improve this resource{" "}
+                <span className="font-medium text-primary">(slots are limited)</span>.
               </p>
             </div>
           </div>
@@ -890,23 +892,23 @@ const Report2025 = () => {
                   >
                     No Cap
                   </a>
-                  , viral AI investing agent, and{" "}
-                  <a 
-                    href="https://oldestlivingboy.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
-                  >
-                    🌐 Brian
-                  </a>
-                  ,{" "}
-                  <br className="hidden sm:inline" />
-                  first devrel engineer at Google and founder of two profitable browser and networking companies.
+                , viral AI investing agent,{" "}
+                <br className="hidden sm:inline" />
+                and{" "}
+                <a 
+                  href="https://oldestlivingboy.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium underline decoration-muted-foreground/30 hover:decoration-primary underline-offset-4"
+                >
+                  🌐 Brian
+                </a>
+                , first devrel engineer at Google and founder of two profitable browser-related companies.
                 </p>
               </div>
               
               <p className="text-[10px] text-muted-foreground/50 max-w-2xl mx-auto">
-                © 2025 All rights reserved
+                © 2025 Some rights reserved
               </p>
             </div>
           </div>

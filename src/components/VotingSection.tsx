@@ -267,7 +267,7 @@ const VotingSection = () => {
                   value={customCategory}
                   onChange={(e) => setCustomCategory(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleCustomCategorySubmit()}
-                  placeholder="e.g., Testing unlogged LinkedIn scraping"
+                  placeholder="E.g., testing logged-out LinkedIn scraping"
                   className="flex-1 text-sm"
                   maxLength={100}
                 />
