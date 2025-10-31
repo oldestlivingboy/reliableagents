@@ -881,7 +881,7 @@ const Report2025 = () => {
                   >
                     🚀 Alex
                   </a>
-                  , repeat founder with an AI exit and Creator of{" "}
+                  , repeat founder with an AI exit and creator of{" "}
                   <a 
                     href="https://nocap.so" 
                     target="_blank" 
