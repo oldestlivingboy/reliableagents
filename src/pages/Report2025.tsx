@@ -665,7 +665,7 @@ const Report2025 = () => {
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">5. Supporting infrastructure</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph, Anon — orchestration, retries, state, and secure authentication</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph, Anon — orchestration, retries, state, and secure authentication. Massive for ethical proxy networks</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
