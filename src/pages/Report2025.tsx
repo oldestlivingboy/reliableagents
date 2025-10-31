@@ -64,6 +64,7 @@ const Report2025 = () => {
       'inngest': 'https://www.inngest.com/',
       'ingnest': 'https://www.inngest.com/',
       'anon': 'https://www.anon.com/',
+      'massive': 'https://www.joinmassive.com/',
       'jsonify': 'https://jsonify.com/',
       'sentius ai': 'https://www.sentius.ai/',
       'parsera': 'https://parsera.org/',
@@ -358,7 +359,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                       
-                      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-1.5 md:gap-2">
+                      <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-2">
                       {category.companies.map((company, companyIdx) => {
                         const domain = getCompanyDomain(company.name);
                         const categoryCount = company.category.split(';').length;
@@ -373,7 +374,7 @@ const Report2025 = () => {
                             className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
                             title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                           >
-                            <div className={`w-11 h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                            <div className={`w-14 h-14 sm:w-11 sm:h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 sm:p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                               <CompanyLogo
                                 companyName={company.name}
                                 domain={domain}
@@ -413,7 +414,7 @@ const Report2025 = () => {
                       </span>
                     </div>
                     
-                    <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-5 gap-1.5 md:gap-2">
+                    <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-5 gap-2 md:gap-2">
                     {category.companies.map((company, companyIdx) => {
                       const domain = getCompanyDomain(company.name);
                       const categoryCount = company.category.split(';').length;
@@ -428,7 +429,7 @@ const Report2025 = () => {
                           className="group flex flex-col items-center gap-1.5 transition-all duration-200 hover:scale-105 relative"
                           title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                         >
-                          <div className={`w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                          <div className={`w-14 h-14 sm:w-12 sm:h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2.5 sm:p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                             <CompanyLogo
                               companyName={company.name}
                               domain={domain}
@@ -467,7 +468,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
+                <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -482,7 +483,7 @@ const Report2025 = () => {
                       className="group flex flex-col items-center gap-1.5 transition-all duration-200 hover:scale-105 relative"
                       title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                     >
-                      <div className={`w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                      <div className={`w-14 h-14 sm:w-12 sm:h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2.5 sm:p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                         <CompanyLogo
                           companyName={company.name}
                           domain={domain}
@@ -520,7 +521,7 @@ const Report2025 = () => {
                 </span>
               </div>
               
-                <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-1.5 md:gap-2">
+                <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-2">
                 {category.companies.map((company, companyIdx) => {
                   const domain = getCompanyDomain(company.name);
                   const categoryCount = company.category.split(';').length;
@@ -535,7 +536,7 @@ const Report2025 = () => {
                       className="group flex flex-col items-center gap-1.5 transition-all duration-200 hover:scale-105 relative"
                       title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                     >
-                      <div className={`w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                      <div className={`w-14 h-14 sm:w-12 sm:h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2.5 sm:p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                         <CompanyLogo
                           companyName={company.name}
                           domain={domain}
@@ -574,7 +575,7 @@ const Report2025 = () => {
                 </span>
               </div>
               
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-1.5 md:gap-2">
+              <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-2">
               {category.companies.map((company, companyIdx) => {
                 const domain = getCompanyDomain(company.name);
                 const categoryCount = company.category.split(';').length;
@@ -589,7 +590,7 @@ const Report2025 = () => {
                     className="group flex flex-col items-center gap-1.5 transition-all duration-200 hover:scale-105 relative"
                     title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                   >
-                    <div className={`w-12 h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
+                    <div className={`w-14 h-14 sm:w-12 sm:h-12 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2.5 sm:p-2 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
                       <CompanyLogo
                         companyName={company.name}
                         domain={domain}

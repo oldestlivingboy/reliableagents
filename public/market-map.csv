@@ -25,6 +25,7 @@ LangGraph,,5. Supporting infrastructure,Orchestration framework for LLM agent gr
 Temporal,,5. Supporting infrastructure,Workflow engine for long-running agent tasks.,a16z → Durable Execution & Orchestration,https://temporal.io/,https://temporal.io/images/logos/logo-temporal-with-copy-white-text.svg
 Inngest,,5. Supporting infrastructure,Durable execution/orchestration for agent workflows.,a16z → Durable Execution & Orchestration,https://www.inngest.com/,https://www.inngest.com/logo.svg
 Anon,,5. Supporting infrastructure,Secure auth/access so agents can log in and act safely.,Market Map → Infrastructure,https://www.anon.com/,https://cdn.prod.website-files.com/689bc3805f94765d37f8acd7/68bf5e2914f06cb650e509db_151462d7d320b52ecdfd6605fc35a695_option_anon.svg
+Massive,,5. Supporting infrastructure,100% ethically-sourced residential proxy network for web data collection.,Market Map → Infrastructure,https://www.joinmassive.com/,src/assets/logos/massive.png
 RiveterHQ,,6. Scraping & crawling APIs,,,https://riveterhq.com/,https://framerusercontent.com/images/3jiyWMBSmsgvoQg8Awfgrn622LU.png?width=1980&height=532
 Zyte,,6. Scraping & crawling APIs,Web data platform offering scraping services and APIs.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.zyte.com/,https://logowik.com/content/uploads/images/zyte3602.jpg
 Parsera,,6. Scraping & crawling APIs,,,https://parsera.org/,src/assets/logos/parsera.png

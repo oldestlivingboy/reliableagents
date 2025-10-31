@@ -66,6 +66,7 @@ import parseraLogo from '@/assets/logos/parsera.png';
 import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png';
 import cometLogo from '@/assets/logos/comet.png';
 import marinerLogo from '@/assets/logos/mariner.png';
+import massiveLogo from '@/assets/logos/massive.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -102,6 +103,7 @@ const logoMap: { [key: string]: string } = {
   'inngest': inngestLogo,
   'langgraph': langgraphLogo,
   'anon': anonLogo,
+  'massive': massiveLogo,
   
   // Scraping/APIs
   'riveterhq': riveterhqLogo,
@@ -197,7 +199,7 @@ export const CompanyLogo = ({ companyName, domain, categoryColor, className = ''
       img.style.display = 'none';
       const parent = img.parentElement;
       if (parent) {
-        parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-xs font-bold" style="color: ${categoryColor}">${companyName.charAt(0)}</div>`;
+        parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-base sm:text-xs font-bold text-foreground opacity-40">${companyName.charAt(0)}</div>`;
       }
     }
   };
