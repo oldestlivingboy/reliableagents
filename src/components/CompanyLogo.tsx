@@ -68,6 +68,7 @@ import cometLogo from '@/assets/logos/comet.png';
 import marinerLogo from '@/assets/logos/mariner.png';
 import massiveLogo from '@/assets/logos/massive.png';
 import extractLogo from '@/assets/logos/extruct.png';
+import axiomLogo from '@/assets/logos/axiom.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -130,6 +131,7 @@ const logoMap: { [key: string]: string } = {
   'google gemini 2.5 computer use model': googleLogo,
   'google project mariner': marinerLogo,
   'amazon nova (acq adept ai)': amazonLogo,
+  'axiom-1 by induction labs': axiomLogo,
   
   // Enterprise automation
   'notte.cc': notteLogo,
