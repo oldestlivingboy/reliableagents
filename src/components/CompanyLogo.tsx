@@ -67,6 +67,7 @@ import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png'
 import cometLogo from '@/assets/logos/comet.png';
 import marinerLogo from '@/assets/logos/mariner.png';
 import massiveLogo from '@/assets/logos/massive.png';
+import extractLogo from '@/assets/logos/extruct.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -104,6 +105,7 @@ const logoMap: { [key: string]: string } = {
   'langgraph': langgraphLogo,
   'anon': anonLogo,
   'massive': massiveLogo,
+  'extruct.ai': extractLogo,
   
   // Scraping/APIs
   'riveterhq': riveterhqLogo,
