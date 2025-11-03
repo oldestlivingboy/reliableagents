@@ -18,6 +18,7 @@ import perplexityLogo from '@/assets/logos/perplexity.png';
 import playwrightLogo from '@/assets/logos/playwright-new.svg';
 import puppeteerLogo from '@/assets/logos/puppeteer.png';
 import stagehandLogo from '@/assets/logos/stagehand.png';
+import directorLogo from '@/assets/logos/director.png';
 import tavilyLogo from '@/assets/logos/tavily.png';
 import temporalLogo from '@/assets/logos/temporal.png';
 import triggerdevLogo from '@/assets/logos/triggerdev.png';
@@ -85,8 +86,9 @@ const logoMap: { [key: string]: string } = {
   // Frameworks
   'browser use': browseruseLogo,
   'stagehand': stagehandLogo,
-  'director': stagehandLogo,
-  'director (browserbase)': stagehandLogo,
+  'director': directorLogo,
+  'director.ai': directorLogo,
+  'director (browserbase)': directorLogo,
   'trigger.dev': triggerdevLogo,
   'magnitude.run': magnitudeLogo,
   'simular': simularLogo,
