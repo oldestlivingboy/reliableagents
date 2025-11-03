@@ -66,7 +66,7 @@ const Report2025 = () => {
       'anon': 'https://www.anon.com/',
       'massive': 'https://www.joinmassive.com/',
       'jsonify': 'https://jsonify.com/',
-      'sentius ai': 'https://www.sentius.ai/',
+      'successors.ai': 'https://www.sentius.ai/',
       'parsera': 'https://parsera.org/',
       'riveterhq.com': 'https://riveterhq.com/',
       'zyte.com': 'https://www.zyte.com/',
