@@ -630,7 +630,7 @@ const Report2025 = () => {
             <h3 className="text-xl font-semibold text-foreground">Building Your Stack</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
-                The market map shows nine categories, but developers should focus on the first seven to build their stack. 
+                The market map shows ten categories, but developers should focus on the first eight to build their stack. 
                 The last two are consumer-facing products. Here's how to think through the developer categories:
               </p>
             </div>
