@@ -56,7 +56,9 @@ import manusLogo from '@/assets/logos/manus.svg';
 import nanobrowserLogo from '@/assets/logos/nanobrowser.png';
 import generalagentsLogo from '@/assets/logos/generalagents.svg';
 import godmodeLogo from '@/assets/logos/godmode.png';
+import godmodeNewLogo from '@/assets/logos/godmode-new.png';
 import dexLogo from '@/assets/logos/dex.svg';
+import yutoriLogo from '@/assets/logos/yutori.png';
 import scrapybaraLogo from '@/assets/logos/scrapybara.png';
 import cuaLogo from '@/assets/logos/cua-new.png';
 import opencuaLogo from '@/assets/logos/opencua-new.png';
@@ -164,11 +166,12 @@ const logoMap: { [key: string]: string } = {
   'manus': manusLogo,
   'nanobrowser': nanobrowserLogo,
   'general agents': generalagentsLogo,
-  'godmode ai': godmodeLogo,
+  'godmode ai': godmodeNewLogo,
   'dex': dexLogo,
   'dex (thirdlayer)': dexLogo,
   'please': pleaseLogo,
   'twin': twinLogo,
+  'yutori': yutoriLogo,
   
   // Browsers
   'google chrome': chromeLogo,
