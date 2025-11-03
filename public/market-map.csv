@@ -1,7 +1,7 @@
 Company / Tool,In touch/comments?,Categories,One-liner,Appears in (Source → Category),Verified URL,Logo Path
 Magnitude.run,,1. Browser use frameworks,,,https://magnitude.run/,src/assets/logos/magnitude.png
 Trigger.dev,,1. Browser use frameworks,,,https://trigger.dev/,https://trigger.dev/assets/triggerdev-logo--light.svg
-Browserbase,,3. Browsers as a service,Managed headless browsers + monitoring at scale.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.browserbase.com/,https://www.browserbase.com/assets/logos/director.png
+Browserbase,,3. Browsers as a service,Managed headless browsers + monitoring at scale.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.browserbase.com/,src/assets/logos/browserbase.png
 Stagehand,,2. Low-level/specialized browser use,AI Browser Automation framework to control web browsers with natural language and code.,Market Map → Frameworks; a16z → Interaction Frameworks,https://www.stagehand.dev/,src/assets/logos/stagehand.png
 Director.ai,,1. Browser use frameworks,An agent that allows building Stagehand workflows using natural language.,Market Map → Frameworks; a16z → Interaction Frameworks,https://www.browserbase.com/blog/introducing-director,src/assets/logos/director.png
 Browser Use,,1. Browser use frameworks,Python library to let agents control a browser (DOM + vision).,Market Map → Frameworks; a16z → Interaction Frameworks,https://github.com/a-r-n-o-l-d/browser-use,No distinct logo
