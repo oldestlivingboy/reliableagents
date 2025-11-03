@@ -639,7 +639,7 @@ const Report2025 = () => {
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">1. Browser use frameworks</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Stagehand, Browser Use, Skyvern — a convenient abstraction layer for you to work at, like React is for web development</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Browser Use, Skyvern — a convenient abstraction layer for you to work at, like React is for web development</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
