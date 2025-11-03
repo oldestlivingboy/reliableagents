@@ -47,13 +47,17 @@ import omniparserLogo from '@/assets/logos/omniparser.png';
 import notteLogo from '@/assets/logos/notte-new.png';
 import kuraLogo from '@/assets/logos/kura.png';
 import emergenceLogo from '@/assets/logos/emergence-new.png';
+import emergenceNewerLogo from '@/assets/logos/emergence-newer.png';
 import twinLogo from '@/assets/logos/twin-new.svg';
 import naradaLogo from '@/assets/logos/narada.svg';
+import naradaNewLogo from '@/assets/logos/narada-new.png';
 import athenaLogo from '@/assets/logos/athena.png';
 import copycatLogo from '@/assets/logos/copycat.png';
 import hcompanyLogo from '@/assets/logos/h-company.svg';
 import basepilotLogo from '@/assets/logos/basepilot.png';
+import basepilotNewLogo from '@/assets/logos/basepilot-new.png';
 import asteroidLogo from '@/assets/logos/asteroid.webp';
+import asteroidNewLogo from '@/assets/logos/asteroid-new.png';
 import manusLogo from '@/assets/logos/manus.svg';
 import nanobrowserLogo from '@/assets/logos/nanobrowser.png';
 import generalagentsLogo from '@/assets/logos/generalagents.svg';
@@ -71,6 +75,7 @@ import uitarsLogo from '@/assets/logos/ui-tars.png';
 import anchorLogo from '@/assets/logos/anchor.svg';
 import kernelLogo from '@/assets/logos/kernel.svg';
 import jsonifyLogo from '@/assets/logos/jsonify.png';
+import jsonifyNewLogo from '@/assets/logos/jsonify-new.png';
 import successorsLogo from '@/assets/logos/successors.png';
 import parseraLogo from '@/assets/logos/parsera.png';
 import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png';
@@ -153,16 +158,16 @@ const logoMap: { [key: string]: string } = {
   // Enterprise automation
   'notte.cc': notteLogo,
   'kura ai': kuraLogo,
-  'emergence': emergenceLogo,
-  'narada': naradaLogo,
+  'emergence': emergenceNewerLogo,
+  'narada': naradaNewLogo,
   'athena intelligence': athenaLogo,
   'copycat': copycatLogo,
   'h': hcompanyLogo,
   'h (h company)': hcompanyLogo,
   'intuned': intunedLogo,
-  'basepilot': basepilotLogo,
-  'asteroid': asteroidLogo,
-  'jsonify': jsonifyLogo,
+  'basepilot': basepilotNewLogo,
+  'asteroid': asteroidNewLogo,
+  'jsonify': jsonifyNewLogo,
   'successors.ai': successorsLogo,
   
   // Consumer automation
