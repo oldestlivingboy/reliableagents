@@ -69,6 +69,9 @@ import marinerLogo from '@/assets/logos/mariner.png';
 import massiveLogo from '@/assets/logos/massive.png';
 import extractLogo from '@/assets/logos/extruct.png';
 import axiomLogo from '@/assets/logos/axiom.png';
+import intunedLogo from '@/assets/logos/intuned.png';
+import sentineloneLogo from '@/assets/logos/sentinelone.png';
+import steelNewLogo from '@/assets/logos/steel.png';
 
 const logoMap: { [key: string]: string } = {
   // Frameworks
@@ -91,8 +94,9 @@ const logoMap: { [key: string]: string } = {
   
   // Browsers as service
   'browserbase': browserbaseLogo,
-  'steel.dev': steelLogo,
+  'steel.dev': steelNewLogo,
   'browserless': browserlessLogo,
+  'sentinelone (s1)': sentineloneLogo,
   'kernel': kernelLogo,
   'anchor browser': anchorLogo,
   'hyperbrowser': hyperbrowserLogo,
@@ -142,6 +146,7 @@ const logoMap: { [key: string]: string } = {
   'copycat': copycatLogo,
   'h': hcompanyLogo,
   'h (h company)': hcompanyLogo,
+  'intuned': intunedLogo,
   'basepilot': basepilotLogo,
   'asteroid': asteroidLogo,
   'jsonify': jsonifyLogo,
