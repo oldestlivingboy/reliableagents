@@ -24,10 +24,13 @@ import triggerdevLogo from '@/assets/logos/triggerdev.png';
 import zyteLogo from '@/assets/logos/zyte.png';
 import openaiLogo from '@/assets/logos/openai.png';
 import anthropicLogo from '@/assets/logos/anthropic.png';
+import anthropicClaudeLogo from '@/assets/logos/anthropic-claude.png';
 import chromeLogo from '@/assets/logos/chrome.svg';
 import googleLogo from '@/assets/logos/google.png';
+import geminiLogo from '@/assets/logos/gemini.png';
 import microsoftLogo from '@/assets/logos/microsoft-copilot.png';
 import amazonLogo from '@/assets/logos/amazon.png';
+import amazonNovaLogo from '@/assets/logos/amazon-nova.png';
 import atlasLogo from '@/assets/logos/atlas.png';
 import magnitudeLogo from '@/assets/logos/magnitude.png';
 import simularLogo from '@/assets/logos/simular.png';
@@ -57,7 +60,10 @@ import dexLogo from '@/assets/logos/dex.svg';
 import scrapybaraLogo from '@/assets/logos/scrapybara.png';
 import cuaLogo from '@/assets/logos/cua-new.png';
 import opencuaLogo from '@/assets/logos/opencua-new.png';
+import opencuaModelLogo from '@/assets/logos/opencua-model.png';
 import lavagueLogo from '@/assets/logos/lavague.png';
+import qwenLogo from '@/assets/logos/qwen.png';
+import uitarsLogo from '@/assets/logos/ui-tars.png';
 import anchorLogo from '@/assets/logos/anchor.svg';
 import kernelLogo from '@/assets/logos/kernel.svg';
 import jsonifyLogo from '@/assets/logos/jsonify.png';
@@ -90,7 +96,6 @@ const logoMap: { [key: string]: string } = {
   'scrapybara': scrapybaraLogo,
   'cua': cuaLogo,
   'lavague': lavagueLogo,
-  'opencua': opencuaLogo,
   
   // Browsers as service
   'browserbase': browserbaseLogo,
@@ -131,11 +136,14 @@ const logoMap: { [key: string]: string } = {
   // Computer use models
   'openai operator': openaiLogo,
   'openai computer-using agent (cua)': openaiLogo,
-  'anthropic claude': anthropicLogo,
-  'google gemini 2.5 computer use model': googleLogo,
+  'anthropic claude': anthropicClaudeLogo,
+  'google gemini 2.5 computer use model': geminiLogo,
   'google project mariner': marinerLogo,
-  'amazon nova (acq adept ai)': amazonLogo,
+  'amazon nova (acq adept ai)': amazonNovaLogo,
   'axiom-1 by induction labs': axiomLogo,
+  'opencua': opencuaModelLogo,
+  'qwen2.5-vl': qwenLogo,
+  'bytedance ui-tars': uitarsLogo,
   
   // Enterprise automation
   'notte.cc': notteLogo,
