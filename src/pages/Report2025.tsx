@@ -341,9 +341,9 @@ const Report2025 = () => {
 
               {/* Categories - redesigned with better organization */}
               <div className="flex-1 space-y-4 md:space-y-6">
-                {/* Categories 1-3: 3-column grid on desktop, stack on mobile */}
-                <div className="flex flex-col lg:grid lg:grid-cols-3 gap-3 md:gap-4">
-                  {marketMap.slice(0, 3).map((category, idx) => {
+                {/* Categories 1-2: 2-column grid on desktop, stack on mobile */}
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-4">
+                  {marketMap.slice(0, 2).map((category, idx) => {
                     const CategoryIcon = getCategoryIcon(category.name);
                     return (
                     <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
@@ -398,7 +398,7 @@ const Report2025 = () => {
 
               {/* Categories 4-6: 3-column grid on desktop, stack on mobile */}
               <div className="flex flex-col lg:grid lg:grid-cols-3 gap-3 md:gap-4">
-                {marketMap.slice(3, 6).map((category, idx) => {
+                {marketMap.slice(2, 5).map((category, idx) => {
                   const CategoryIcon = getCategoryIcon(category.name);
                   return (
                   <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
@@ -452,7 +452,7 @@ const Report2025 = () => {
             </div>
 
             {/* Category 7: Computer use models - separate full width */}
-            {marketMap.slice(6, 7).map((category, idx) => {
+            {marketMap.slice(5, 6).map((category, idx) => {
               const CategoryIcon = getCategoryIcon(category.name);
               return (
               <div key={idx} className="space-y-3 p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
@@ -505,7 +505,7 @@ const Report2025 = () => {
           })}
 
           {/* Category 8: Enterprise automation - full width */}
-          {marketMap.slice(7, 8).map((category, idx) => {
+          {marketMap.slice(6, 7).map((category, idx) => {
             const CategoryIcon = getCategoryIcon(category.name);
             return (
             <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
@@ -559,7 +559,7 @@ const Report2025 = () => {
 
         {/* Categories 9-10: Consumer automation and browsers - 2 columns on desktop, stack on mobile */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-4">
-          {marketMap.slice(8, 10).map((category, idx) => {
+          {marketMap.slice(7, 9).map((category, idx) => {
             const CategoryIcon = getCategoryIcon(category.name);
             return (
             <div key={idx} className="space-y-3 p-3 md:p-4 rounded-xl border-2 border-border/50 bg-gradient-to-br from-background to-muted/10 shadow-sm">
