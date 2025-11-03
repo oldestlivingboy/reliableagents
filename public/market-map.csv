@@ -1,7 +1,7 @@
 Company / Tool,In touch/comments?,Categories,One-liner,Appears in (Source → Category),Verified URL,Logo Path
 Magnitude.run,,1. Browser use frameworks,,,https://magnitude.run/,src/assets/logos/magnitude.png
 Trigger.dev,,1. Browser use frameworks,,,https://trigger.dev/,https://trigger.dev/assets/triggerdev-logo--light.svg
-Browserbase,,4. Browsers as a service,Managed headless browsers + monitoring at scale.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.browserbase.com/,https://www.browserbase.com/assets/logos/director.png
+Browserbase,,3. Browsers as a service,Managed headless browsers + monitoring at scale.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.browserbase.com/,https://www.browserbase.com/assets/logos/director.png
 Stagehand,,2. Low-level/specialized browser use,AI Browser Automation framework to control web browsers with natural language and code.,Market Map → Frameworks; a16z → Interaction Frameworks,https://www.stagehand.dev/,src/assets/logos/stagehand.png
 Director.ai,,9. Consumer automation,An agent that allows building Stagehand workflows using natural language.,Market Map → Frameworks; a16z → Interaction Frameworks,https://www.browserbase.com/blog/introducing-director,src/assets/logos/director.png
 Browser Use,,1. Browser use frameworks,Python library to let agents control a browser (DOM + vision).,Market Map → Frameworks; a16z → Interaction Frameworks,https://github.com/a-r-n-o-l-d/browser-use,No distinct logo
@@ -10,71 +10,71 @@ Skyvern,"Yes, WA",1. Browser use frameworks,"Vision-augmented, LLM-first web-aut
 Puppeteer,,2. Low-level/specialized browser use,Headless Chrome/Chromium control library.,a16z → Browser Control Layers,https://pptr.dev/,https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png
 Playwright,,2. Low-level/specialized browser use,Modern automation library to control browsers (DOM-based).,a16z → Browser Control Layers,https://playwright.dev/,https://playwright.dev/img/playwright-logo.svg
 
-Cua,,4. Browsers as a service,Open-source infrastructure for Computer-Use Agents (Docker for CUA).,Market Map → Infrastructure; a16z → Interaction Frameworks & Desktop Infra,https://github.com/trycua/cua,https://www.cua.ai/cua_logo_white.svg
+Cua,,3. Browsers as a service,Open-source infrastructure for Computer-Use Agents (Docker for CUA).,Market Map → Infrastructure; a16z → Interaction Frameworks & Desktop Infra,https://github.com/trycua/cua,https://www.cua.ai/cua_logo_white.svg
 LaVague,,2. Low-level/specialized browser use,Open-source framework for building web agents/tests.,Market Map → Frameworks,https://lavague.ai/,https://cdn.prod.website-files.com/65f2cdf991013d85c582af00/660ea9ea8f295160425324d4_logo%20horizontal%20closer.png
-Steel.dev,,4. Browsers as a service,,,https://steel.dev/,src/assets/logos/steel.png
-Browserless,,4. Browsers as a service,,,https://www.browserless.io/,https://cdn.prod.website-files.com/65cb4923a3a6b08fe1124094/65e0cda14eeed054fea3ec28_icon_browserless.svg
-SentinelOne (S1),,4. Browsers as a service,"Cybersecurity platform, listed as a provider for hosted browser-infra (S1).",a16z → Execution Environments (Browser Infra) (SentinelOne Identity Confirmed),https://www.sentinelone.com/,src/assets/logos/sentinelone.png
-Kernel,"Yes, twi/email",4. Browsers as a service,Provider listed for hosted browser-infra.,a16z → Execution Environments (Browser Infra),https://www.onkernel.com/,https://github.com/onkernel/kernel-images/raw/main/static/images/Kernel-Wordmark_Accent.svg
-Anchor Browser,,4. Browsers as a service,Hosted browser infrastructure provider.,a16z → Execution Environments (Browser Infra),https://anchorbrowser.io/,https://cdn.prod.website-files.com/68e76a236cc487333075990b/68e76a236cc48733307599a9_icon-anchor.svg
-hyperbrowser,,4. Browsers as a service,Cloud browser/agent infra for scaling agents.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.hyperbrowser.ai/,https://www.hyperbrowser.ai/hyperbrowser_logo-YELLOW-LIGHT.svg
-Morph.so,,5. Supporting infrastructure,,,https://www.morph.so/,https://www.morph.so/logo.png
-Halluminate,,5. Supporting infrastructure,,,https://halluminate.ai/,https://halluminate.ai/hlogo.svg
-Lightpanda,,5. Supporting infrastructure,Browser/engine listed as an option in the stack.,a16z → Browsers,https://lightpanda.io/,https://cdn.lightpanda.io/assets/images/logo/lpd-logo.png
-LangGraph,,5. Supporting infrastructure,Orchestration framework for LLM agent graphs.,a16z → Durable Execution & Orchestration,https://www.langchain.com/langgraph,https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/65c6a38f9c53ec71f5fc73de_langchain-word.svg
-Temporal,,5. Supporting infrastructure,Workflow engine for long-running agent tasks.,a16z → Durable Execution & Orchestration,https://temporal.io/,https://temporal.io/images/logos/logo-temporal-with-copy-white-text.svg
-Inngest,,5. Supporting infrastructure,Durable execution/orchestration for agent workflows.,a16z → Durable Execution & Orchestration,https://www.inngest.com/,https://www.inngest.com/logo.svg
-Anon,,5. Supporting infrastructure,Secure auth/access so agents can log in and act safely.,Market Map → Infrastructure,https://www.anon.com/,https://cdn.prod.website-files.com/689bc3805f94765d37f8acd7/68bf5e2914f06cb650e509db_151462d7d320b52ecdfd6605fc35a695_option_anon.svg
-Massive,,5. Supporting infrastructure,100% ethically-sourced residential proxy network for web data collection.,Market Map → Infrastructure,https://www.joinmassive.com/,src/assets/logos/massive.png
-Extruct.ai,,5. Supporting infrastructure,Data extraction for web automation.,Market Map → Infrastructure,https://www.extruct.ai/,src/assets/logos/extruct.png
-RiveterHQ,,6. Scraping & crawling APIs,,,https://riveterhq.com/,https://framerusercontent.com/images/3jiyWMBSmsgvoQg8Awfgrn622LU.png?width=1980&height=532
-Zyte,,6. Scraping & crawling APIs,Web data platform offering scraping services and APIs.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.zyte.com/,https://logowik.com/content/uploads/images/zyte3602.jpg
-Parsera,,6. Scraping & crawling APIs,,,https://parsera.org/,src/assets/logos/parsera.png
-Exa.ai,"Yes, twi",6. Scraping & crawling APIs,,,https://exa.ai/,https://exa.ai/images/testimonial/cursor_monochrome.svg
-Tavily,,6. Scraping & crawling APIs,,,https://tavily.com/,https://www.tavily.com/images/logo.svg
-Kaizen,,6. Scraping & crawling APIs,,,https://www.kaizenautomation.com/,https://framerusercontent.com/images/KaapmT1KfqX3ZEnD8PksGbXTqmk.png?width=492&height=532
-Bright Data,,6. Scraping & crawling APIs,"World's largest web data platform offering proxy, scraping, and browser infrastructure.",Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/,https://brightdata.com/logo-dark.svg
-Browser.ai (Bright Data),,4. Browsers as a service,AI-Ready Browser and Scraping Browser for scalable and block-free agent execution.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/products/scraping-browser,https://www.browser-ai.tech/_next/static/media/logo.131a6ead.svg
-Apify,"Yes, WA",6. Scraping & crawling APIs,,,https://apify.com/,https://apify.com/img/apify-logo/wordmark.svg
-Firecrawl,,6. Scraping & crawling APIs,,,https://www.firecrawl.dev/,https://www.firecrawl.dev/assets-original/developer-os-icon.png
-Perplexity Search API,,6. Scraping & crawling APIs,API to get raw web search results with advanced filtering and customization options.,Market Map → AI Browsers,https://docs.perplexity.ai/guides/search-guide,https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg
-Google Gemini 2.5 Computer Use Model,,7. Computer use models,A model from the Gemini family optimized for browser and mobile task automation.,Market Map → Foundation Models; a16z → Models (Pixel-based),https://ai.google.dev/gemini-api/docs/computer-use,src/assets/logos/gemini.png
-CoAct-1,,7. Computer use models,Computer-use/agent model variant.,a16z → Models (Pixel-based),https://linxins.net/coact/,N/A
-Axiom-1 by Induction Labs,,7. Computer use models,"A unified model that sees software, plans, and acts directly.",a16z → Models (Pixel-based),https://inductionlabs.com/news/axiom-1,https://inductionlabs.com/images/induction-logo.svg
-OpenCUA,,7. Computer use models,Open computer-use model family.,a16z → Models (Pixel-based),https://opencua.xlang.ai/,src/assets/logos/opencua-model.png
-Qwen2.5-VL,,7. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://qwen.ai/research,src/assets/logos/qwen.png
-GLM-4.5V (BigModel),,7. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://bigmodel.cn/,https://z-cdn.chatglm.cn/z-ai/static/logo.svg
-Anthropic Claude,,7. Computer use models,General LLM variant used for computer-use tasks.,a16z → Models (Pixel-based),https://claude.com/,src/assets/logos/anthropic-claude.png
-Amazon Nova (acq Adept AI),,7. Computer use models,Amazon multimodal model family used as agent backends.,Market Map → Foundation Models,https://nova.amazon.com/,src/assets/logos/amazon-nova.png
-Bytedance UI-TARS,,7. Computer use models,ByteDance computer-use/GUI agent model family.,Market Map → Foundation Models,https://seed.bytedance.com/en/ui-tars,src/assets/logos/ui-tars.png
-Google Project Mariner,,7. Computer use models,DeepMind project for browser task automation.,Market Map → Foundation Models,https://deepmind.google/models/project-mariner/,https://deepmind.google/api/blob/website/images/project-mariner__find-jobs__icon.original.svg
-OpenAI Computer-Using Agent (CUA),,7. Computer use models,"The model powering Operator, combining GPT-4o's vision with advanced reasoning.",Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/computer-using-agent/,https://images.ctfassets.net/kftzwdyauwt9/1CgBJ2rSQnriAldNvIdInw/32befbf64486d1cabe6377b42a06d4a9/Infographic_Transparent__Web_.png
-Notte.cc,,8. Enterprise automation,,,https://www.notte.cc/,https://www.notte.cc/yc-logo-orange.svg
-Kura AI,,8. Enterprise automation,,,https://www.trykura.com/,https://www.trykura.com/logo_512.png
-emergence,,8. Enterprise automation,Enterprise agent platform (listed on map).,Market Map → Enterprise,https://www.emergence.ai/,src/assets/logos/emergence-newer.png
-Narada,,8. Enterprise automation,Agentic process automation with large action models.,Market Map → Enterprise,https://www.narada.ai/,src/assets/logos/narada-new.png
-Athena Intelligence,,8. Enterprise automation,Artificial data-analyst copilot for analytics tasks.,Market Map → Enterprise,https://www.athenaintel.com/,https://cdn.prod.website-files.com/667abeccd5a8386435937307/667ae0d793e24ebab63b9797_athena-logo.png
-CopyCat,,8. Enterprise automation,AI RPA using browser agents to replace brittle scripts.,Market Map → Enterprise,https://www.runcopycat.com/,https://framerusercontent.com/images/OrB217oGkbyU4SlbAejQzmU7QC8.png
-H (H Company),"Yes, WA",8. Enterprise automation,Browser-only agents powered by the H stack.,Market Map → Enterprise,https://www.hcompany.ai/,https://cdn.prod.website-files.com/67e2dbd9acff0c50d4c8a80c/6825b6d3023348faad2e4c3b_h-logo-gray.svg
-Intuned,,8. Enterprise automation,,,https://intunedhq.com,src/assets/logos/intuned.png
-basepilot,,8. Enterprise automation,AI workers for insurance/operational browser workflows.,Market Map → Enterprise,https://www.basepilot.com/,src/assets/logos/basepilot-new.png
-Asteroid,,8. Enterprise automation,Enterprise browser-agent automation for internal ops.,Market Map → Enterprise,https://asteroid.ai/,src/assets/logos/asteroid-new.png
-Jsonify,,8. Enterprise automation,,,https://jsonify.com/,src/assets/logos/jsonify-new.png
-Successors.ai,,8. Enterprise automation,,,https://www.sentius.ai/,src/assets/logos/successors.png
-OpenAI Operator,,9. Consumer automation,An AI agent capable of doing work for the user independently by navigating the web.,Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/introducing-operator/,https://images.ctfassets.net/kftzwdyauwt9/1CgBJ2rSQnriAldNvIdInw/32befbf64486d1cabe6377b42a06d4a9/Infographic_Transparent__Web_.png
-Yutori,,9. Consumer automation,Consumer agent that monitors and acts on web tasks.,Market Map → Consumer,https://yutori.com/,src/assets/logos/yutori.png
-Manus,,9. Consumer automation,Full-stack agent that executes multi-step tasks for users.,Market Map → Consumer; a16z → Full-stack applications,https://manus.im/,https://files.manuscdn.com/assets/image/brand/image/Manus-Logo-Black.svg
-Nanobrowser,,9. Consumer automation,Lightweight agentic browser/extension for local tasks.,Market Map → Consumer,https://nanobrowser.ai/,https://nanobrowser.ai/logo-w.png
-General Agents,,9. Consumer automation,Team building autonomous "AI coworkers" for web tools.,Market Map → Consumer,https://generalagents.com/,https://generalagents.com/images/wordmark.svg
-Godmode AI,,9. Consumer automation,Delegate repetitive web tasks to an agent.,Market Map → Consumer,https://app.godmode.space/,src/assets/logos/godmode-new.png
-twin,,9. Consumer automation,Skilled agents that operate apps without APIs to run ops.,Market Map → Enterprise,https://twin.so/,https://cdn.prod.website-files.com/6674a0a7dd2acefb8a875990/66fd6e551bafb4e2fa1fb236_twinsai-horizontal-logo-130x42-wht.png
-Please,,9. Consumer automation,Planning assistant that generates and runs life/project plans.,Market Map → Consumer,https://please.ai/,https://please.ai/icons/icon-192x192.png
-KAIROS,,9. Consumer automation,Show-and-repeat consumer automation of recorded workflows.,Market Map → Consumer,https://www.kairos.computer/,https://www.kairos.computer/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fkairos-logo.21111111.png&w=3840&q=75
-DEX (ThirdLayer),,9. Consumer automation,Browser copilot that turns intent into on-page actions.,Market Map → Consumer,https://www.thirdlayer.inc/,https://getdex.com/_astro/dex_logo_v3.CoPGVUpy_2wukN3.svg
-Google Chrome,,10. Consumer browsers,Mainstream web browser.,Market Map → AI Browsers,https://www.google.com/chrome/,https://www.google.com/chrome/static/images/chrome-logo-m100.svg
-ChatGPT Atlas,,10. Consumer browsers,"A new web browser built with ChatGPT at its core, designed for AI-first browsing.",Market Map → AI Browsers,https://openai.com/index/introducing-chatgpt-atlas/,https://cdn.openai.com/API/images/atlas-logo.svg
-Microsoft Edge Copilot,,10. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot,src/assets/logos/microsoft-edge-copilot.png
-Perplexity Comet Browser,,10. Consumer browsers,The AI browser that acts as a personal assistant to automate tasks and research the web.,Market Map → AI Browsers,https://www.perplexity.ai/comet/,src/assets/logos/comet.png
-Opera,,10. Consumer browsers,Mainstream browser adding agentic/AI browsing features.,Market Map → AI Browsers,https://www.opera.com/,src/assets/logos/opera-new.png
-Dia,,10. Consumer browsers,AI browser (Arc successor) with agentic features.,Market Map → AI Browsers,https://www.diabrowser.com/,https://static.wikia.nocookie.net/logopedia/images/3/39/Dia_2025.svg
-Strawberry Browser,,10. Consumer browsers,AI-native browser with built-in agent capabilities and natural language control.,Market Map → AI Browsers,https://www.strawberrybrowser.com/,https://www.strawberrybrowser.com/logo.svg
+Steel.dev,,3. Browsers as a service,,,https://steel.dev/,src/assets/logos/steel.png
+Browserless,,3. Browsers as a service,,,https://www.browserless.io/,https://cdn.prod.website-files.com/65cb4923a3a6b08fe1124094/65e0cda14eeed054fea3ec28_icon_browserless.svg
+SentinelOne (S1),,3. Browsers as a service,"Cybersecurity platform, listed as a provider for hosted browser-infra (S1).",a16z → Execution Environments (Browser Infra) (SentinelOne Identity Confirmed),https://www.sentinelone.com/,src/assets/logos/sentinelone.png
+Kernel,"Yes, twi/email",3. Browsers as a service,Provider listed for hosted browser-infra.,a16z → Execution Environments (Browser Infra),https://www.onkernel.com/,https://github.com/onkernel/kernel-images/raw/main/static/images/Kernel-Wordmark_Accent.svg
+Anchor Browser,,3. Browsers as a service,Hosted browser infrastructure provider.,a16z → Execution Environments (Browser Infra),https://anchorbrowser.io/,https://cdn.prod.website-files.com/68e76a236cc487333075990b/68e76a236cc48733307599a9_icon-anchor.svg
+hyperbrowser,,3. Browsers as a service,Cloud browser/agent infra for scaling agents.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.hyperbrowser.ai/,https://www.hyperbrowser.ai/hyperbrowser_logo-YELLOW-LIGHT.svg
+Morph.so,,4. Supporting infrastructure,,,https://www.morph.so/,https://www.morph.so/logo.png
+Halluminate,,4. Supporting infrastructure,,,https://halluminate.ai/,https://halluminate.ai/hlogo.svg
+Lightpanda,,4. Supporting infrastructure,Browser/engine listed as an option in the stack.,a16z → Browsers,https://lightpanda.io/,https://cdn.lightpanda.io/assets/images/logo/lpd-logo.png
+LangGraph,,4. Supporting infrastructure,Orchestration framework for LLM agent graphs.,a16z → Durable Execution & Orchestration,https://www.langchain.com/langgraph,https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/65c6a38f9c53ec71f5fc73de_langchain-word.svg
+Temporal,,4. Supporting infrastructure,Workflow engine for long-running agent tasks.,a16z → Durable Execution & Orchestration,https://temporal.io/,https://temporal.io/images/logos/logo-temporal-with-copy-white-text.svg
+Inngest,,4. Supporting infrastructure,Durable execution/orchestration for agent workflows.,a16z → Durable Execution & Orchestration,https://www.inngest.com/,https://www.inngest.com/logo.svg
+Anon,,4. Supporting infrastructure,Secure auth/access so agents can log in and act safely.,Market Map → Infrastructure,https://www.anon.com/,https://cdn.prod.website-files.com/689bc3805f94765d37f8acd7/68bf5e2914f06cb650e509db_151462d7d320b52ecdfd6605fc35a695_option_anon.svg
+Massive,,4. Supporting infrastructure,100% ethically-sourced residential proxy network for web data collection.,Market Map → Infrastructure,https://www.joinmassive.com/,src/assets/logos/massive.png
+Extruct.ai,,4. Supporting infrastructure,Data extraction for web automation.,Market Map → Infrastructure,https://www.extruct.ai/,src/assets/logos/extruct.png
+RiveterHQ,,5. Scraping & crawling APIs,,,https://riveterhq.com/,https://framerusercontent.com/images/3jiyWMBSmsgvoQg8Awfgrn622LU.png?width=1980&height=532
+Zyte,,5. Scraping & crawling APIs,Web data platform offering scraping services and APIs.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.zyte.com/,https://logowik.com/content/uploads/images/zyte3602.jpg
+Parsera,,5. Scraping & crawling APIs,,,https://parsera.org/,src/assets/logos/parsera.png
+Exa.ai,"Yes, twi",5. Scraping & crawling APIs,,,https://exa.ai/,https://exa.ai/images/testimonial/cursor_monochrome.svg
+Tavily,,5. Scraping & crawling APIs,,,https://tavily.com/,https://www.tavily.com/images/logo.svg
+Kaizen,,5. Scraping & crawling APIs,,,https://www.kaizenautomation.com/,https://framerusercontent.com/images/KaapmT1KfqX3ZEnD8PksGbXTqmk.png?width=492&height=532
+Bright Data,,5. Scraping & crawling APIs,"World's largest web data platform offering proxy, scraping, and browser infrastructure.",Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/,https://brightdata.com/logo-dark.svg
+Browser.ai (Bright Data),,3. Browsers as a service,AI-Ready Browser and Scraping Browser for scalable and block-free agent execution.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://brightdata.com/products/scraping-browser,https://www.browser-ai.tech/_next/static/media/logo.131a6ead.svg
+Apify,"Yes, WA",5. Scraping & crawling APIs,,,https://apify.com/,https://apify.com/img/apify-logo/wordmark.svg
+Firecrawl,,5. Scraping & crawling APIs,,,https://www.firecrawl.dev/,https://www.firecrawl.dev/assets-original/developer-os-icon.png
+Perplexity Search API,,5. Scraping & crawling APIs,API to get raw web search results with advanced filtering and customization options.,Market Map → AI Browsers,https://docs.perplexity.ai/guides/search-guide,https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg
+Google Gemini 2.5 Computer Use Model,,6. Computer use models,A model from the Gemini family optimized for browser and mobile task automation.,Market Map → Foundation Models; a16z → Models (Pixel-based),https://ai.google.dev/gemini-api/docs/computer-use,src/assets/logos/gemini.png
+CoAct-1,,6. Computer use models,Computer-use/agent model variant.,a16z → Models (Pixel-based),https://linxins.net/coact/,N/A
+Axiom-1 by Induction Labs,,6. Computer use models,"A unified model that sees software, plans, and acts directly.",a16z → Models (Pixel-based),https://inductionlabs.com/news/axiom-1,https://inductionlabs.com/images/induction-logo.svg
+OpenCUA,,6. Computer use models,Open computer-use model family.,a16z → Models (Pixel-based),https://opencua.xlang.ai/,src/assets/logos/opencua-model.png
+Qwen2.5-VL,,6. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://qwen.ai/research,src/assets/logos/qwen.png
+GLM-4.5V (BigModel),,6. Computer use models,Vision-language model listed for computer-use.,a16z → Models (Pixel-based),https://bigmodel.cn/,https://z-cdn.chatglm.cn/z-ai/static/logo.svg
+Anthropic Claude,,6. Computer use models,General LLM variant used for computer-use tasks.,a16z → Models (Pixel-based),https://claude.com/,src/assets/logos/anthropic-claude.png
+Amazon Nova (acq Adept AI),,6. Computer use models,Amazon multimodal model family used as agent backends.,Market Map → Foundation Models,https://nova.amazon.com/,src/assets/logos/amazon-nova.png
+Bytedance UI-TARS,,6. Computer use models,ByteDance computer-use/GUI agent model family.,Market Map → Foundation Models,https://seed.bytedance.com/en/ui-tars,src/assets/logos/ui-tars.png
+Google Project Mariner,,6. Computer use models,DeepMind project for browser task automation.,Market Map → Foundation Models,https://deepmind.google/models/project-mariner/,https://deepmind.google/api/blob/website/images/project-mariner__find-jobs__icon.original.svg
+OpenAI Computer-Using Agent (CUA),,6. Computer use models,"The model powering Operator, combining GPT-4o's vision with advanced reasoning.",Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/computer-using-agent/,https://images.ctfassets.net/kftzwdyauwt9/1CgBJ2rSQnriAldNvIdInw/32befbf64486d1cabe6377b42a06d4a9/Infographic_Transparent__Web_.png
+Notte.cc,,7. Enterprise automation,,,https://www.notte.cc/,https://www.notte.cc/yc-logo-orange.svg
+Kura AI,,7. Enterprise automation,,,https://www.trykura.com/,https://www.trykura.com/logo_512.png
+emergence,,7. Enterprise automation,Enterprise agent platform (listed on map).,Market Map → Enterprise,https://www.emergence.ai/,src/assets/logos/emergence-newer.png
+Narada,,7. Enterprise automation,Agentic process automation with large action models.,Market Map → Enterprise,https://www.narada.ai/,src/assets/logos/narada-new.png
+Athena Intelligence,,7. Enterprise automation,Artificial data-analyst copilot for analytics tasks.,Market Map → Enterprise,https://www.athenaintel.com/,https://cdn.prod.website-files.com/667abeccd5a8386435937307/667ae0d793e24ebab63b9797_athena-logo.png
+CopyCat,,7. Enterprise automation,AI RPA using browser agents to replace brittle scripts.,Market Map → Enterprise,https://www.runcopycat.com/,https://framerusercontent.com/images/OrB217oGkbyU4SlbAejQzmU7QC8.png
+H (H Company),"Yes, WA",7. Enterprise automation,Browser-only agents powered by the H stack.,Market Map → Enterprise,https://www.hcompany.ai/,https://cdn.prod.website-files.com/67e2dbd9acff0c50d4c8a80c/6825b6d3023348faad2e4c3b_h-logo-gray.svg
+Intuned,,7. Enterprise automation,,,https://intunedhq.com,src/assets/logos/intuned.png
+basepilot,,7. Enterprise automation,AI workers for insurance/operational browser workflows.,Market Map → Enterprise,https://www.basepilot.com/,src/assets/logos/basepilot-new.png
+Asteroid,,7. Enterprise automation,Enterprise browser-agent automation for internal ops.,Market Map → Enterprise,https://asteroid.ai/,src/assets/logos/asteroid-new.png
+Jsonify,,7. Enterprise automation,,,https://jsonify.com/,src/assets/logos/jsonify-new.png
+Successors.ai,,7. Enterprise automation,,,https://www.sentius.ai/,src/assets/logos/successors.png
+OpenAI Operator,,8. Consumer automation,An AI agent capable of doing work for the user independently by navigating the web.,Market Map → Foundation Models; a16z → Full-stack apps & Models,https://openai.com/index/introducing-operator/,https://images.ctfassets.net/kftzwdyauwt9/1CgBJ2rSQnriAldNvIdInw/32befbf64486d1cabe6377b42a06d4a9/Infographic_Transparent__Web_.png
+Yutori,,8. Consumer automation,Consumer agent that monitors and acts on web tasks.,Market Map → Consumer,https://yutori.com/,src/assets/logos/yutori.png
+Manus,,8. Consumer automation,Full-stack agent that executes multi-step tasks for users.,Market Map → Consumer; a16z → Full-stack applications,https://manus.im/,https://files.manuscdn.com/assets/image/brand/image/Manus-Logo-Black.svg
+Nanobrowser,,8. Consumer automation,Lightweight agentic browser/extension for local tasks.,Market Map → Consumer,https://nanobrowser.ai/,https://nanobrowser.ai/logo-w.png
+General Agents,,8. Consumer automation,Team building autonomous "AI coworkers" for web tools.,Market Map → Consumer,https://generalagents.com/,https://generalagents.com/images/wordmark.svg
+Godmode AI,,8. Consumer automation,Delegate repetitive web tasks to an agent.,Market Map → Consumer,https://app.godmode.space/,src/assets/logos/godmode-new.png
+twin,,8. Consumer automation,Skilled agents that operate apps without APIs to run ops.,Market Map → Enterprise,https://twin.so/,https://cdn.prod.website-files.com/6674a0a7dd2acefb8a875990/66fd6e551bafb4e2fa1fb236_twinsai-horizontal-logo-130x42-wht.png
+Please,,8. Consumer automation,Planning assistant that generates and runs life/project plans.,Market Map → Consumer,https://please.ai/,https://please.ai/icons/icon-192x192.png
+KAIROS,,8. Consumer automation,Show-and-repeat consumer automation of recorded workflows.,Market Map → Consumer,https://www.kairos.computer/,https://www.kairos.computer/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fkairos-logo.21111111.png&w=3840&q=75
+DEX (ThirdLayer),,8. Consumer automation,Browser copilot that turns intent into on-page actions.,Market Map → Consumer,https://www.thirdlayer.inc/,https://getdex.com/_astro/dex_logo_v3.CoPGVUpy_2wukN3.svg
+Google Chrome,,9. Consumer browsers,Mainstream web browser.,Market Map → AI Browsers,https://www.google.com/chrome/,https://www.google.com/chrome/static/images/chrome-logo-m100.svg
+ChatGPT Atlas,,9. Consumer browsers,"A new web browser built with ChatGPT at its core, designed for AI-first browsing.",Market Map → AI Browsers,https://openai.com/index/introducing-chatgpt-atlas/,https://cdn.openai.com/API/images/atlas-logo.svg
+Microsoft Edge Copilot,,9. Consumer browsers,,,https://www.microsoft.com/en-us/edge/copilot,src/assets/logos/microsoft-edge-copilot.png
+Perplexity Comet Browser,,9. Consumer browsers,The AI browser that acts as a personal assistant to automate tasks and research the web.,Market Map → AI Browsers,https://www.perplexity.ai/comet/,src/assets/logos/comet.png
+Opera,,9. Consumer browsers,Mainstream browser adding agentic/AI browsing features.,Market Map → AI Browsers,https://www.opera.com/,src/assets/logos/opera-new.png
+Dia,,9. Consumer browsers,AI browser (Arc successor) with agentic features.,Market Map → AI Browsers,https://www.diabrowser.com/,https://static.wikia.nocookie.net/logopedia/images/3/39/Dia_2025.svg
+Strawberry Browser,,9. Consumer browsers,AI-native browser with built-in agent capabilities and natural language control.,Market Map → AI Browsers,https://www.strawberrybrowser.com/,https://www.strawberrybrowser.com/logo.svg

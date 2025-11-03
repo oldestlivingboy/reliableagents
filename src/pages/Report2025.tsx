@@ -630,7 +630,7 @@ const Report2025 = () => {
             <h3 className="text-xl font-semibold text-foreground">Building Your Stack</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
-                The market map shows ten categories, but developers should focus on the first eight to build their stack. 
+                The market map shows nine categories, but developers should focus on the first seven to build their stack. 
                 The last two are consumer-facing products. Here's how to think through the developer categories:
               </p>
             </div>
@@ -650,31 +650,31 @@ const Report2025 = () => {
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">4. Browsers as a service</p>
+                    <p className="font-semibold text-foreground">3. Browsers as a service</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Browserbase, Anchor, Hyperbrowser — cloud infrastructure for your browsers, analogous to Vercel for web hosting</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">5. Supporting infrastructure</p>
+                    <p className="font-semibold text-foreground">4. Supporting infrastructure</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph, Anon — orchestration, retries, state, and secure authentication. Massive for ethical proxy networks. Extruct.ai for data extraction</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">6. Scraping & crawling APIs</p>
+                    <p className="font-semibold text-foreground">5. Scraping & crawling APIs</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Firecrawl, Apify, Zyte — mostly "read-only" web extraction that can be more economical than a fully interactive agent</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">7. Computer use models</p>
+                    <p className="font-semibold text-foreground">6. Computer use models</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Claude Computer Use, OpenAI CUA, Gemini 2.5 — foundation models that serve as your agent's brain</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">8. Enterprise automation</p>
+                    <p className="font-semibold text-foreground">7. Enterprise automation</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">Narada, twin, H — full-stack enterprise solutions if you want an all-in-one platform.</p>
                   </div>
                 </div>
@@ -682,7 +682,7 @@ const Report2025 = () => {
               
               <div className="pt-6 mt-6 border-t border-border/50">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  <span className="font-semibold">Key insight:</span> Choose a framework first (category 1), then choose where to host the framework (category 4). 
+                  <span className="font-semibold">Key insight:</span> Choose a framework first (category 1), then choose where to host the framework (category 3). 
                   Think of browser use frameworks like web frameworks (e.g., React) and browsers as a service like hosting platforms (e.g., Vercel).
                 </p>
               </div>
@@ -697,7 +697,7 @@ const Report2025 = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-3 text-base">Is interaction required? <span className="text-sm text-muted-foreground font-normal">(login, form submission, file upload, pagination)</span></h3>
                 <div className="space-y-2 ml-4 text-sm">
-                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → consider scraping tools (category 6) to fetch content cheaply</p>
+                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">No</span> → consider scraping tools (category 5) to fetch content cheaply</p>
                   <p className="text-muted-foreground"><span className="font-semibold text-foreground">Yes</span> → go agentic ↓</p>
                 </div>
               </div>
