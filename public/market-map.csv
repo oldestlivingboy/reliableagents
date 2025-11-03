@@ -12,9 +12,9 @@ Playwright,,2. Low-level/specialized browser use,Modern automation library to co
 
 Cua,,4. Browsers as a service,Open-source infrastructure for Computer-Use Agents (Docker for CUA).,Market Map → Infrastructure; a16z → Interaction Frameworks & Desktop Infra,https://github.com/trycua/cua,https://www.cua.ai/cua_logo_white.svg
 LaVague,,2. Low-level/specialized browser use,Open-source framework for building web agents/tests.,Market Map → Frameworks,https://lavague.ai/,https://cdn.prod.website-files.com/65f2cdf991013d85c582af00/660ea9ea8f295160425324d4_logo%20horizontal%20closer.png
-Steel.dev,,4. Browsers as a service,,,https://steel.dev/,https://framerusercontent.com/images/kZVIqwWUZs9plIC6tO2HansOo.png
+Steel.dev,,4. Browsers as a service,,,https://steel.dev/,src/assets/logos/steel.png
 Browserless,,4. Browsers as a service,,,https://www.browserless.io/,https://cdn.prod.website-files.com/65cb4923a3a6b08fe1124094/65e0cda14eeed054fea3ec28_icon_browserless.svg
-SentinelOne (S1),,4. Browsers as a service,"Cybersecurity platform, listed as a provider for hosted browser-infra (S1).",a16z → Execution Environments (Browser Infra) (SentinelOne Identity Confirmed),https://www.sentinelone.com/,https://www.sentinelone.com/wp-content/uploads/2023/08/sentinelone-logo-horizontal.svg
+SentinelOne (S1),,4. Browsers as a service,"Cybersecurity platform, listed as a provider for hosted browser-infra (S1).",a16z → Execution Environments (Browser Infra) (SentinelOne Identity Confirmed),https://www.sentinelone.com/,src/assets/logos/sentinelone.png
 Kernel,"Yes, twi/email",4. Browsers as a service,Provider listed for hosted browser-infra.,a16z → Execution Environments (Browser Infra),https://www.onkernel.com/,https://github.com/onkernel/kernel-images/raw/main/static/images/Kernel-Wordmark_Accent.svg
 Anchor Browser,,4. Browsers as a service,Hosted browser infrastructure provider.,a16z → Execution Environments (Browser Infra),https://anchorbrowser.io/,https://cdn.prod.website-files.com/68e76a236cc487333075990b/68e76a236cc48733307599a9_icon-anchor.svg
 hyperbrowser,,4. Browsers as a service,Cloud browser/agent infra for scaling agents.,Market Map → Infrastructure; a16z → Execution Environments (Browser Infra),https://www.hyperbrowser.ai/,https://www.hyperbrowser.ai/hyperbrowser_logo-YELLOW-LIGHT.svg
