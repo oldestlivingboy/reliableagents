@@ -130,8 +130,7 @@ const Report2025 = () => {
   const getCategoryIcon = (categoryName: string) => {
     const iconMap: { [key: string]: any } = {
       '1. Browser use frameworks': Wrench,
-      '2. Low-level browser use': BookOpen,
-      '3. Specialized browser use': Settings,
+      '2. Low-level/specialized browser use': BookOpen,
       '4. Browsers as a service': Cloud,
       '5. Supporting infrastructure': Building2,
       '6. Scraping & crawling APIs': Bug,
@@ -146,8 +145,7 @@ const Report2025 = () => {
   const getCategoryOrder = (categoryName: string): number => {
     const orderMap: { [key: string]: number } = {
       '1. Browser use frameworks': 1,
-      '2. Low-level browser use': 2,
-      '3. Specialized browser use': 3,
+      '2. Low-level/specialized browser use': 2,
       '4. Browsers as a service': 4,
       '5. Supporting infrastructure': 5,
       '6. Scraping & crawling APIs': 6,
@@ -632,7 +630,7 @@ const Report2025 = () => {
             <h3 className="text-xl font-semibold text-foreground">Building Your Stack</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed text-base">
               <p>
-                The market map shows ten categories, but developers should focus on the first eight to build their stack. 
+                The market map shows nine categories, but developers should focus on the first seven to build their stack. 
                 The last two are consumer-facing products. Here's how to think through the developer categories:
               </p>
             </div>
@@ -646,14 +644,8 @@ const Report2025 = () => {
                 </div>
                 <div className="flex gap-4">
                   <div className="space-y-1">
-                    <p className="font-semibold text-foreground">2. Low-level browser use</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer — automation runtimes that issue browser commands, often on behalf of the frameworks and similarly to how JavaScript controls web apps</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="space-y-1">
-                    <p className="font-semibold text-foreground">3. Specialized browser use</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">LaVague, Cua, Scrapybara — OS access or other control when there's no DOM</p>
+                    <p className="font-semibold text-foreground">2. Low-level/specialized browser use</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Playwright, Puppeteer, LaVague, Stagehand — automation runtimes that issue browser commands and specialized frameworks for OS access or other control when there's no DOM</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
