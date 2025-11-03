@@ -357,7 +357,7 @@ const Report2025 = () => {
                   </span>
                 </div>
                       
-                      <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-2">
+                      <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-2">
                       {category.companies.map((company, companyIdx) => {
                         const domain = getCompanyDomain(company.name);
                         const categoryCount = company.category.split(';').length;
