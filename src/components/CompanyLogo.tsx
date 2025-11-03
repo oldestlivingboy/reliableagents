@@ -61,7 +61,7 @@ import lavagueLogo from '@/assets/logos/lavague.png';
 import anchorLogo from '@/assets/logos/anchor.svg';
 import kernelLogo from '@/assets/logos/kernel.svg';
 import jsonifyLogo from '@/assets/logos/jsonify.png';
-import sentiusLogo from '@/assets/logos/sentius.png';
+import successorsLogo from '@/assets/logos/successors.png';
 import parseraLogo from '@/assets/logos/parsera.png';
 import microsoftEdgeCopilotLogo from '@/assets/logos/microsoft-edge-copilot.png';
 import cometLogo from '@/assets/logos/comet.png';
@@ -150,7 +150,7 @@ const logoMap: { [key: string]: string } = {
   'basepilot': basepilotLogo,
   'asteroid': asteroidLogo,
   'jsonify': jsonifyLogo,
-  'sentius ai': sentiusLogo,
+  'successors.ai': successorsLogo,
   
   // Consumer automation
   'manus': manusLogo,
