@@ -369,7 +369,7 @@ const Report2025 = () => {
                             href={getCompanyUrl(company.name)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex flex-col items-center gap-1 transition-all duration-200 hover:scale-105 relative"
+                            className="group flex flex-col items-center gap-1.5 transition-all duration-200 hover:scale-105 relative"
                             title={`${company.name}${company.oneLiner ? ': ' + company.oneLiner : ''}${isMultiCategory ? ' (appears in ' + categoryCount + ' categories)' : ''}`}
                           >
                             <div className={`w-14 h-14 sm:w-11 sm:h-11 rounded-lg bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden p-2 sm:p-1.5 transition-all duration-200 ${isMultiCategory ? 'ring-2 ring-primary/20 shadow-sm' : 'border border-border/20 group-hover:border-primary/30 group-hover:shadow-sm'}`}>
