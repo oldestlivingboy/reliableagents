@@ -14,6 +14,7 @@ import hyperbrowserLogo from '@/assets/logos/hyperbrowser.png';
 import inngestLogo from '@/assets/logos/inngest.png';
 import langgraphLogo from '@/assets/logos/langgraph.png';
 import operaLogo from '@/assets/logos/opera.png';
+import operaNewLogo from '@/assets/logos/opera-new.png';
 import perplexityLogo from '@/assets/logos/perplexity.png';
 import playwrightLogo from '@/assets/logos/playwright-new.svg';
 import puppeteerLogo from '@/assets/logos/puppeteer.png';
@@ -180,7 +181,7 @@ const logoMap: { [key: string]: string } = {
   'microsoft edge copilot': microsoftEdgeCopilotLogo,
   'perplexity comet browser': cometLogo,
   'comet': cometLogo,
-  'opera': operaLogo,
+  'opera': operaNewLogo,
   'chatgpt atlas': atlasLogo,
 };
 
