@@ -63,6 +63,7 @@ const Report2025 = () => {
       'lightpanda': 'https://lightpanda.io/',
       'langgraph': 'https://www.langchain.com/langgraph',
       'temporal': 'https://temporal.io/',
+      'restate': 'https://restate.dev/',
       'inngest': 'https://www.inngest.com/',
       'ingnest': 'https://www.inngest.com/',
       'anon': 'https://www.anon.com/',
@@ -671,7 +672,7 @@ const Report2025 = () => {
                 <div className="flex gap-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-foreground">4. Supporting infrastructure</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, LangGraph, Anon — orchestration, retries, state, and secure authentication. Massive for ethical proxy networks. Extruct.ai for data extraction</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Temporal, Inngest, Restate, LangGraph, Anon — orchestration, retries, state, and secure authentication. Massive for ethical proxy networks. Extruct.ai for data extraction</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
