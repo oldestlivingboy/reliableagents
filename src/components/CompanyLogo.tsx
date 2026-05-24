@@ -20,6 +20,7 @@ import playwrightLogo from '@/assets/logos/playwright-new.svg';
 import puppeteerLogo from '@/assets/logos/puppeteer.png';
 import stagehandLogo from '@/assets/logos/stagehand.png';
 import directorLogo from '@/assets/logos/director.png';
+import restateLogo from '@/assets/logos/restate.svg';
 import tavilyLogo from '@/assets/logos/tavily.png';
 import temporalLogo from '@/assets/logos/temporal.png';
 import triggerdevLogo from '@/assets/logos/triggerdev.png';
@@ -122,6 +123,7 @@ const logoMap: { [key: string]: string } = {
   'lightpanda': lightpandaLogo,
   'temporal': temporalLogo,
   'inngest': inngestLogo,
+  'restate': restateLogo,
   'langgraph': langgraphLogo,
   'anon': anonLogo,
   'massive': massiveLogo,
